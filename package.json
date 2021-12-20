@@ -1,0 +1,46 @@
+{
+  "name": "landing-v2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ext .js .",
+    "lint:fix": "eslint --ext .js . --fix",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "concurrently --kill-others -s first \"yarn dev\" \"cypress run\"",
+    "test:watch": "concurrently --kill-others -s first \"yarn dev\" \"cypress open\"",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "color": "^4.1.0",
+    "lodash.get": "^4.4.2",
+    "next": "12.0.7",
+    "next-i18next": "^10.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "reakit": "^1.3.11",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-macros": "^3.1.0",
+    "cypress": "^9.1.1",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "i18next-http-backend": "^1.3.1",
+    "prettier": "^2.5.1"
+  }
+}
