@@ -1,3 +1,6 @@
 {
-  "title": "Home"
+  "meta": {
+    "title": "MeiliSearch",
+    "description": "An open source, blazingly fast and hyper relevant search-engine that will improve your search experience"
+  }
 }
