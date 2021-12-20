@@ -4,6 +4,6 @@ module.exports = {
     defaultLocale: 'en',
     locales: ['en'],
     fallbackLng: 'en',
-    // defaultNS: ['header', 'footer'],
+    defaultNS: ['homepage'],
   },
 }
