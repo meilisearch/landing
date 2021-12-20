@@ -1,0 +1,51 @@
+import styled, { css } from 'styled-components'
+import PropTypes from 'prop-types'
+import get from 'utils/get'
+
+const variants = {
+  default: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-weight: ${get('fontWeight.medium')};
+      font-size: 15px;
+      line-height: 21px;
+    `,
+  },
+  preTitle: {
+    tag: 'span',
+    style: css`
+      font-family: Poppins;
+      font-weight: ${get('fontWeight.bold')};
+      letter-spacing: 0.03em;
+      font-size: 14px;
+      line-height: 21px;
+    `,
+  },
+}
+
+const StyledTypography = styled.span`
+  margin: 0;
+  ${p => p.$variant.style};
+`
+
+const Typography = ({ variant = 'default', ...props }) => {
+  const safeVariant = variants[variant] || variants.default
+  const { tag = 'span', style = css`` } = safeVariant
+  return (
+    <StyledTypography as={tag} {...style} $variant={safeVariant} {...props} />
+  )
+}
+
+Typography.propTypes = {
+  /**
+   * The variant name, used to display Typography with different styles
+   */
+  variant: PropTypes.oneOf(['default', 'preTitle']),
+}
+
+Typography.defaultProps = {
+  variant: 'default',
+}
+
+export default Typography
