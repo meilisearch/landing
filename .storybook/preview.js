@@ -35,8 +35,12 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'fullscreen',
   backgrounds: {
-    default: 'white',
+    default: 'valhalla',
     values: [
+      {
+        name: 'valhalla',
+        value: '#261A59',
+      },
       {
         name: 'white',
         value: '#FFF',
