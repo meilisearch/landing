@@ -10,7 +10,7 @@ export default {
   },
   argTypes: {
     variant: {
-      options: ['default', 'preTitle'],
+      options: ['default', 'preTitle', 'navigation', 'smallText'],
       control: {
         type: 'select',
       },
@@ -29,4 +29,16 @@ export const PreTitle = Template.bind({})
 PreTitle.args = {
   variant: 'preTitle',
   children: 'I’m the preTitle variant',
+}
+
+export const Navigation = Template.bind({})
+Navigation.args = {
+  variant: 'navigation',
+  children: 'I’m the navigation variant',
+}
+
+export const SmallText = Template.bind({})
+SmallText.args = {
+  variant: 'smallText',
+  children: 'I’m the smallText variant',
 }

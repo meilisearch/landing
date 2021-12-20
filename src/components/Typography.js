@@ -22,6 +22,28 @@ const variants = {
       line-height: 21px;
     `,
   },
+  navigation: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-weight: ${get('fontWeight.medium')};
+      font-size: 15px;
+      line-height: 21px;
+      @media (min-width: ${get('breakpoints.desktop')}) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    `,
+  },
+  smallText: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-weight: ${get('fontWeight.medium')};
+      font-size: 14px;
+      line-height: 21px;
+    `,
+  },
 }
 
 const StyledTypography = styled.span`
@@ -41,7 +63,7 @@ Typography.propTypes = {
   /**
    * The variant name, used to display Typography with different styles
    */
-  variant: PropTypes.oneOf(['default', 'preTitle']),
+  variant: PropTypes.oneOf(['default', 'preTitle', 'navigation', 'smallText']),
 }
 
 Typography.defaultProps = {

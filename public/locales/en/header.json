@@ -1,0 +1,17 @@
+{
+  "documentation": "Documentation",
+  "blog": "Blog",
+  "jobs": "Jobs",
+  "ressources": {
+    "title": "Ressources",
+    "subMenu": [
+      { "title": "Guides", "subtitle": "Lorem ipsum dolor sit amet" },
+      { "title": "Api Reference", "subtitle": "Lorem ipsum dolor sit amet" },
+      { "title": "Roadmap", "subtitle": "Lorem ipsum dolor sit amet" },
+      { "title": "Changelog", "subtitle": "Lorem ipsum dolor sit amet" },
+      { "title": "Integrations", "subtitle": "Lorem ipsum dolor sit amet" }
+    ]
+  },
+  "logIn": "Log In",
+  "getStarted": "Get Started"
+}
