@@ -1,2 +1,8 @@
+export { default as ApiReference } from './ApiReference'
+export { default as Arrow } from './Arrow'
 export { default as Github } from './Github'
+export { default as GithubOutlined } from './GithubOutlined'
+export { default as Guides } from './Guides'
+export { default as Integrations } from './Integrations'
+export { default as Roadmap } from './Roadmap'
 export { default as Star } from './Star'

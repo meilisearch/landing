@@ -67,13 +67,6 @@ or :
 npm run storybook
 ```
 
-### Internationalization
-
-To add a new language, add it inside the `locales` array of the `next-i18next.config.js` file.
-Then, the easiest way to add the translations is to duplicate one of the existing folder inside `public/locales` and translate its content.
-For example, you might want to duplicate the `en` folder and rename it in `fr`. Then, you can translate its content.
-Don't forget to restart your server to see your changes !
-
 ## Git Guidelines
 
 ### Git Branches <!-- omit in toc -->
