@@ -44,6 +44,15 @@ const variants = {
       line-height: 21px;
     `,
   },
+  ctaBig: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-weight: ${get('fontWeight.bold')};
+      font-size: 16px;
+      line-height: 22px;
+    `,
+  },
 }
 
 const StyledTypography = styled.span`
@@ -63,7 +72,13 @@ Typography.propTypes = {
   /**
    * The variant name, used to display Typography with different styles
    */
-  variant: PropTypes.oneOf(['default', 'preTitle', 'navigation', 'smallText']),
+  variant: PropTypes.oneOf([
+    'default',
+    'preTitle',
+    'navigation',
+    'smallText',
+    'ctaBig',
+  ]),
 }
 
 Typography.defaultProps = {
