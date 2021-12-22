@@ -16,7 +16,7 @@ export default {
 export const Default = () => {
   const menuState = useMenuState()
   const { t } = useTranslation('header')
-  const headerProps = getHeaderData(t, null)
+  const headerProps = getHeaderData(t)
 
   const menuList = headerProps.links.find(link => link.subMenu)
   return (
@@ -36,7 +36,7 @@ export const Default = () => {
 export const Animated = () => {
   const menuState = useMenuState({ animated: 300, loop: true })
   const { t } = useTranslation('header')
-  const headerProps = getHeaderData(t, null)
+  const headerProps = getHeaderData(t)
 
   const menuList = headerProps.links.find(link => link.subMenu)
 
