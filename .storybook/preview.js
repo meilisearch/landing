@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components'
 import theme from '../src/theme'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
+import * as nextImage from 'next/image';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -48,3 +49,9 @@ export const parameters = {
     ],
   },
 }
+
+// Workaround for Next/Image not working in Storybook
+Object.defineProperty(nextImage, 'default', {
+  configurable: true,
+  value: (props) => <img {...props} />,
+});
