@@ -44,6 +44,14 @@ const variants = {
       line-height: 21px;
     `,
   },
+  small: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-size: 14px;
+      line-height: 21px;
+    `,
+  },
   ctaBig: {
     tag: 'span',
     style: css`
@@ -77,6 +85,7 @@ Typography.propTypes = {
     'preTitle',
     'navigation',
     'smallText',
+    'small',
     'ctaBig',
   ]),
 }
