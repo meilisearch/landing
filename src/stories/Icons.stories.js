@@ -9,6 +9,7 @@ import {
   Integrations as IntegrationsIcon,
   Roadmap as RoadmapIcon,
   Star as StarIcon,
+  Twitter as TwitterIcon,
 } from 'components/icons'
 
 export default {
@@ -38,3 +39,4 @@ export const Hamburger = () => <HamburgerIcon height={56} />
 export const Integrations = () => <IntegrationsIcon height={56} />
 export const Roadmap = () => <RoadmapIcon height={56} />
 export const Star = () => <StarIcon height={56} />
+export const Twitter = () => <TwitterIcon height={56} />
