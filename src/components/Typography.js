@@ -40,8 +40,12 @@ const variants = {
     style: css`
       font-family: Inter;
       font-weight: ${get('fontWeight.medium')};
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 13px;
+      line-height: 19.5px;
+      @media (min-width: ${get('breakpoints.desktop')}) {
+        font-size: 14px;
+        line-height: 21px;
+      }
     `,
   },
   small: {
