@@ -8,14 +8,16 @@ import { darken } from 'utils/colors'
 const variants = {
   primary: css`
     background-color: ${p => p.$color};
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: ${p => darken(p.$color, 40)};
       border-color: ${p => darken(p.$color, 40)};
     }
   `,
   secondary: css`
     background-color: transparent;
-    &:hover {
+    &:hover,
+    &:focus {
       ${p =>
         p.$color === '#FFF' &&
         css`
@@ -42,6 +44,7 @@ const StyledButton = styled(ReakitButton)`
   cursor: pointer;
   transition-property: background-color, border-color, color;
   transition-duration: 0.3s;
+  outline: none;
 
   ${p => variants[p.$variant]};
 `
