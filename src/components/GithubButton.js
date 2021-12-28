@@ -28,7 +28,11 @@ const StarIcon = styled(Star)`
   height: 10px;
 `
 
-const GithubButton = ({ count = '', href, ...props }) => (
+const GithubButton = ({
+  count = '',
+  href = 'https://github.com/meilisearch/MeiliSearch',
+  ...props
+}) => (
   <GithubLink href={href} rel="noreferrer" target="_blank" {...props}>
     <GithubLogo height={20} />
     <Typography variant="preTitle">{count}</Typography>
@@ -49,7 +53,7 @@ GithubButton.propTypes = {
 
 GithubButton.defaultProps = {
   count: null,
-  href: null,
+  href: 'https://github.com/meilisearch/MeiliSearch',
 }
 
 export default GithubButton

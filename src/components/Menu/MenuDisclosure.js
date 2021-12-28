@@ -14,6 +14,7 @@ const MenuButton = styled(ReakitMenuButton)`
   cursor: pointer;
   padding: 0;
   transition: color 300ms;
+  outline: none;
   &:hover,
   &:focus {
     color: ${get('colors.hotPink')};

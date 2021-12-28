@@ -6,9 +6,12 @@ import get from 'utils/get'
 const StyledLink = styled.a`
   color: inherit;
   transition: color 300ms;
-  &:hover,
-  &:focus {
-    color: ${get('colors.hotPink')};
+  outline: none;
+  @media (min-width: ${get('breakpoints.tablet')}) {
+    &:hover,
+    &:focus {
+      color: ${get('colors.hotPink')};
+    }
   }
 `
 
