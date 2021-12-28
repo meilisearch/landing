@@ -1,5 +1,6 @@
 export { default as ApiReference } from './ApiReference'
 export { default as Arrow } from './Arrow'
+export { default as Cross } from './Cross'
 export { default as Github } from './Github'
 export { default as GithubOutlined } from './GithubOutlined'
 export { default as Guides } from './Guides'

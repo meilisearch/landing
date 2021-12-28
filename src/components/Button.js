@@ -45,6 +45,7 @@ const StyledButton = styled(ReakitButton)`
   transition-property: background-color, border-color, color;
   transition-duration: 0.3s;
   outline: none;
+  flex-shrink: 0;
 
   ${p => variants[p.$variant]};
 `

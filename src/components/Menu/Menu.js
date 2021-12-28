@@ -30,10 +30,14 @@ const MenuContent = styled.div`
   }
 `
 
+const MenuWrapper = styled(ReakitMenu)`
+  margin: 0;
+`
+
 const Menu = ({ ariaLabel, children, ...props }) => (
-  <ReakitMenu aria-label={ariaLabel} {...props}>
+  <MenuWrapper aria-label={ariaLabel} {...props}>
     <MenuContent $animated={props.animated}>{children}</MenuContent>
-  </ReakitMenu>
+  </MenuWrapper>
 )
 
 Menu.propTypes = {
