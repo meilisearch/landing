@@ -12,6 +12,8 @@ export default {
     variant: {
       options: [
         'default',
+        'body',
+        'h1',
         'preTitle',
         'navigation',
         'smallText',
@@ -30,6 +32,18 @@ const Template = args => <Typography {...args} />
 export const Default = Template.bind({})
 Default.args = {
   children: 'I’m the default variant',
+}
+
+export const Body = Template.bind({})
+Body.args = {
+  variant: 'body',
+  children: 'I’m the body variant',
+}
+
+export const H1 = Template.bind({})
+H1.args = {
+  variant: 'h1',
+  children: 'I’m the h1 variant',
 }
 
 export const PreTitle = Template.bind({})

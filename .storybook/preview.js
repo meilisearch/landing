@@ -40,7 +40,7 @@ export const parameters = {
     values: [
       {
         name: 'valhalla',
-        value: '#261A59',
+        value: '#21004B',
       },
       {
         name: 'white',

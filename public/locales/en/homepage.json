@@ -2,5 +2,11 @@
   "meta": {
     "title": "MeiliSearch",
     "description": "An open source, blazingly fast and hyper relevant search-engine that will improve your search experience"
+  },
+  "hero": {
+    "title": "Shape a <strong>delightful</strong> <strong>search</strong> experience in a snap",
+    "description": "An open source, lightning fast, and hyper relevant search-engine that fits effortlessly into your apps, websites, and workflow.",
+    "cta1": "Join Slack",
+    "cta2": "Documentation"
   }
 }
