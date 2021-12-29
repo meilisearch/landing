@@ -12,6 +12,32 @@ const variants = {
       line-height: 21px;
     `,
   },
+  body: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-size: 16px;
+      line-height: 24px;
+      @media (min-width: ${get('breakpoints.tablet')}) {
+        font-size: 15px;
+        line-height: 21px;
+      }
+    `,
+  },
+  h1: {
+    tag: 'span',
+    style: css`
+      font-family: Poppins;
+      font-weight: ${get('fontWeight.bold')};
+      font-size: 32px;
+      line-height: 46px;
+      letter-spacing: -0.02em;
+      @media (min-width: ${get('breakpoints.tablet')}) {
+        font-size: 64px;
+        line-height: 96px;
+      }
+    `,
+  },
   preTitle: {
     tag: 'span',
     style: css`
@@ -86,6 +112,8 @@ Typography.propTypes = {
    */
   variant: PropTypes.oneOf([
     'default',
+    'body',
+    'h1',
     'preTitle',
     'navigation',
     'smallText',

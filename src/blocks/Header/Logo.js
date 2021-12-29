@@ -14,13 +14,14 @@ const MeiliSearchName = styled.div`
   }
 `
 
-const Logos = styled.div`
+const Logos = styled.a`
   display: flex;
   align-items: center;
+  outline: none;
 `
 
 const Logo = () => (
-  <Logos>
+  <Logos href="/">
     <Image
       src="/images/meili-logo.svg"
       height={35}

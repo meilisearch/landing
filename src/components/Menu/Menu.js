@@ -32,6 +32,7 @@ const MenuContent = styled.div`
 
 const MenuWrapper = styled(ReakitMenu)`
   margin: 0;
+  z-index: 50;
 `
 
 const Menu = ({ ariaLabel, children, ...props }) => (
