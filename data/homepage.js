@@ -10,10 +10,12 @@ const getHomepageData = (t = () => {}) => ({
     cta1: {
       title: t('hero.cta1'),
       url: 'https://slack.meilisearch.com/',
+      target: '_blank',
     },
     cta2: {
       title: t('hero.cta2'),
       url: 'https://docs.meilisearch.com/',
+      target: '_blank',
     },
     lottie: {
       desktop: heroAnimationDesktop,
