@@ -9,11 +9,11 @@ const getHomepageData = (t = () => {}) => ({
     desktopBackground: '/images/hero-desktop.svg',
     cta1: {
       title: t('hero.cta1'),
-      url: '',
+      url: 'https://slack.meilisearch.com/',
     },
     cta2: {
       title: t('hero.cta2'),
-      url: '',
+      url: 'https://docs.meilisearch.com/',
     },
     lottie: {
       desktop: heroAnimationDesktop,
