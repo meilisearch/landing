@@ -31,18 +31,11 @@ const Logo = () => (
     />
     <MeiliSearchName>
       <Image
-        src="/images/meili.svg"
+        src="/images/meilisearch.svg"
         height={25}
-        width={67}
+        width={164}
         layout="fixed"
-        alt="Meili name"
-      />
-      <Image
-        src="/images/search.svg"
-        height={25}
-        width={93}
-        layout="fixed"
-        alt="Search"
+        alt="MeiliSearch"
       />
     </MeiliSearchName>
   </Logos>

@@ -97,12 +97,17 @@ const Hero = ({ heroProps, ...props }) => (
         <Buttons>
           <Button
             href={heroProps.cta1.url}
+            target={heroProps.cta1.target}
             color={get('colors.hotPink')}
             variant="secondary"
           >
             <Typography>{heroProps.cta1.title}</Typography>
           </Button>
-          <Button href={heroProps.cta2.url} color={get('colors.hotPink')}>
+          <Button
+            href={heroProps.cta2.url}
+            target={heroProps.cta2.target}
+            color={get('colors.hotPink')}
+          >
             <Typography>{heroProps.cta2.title}</Typography>
           </Button>
         </Buttons>
