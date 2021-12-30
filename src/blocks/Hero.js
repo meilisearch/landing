@@ -8,6 +8,7 @@ import get from 'utils/get'
 
 const Content = styled.div`
   grid-column: 1 / 8;
+  overflow: hidden;
   color: ${get('colors.white')};
 `
 
