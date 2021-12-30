@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Grid from 'components/Grid'
 import Button from 'components/Button'
+import Lottie from 'components/Lottie'
 import Typography from 'components/Typography'
 import get from 'utils/get'
 
@@ -51,26 +52,32 @@ const Buttons = styled.div`
   }
 `
 
-const RightImage = styled.div`
-  background: url('${p => p.$mobileImage}') center right no-repeat;
-  width: 100%;
-  height: 481px;
-
+const DesktopAnimation = styled.div`
+  display: none;
   @media (min-width: ${get('breakpoints.tablet')}) {
+    display: block;
     position: absolute;
-    right: 0;
+    right: -8px;
     transform: translateY(-50%);
-    background: url('${p => p.$desktopImage}') center right no-repeat;
     background-size: contain;
     width: 450px;
     height: 394px;
     top: 63%;
   }
-
   @media (min-width: ${get('breakpoints.desktop')}) {
     width: 644px;
     height: 564px;
     top: 66%;
+  }
+`
+
+const MobileAnimation = styled.div`
+  width: 444px;
+  height: 481px;
+  margin: 0 -68px 0 auto;
+
+  @media (min-width: ${get('breakpoints.tablet')}) {
+    display: none;
   }
 `
 
@@ -82,10 +89,9 @@ const Hero = ({ heroProps, ...props }) => (
           variant="h1"
           dangerouslySetInnerHTML={{ __html: heroProps.title }}
         />
-        <RightImage
-          $mobileImage={heroProps.mobileBackground}
-          $desktopImage={heroProps.desktopBackground}
-        />
+        <MobileAnimation>
+          <Lottie animation={heroProps.lottie.mobile} />
+        </MobileAnimation>
         <Description>{heroProps.description}</Description>
         <Buttons>
           <Button
@@ -101,6 +107,9 @@ const Hero = ({ heroProps, ...props }) => (
         </Buttons>
       </Content>
     </Grid>
+    <DesktopAnimation>
+      <Lottie animation={heroProps.lottie.desktop} />
+    </DesktopAnimation>
   </section>
 )
 
