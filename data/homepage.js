@@ -1,3 +1,6 @@
+import heroAnimationDesktop from 'lotties/hero-desktop'
+import heroAnimationMobile from 'lotties/hero-mobile'
+
 const getHomepageData = (t = () => {}) => ({
   hero: {
     title: t('hero.title'),
@@ -11,6 +14,10 @@ const getHomepageData = (t = () => {}) => ({
     cta2: {
       title: t('hero.cta2'),
       url: '',
+    },
+    lottie: {
+      desktop: heroAnimationDesktop,
+      mobile: heroAnimationMobile,
     },
   },
 })
