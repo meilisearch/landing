@@ -93,7 +93,7 @@ const MenuLinks = ({ headerProps }) => (
       link.subMenu ? (
         <Submenu link={link} key={link.title} />
       ) : (
-        <Link href={link.href} key={link.title}>
+        <Link href={link.href} target={link.target} key={link.title}>
           <Typography>{link.title}</Typography>
         </Link>
       )
