@@ -4,8 +4,7 @@ import getStarzagersCount from 'utils/getStarzagersCount'
 import formatStargazers from 'utils/formatStargazers'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Header from 'blocks/Header'
-import BaseHero from 'blocks/Hero'
+import { Header, Hero as BaseHero, Demo as BaseDemo } from 'blocks'
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
 
@@ -16,9 +15,16 @@ const Hero = styled(BaseHero)`
   }
 `
 
+const Demo = styled(BaseDemo)`
+  margin-top: 102px;
+  @media (min-width: ${get('breakpoints.tablet')}) {
+    margin-top: 266px;
+  }
+`
+
 const Home = ({ stargazers_count }) => {
   const { t } = useTranslation('homepage')
-  const { hero } = getHomepageData(t)
+  const { hero, demo } = getHomepageData(t)
   return (
     <>
       <Head>
@@ -27,6 +33,7 @@ const Home = ({ stargazers_count }) => {
       </Head>
       <Header stargazers_count={formatStargazers(stargazers_count)} />
       <Hero heroProps={hero} />
+      <Demo demoProps={demo} color={get('colors.lila')} />
     </>
   )
 }

@@ -14,6 +14,8 @@ export default {
         'default',
         'body',
         'h1',
+        'h2',
+        'h3',
         'preTitle',
         'navigation',
         'smallText',
@@ -44,6 +46,17 @@ export const H1 = Template.bind({})
 H1.args = {
   variant: 'h1',
   children: 'I’m the h1 variant',
+}
+
+export const H2 = Template.bind({})
+H2.args = {
+  variant: 'h2',
+  children: 'I’m the h2 variant',
+}
+export const H3 = Template.bind({})
+H3.args = {
+  variant: 'h3',
+  children: 'I’m the h3 variant',
 }
 
 export const PreTitle = Template.bind({})
