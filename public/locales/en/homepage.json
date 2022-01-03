@@ -8,5 +8,29 @@
     "description": "An open source, lightning fast, and hyper relevant search-engine that fits effortlessly into your apps, websites, and workflow.",
     "cta1": "Join Slack",
     "cta2": "Documentation"
+  },
+  "demo": {
+    "preTitle": "Why MeiliSearch?",
+    "title": "The next generation of search",
+    "description": "Meilisearch is a flexible, powerful, user-focused search engine that can be added to any website or application. It aims to save users time and improve product experience.",
+    "keypoints": [
+      {
+        "title": "Lightning fast",
+        "description": "Search-as-you-type returns answers in less than 50 milliseconds. That's faster than the blink of an eye!"
+      },
+      {
+        "title": "Plug ‘n play",
+        "description": "Deploy in a matter of minutes. Smart presets let you start searching through your data with zero configuration. "
+      },
+      {
+        "title": "Flexible",
+        "description": "Send data to MeiliSearch however you want—no need to match a schema or transform your data into a compatible format."
+      },
+      {
+        "title": "Typo tolerant",
+        "description": "Everyone makes mistakes! If typos break your search experience, many users will leave thinking what they were looking for just wasn't there."
+      }
+    ],
+    "cta": "Start now"
   }
 }

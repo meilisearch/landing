@@ -16,25 +16,57 @@ const variants = {
     tag: 'span',
     style: css`
       font-family: Inter;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 15px;
+      line-height: 21px;
       @media (min-width: ${get('breakpoints.tablet')}) {
-        font-size: 15px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 24px;
       }
     `,
   },
   h1: {
-    tag: 'span',
+    tag: 'h1',
     style: css`
       font-family: Poppins;
       font-weight: ${get('fontWeight.bold')};
       font-size: 32px;
       line-height: 46px;
       letter-spacing: -0.02em;
+      margin: 0;
       @media (min-width: ${get('breakpoints.tablet')}) {
         font-size: 64px;
         line-height: 96px;
+      }
+    `,
+  },
+  h2: {
+    tag: 'h2',
+    style: css`
+      font-family: Poppins;
+      font-weight: ${get('fontWeight.semibold')};
+      font-size: 28px;
+      line-height: 145%;
+      letter-spacing: -0.02em;
+      @media (min-width: ${get('breakpoints.tablet')}) {
+        font-size: 34px;
+        line-height: 51px;
+      }
+      @media (min-width: ${get('breakpoints.desktop')}) {
+        font-size: 40px;
+        line-height: 60px;
+      }
+    `,
+  },
+  h3: {
+    tag: 'h3',
+    style: css`
+      font-family: Poppins;
+      font-weight: ${get('fontweight.semibold')};
+      font-size: 21px;
+      line-height: 36px;
+      letter-spacing: -0.02em;
+      @media (min-width: ${get('breakpoints.desktop')}) {
+        font-size: 24px;
       }
     `,
   },
@@ -44,8 +76,16 @@ const variants = {
       font-family: Poppins;
       font-weight: ${get('fontWeight.bold')};
       letter-spacing: 0.03em;
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 11px;
+      line-height: 150%;
+      @media (min-width: ${get('breakpoints.desktop')}) {
+        font-size: 12px;
+        line-height: 150%;
+      }
+      @media (min-width: ${get('breakpoints.desktop')}) {
+        font-size: 14px;
+        line-height: 21px;
+      }
     `,
   },
   navigation: {
@@ -78,8 +118,12 @@ const variants = {
     tag: 'span',
     style: css`
       font-family: Inter;
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 13px;
+      line-height: 19.5px;
+      @media (min-width: ${get('breakpoints.tablet')}) {
+        font-size: 14px;
+        line-height: 21px;
+      }
     `,
   },
   ctaBig: {
@@ -114,6 +158,8 @@ Typography.propTypes = {
     'default',
     'body',
     'h1',
+    'h2',
+    'h3',
     'preTitle',
     'navigation',
     'smallText',

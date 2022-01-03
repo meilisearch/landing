@@ -1,5 +1,6 @@
 import heroAnimationDesktop from 'lotties/hero-desktop'
 import heroAnimationMobile from 'lotties/hero-mobile'
+import { Lightning, Plug, Puzzle, Typo } from 'components/icons'
 
 const getHomepageData = (t = () => {}) => ({
   hero: {
@@ -20,6 +21,39 @@ const getHomepageData = (t = () => {}) => ({
     lottie: {
       desktop: heroAnimationDesktop,
       mobile: heroAnimationMobile,
+    },
+  },
+  demo: {
+    demoImage: '/images/demo-search.png',
+    preTitle: t('demo.preTitle'),
+    title: t('demo.title'),
+    description: t('demo.description'),
+    keypoints: [
+      {
+        icon: Lightning,
+        title: t('demo.keypoints.0.title'),
+        description: t('demo.keypoints.0.description'),
+      },
+      {
+        icon: Plug,
+        title: t('demo.keypoints.1.title'),
+        description: t('demo.keypoints.1.description'),
+      },
+      {
+        icon: Puzzle,
+        title: t('demo.keypoints.2.title'),
+        description: t('demo.keypoints.2.description'),
+      },
+      {
+        icon: Typo,
+        title: t('demo.keypoints.3.title'),
+        description: t('demo.keypoints.3.description'),
+      },
+    ],
+    cta: {
+      title: t('demo.cta'),
+      url: '/',
+      target: '',
     },
   },
 })

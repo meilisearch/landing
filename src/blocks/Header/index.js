@@ -11,6 +11,9 @@ const Wrapper = styled.header`
   background-color: ${get('colors.valhalla')};
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 `
 
 const Header = ({ stargazers_count }) => {
