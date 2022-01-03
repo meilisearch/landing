@@ -1196,14 +1196,14 @@
     core-js-pure "^3.16.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@7.15.4", "@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.17", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
+"@babel/runtime@7.15.4":
   version "7.15.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.16.3":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.17", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.16.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
   version "7.16.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.5.tgz#7f3e34bf8bdbbadf03fbb7b1ea0d929569c9487a"
   integrity sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==
@@ -9105,10 +9105,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-next-i18next@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-10.0.1.tgz#f42239f276b3c7a3e62b9fd83ac5c21607c2f938"
-  integrity sha512-wcpZDip4Vt89dCHgN2EKeNyA5Ckz6NenPUVpzQMphmuXyTPMqmFkWyWbpMDdg4QuMiYiX98eTeY4RLGhUXzHmQ==
+next-i18next@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-10.1.0.tgz#fac7856ae6166d37323bf3140296390980662096"
+  integrity sha512-KvrXiSLRjsJrP8Uv+MFNuTXk1tlwaktce+3yTDtYqh/75BExLmV4Dr9om+zhAz8P+yMke5yhmR2Lnl0FV6mhsQ==
   dependencies:
     "@babel/runtime" "^7.13.17"
     "@types/hoist-non-react-statics" "^3.3.1"
