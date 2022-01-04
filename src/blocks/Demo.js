@@ -7,11 +7,16 @@ import Button from 'components/Button'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 
-const DesktopImage = styled.div`
+const LeftColumn = styled.div`
   display: none;
   @media (min-width: ${get('breakpoints.tablet')}) {
-    display: block;
-    grid-column: 1 / 5;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+    grid-column: 1 / 6;
+    overflow: visible;
   }
 `
 
@@ -24,7 +29,7 @@ const MobileImage = styled.div`
 `
 
 const Content = styled.div`
-  grid-column: 7 / -1;
+  grid-column: 6 / -1;
   color: ${get('colors.white')};
 `
 
@@ -46,7 +51,7 @@ const Keypoints = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 48px 32px;
   margin-top: 46px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.desktop')}) {
     margin-top: 82px;
     grid-gap: 82px 68px;
   }
@@ -84,28 +89,59 @@ const Keypoint = ({ keypoint, color, ...props }) => {
 }
 
 const Cta = styled(Button)`
-  margin-top: 80px;
+  margin-top: 46px;
+  @media (min-width: ${get('breakpoints.desktop')}) {
+    margin-top: 80px;
+  }
 `
 
 const Section = styled.section`
   padding: 0 16px;
   @media (min-width: ${get('breakpoints.tablet')}) {
+    position: relative;
     padding: 0;
+  }
+`
+
+const Decorator = styled.div`
+  display: none;
+
+  @media (min-width: ${get('breakpoints.tablet')}) {
+    display: block;
+    background: url(images/decorator1.svg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -16px;
+    bottom: 40px;
+    right: 24px;
+    height: auto;
+    width: 586px;
+    left: auto;
+    background-position: top right;
+  }
+
+  @media (min-width: ${get('breakpoints.desktop')}) {
+    width: 706px;
+    top: 40px;
+    background-position: right;
   }
 `
 
 const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
   <Section {...props}>
     <Grid style={{ alignItems: 'center' }}>
-      <DesktopImage>
-        <Image
-          src={demoProps.demoImage}
-          alt="Demo"
-          layout="responsive"
-          width={395}
-          height={460}
-        />
-      </DesktopImage>
+      <LeftColumn>
+        <Decorator />
+        <div style={{ width: '100%' }}>
+          <Image
+            src={demoProps.demoImage}
+            alt="Demo"
+            layout="responsive"
+            width={395}
+            height={460}
+          />
+        </div>
+      </LeftColumn>
       <Content>
         <PreTitle variant="preTitle" style={{ color: color }}>
           {demoProps.preTitle}
