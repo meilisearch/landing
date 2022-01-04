@@ -18,6 +18,9 @@ const Hero = styled(BaseHero)`
 const Demo = styled(BaseDemo)`
   margin-top: 102px;
   @media (min-width: ${get('breakpoints.tablet')}) {
+    margin-top: 178px;
+  }
+  @media (min-width: ${get('breakpoints.desktop')}) {
     margin-top: 266px;
   }
 `
