@@ -32,5 +32,17 @@
       }
     ],
     "cta": "Start now"
+  },
+  "openSource": {
+    "preTitle": "Open Source",
+    "title": "Nothing <strong>good</strong> is built alone",
+    "description": "Join the MeiliSquad, our fast growing community.",
+    "cta": "Browse on Github",
+    "keypoints": [
+      { "title": "Downloads" },
+      { "title": "Contributors" },
+      { "title": "Servers in Production" },
+      { "title": "Developer Community" }
+    ]
   }
 }

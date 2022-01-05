@@ -4,6 +4,7 @@ import Grid from 'components/Grid'
 import get from 'utils/get'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
+import PreTitle from 'components/PreTitle'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 
@@ -31,10 +32,6 @@ const MobileImage = styled.div`
 const Content = styled.div`
   grid-column: 6 / -1;
   color: ${get('colors.white')};
-`
-
-const PreTitle = styled(Typography)`
-  text-transform: uppercase;
 `
 
 const Title = styled(Typography)`
@@ -143,9 +140,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
         </div>
       </LeftColumn>
       <Content>
-        <PreTitle variant="preTitle" style={{ color: color }}>
-          {demoProps.preTitle}
-        </PreTitle>
+        <PreTitle color={color} preTitle={demoProps.preTitle} />
         <Title variant="h2">{demoProps.title}</Title>
         <Description>{demoProps.description}</Description>
         <MobileImage>

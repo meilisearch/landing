@@ -1,5 +1,6 @@
 import heroAnimationDesktop from 'lotties/hero-desktop'
 import heroAnimationMobile from 'lotties/hero-mobile'
+import openSource from 'lotties/opensource'
 import { Lightning, Plug, Puzzle, Typo } from 'components/icons'
 
 const getHomepageData = (t = () => {}) => ({
@@ -55,6 +56,35 @@ const getHomepageData = (t = () => {}) => ({
       url: '/',
       target: '',
     },
+  },
+  openSource: {
+    preTitle: t('openSource.preTitle'),
+    title: t('openSource.title'),
+    description: t('openSource.description'),
+    cta: {
+      title: t('openSource.cta'),
+      url: 'https://github.com/meilisearch/MeiliSearch',
+      target: '',
+    },
+    lottie: openSource,
+    keypoints: [
+      {
+        number: '10M',
+        title: t('openSource.keypoints.0.title'),
+      },
+      {
+        number: '300',
+        title: t('openSource.keypoints.1.title'),
+      },
+      {
+        number: '3000',
+        title: t('openSource.keypoints.2.title'),
+      },
+      {
+        number: '23K',
+        title: t('openSource.keypoints.3.title'),
+      },
+    ],
   },
 })
 

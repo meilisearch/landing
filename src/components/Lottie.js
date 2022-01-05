@@ -9,7 +9,7 @@ const Lottie = styled(BaseLottie)`
   inset: 0;
 `
 
-const LottieAnimation = ({ animation, ...props }) => {
+const LottieAnimation = ({ animation, options = {}, ...props }) => {
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -17,6 +17,7 @@ const LottieAnimation = ({ animation, ...props }) => {
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },
+    ...options,
   }
   return (
     <Lottie options={lottieOptions} height="100%" width="100%" {...props} />
