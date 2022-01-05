@@ -12,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  #__next {
+    overflow: hidden;
+  }
 `
 
 export default GlobalStyle

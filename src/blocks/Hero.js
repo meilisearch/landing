@@ -53,22 +53,25 @@ const Buttons = styled.div`
   }
 `
 
+const RightColumn = styled.div`
+  grid-column: 8 / -1;
+  position: relative;
+`
+
 const DesktopAnimation = styled.div`
   display: none;
   @media (min-width: ${get('breakpoints.tablet')}) {
     display: block;
     position: absolute;
-    right: -8px;
-    transform: translateY(-50%);
+    left: 0;
     background-size: contain;
     width: 450px;
     height: 394px;
-    top: 63%;
   }
   @media (min-width: ${get('breakpoints.desktop')}) {
     width: 644px;
     height: 564px;
-    top: 66%;
+    top: -16px;
   }
 `
 
@@ -112,10 +115,12 @@ const Hero = ({ heroProps, ...props }) => (
           </Button>
         </Buttons>
       </Content>
+      <RightColumn>
+        <DesktopAnimation>
+          <Lottie animation={heroProps.lottie.desktop} />
+        </DesktopAnimation>
+      </RightColumn>
     </Grid>
-    <DesktopAnimation>
-      <Lottie animation={heroProps.lottie.desktop} />
-    </DesktopAnimation>
   </section>
 )
 

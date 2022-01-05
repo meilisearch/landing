@@ -7,8 +7,11 @@ const Grid = styled.div`
     padding: 0 16px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 8px;
-    max-width: 1080px;
+    grid-gap: 16px;
+    max-width: 896px;
+  }
+  @media (min-width: ${get('breakpoints.tablet')}) {
+    max-width: 1136px;
   }
 `
 
