@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${get('colors.valhalla')};
   }
   * {
-    font-family: 'Work Sans';
     box-sizing: border-box;
   }
   a {
