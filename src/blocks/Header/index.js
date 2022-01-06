@@ -7,13 +7,18 @@ import DesktopHeader from './DesktopHeader'
 import MobileHeader from './MobileHeader'
 
 const Wrapper = styled.header`
-  height: 148px;
+  height: 113px;
   background-color: ${get('colors.valhalla')};
   display: flex;
   justify-content: center;
   position: sticky;
   top: 0;
   z-index: 50;
+
+  @media (min-width: ${get('breakpoints.lg')}) {
+    height: 46px;
+    margin-top: 40px;
+  }
 `
 
 const Header = ({ stargazers_count }) => {

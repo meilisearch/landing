@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import GithubButton from 'components/GithubButton'
-import Container from 'components/Container'
+import BaseGrid from 'components/Grid'
 import { Hamburger, Cross } from 'components/icons'
 import get from 'utils/get'
 import Logo from './Logo'
@@ -14,13 +14,14 @@ import {
   DialogContent,
 } from 'components/Dialog'
 
-const Grid = styled(Container)`
+const Grid = styled(BaseGrid)`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 56px 16px 28px;
+  padding: 56px 0 28px;
 
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
   }
 `
