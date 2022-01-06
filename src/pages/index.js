@@ -43,6 +43,14 @@ const OpenSource = styled(BaseOpenSource)`
   }
 `
 
+const PageContent = styled.div`
+  overflow: hidden;
+  padding: 0 16px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    padding: 0 32px;
+  }
+`
+
 const Home = ({ stargazers_count }) => {
   const { t } = useTranslation('homepage')
   const { hero, demo, openSource } = getHomepageData(t)
@@ -53,9 +61,14 @@ const Home = ({ stargazers_count }) => {
         <meta name="description" content={t('meta.description')} />
       </Head>
       <Header stargazers_count={formatStargazers(stargazers_count)} />
-      <Hero heroProps={hero} />
-      <Demo demoProps={demo} color={get('colors.lila')} />
-      <OpenSource openSourceProps={openSource} color={get('colors.hotPink')} />
+      <PageContent>
+        <Hero heroProps={hero} />
+        <Demo demoProps={demo} color={get('colors.lila')} />
+        <OpenSource
+          openSourceProps={openSource}
+          color={get('colors.hotPink')}
+        />
+      </PageContent>
     </>
   )
 }

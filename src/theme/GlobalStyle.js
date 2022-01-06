@@ -12,13 +12,6 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
-  #__next {
-    overflow: hidden;
-    padding: 0 16px;
-    @media (min-width: ${get('breakpoints.md')}) {
-      padding: 0 32px;
-    }
-  }
 `
 
 export default GlobalStyle
