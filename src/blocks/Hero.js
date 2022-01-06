@@ -34,12 +34,12 @@ const Title = styled(Typography)`
 `
 
 const Description = styled(Typography)`
-  margin-top: 28px;
   display: block;
   text-align: center;
   @media (min-width: ${get('breakpoints.md')}) {
     padding: 0;
     text-align: left;
+    margin-top: 28px;
   }
 
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -97,9 +97,9 @@ const DesktopAnimation = styled.div`
 `
 
 const MobileAnimation = styled.div`
-  width: 444px;
+  width: 403px;
   height: 481px;
-  margin: 0 -68px 0 auto;
+  margin: -32px 16px 0 auto;
 
   @media (min-width: ${get('breakpoints.md')}) {
     display: none;
