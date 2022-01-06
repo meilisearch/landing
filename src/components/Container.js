@@ -6,12 +6,8 @@ const Container = styled.div`
   padding: 0;
   display: flex;
   width: 100%;
-  padding: 0 16px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
-    padding: 0 26px;
-  }
-  @media (min-width: ${get('breakpoints.desktop')}) {
-    width: 1328px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    max-width: 1328px;
   }
 `
 

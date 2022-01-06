@@ -15,27 +15,30 @@ import get from 'utils/get'
 
 const Hero = styled(BaseHero)`
   padding-top: 54px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
-    padding-top: 148px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    padding-top: 122px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding-top: 180px;
   }
 `
 
 const Demo = styled(BaseDemo)`
   margin-top: 102px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 178px;
   }
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     margin-top: 266px;
   }
 `
 
 const OpenSource = styled(BaseOpenSource)`
   margin-top: 24px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 42px;
   }
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     margin-top: 140px;
   }
 `

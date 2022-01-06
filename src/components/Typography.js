@@ -18,7 +18,7 @@ const variants = {
       font-family: Inter;
       font-size: 15px;
       line-height: 21px;
-      @media (min-width: ${get('breakpoints.tablet')}) {
+      @media (min-width: ${get('breakpoints.md')}) {
         font-size: 16px;
         line-height: 24px;
       }
@@ -30,10 +30,14 @@ const variants = {
       font-family: Poppins;
       font-weight: ${get('fontWeight.bold')};
       font-size: 32px;
-      line-height: 46px;
+      line-height: 145%;
       letter-spacing: -0.02em;
       margin: 0;
-      @media (min-width: ${get('breakpoints.tablet')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
+        font-size: 50px;
+        line-height: 150%;
+      }
+      @media (min-width: ${get('breakpoints.xl')}) {
         font-size: 64px;
         line-height: 96px;
       }
@@ -47,11 +51,11 @@ const variants = {
       font-size: 28px;
       line-height: 145%;
       letter-spacing: -0.02em;
-      @media (min-width: ${get('breakpoints.tablet')}) {
+      @media (min-width: ${get('breakpoints.md')}) {
         font-size: 34px;
         line-height: 51px;
       }
-      @media (min-width: ${get('breakpoints.desktop')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 40px;
         line-height: 60px;
       }
@@ -65,7 +69,7 @@ const variants = {
       font-size: 21px;
       line-height: 36px;
       letter-spacing: -0.02em;
-      @media (min-width: ${get('breakpoints.desktop')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 24px;
       }
     `,
@@ -78,11 +82,11 @@ const variants = {
       letter-spacing: 0.03em;
       font-size: 11px;
       line-height: 150%;
-      @media (min-width: ${get('breakpoints.desktop')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 12px;
         line-height: 150%;
       }
-      @media (min-width: ${get('breakpoints.desktop')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 14px;
         line-height: 21px;
       }
@@ -95,7 +99,7 @@ const variants = {
       font-weight: ${get('fontWeight.medium')};
       font-size: 15px;
       line-height: 21px;
-      @media (min-width: ${get('breakpoints.desktop')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 18px;
         line-height: 22px;
       }
@@ -108,7 +112,7 @@ const variants = {
       font-weight: ${get('fontWeight.medium')};
       font-size: 13px;
       line-height: 19.5px;
-      @media (min-width: ${get('breakpoints.desktop')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 14px;
         line-height: 21px;
       }
@@ -120,7 +124,7 @@ const variants = {
       font-family: Inter;
       font-size: 13px;
       line-height: 19.5px;
-      @media (min-width: ${get('breakpoints.tablet')}) {
+      @media (min-width: ${get('breakpoints.md')}) {
         font-size: 14px;
         line-height: 21px;
       }
