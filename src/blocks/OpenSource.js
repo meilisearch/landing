@@ -15,10 +15,10 @@ const Section = styled.section`
   justify-content: center;
   color: ${get('colors.white')};
 
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     padding: 0 27px;
   }
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     padding: 0 54px;
   }
 `
@@ -29,10 +29,10 @@ const ColoredContainer = styled.div`
   background-color: ${get('colors.valhalla.700')};
   border-radius: 16px;
   padding: 51px 40px 40px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     padding: 82px 16px;
   }
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     padding: 98px 16px 106px;
   }
 `
@@ -51,7 +51,7 @@ const Title = styled(Typography)`
 const Description = styled(Typography)`
   display: block;
   margin-top: 16px;
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     margin-top: 32px;
   }
 `
@@ -63,7 +63,7 @@ const Keypoints = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 0;
     grid-column: 6 / -1;
   }
@@ -83,12 +83,12 @@ const Number = styled.span`
   font-size: 50px;
   line-height: 75px;
 
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     font-size: 64px;
     line-height: 96px;
   }
 
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     font-size: 72px;
     line-height: 108px;
   }
@@ -108,7 +108,7 @@ const Cta = ({ cta, color, ...props }) => (
 
 const DesktopCta = styled(Cta)`
   display: none;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     display: inline-flex;
     margin-top: 40px;
   }
@@ -117,7 +117,7 @@ const DesktopCta = styled(Cta)`
 const MobileCta = styled(Cta)`
   display: inline-flex;
   margin-top: 45px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     display: none;
   }
 `

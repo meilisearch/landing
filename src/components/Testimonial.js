@@ -15,7 +15,7 @@ const Card = styled.article`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     height: 386px;
     width: 252px;
   }
@@ -24,7 +24,7 @@ const Card = styled.article`
 const TwitterIcon = styled(Twitter)`
   height: 18px;
   color: ${get('colors.valhalla.200')};
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     height: 24px;
   }
 `
@@ -45,7 +45,7 @@ const ProfilePicture = styled(Image)`
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     width: 56px;
     height: 56px;
   }

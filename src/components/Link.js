@@ -7,7 +7,7 @@ const StyledLink = styled.a`
   color: inherit;
   transition: color 300ms;
   outline: none;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     &:hover,
     &:focus {
       color: ${get('colors.hotPink')};

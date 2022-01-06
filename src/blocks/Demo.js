@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 
 const LeftColumn = styled.div`
   display: none;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     position: relative;
     height: 100%;
     display: flex;
@@ -24,7 +24,7 @@ const LeftColumn = styled.div`
 const MobileImage = styled.div`
   display: block;
   margin-top: 28px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     display: none;
   }
 `
@@ -48,7 +48,7 @@ const Keypoints = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 48px 32px;
   margin-top: 46px;
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     margin-top: 82px;
     grid-gap: 82px 68px;
   }
@@ -62,10 +62,10 @@ const KeypointDescription = styled(Typography)`
 
 const StyledIcon = styled.div`
   height: 22px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     height: 28px;
   }
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     height: 32px;
   }
 `
@@ -87,14 +87,14 @@ const Keypoint = ({ keypoint, color, ...props }) => {
 
 const Cta = styled(Button)`
   margin-top: 46px;
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     margin-top: 80px;
   }
 `
 
 const Section = styled.section`
   padding: 0 16px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     position: relative;
     padding: 0;
   }
@@ -103,7 +103,7 @@ const Section = styled.section`
 const Decorator = styled.div`
   display: none;
 
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.md')}) {
     display: block;
     background: url(images/decorator1.svg) no-repeat;
     background-size: contain;
@@ -117,7 +117,7 @@ const Decorator = styled.div`
     background-position: top right;
   }
 
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     width: 706px;
     top: 40px;
     background-position: right;
