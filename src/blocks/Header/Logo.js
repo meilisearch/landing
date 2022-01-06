@@ -5,11 +5,11 @@ import get from 'utils/get'
 
 const MeiliSearchName = styled.div`
   margin-left: 12px;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
   }
 
-  @media (min-width: ${get('breakpoints.desktop')}) {
+  @media (min-width: ${get('breakpoints.xl')}) {
     display: block;
   }
 `

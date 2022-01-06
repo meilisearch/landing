@@ -9,11 +9,10 @@ import Ctas from './Ctas'
 
 const Grid = styled(Container)`
   display: none;
-  @media (min-width: ${get('breakpoints.tablet')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 46px 26px;
   }
 `
 
