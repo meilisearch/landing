@@ -16,8 +16,9 @@ const Wrapper = styled.header`
   z-index: 50;
 
   @media (min-width: ${get('breakpoints.lg')}) {
-    height: 46px;
-    margin-top: 40px;
+    height: 118px;
+    padding-top: 40px;
+    padding-bottom: 32px;
   }
 `
 
