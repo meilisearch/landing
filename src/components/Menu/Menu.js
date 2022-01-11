@@ -7,7 +7,7 @@ const MenuContent = styled.div`
   overflow: hidden;
   transition: transform 300ms, opacity 300ms;
   margin-top: 16px;
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     border: 1px solid ${get('colors.valhalla.400')};
     border-radius: 8px;
     background-color: ${get('colors.valhalla')};

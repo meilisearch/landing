@@ -16,7 +16,7 @@ const Links = styled.div`
     margin: 42px 0 0 0;
   }
 
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     flex-direction: row;
     > * + * {
       margin: 0 0 0 58px;
@@ -26,7 +26,7 @@ const Links = styled.div`
 
 const DesktopMenuWrapper = styled.div`
   display: none;
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: flex;
   }
 `
@@ -54,7 +54,7 @@ const DesktopSubmenu = ({ link }) => {
 const MobileMenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
   }
 `
