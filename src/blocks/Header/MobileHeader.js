@@ -35,7 +35,7 @@ const Backdrop = styled(DialogBackdrop)`
   padding-top: 64px;
 `
 
-const DialogFooter = styled(Ctas)`
+const DialogFooter = styled(Grid)`
   position: sticky;
   bottom: 0;
   height: 128px;
@@ -52,11 +52,12 @@ const Content = styled(DialogContent)`
   flex-direction: column;
 `
 
-const Scrollable = styled.div`
+const Scrollable = styled(Grid)`
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
 `
 
 const MobileHeader = ({ headerProps, stargazers_count }) => {
@@ -76,7 +77,9 @@ const MobileHeader = ({ headerProps, stargazers_count }) => {
             <MenuLinks headerProps={headerProps} />
             <GithubButton count={stargazers_count} style={{ marginTop: 44 }} />
           </Scrollable>
-          <DialogFooter headerProps={headerProps} />
+          <DialogFooter>
+            <Ctas headerProps={headerProps} />
+          </DialogFooter>
         </Content>
       </Backdrop>
     </Grid>

@@ -12,7 +12,7 @@ const Content = styled.div`
   align-items: flex-start;
   background-color: transparent;
   transition: background-color 300ms;
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     padding: 16px 28px;
   }
 `
@@ -21,7 +21,7 @@ const StyledMenuItem = styled.a`
   display: block;
   outline: none;
 
-  @media (max-width: ${get('breakpoints.md')}) {
+  @media (max-width: ${get('breakpoints.lg')}) {
     &:not(:first-child) {
       margin-top: 24px;
     }
@@ -29,7 +29,7 @@ const StyledMenuItem = styled.a`
 
   &:hover,
   &:focus {
-    @media (min-width: ${get('breakpoints.md')}) {
+    @media (min-width: ${get('breakpoints.lg')}) {
       ${Content} {
         background-color: ${get('colors.valhalla.700')};
         span:first-child {
@@ -51,7 +51,7 @@ const StyledMenuItem = styled.a`
 
 const Title = styled(Typography)`
   color: ${get('colors.white')};
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     color: ${get('colors.ashes')};
   }
 `
@@ -59,7 +59,7 @@ const Title = styled(Typography)`
 const SubTitle = styled(Typography)`
   display: none;
   color: ${get('colors.valhalla.100')};
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: inline-block;
   }
 `
@@ -76,7 +76,7 @@ const StyledIcon = styled.img`
   width: 16px;
   flex-shrink: 0;
   color: ${get('colors.hotPink')};
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     color: white;
   }
 `
