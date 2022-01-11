@@ -14,17 +14,20 @@ import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
 
 const Hero = styled(BaseHero)`
-  padding-top: 54px;
+  margin-top: 54px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 98px;
+  }
   @media (min-width: ${get('breakpoints.lg')}) {
-    padding-top: 122px;
+    margin-top: 148px;
   }
   @media (min-width: ${get('breakpoints.xl')}) {
-    padding-top: 180px;
+    margin-top: 250px;
   }
 `
 
 const Demo = styled(BaseDemo)`
-  margin-top: 102px;
+  margin-top: 72px;
   @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 178px;
   }

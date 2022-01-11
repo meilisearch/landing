@@ -48,14 +48,14 @@ const variants = {
     style: css`
       font-family: Poppins;
       font-weight: ${get('fontWeight.semibold')};
-      font-size: 28px;
-      line-height: 145%;
       letter-spacing: -0.02em;
-      @media (min-width: ${get('breakpoints.md')}) {
+      font-size: 28px;
+      line-height: 40px;
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 34px;
         line-height: 51px;
       }
-      @media (min-width: ${get('breakpoints.lg')}) {
+      @media (min-width: ${get('breakpoints.xl')}) {
         font-size: 40px;
         line-height: 60px;
       }
@@ -67,10 +67,11 @@ const variants = {
       font-family: Poppins;
       font-weight: ${get('fontweight.semibold')};
       font-size: 21px;
-      line-height: 36px;
+      line-height: 30px;
       letter-spacing: -0.02em;
-      @media (min-width: ${get('breakpoints.lg')}) {
+      @media (min-width: ${get('breakpoints.xl')}) {
         font-size: 24px;
+        line-height: 36px;
       }
     `,
   },
@@ -124,7 +125,7 @@ const variants = {
       font-family: Inter;
       font-size: 13px;
       line-height: 19.5px;
-      @media (min-width: ${get('breakpoints.md')}) {
+      @media (min-width: ${get('breakpoints.lg')}) {
         font-size: 14px;
         line-height: 21px;
       }
