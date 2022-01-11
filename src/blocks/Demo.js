@@ -10,27 +10,40 @@ import PropTypes from 'prop-types'
 
 const LeftColumn = styled.div`
   display: none;
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;
-    padding-right: 80px;
+    padding-right: 38px;
     grid-column: 1 / 6;
     overflow: visible;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding-right: 68px;
   }
 `
 
 const MobileImage = styled.div`
   display: block;
-  margin-top: 28px;
-  @media (min-width: ${get('breakpoints.md')}) {
+  margin: 48px auto 0;
+  max-width: 284px;
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
   }
 `
 
 const Content = styled.div`
-  grid-column: 6 / -1;
+  grid-column: 1 / -1;
+  @media (min-width: ${get('breakpoints.md')}) {
+    grid-column: 3 / 11;
+    text-align: center;
+  }
+
+  @media (min-width: ${get('breakpoints.lg')}) {
+    grid-column: 6 / -1;
+    text-align: left;
+  }
   color: ${get('colors.white')};
 `
 
@@ -47,10 +60,12 @@ const Keypoints = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 48px 32px;
-  margin-top: 46px;
+  margin-top: 48px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    text-align: left;
+  }
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 82px;
-    grid-gap: 82px 68px;
+    grid-gap: 75px 55px;
   }
 `
 
@@ -61,12 +76,12 @@ const KeypointDescription = styled(Typography)`
 `
 
 const StyledIcon = styled.div`
-  height: 22px;
-  @media (min-width: ${get('breakpoints.md')}) {
-    height: 28px;
-  }
+  height: 25px;
   @media (min-width: ${get('breakpoints.lg')}) {
-    height: 32px;
+    height: 30px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    height: 35px;
   }
 `
 
@@ -85,30 +100,35 @@ const Keypoint = ({ keypoint, color, ...props }) => {
   )
 }
 
-const Cta = styled(Button)`
-  margin-top: 46px;
+const Cta = styled.div`
+  text-align: center;
+  margin-top: 28px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 48px;
+  }
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 80px;
+    text-align: left;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 72px;
   }
 `
 
 const Section = styled.section`
-  padding: 0 16px;
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     position: relative;
-    padding: 0;
   }
 `
 
 const Decorator = styled.div`
   display: none;
 
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     display: block;
     background: url(images/decorator1.svg) no-repeat;
     background-size: contain;
     position: absolute;
-    top: -16px;
+    top: -24px;
     bottom: 40px;
     right: 24px;
     height: auto;
@@ -117,10 +137,19 @@ const Decorator = styled.div`
     background-position: top right;
   }
 
-  @media (min-width: ${get('breakpoints.lg')}) {
+  @media (min-width: ${get('breakpoints.xl')}) {
     width: 706px;
     top: 40px;
     background-position: right;
+  }
+`
+
+const SearchImage = styled.div`
+  width: 100%;
+  margin-right: -38px;
+  margin-top: -168px;
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: -124px;
   }
 `
 
@@ -129,7 +158,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
     <Grid style={{ alignItems: 'center' }}>
       <LeftColumn>
         <Decorator />
-        <div style={{ width: '100%' }}>
+        <SearchImage>
           <Image
             src={demoProps.demoImage}
             alt="Demo"
@@ -137,7 +166,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
             width={395}
             height={460}
           />
-        </div>
+        </SearchImage>
       </LeftColumn>
       <Content>
         <PreTitle color={color} preTitle={demoProps.preTitle} />
@@ -148,8 +177,8 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
             src={demoProps.demoImage}
             alt="Demo"
             layout="responsive"
-            width={395}
-            height={460}
+            width={326}
+            height={293}
           />
         </MobileImage>
         <Keypoints>
@@ -157,12 +186,14 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
             <Keypoint key={keypoint.title} keypoint={keypoint} color={color} />
           ))}
         </Keypoints>
-        <Cta
-          color={color}
-          href={demoProps.cta.url}
-          target={demoProps.cta.target}
-        >
-          <Typography>{demoProps.cta.title}</Typography>
+        <Cta>
+          <Button
+            color={color}
+            href={demoProps.cta.url}
+            target={demoProps.cta.target}
+          >
+            <Typography>{demoProps.cta.title}</Typography>
+          </Button>
         </Cta>
       </Content>
     </Grid>

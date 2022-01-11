@@ -25,7 +25,7 @@ const getHomepageData = (t = () => {}) => ({
     },
   },
   demo: {
-    demoImage: '/images/demo-search.png',
+    demoImage: '/images/demo-search.svg',
     preTitle: t('demo.preTitle'),
     title: t('demo.title'),
     description: t('demo.description'),

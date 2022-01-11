@@ -19,16 +19,7 @@ const Grid = styled(BaseGrid)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 56px 16px 28px;
-  margin: 0 -16px;
-  max-width: 536px;
-
-  @media (min-width: ${get('breakpoints.md')}) {
-    max-width: 960px;
-    margin: 0 -32px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+  padding: 56px 0 28px;
 
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
