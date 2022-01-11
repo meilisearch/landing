@@ -37,12 +37,15 @@ const Demo = styled(BaseDemo)`
 `
 
 const OpenSource = styled(BaseOpenSource)`
-  margin-top: 24px;
+  margin-top: 30px;
   @media (min-width: ${get('breakpoints.md')}) {
-    margin-top: 42px;
+    margin-top: 72px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 140px;
+    margin-top: 120px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 192px;
   }
 `
 

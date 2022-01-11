@@ -10,35 +10,45 @@ import Lottie from 'components/Lottie'
 import { useInView } from 'react-intersection-observer'
 
 const Section = styled.section`
-  padding: 0 16px;
   display: flex;
   justify-content: center;
   color: ${get('colors.white')};
-
-  @media (min-width: ${get('breakpoints.md')}) {
-    padding: 0 27px;
-  }
   @media (min-width: ${get('breakpoints.lg')}) {
-    padding: 0 54px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 `
 
 const ColoredContainer = styled.div`
-  max-width: 1276px;
+  max-width: 504px;
   width: 100%;
   background-color: ${get('colors.valhalla.700')};
   border-radius: 16px;
-  padding: 51px 40px 40px;
+  padding: 51px 0 40px;
   @media (min-width: ${get('breakpoints.md')}) {
-    padding: 82px 16px;
+    padding: 82px 0;
+    max-width: 740px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    padding: 98px 16px 106px;
+    max-width: 970px;
+    padding: 120px 0;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    max-width: 1332px;
   }
 `
 
 const Text = styled.div`
-  grid-column: 1 / 6;
+  grid-column: 1 / 5;
+  padding: 0 0 0 40px;
+  z-index: 1;
+  @media (min-width: ${get('breakpoints.md')}) {
+    grid-column: 2 / 6;
+    padding: 0;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    grid-column: 1 / 6;
+  }
 `
 
 const Title = styled(Typography)`
@@ -57,6 +67,8 @@ const Description = styled(Typography)`
 `
 
 const Keypoints = styled.div`
+  grid-column: 1 / -1;
+  padding: 0 40px;
   position: relative;
   overflow: visible;
   margin-top: 52px;
@@ -65,7 +77,10 @@ const Keypoints = styled.div`
   flex-wrap: wrap;
   @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 0;
-    grid-column: 6 / -1;
+    grid-gap: 0 16px;
+
+    padding: 0;
+    grid-column: 7 / -1;
   }
 `
 
@@ -74,6 +89,9 @@ const Keypoint = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (min-width: ${get('breakpoints.md')}) {
+    padding-right: 24px;
+  }
 `
 
 const Number = styled.span`
@@ -83,12 +101,12 @@ const Number = styled.span`
   font-size: 50px;
   line-height: 75px;
 
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     font-size: 64px;
     line-height: 96px;
   }
 
-  @media (min-width: ${get('breakpoints.lg')}) {
+  @media (min-width: ${get('breakpoints.xl')}) {
     font-size: 72px;
     line-height: 108px;
   }
@@ -114,8 +132,9 @@ const DesktopCta = styled(Cta)`
   }
 `
 
-const MobileCta = styled(Cta)`
-  display: inline-flex;
+const MobileCta = styled.div`
+  grid-column: 1 / -1;
+  text-align: center;
   margin-top: 45px;
   @media (min-width: ${get('breakpoints.md')}) {
     display: none;
@@ -128,6 +147,11 @@ const Animation = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    width: 143%;
+    left: 46%;
+  }
 `
 
 const OpenSource = ({
@@ -136,7 +160,7 @@ const OpenSource = ({
   ...props
 }) => {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.5,
   })
 
   return (
@@ -172,9 +196,9 @@ const OpenSource = ({
               </Keypoint>
             ))}
           </Keypoints>
-          <div style={{ textAlign: 'center' }}>
-            <MobileCta cta={OSProps.cta} color={color} />
-          </div>
+          <MobileCta>
+            <Cta cta={OSProps.cta} color={color} />
+          </MobileCta>
         </Grid>
       </ColoredContainer>
     </Section>

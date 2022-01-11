@@ -64,7 +64,7 @@ const getHomepageData = (t = () => {}) => ({
     cta: {
       title: t('openSource.cta'),
       url: 'https://github.com/meilisearch/MeiliSearch',
-      target: '',
+      target: '_blank',
     },
     lottie: openSource,
     keypoints: [
