@@ -14,6 +14,7 @@ import {
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
 import Typography from 'components/Typography'
+import PageContent from 'components/PageContent'
 
 const Hero = styled(BaseHero)`
   margin-top: 54px;
@@ -48,14 +49,6 @@ const OpenSource = styled(BaseOpenSource)`
   }
   @media (min-width: ${get('breakpoints.xl')}) {
     margin-top: 192px;
-  }
-`
-
-const PageContent = styled.div`
-  overflow: hidden;
-  padding: 0 16px;
-  @media (min-width: ${get('breakpoints.md')}) {
-    padding: 0 32px;
   }
 `
 
