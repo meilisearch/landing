@@ -9,9 +9,11 @@ import {
   Hero as BaseHero,
   Demo as BaseDemo,
   OpenSource as BaseOpenSource,
+  Step1 as BaseStep1,
 } from 'blocks'
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
+import Typography from 'components/Typography'
 
 const Hero = styled(BaseHero)`
   margin-top: 54px;
@@ -57,9 +59,19 @@ const PageContent = styled.div`
   }
 `
 
+const Step1 = styled(BaseStep1)`
+  margin-top: 80px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 120px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 288px;
+  }
+`
+
 const Home = ({ stargazers_count }) => {
   const { t } = useTranslation('homepage')
-  const { hero, demo, openSource } = getHomepageData(t)
+  const { hero, demo, openSource, steps } = getHomepageData(t)
   return (
     <>
       <Head>
@@ -74,6 +86,28 @@ const Home = ({ stargazers_count }) => {
           openSourceProps={openSource}
           color={get('colors.hotPink')}
         />
+        <Step1
+          step1Props={steps[0]}
+          steps={steps.map(step => ({
+            preTitle: step.preTitle,
+            title: step.title,
+          }))}
+          color={get('colors.lila')}
+        />
+        <div style={{ color: get('colors.white') }}>
+          <div style={{ padding: '200px 0' }}>
+            <Typography variant="h1" id={steps[1].title}>
+              {steps[1].title}
+            </Typography>
+            <Typography>This is just a test</Typography>
+          </div>
+          <div style={{ padding: '200px 0' }}>
+            <Typography variant="h1" id={steps[2].title}>
+              {steps[2].title}
+            </Typography>
+            <Typography>This is just a test</Typography>
+          </div>
+        </div>
       </PageContent>
     </>
   )

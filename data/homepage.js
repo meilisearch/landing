@@ -86,6 +86,28 @@ const getHomepageData = (t = () => {}) => ({
       },
     ],
   },
+  steps: [
+    {
+      preTitle: t('steps.0.preTitle'),
+      title: t('steps.0.title'),
+      description: t('steps.0.description'),
+      cta: {
+        title: t('steps.0.cta'),
+        url: 'https://github.com/meilisearch/integration-guides',
+        target: '_blank',
+      },
+      image: '/images/step1.svg',
+      mobileImage: '/images/step1-mobile.svg',
+    },
+    {
+      preTitle: t('steps.1.preTitle'),
+      title: t('steps.1.title'),
+    },
+    {
+      preTitle: t('steps.2.preTitle'),
+      title: t('steps.2.title'),
+    },
+  ],
 })
 
 export default getHomepageData

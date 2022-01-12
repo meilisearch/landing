@@ -44,5 +44,21 @@
       { "title": "Servers in Production" },
       { "title": "Developer Community" }
     ]
-  }
+  },
+  "steps": [
+    {
+      "preTitle": "Step 1",
+      "title": "Connect",
+      "description": "In less than 5 minutes, your data is ready to be searched. Connect your codebase to Meilisearch with our official libraries.",
+      "cta": "See al integrations"
+    },
+    {
+      "preTitle": "Step 2",
+      "title": "Customize"
+    },
+    {
+      "preTitle": "Step 3",
+      "title": "Deploy"
+    }
+  ]
 }
