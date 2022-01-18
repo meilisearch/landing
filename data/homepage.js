@@ -1,7 +1,18 @@
 import heroAnimationDesktop from 'lotties/hero-desktop'
 import heroAnimationMobile from 'lotties/hero-mobile'
 import openSource from 'lotties/opensource'
-import { Lightning, Plug, Puzzle, Typo } from 'components/icons'
+import {
+  Lightning,
+  Plug,
+  Puzzle,
+  Typo,
+  Chat,
+  Earth,
+  Filter,
+  Key,
+  SortBy,
+  Wrench,
+} from 'components/icons'
 
 const getHomepageData = (t = () => {}) => ({
   hero: {
@@ -102,6 +113,45 @@ const getHomepageData = (t = () => {}) => ({
     {
       preTitle: t('steps.1.preTitle'),
       title: t('steps.1.title'),
+      description: t('steps.1.description'),
+      cards: [
+        {
+          icon: Filter,
+          title: t('steps.1.cards.0.title'),
+          description: t('steps.1.cards.0.description'),
+        },
+        {
+          icon: Earth,
+          title: t('steps.1.cards.1.title'),
+          description: t('steps.1.cards.1.description'),
+        },
+        {
+          icon: Chat,
+          title: t('steps.1.cards.2.title'),
+          description: t('steps.1.cards.2.description'),
+        },
+        {
+          icon: SortBy,
+          title: t('steps.1.cards.3.title'),
+          description: t('steps.1.cards.3.description'),
+        },
+        {
+          icon: Wrench,
+          title: t('steps.1.cards.4.title'),
+          description: t('steps.1.cards.4.description'),
+        },
+        {
+          icon: Key,
+          title: t('steps.1.cards.5.title'),
+          description: t('steps.1.cards.5.description'),
+        },
+      ],
+      cta: {
+        title: t('steps.1.cta'),
+        url: '/',
+        target: '',
+      },
+      mobileImage: '/images/step2-mobile.svg',
     },
     {
       preTitle: t('steps.2.preTitle'),

@@ -5,9 +5,12 @@ import PreTitle from 'components/PreTitle'
 import get from 'utils/get'
 
 const PreTitlesWrapper = styled.div`
-  display: flex;
-  > div + div {
-    margin-left: 30px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    position: relative;
+    display: flex;
+    > div + div {
+      margin-left: 30px;
+    }
   }
 `
 

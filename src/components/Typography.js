@@ -65,7 +65,7 @@ const variants = {
     tag: 'h3',
     style: css`
       font-family: Poppins;
-      font-weight: ${get('fontweight.semibold')};
+      font-weight: ${get('fontWeight.semibold')};
       font-size: 21px;
       line-height: 30px;
       letter-spacing: -0.02em;
@@ -110,7 +110,6 @@ const variants = {
     tag: 'span',
     style: css`
       font-family: Inter;
-      font-weight: ${get('fontWeight.medium')};
       font-size: 13px;
       line-height: 19.5px;
       @media (min-width: ${get('breakpoints.lg')}) {
@@ -144,6 +143,7 @@ const variants = {
 
 const StyledTypography = styled.span`
   margin: 0;
+  display: inline-block;
   ${p => p.$variant.style};
 `
 
