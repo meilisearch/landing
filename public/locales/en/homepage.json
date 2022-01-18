@@ -54,7 +54,35 @@
     },
     {
       "preTitle": "Step 2",
-      "title": "Customize"
+      "title": "Customize",
+      "description": "Meilisearch is designed to work out of the box. But because every project is different, you can customize it in just a few minutes to make any searches enjoyable.",
+      "cards": [
+        {
+          "title": "Filters",
+          "description": "Enhance your user's search by adding custom filters and build a faceted search in a few lines of code."
+        },
+        {
+          "title": "Geo search",
+          "description": "Search in the real world. No need for a PhD, we've got you covered."
+        },
+        {
+          "title": "Language detection",
+          "description": "MeiliSearch supports all languages and is able to detect them automatically. "
+        },
+        {
+          "title": "Sort by",
+          "description": "Sort your result based on price, date, or whatever you have in mind."
+        },
+        {
+          "title": "Custom relevancy",
+          "description": "Let's break the rules. Play with our main rules or create your own. "
+        },
+        {
+          "title": "API Keys",
+          "description": "Secure your data by managing API keys with dedicated access and permissions."
+        }
+      ],
+      "cta": "See all features"
     },
     {
       "preTitle": "Step 3",

@@ -10,6 +10,7 @@ import {
   Demo as BaseDemo,
   OpenSource as BaseOpenSource,
   Step1 as BaseStep1,
+  Step2 as BaseStep2,
 } from 'blocks'
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
@@ -62,9 +63,26 @@ const Step1 = styled(BaseStep1)`
   }
 `
 
+const Step2 = styled(BaseStep2)`
+  margin-top: 94px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 155px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    margin-top: 146px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    margin-top: 424px;
+  }
+`
+
 const Home = ({ stargazers_count }) => {
   const { t } = useTranslation('homepage')
   const { hero, demo, openSource, steps } = getHomepageData(t)
+  const stepsAnchor = steps.map(step => ({
+    preTitle: step.preTitle,
+    title: step.title,
+  }))
   return (
     <>
       <Head>
@@ -81,25 +99,26 @@ const Home = ({ stargazers_count }) => {
         />
         <Step1
           step1Props={steps[0]}
-          steps={steps.map(step => ({
-            preTitle: step.preTitle,
-            title: step.title,
-          }))}
+          steps={stepsAnchor}
           color={get('colors.lila')}
         />
-        <div style={{ color: get('colors.white') }}>
-          <div style={{ padding: '200px 0' }}>
-            <Typography variant="h1" id={steps[1].title}>
-              {steps[1].title}
-            </Typography>
-            <Typography>This is just a test</Typography>
-          </div>
-          <div style={{ padding: '200px 0' }}>
-            <Typography variant="h1" id={steps[2].title}>
-              {steps[2].title}
-            </Typography>
-            <Typography>This is just a test</Typography>
-          </div>
+        <Step2
+          step2Props={steps[1]}
+          steps={stepsAnchor}
+          color={get('colors.hotPink')}
+        />
+        <div
+          style={{
+            padding: '200px 0',
+            color: 'white',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <Typography variant="h1" id={steps[2].title}>
+            {steps[2].title}
+          </Typography>
+          <Typography>This is just a test</Typography>
         </div>
       </PageContent>
     </>

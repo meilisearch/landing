@@ -7,10 +7,6 @@ import Button from 'components/Button'
 import PropTypes from 'prop-types'
 import AnchorTitles from 'components/AnchorTitles'
 
-const Section = styled.div`
-  padding-bottom: 200px;
-`
-
 const LeftColumn = styled.div`
   grid-column: 1 / -1;
   color: ${get('colors.white')};
@@ -90,7 +86,7 @@ const Decorator = styled.div`
   background: url(/images/decorator2.svg) no-repeat;
   background-size: contain;
   position: absolute;
-  top: 228px;
+  top: 208px;
   right: 0;
   bottom: 0;
   left: 130px;
@@ -102,16 +98,17 @@ const Decorator = styled.div`
     left: 156px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    background: url(/images/decorator3-lg.svg) no-repeat;
-    height: 464px;
+    background: url(/images/decorator3.svg) no-repeat;
+    background-size: 365px 464px;
     width: 365px;
+    height: 464px;
     left: -96px;
     top: 66px;
   }
   @media (min-width: ${get('breakpoints.xl')}) {
-    background: url(/images/decorator3-xl.svg) no-repeat;
-    height: 602px;
+    background-size: 473px 602px;
     width: 473px;
+    height: 602px;
     left: -235px;
   }
 `
@@ -127,7 +124,7 @@ const Step1 = ({
   color = get('colors.lila'),
   ...props
 }) => (
-  <Section {...props}>
+  <section {...props}>
     <Grid style={{ position: 'relative' }}>
       <LeftColumn>
         <Content>
@@ -152,7 +149,7 @@ const Step1 = ({
         <DesktopImage $image={step.image} />
       </RightColumn>
     </Grid>
-  </Section>
+  </section>
 )
 
 Step1.propTypes = {
