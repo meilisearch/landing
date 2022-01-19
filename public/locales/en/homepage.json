@@ -86,7 +86,17 @@
     },
     {
       "preTitle": "Step 3",
-      "title": "Deploy"
+      "title": "Deploy",
+      "firstSection": {
+        "title": "Open Source",
+        "description": "Did we tell you that we are building in public? Start using Meilisearch now by downloading our open source version.<br /><br />You can also deploy Meilisearch on any cloud provider such as AWS, GCP or Digital Ocean with our integrations. It's up to you.",
+        "cta": "Github Link"
+      },
+      "secondSection": {
+        "title": "Cloud",
+        "description": "Need to go fast? We take care of everything so you just have to focus on the most important thing, customizing your users' search experience.<br/><br/>You can now enter the waiting list for the beta of our cloud by completing the form.",
+        "cta": "Apply for the beta"
+      }
     }
   ]
 }

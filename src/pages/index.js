@@ -11,10 +11,10 @@ import {
   OpenSource as BaseOpenSource,
   Step1 as BaseStep1,
   Step2 as BaseStep2,
+  Step3 as BaseStep3,
 } from 'blocks'
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
-import Typography from 'components/Typography'
 import PageContent from 'components/PageContent'
 
 const Hero = styled(BaseHero)`
@@ -69,10 +69,23 @@ const Step2 = styled(BaseStep2)`
     margin-top: 155px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 146px;
+    margin-top: 245px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 424px;
+  }
+`
+
+const Step3 = styled(BaseStep3)`
+  margin-top: 105px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 72px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 424px;
+    margin-top: 120px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 256px;
   }
 `
 
@@ -107,19 +120,11 @@ const Home = ({ stargazers_count }) => {
           steps={stepsAnchor}
           color={get('colors.hotPink')}
         />
-        <div
-          style={{
-            padding: '200px 0',
-            color: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          <Typography variant="h1" id={steps[2].title}>
-            {steps[2].title}
-          </Typography>
-          <Typography>This is just a test</Typography>
-        </div>
+        <Step3
+          step3Props={steps[2]}
+          steps={stepsAnchor}
+          color={get('colors.dodgerBlue')}
+        />
       </PageContent>
     </>
   )
