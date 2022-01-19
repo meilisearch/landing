@@ -151,11 +151,33 @@ const getHomepageData = (t = () => {}) => ({
         url: '/',
         target: '',
       },
-      mobileImage: '/images/step2-mobile.svg',
+      image: '/images/step2.svg',
     },
     {
       preTitle: t('steps.2.preTitle'),
       title: t('steps.2.title'),
+      firstSection: {
+        title: t('steps.2.firstSection.title'),
+        description: t('steps.2.firstSection.description'),
+        image: '/images/step3.svg',
+        mobileImage: '/images/step3-mobile.svg',
+        cta: {
+          title: t('steps.2.firstSection.cta'),
+          url: '/',
+          target: '',
+        },
+      },
+      secondSection: {
+        title: t('steps.2.secondSection.title'),
+        description: t('steps.2.secondSection.description'),
+        image: '/images/step3-2.svg',
+        mobileImage: '/images/step3-2-mobile.svg',
+        cta: {
+          title: t('steps.2.secondSection.cta'),
+          url: '/',
+          target: '',
+        },
+      },
     },
   ],
 })

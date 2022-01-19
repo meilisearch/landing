@@ -61,7 +61,7 @@ const Description = styled(Typography)`
   }
 `
 
-const MobileImage = styled.div`
+const Illustration = styled.div`
   display: block;
   background: url(${p => p.$image}) no-repeat;
   background-size: 196px 330px;
@@ -251,7 +251,7 @@ const Step2 = ({
         </Button>
       </DesktopCta>
       <RightColumn>
-        <MobileImage $image={step.mobileImage} />
+        <Illustration $image={step.image} />
       </RightColumn>
       <Cards>
         {step.cards?.map(card => (
