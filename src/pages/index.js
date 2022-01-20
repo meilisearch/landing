@@ -8,6 +8,7 @@ import {
   Header,
   Hero as BaseHero,
   Demo as BaseDemo,
+  Footer,
   OpenSource as BaseOpenSource,
   Step1 as BaseStep1,
   Step2 as BaseStep2,
@@ -126,6 +127,7 @@ const Home = ({ stargazers_count }) => {
           color={get('colors.dodgerBlue')}
         />
       </PageContent>
+      <Footer />
     </>
   )
 }
@@ -136,7 +138,11 @@ export const getStaticProps = async ({ locale }) => {
     return {
       props: {
         stargazers_count: stargazers_count,
-        ...(await serverSideTranslations(locale, ['homepage', 'header'])),
+        ...(await serverSideTranslations(locale, [
+          'homepage',
+          'header',
+          'footer',
+        ])),
       },
     }
   } catch (err) {

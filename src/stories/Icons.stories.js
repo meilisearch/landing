@@ -13,9 +13,11 @@ import {
   Integrations as IntegrationsIcon,
   Key as KeyIcon,
   Lightning as LightningIcon,
+  Linkedin as LinkedinIcon,
   Plug as PlugIcon,
   Puzzle as PuzzleIcon,
   Roadmap as RoadmapIcon,
+  Slack as SlackIcon,
   SortBy as SortByIcon,
   Star as StarIcon,
   Twitter as TwitterIcon,
@@ -54,9 +56,11 @@ export const Hamburger = () => <HamburgerIcon height={56} />
 export const Integrations = () => <IntegrationsIcon height={56} />
 export const Key = () => <KeyIcon height={56} />
 export const Lightning = () => <LightningIcon height={56} />
+export const Linkedin = () => <LinkedinIcon height={56} />
 export const Plug = () => <PlugIcon height={56} />
 export const Puzzle = () => <PuzzleIcon height={56} />
 export const Roadmap = () => <RoadmapIcon height={56} />
+export const Slack = () => <SlackIcon height={56} />
 export const SortBy = () => <SortByIcon height={56} />
 export const Star = () => <StarIcon height={56} />
 export const Twitter = () => <TwitterIcon height={56} />
