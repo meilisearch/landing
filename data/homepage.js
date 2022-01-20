@@ -12,7 +12,11 @@ import {
   Key,
   SortBy,
   Wrench,
+  Github,
+  Slack,
+  Roadmap,
 } from 'components/icons'
+import get from 'utils/get'
 
 const getHomepageData = (t = () => {}) => ({
   hero: {
@@ -180,6 +184,46 @@ const getHomepageData = (t = () => {}) => ({
       },
     },
   ],
+  cards: {
+    preTitle: t('cards.preTitle'),
+    title: t('cards.title'),
+    description: t('cards.description'),
+    cards: [
+      {
+        color: get('colors.dodgerBlue'),
+        icon: Github,
+        title: t('cards.cards.0.title'),
+        description: t('cards.cards.0.description'),
+        cta: {
+          title: t('cards.cards.0.cta'),
+          href: 'https://github.com/meilisearch/MeiliSearch',
+          target: '_blank',
+        },
+      },
+      {
+        color: get('colors.lila'),
+        icon: Slack,
+        title: t('cards.cards.1.title'),
+        description: t('cards.cards.1.description'),
+        cta: {
+          title: t('cards.cards.1.cta'),
+          href: 'https://slack.meilisearch.com/',
+          target: '_blank',
+        },
+      },
+      {
+        color: get('colors.hotPink'),
+        icon: Roadmap,
+        title: t('cards.cards.2.title'),
+        description: t('cards.cards.2.description'),
+        cta: {
+          title: t('cards.cards.2.cta'),
+          href: 'https://roadmap.meilisearch.com/',
+          target: '_blank',
+        },
+      },
+    ],
+  },
 })
 
 export default getHomepageData

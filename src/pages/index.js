@@ -5,6 +5,7 @@ import formatStargazers from 'utils/formatStargazers'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {
+  Cards as BaseCards,
   Header,
   Hero as BaseHero,
   Demo as BaseDemo,
@@ -90,9 +91,21 @@ const Step3 = styled(BaseStep3)`
   }
 `
 
+const Cards = styled(BaseCards)`
+  // @media (min-width: ${get('breakpoints.md')}) {
+  //   margin-top: 72px;
+  // }
+  // @media (min-width: ${get('breakpoints.lg')}) {
+  //   margin-top: 120px;
+  // }
+  // @media (min-width: ${get('breakpoints.xl')}) {
+  //   margin-top: 256px;
+  // }
+`
+
 const Home = ({ stargazers_count }) => {
   const { t } = useTranslation('homepage')
-  const { hero, demo, openSource, steps } = getHomepageData(t)
+  const { hero, demo, openSource, steps, cards } = getHomepageData(t)
   const stepsAnchor = steps.map(step => ({
     preTitle: step.preTitle,
     title: step.title,
@@ -126,6 +139,7 @@ const Home = ({ stargazers_count }) => {
           steps={stepsAnchor}
           color={get('colors.dodgerBlue')}
         />
+        <Cards cardsProps={cards} />
       </PageContent>
       <Footer />
     </>
