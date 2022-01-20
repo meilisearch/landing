@@ -1,0 +1,68 @@
+{
+  "menu": [
+    {
+      "title": "Ressources",
+      "submenu": [
+        {
+          "title": "Documentation"
+        },
+        {
+          "title": "Blog"
+        },
+        {
+          "title": "Guides"
+        },
+        {
+          "title": "API Reference"
+        },
+        {
+          "title": "Roadmap"
+        },
+        {
+          "title": "Changelog"
+        },
+        {
+          "title": "Integrations"
+        }
+      ]
+    },
+    {
+      "title": "Connect",
+      "submenu": [
+        {
+          "title": "Support"
+        },
+        {
+          "title": "Github"
+        },
+        {
+          "title": "Slack"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "submenu": [
+        {
+          "title": "About us"
+        },
+        {
+          "title": "Contact us"
+        },
+        {
+          "title": "Career"
+        },
+        {
+          "title": "Code of conduct"
+        },
+        {
+          "title": "Privacy Policy"
+        },
+        {
+          "title": "Terms of service"
+        }
+      ]
+    }
+  ],
+  "copyright": "©2021 Meilisearch - All rights reserved."
+}
