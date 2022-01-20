@@ -46,8 +46,6 @@ const MenuColumn = styled(Grid)`
   }
 `
 
-const MenuSection = styled.div``
-
 const MenuSectionTitle = styled(Typography)`
   text-transform: uppercase;
 `
@@ -96,14 +94,12 @@ const Socials = styled.div`
   }
 `
 
-const SocialLink = styled(Link)``
-
 const Social = ({ social }) => {
   const Icon = social.icon
   return (
-    <SocialLink href={social.href} target={social.target}>
+    <Link href={social.href} target={social.target}>
       <Icon height={24} />
-    </SocialLink>
+    </Link>
   )
 }
 
@@ -136,7 +132,7 @@ const Footer = () => {
         </LogoColumn>
         <MenuColumn>
           {footerProps.menu.map(menu => (
-            <MenuSection key={menu.title}>
+            <div key={menu.title}>
               <MenuSectionTitle variant="preTitle">
                 {menu.title}
               </MenuSectionTitle>
@@ -149,7 +145,7 @@ const Footer = () => {
                   <Typography variant="smallText">{submenu.title}</Typography>
                 </FooterLink>
               ))}
-            </MenuSection>
+            </div>
           ))}
         </MenuColumn>
         <BottomSection>

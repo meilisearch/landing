@@ -101,6 +101,7 @@ const ContentColumn = styled.div`
 const Description = styled(Typography)`
   margin-top: 26px;
   color: ${get('colors.ashes.100')};
+  opacity: 0.9;
 `
 
 const Cta = styled(Button)`

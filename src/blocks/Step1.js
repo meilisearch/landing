@@ -28,6 +28,8 @@ const Title = styled(Typography)`
 const Description = styled(Typography)`
   margin-top: 305px;
   display: block;
+  opacity: 0.9;
+  color: ${get('colors.ashes')};
   @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 42px;
   }
