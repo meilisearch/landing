@@ -98,5 +98,27 @@
         "cta": "Apply for the beta"
       }
     }
-  ]
+  ],
+  "cards": {
+    "preTitle": "Become an actor",
+    "title": "Join the community",
+    "description": "Join our community to make the search accessible to everyone. Whether you are a contributor, a user or you need answers to your questions we will be there for you.",
+    "cards": [
+      {
+        "title": "Github",
+        "description": "Open issues, PRs, request features and vote on them!",
+        "cta": "Start contributing"
+      },
+      {
+        "title": "Slack",
+        "description": "Join us on our team chat and ask questions!",
+        "cta": "Start contributing"
+      },
+      {
+        "title": "Roadmap",
+        "description": "Check what we will be working on in the next few weeks!",
+        "cta": "Open the roapmap"
+      }
+    ]
+  }
 }
