@@ -54,6 +54,8 @@ const Title = styled(Typography)`
 const Description = styled(Typography)`
   margin-top: 16px;
   display: block;
+  opacity: 0.9;
+  color: ${get('colors.ashes.100')};
 `
 
 const Keypoints = styled.div`
@@ -73,6 +75,7 @@ const KeypointDescription = styled(Typography)`
   color: ${get('colors.valhalla.100')};
   margin-top: 8px;
   display: inline-block;
+  opacity: 0.9;
 `
 
 const StyledIcon = styled.div`

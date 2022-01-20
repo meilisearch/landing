@@ -50,6 +50,8 @@ const Description = styled(Typography)`
   display: inline-block;
   margin-top: 20px;
   padding-right: 16px;
+  color: ${get('colors.ashes')};
+  opacity: 0.9;
   @media (min-width: ${get('breakpoints.md')}) {
     padding-right: 0;
   }
@@ -159,7 +161,8 @@ const CardTitle = styled(Typography)`
 `
 
 const CardDescription = styled(Typography)`
-  color: ${get('colors.valhalla.100')};
+  color: ${get('colors.ashes.100')};
+  opacity: 0.9;
   margin-top: 8px;
   @media (min-width: ${get('breakpoints.lg')}) {
     margin-top: 16px;

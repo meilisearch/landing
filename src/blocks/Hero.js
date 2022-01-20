@@ -36,6 +36,7 @@ const Title = styled(Typography)`
 const Description = styled(Typography)`
   display: block;
   text-align: center;
+  opacity: 0.9;
   @media (min-width: ${get('breakpoints.md')}) {
     padding: 0;
     text-align: left;

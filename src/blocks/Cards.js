@@ -106,9 +106,16 @@ const Cta = styled(Button)`
   }
 `
 
+const StyledIcon = styled.div`
+  height: 30px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    height: 44px;
+  }
+`
+
 const Card = ({ title, description, color, icon: Icon, cta }) => (
   <CardWrapper $color={color}>
-    <Icon height={30} />
+    <StyledIcon as={Icon} />
     <CardTitle variant="h3">{title}</CardTitle>
     <CardDescription>{description}</CardDescription>
     <Cta
