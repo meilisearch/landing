@@ -2,8 +2,8 @@
   "documentation": "Documentation",
   "blog": "Blog",
   "jobs": "Jobs",
-  "ressources": {
-    "title": "Ressources",
+  "resources": {
+    "title": "Resources",
     "subMenu": [
       { "title": "Guides", "subtitle": "Lorem ipsum dolor sit amet" },
       { "title": "Api Reference", "subtitle": "Lorem ipsum dolor sit amet" },
