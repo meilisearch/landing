@@ -66,7 +66,7 @@ const MobileHeader = ({ headerProps, stargazers_count }) => {
     unstable_initialFocusRef: null,
   })
   return (
-    <Grid>
+    <Grid as="nav">
       <Logo />
       <DialogDisclosure {...dialog} style={{ color: 'white' }}>
         {dialog.visible ? <Cross height={15} /> : <Hamburger height={24} />}

@@ -9,7 +9,12 @@ const Lottie = styled(BaseLottie)`
   inset: 0;
 `
 
-const LottieAnimation = ({ animation, options = {}, ...props }) => {
+const LottieAnimation = ({
+  animation,
+  options = {},
+  ariaLabel = '',
+  ...props
+}) => {
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -20,7 +25,14 @@ const LottieAnimation = ({ animation, options = {}, ...props }) => {
     ...options,
   }
   return (
-    <Lottie options={lottieOptions} height="100%" width="100%" {...props} />
+    <Lottie
+      options={lottieOptions}
+      height="100%"
+      width="100%"
+      ariaRole="animation"
+      ariaLabel={ariaLabel}
+      {...props}
+    />
   )
 }
 

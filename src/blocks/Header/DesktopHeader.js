@@ -6,7 +6,7 @@ import Logo from './Logo'
 import MenuLinks from './MenuLinks'
 import Ctas from './Ctas'
 
-const Grid = styled.div`
+const Grid = styled.nav`
   display: none;
   @media (min-width: ${get('breakpoints.lg')}) {
     width: 100%;
