@@ -70,8 +70,8 @@ const Custom404 = ({ stargazers_count }) => {
       </Head>
       <Header stargazers_count={formatStargazers(stargazers_count)} />
       <PageContent>
-        <Title variant="h1">404</Title>
-        <Description variant="h2">{t('description')}</Description>
+        <Title variant="title1">404</Title>
+        <Description variant="title2">{t('description')}</Description>
         <Cta>
           <Button href="/" variant="secondary" color={get('colors.hotPink')}>
             <Typography variant="ctaBig">{t('cta')}</Typography>

@@ -24,8 +24,8 @@ const variants = {
       }
     `,
   },
-  h1: {
-    tag: 'h1',
+  title1: {
+    tag: 'span',
     style: css`
       font-family: Poppins;
       font-weight: ${get('fontWeight.bold')};
@@ -43,8 +43,8 @@ const variants = {
       }
     `,
   },
-  h2: {
-    tag: 'h2',
+  title2: {
+    tag: 'span',
     style: css`
       font-family: Poppins;
       font-weight: ${get('fontWeight.semibold')};
@@ -61,8 +61,8 @@ const variants = {
       }
     `,
   },
-  h3: {
-    tag: 'h3',
+  title3: {
+    tag: 'span',
     style: css`
       font-family: Poppins;
       font-weight: ${get('fontWeight.semibold')};
@@ -106,18 +106,6 @@ const variants = {
       }
     `,
   },
-  smallText: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-size: 13px;
-      line-height: 19.5px;
-      @media (min-width: ${get('breakpoints.lg')}) {
-        font-size: 14px;
-        line-height: 21px;
-      }
-    `,
-  },
   small: {
     tag: 'span',
     style: css`
@@ -147,11 +135,16 @@ const StyledTypography = styled.span`
   ${p => p.$variant.style};
 `
 
-const Typography = ({ variant = 'default', ...props }) => {
+const Typography = ({ variant = 'default', forwardedAs, ...props }) => {
   const safeVariant = variants[variant] || variants.default
   const { tag = 'span', style = css`` } = safeVariant
   return (
-    <StyledTypography as={tag} {...style} $variant={safeVariant} {...props} />
+    <StyledTypography
+      as={forwardedAs || tag}
+      {...style}
+      $variant={safeVariant}
+      {...props}
+    />
   )
 }
 
@@ -162,12 +155,11 @@ Typography.propTypes = {
   variant: PropTypes.oneOf([
     'default',
     'body',
-    'h1',
-    'h2',
-    'h3',
+    'title1',
+    'title2',
+    'title3',
     'preTitle',
     'navigation',
-    'smallText',
     'small',
     'ctaBig',
   ]),

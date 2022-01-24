@@ -170,7 +170,8 @@ const OpenSource = ({
           <Text>
             <PreTitle color={color} preTitle={OSProps.preTitle} />
             <Title
-              variant="h1"
+              variant="title1"
+              forwardedAs="h2"
               $color={color}
               dangerouslySetInnerHTML={{ __html: OSProps.title }}
             />

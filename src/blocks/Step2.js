@@ -199,8 +199,10 @@ const Card = ({ card, color }) => {
   return (
     <CardWrapper>
       <StyledIcon as={Icon} color={color} />
-      <CardTitle variant="h3">{card.title}</CardTitle>
-      <CardDescription variant="smallText">{card.description}</CardDescription>
+      <CardTitle variant="title3" forwardedAs="h3">
+        {card.title}
+      </CardTitle>
+      <CardDescription variant="small">{card.description}</CardDescription>
     </CardWrapper>
   )
 }
@@ -243,7 +245,7 @@ const Step2 = ({
       <Decorator />
       <LeftColumn>
         <AnchorTitles links={steps} current={step.preTitle} color={color} />
-        <Title variant="h1" id={step.title} color={color}>
+        <Title variant="title1" forwardedAs="h2" id={step.title} color={color}>
           {step.title}
         </Title>
         <Description>{step.description}</Description>

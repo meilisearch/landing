@@ -93,7 +93,11 @@ const Keypoint = ({ keypoint, color, ...props }) => {
   return (
     <div {...props}>
       <StyledIcon as={Icon} color={color} />
-      <Typography variant="h3" style={{ marginTop: 8 }}>
+      <Typography
+        variant="title3"
+        forwardedAs="h3"
+        style={{ marginTop: 8, display: 'block' }}
+      >
         {keypoint.title}
       </Typography>
       <KeypointDescription variant="small">
@@ -173,7 +177,9 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
       </LeftColumn>
       <Content>
         <PreTitle color={color} preTitle={demoProps.preTitle} />
-        <Title variant="h2">{demoProps.title}</Title>
+        <Title variant="title2" forwardedAs="h2">
+          {demoProps.title}
+        </Title>
         <Description>{demoProps.description}</Description>
         <MobileImage>
           <Image
