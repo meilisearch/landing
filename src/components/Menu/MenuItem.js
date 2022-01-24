@@ -89,7 +89,7 @@ const MenuItem = ({ title, subtitle, icon, href, ...props }) => {
           {icon && <StyledIcon as={icon} alt={title} />}
           <Text>
             <Title variant="navigation">{title}</Title>
-            {subtitle && <SubTitle variant="smallText">{subtitle}</SubTitle>}
+            {subtitle && <SubTitle variant="small">{subtitle}</SubTitle>}
           </Text>
         </Content>
       </ReakitMenuItem>

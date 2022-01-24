@@ -13,12 +13,11 @@ export default {
       options: [
         'default',
         'body',
-        'h1',
-        'h2',
-        'h3',
+        'title1',
+        'title2',
+        'title3',
         'preTitle',
         'navigation',
-        'smallText',
         'small',
         'ctaBig',
       ],
@@ -42,21 +41,21 @@ Body.args = {
   children: 'I’m the body variant',
 }
 
-export const H1 = Template.bind({})
-H1.args = {
-  variant: 'h1',
-  children: 'I’m the h1 variant',
+export const Title1 = Template.bind({})
+Title1.args = {
+  variant: 'title1',
+  children: 'I’m the title1 variant',
 }
 
-export const H2 = Template.bind({})
-H2.args = {
-  variant: 'h2',
-  children: 'I’m the h2 variant',
+export const Title2 = Template.bind({})
+Title2.args = {
+  variant: 'title2',
+  children: 'I’m the title2 variant',
 }
-export const H3 = Template.bind({})
-H3.args = {
-  variant: 'h3',
-  children: 'I’m the h3 variant',
+export const Title3 = Template.bind({})
+Title3.args = {
+  variant: 'title3',
+  children: 'I’m the title3 variant',
 }
 
 export const PreTitle = Template.bind({})
@@ -69,12 +68,6 @@ export const Navigation = Template.bind({})
 Navigation.args = {
   variant: 'navigation',
   children: 'I’m the navigation variant',
-}
-
-export const SmallText = Template.bind({})
-SmallText.args = {
-  variant: 'smallText',
-  children: 'I’m the smallText variant',
 }
 
 export const Small = Template.bind({})

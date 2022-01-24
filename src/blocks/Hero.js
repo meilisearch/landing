@@ -116,7 +116,8 @@ const Hero = ({ heroProps, ...props }) => (
     <Grid>
       <Content>
         <Title
-          variant="h1"
+          variant="title1"
+          forwardedAs="h1"
           dangerouslySetInnerHTML={{ __html: heroProps.title }}
         />
         <MobileAnimation>

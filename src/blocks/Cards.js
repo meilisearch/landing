@@ -116,7 +116,7 @@ const StyledIcon = styled.div`
 const Card = ({ title, description, color, icon: Icon, cta }) => (
   <CardWrapper $color={color}>
     <StyledIcon as={Icon} />
-    <CardTitle variant="h3">{title}</CardTitle>
+    <CardTitle variant="title3">{title}</CardTitle>
     <CardDescription>{description}</CardDescription>
     <Cta
       variant="secondary"
@@ -137,7 +137,9 @@ const Cards = ({ cardsProps, ...props }) => (
           color={get('colors.hotPink')}
           preTitle={cardsProps.preTitle}
         />
-        <Title variant="h2">{cardsProps.title}</Title>
+        <Title variant="title2" forwardedAs="h2">
+          {cardsProps.title}
+        </Title>
         <Description>{cardsProps.description}</Description>
       </LeftColumn>
       <RightColumn>

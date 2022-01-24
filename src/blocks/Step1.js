@@ -131,7 +131,7 @@ const Step1 = ({
       <LeftColumn>
         <Content>
           <AnchorTitles links={steps} current={step.preTitle} color={color} />
-          <Title variant="h1" id={step.title}>
+          <Title variant="title1" forwardedAs="h2" id={step.title}>
             {step.title}
           </Title>
           <Description>{step.description}</Description>

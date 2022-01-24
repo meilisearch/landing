@@ -30,7 +30,7 @@ const TitleSection = ({ steps, step, color }) => {
     <Grid style={{ zIndex: 2, position: 'relative' }}>
       <TitlesColumn>
         <AnchorTitles links={steps} current={step.preTitle} color={color} />
-        <Title variant="h1" id={step.title} color={color}>
+        <Title variant="title1" forwardedAs="h2" id={step.title} color={color}>
           {step.title}
         </Title>
       </TitlesColumn>

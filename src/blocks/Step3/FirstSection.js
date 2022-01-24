@@ -120,7 +120,9 @@ const FirstSection = ({ section, color }) => {
         />
       </IllustrationColumn>
       <ContentColumn>
-        <Typography variant="h2">{section.title}</Typography>
+        <Typography variant="title2" forwardedAs="h3">
+          {section.title}
+        </Typography>
         <Description
           dangerouslySetInnerHTML={{ __html: section.description }}
         />

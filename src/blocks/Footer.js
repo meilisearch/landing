@@ -142,7 +142,7 @@ const Footer = () => {
                   target={submenu.target}
                   key={submenu.title}
                 >
-                  <Typography variant="smallText">{submenu.title}</Typography>
+                  <Typography variant="small">{submenu.title}</Typography>
                 </FooterLink>
               ))}
             </div>
