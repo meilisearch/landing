@@ -77,7 +77,7 @@ const getFooterData = (t = () => {}) => ({
         },
         {
           title: t('menu.2.submenu.2.title'),
-          href: 'https://jobs.lever.co/meili',
+          href: 'https://www.welcometothejungle.com/fr/companies/meilisearch',
           target: '_blank',
         },
         {
