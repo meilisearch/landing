@@ -11,6 +11,7 @@ const Content = styled.div`
   grid-column: 1 / 7;
   @media (min-width: ${get('breakpoints.lg')}) {
     grid-column: 1 / 8;
+    padding-right: 16px;
   }
 `
 
