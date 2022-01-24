@@ -97,7 +97,7 @@ const Socials = styled.div`
 const Social = ({ social }) => {
   const Icon = social.icon
   return (
-    <Link href={social.href} target={social.target}>
+    <Link href={social.href} target={social.target} title={social.title}>
       <Icon height={24} />
     </Link>
   )

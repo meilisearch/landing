@@ -104,21 +104,25 @@ const getFooterData = (t = () => {}) => ({
       icon: Github,
       href: 'https://github.com/meilisearch',
       target: '_blank',
+      title: 'Github',
     },
     {
       icon: Twitter,
       href: 'https://twitter.com/meilisearch/',
       target: '_blank',
+      title: 'Twitter',
     },
     {
       icon: Linkedin,
       href: 'https://www.linkedin.com/company/meilisearch',
       target: '_blank',
+      title: 'Linkedin',
     },
     {
       icon: Slack,
       href: 'https://slack.meilisearch.com/',
       target: '_blank',
+      title: 'Slack',
     },
   ],
 })

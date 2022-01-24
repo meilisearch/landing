@@ -1,15 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
-import BaseLottie from 'react-lottie'
+import Lottie from 'react-lottie-wrapper'
 
-const Lottie = styled(BaseLottie)`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-`
-
-const LottieAnimation = ({ animation, options = {}, ...props }) => {
+const LottieAnimation = ({ animation, options = {}, ariaLabel, ...props }) => {
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -20,7 +12,15 @@ const LottieAnimation = ({ animation, options = {}, ...props }) => {
     ...options,
   }
   return (
-    <Lottie options={lottieOptions} height="100%" width="100%" {...props} />
+    <Lottie
+      options={lottieOptions}
+      height="100%"
+      width="100%"
+      ariaRole={null}
+      ariaLabel={ariaLabel}
+      tabIndex={-1}
+      {...props}
+    />
   )
 }
 

@@ -184,6 +184,7 @@ const OpenSource = ({
                 animation={OSProps.lottie}
                 options={{ loop: false }}
                 isPaused={!inView}
+                ariaLabel="Popping stars"
               />
             </Animation>
             {OSProps.keypoints.map(keypoint => (
