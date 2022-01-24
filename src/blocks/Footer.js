@@ -127,7 +127,7 @@ const Footer = () => {
             height={32}
             width={213}
             layout="fixed"
-            alt="MeiliSearch Logo"
+            alt="Meilisearch Logo"
           />
         </LogoColumn>
         <MenuColumn>

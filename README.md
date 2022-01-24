@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/meilisearch/integration-guides/main/assets/logos/logo.svg" alt="MeiliSearch logo" width="200" height="200" />
+  <img src="https://raw.githubusercontent.com/meilisearch/integration-guides/main/assets/logos/logo.svg" alt="Meilisearch logo" width="200" height="200" />
 </p>
 
 <h1 align="center">Landing</h1>
 
 <h4 align="center">
-  <a href="https://github.com/meilisearch/MeiliSearch">MeiliSearch</a> |
+  <a href="https://github.com/meilisearch/meilisearch">Meilisearch</a> |
   <a href="https://docs.meilisearch.com">Documentation</a> |
   <a href="https://slack.meilisearch.com">Slack</a> |
   <a href="https://www.meilisearch.com">Website</a> |
@@ -17,7 +17,7 @@
 </p>
 <br/>
 
-<p align="center" style="font-weight:bold;" >MeiliSearch's Landing</p>
+<p align="center" style="font-weight:bold;" >Meilisearch's Landing</p>
 
 **Table of Contents**:
 

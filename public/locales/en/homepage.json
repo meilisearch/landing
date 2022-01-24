@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "MeiliSearch",
+    "title": "Meilisearch",
     "description": "An open source, blazingly fast and hyper relevant search-engine that will improve your search experience"
   },
   "hero": {
@@ -10,7 +10,7 @@
     "cta2": "Documentation"
   },
   "demo": {
-    "preTitle": "Why MeiliSearch?",
+    "preTitle": "Why Meilisearch?",
     "title": "The next generation of search",
     "description": "Meilisearch is a flexible, powerful, user-focused search engine that can be added to any website or application. It aims to save users time and improve product experience.",
     "keypoints": [
@@ -24,7 +24,7 @@
       },
       {
         "title": "Flexible",
-        "description": "Send data to MeiliSearch however you want—no need to match a schema or transform your data into a compatible format."
+        "description": "Send data to Meilisearch however you want—no need to match a schema or transform your data into a compatible format."
       },
       {
         "title": "Typo tolerant",
@@ -67,7 +67,7 @@
         },
         {
           "title": "Language detection",
-          "description": "MeiliSearch supports all languages and is able to detect them automatically. "
+          "description": "Meilisearch supports all languages and is able to detect them automatically. "
         },
         {
           "title": "Sort by",

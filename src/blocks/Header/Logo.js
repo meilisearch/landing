@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import get from 'utils/get'
 
-const MeiliSearchName = styled.div`
+const MeilisearchName = styled.div`
   margin-left: 12px;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
@@ -27,17 +27,17 @@ const Logo = () => (
       height={35}
       width={60}
       layout="fixed"
-      alt="MeiliSearch Logo"
+      alt="Meilisearch Logo"
     />
-    <MeiliSearchName>
+    <MeilisearchName>
       <Image
         src="/images/meilisearch.svg"
         height={25}
         width={164}
         layout="fixed"
-        alt="MeiliSearch"
+        alt="Meilisearch"
       />
-    </MeiliSearchName>
+    </MeilisearchName>
   </Logos>
 )
 

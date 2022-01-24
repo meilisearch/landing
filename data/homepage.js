@@ -78,7 +78,7 @@ const getHomepageData = (t = () => {}) => ({
     description: t('openSource.description'),
     cta: {
       title: t('openSource.cta'),
-      url: 'https://github.com/meilisearch/MeiliSearch',
+      url: 'https://github.com/meilisearch/meilisearch',
       target: '_blank',
     },
     lottie: openSource,
@@ -196,7 +196,7 @@ const getHomepageData = (t = () => {}) => ({
         description: t('cards.cards.0.description'),
         cta: {
           title: t('cards.cards.0.cta'),
-          href: 'https://github.com/meilisearch/MeiliSearch',
+          href: 'https://github.com/meilisearch/meilisearch',
           target: '_blank',
         },
       },

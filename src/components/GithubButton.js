@@ -40,7 +40,7 @@ const StarIcon = styled(Star)`
 
 const GithubButton = ({
   count = '',
-  href = 'https://github.com/meilisearch/MeiliSearch',
+  href = 'https://github.com/meilisearch/meilisearch',
   ...props
 }) => (
   <GithubLink href={href} rel="noreferrer" target="_blank" {...props}>
@@ -63,7 +63,7 @@ GithubButton.propTypes = {
 
 GithubButton.defaultProps = {
   count: null,
-  href: 'https://github.com/meilisearch/MeiliSearch',
+  href: 'https://github.com/meilisearch/meilisearch',
 }
 
 export default GithubButton
