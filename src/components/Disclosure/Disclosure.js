@@ -14,7 +14,7 @@ const StyledDisclosureButton = styled.button`
 
 const StyledArrow = styled(Arrow)`
   margin-left: 10px;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: transform 300ms;
   height: 8px;
   stroke: currentColor;
@@ -22,7 +22,7 @@ const StyledArrow = styled(Arrow)`
   ${p =>
     p.$visible &&
     css`
-      transform: rotate(0deg);
+      transform: rotate(180deg);
     `};
 `
 

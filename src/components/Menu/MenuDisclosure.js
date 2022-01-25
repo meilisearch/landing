@@ -23,14 +23,14 @@ const MenuButton = styled(ReakitMenuButton)`
 
 const StyledArrow = styled(Arrow)`
   margin-left: 10px;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: transform 300ms;
   stroke: currentColor;
   width: 10px;
   ${p =>
     p.$visible &&
     css`
-      transform: rotate(0deg);
+      transform: rotate(180deg);
     `}
 `
 
