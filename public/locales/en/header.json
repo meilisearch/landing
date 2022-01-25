@@ -1,17 +1,52 @@
 {
-  "documentation": "Documentation",
-  "blog": "Blog",
-  "jobs": "Jobs",
+  "documentation": {
+    "title": "Documentation",
+    "url": "https://docs.meilisearch.com/"
+  },
+  "blog": {
+    "title":"Blog",
+    "url": "https://blog.meilisearch.com/"
+  },
+  "jobs": {
+    "title": "Jobs",
+    "url" :"https://jobs.lever.co/meili"
+  },
   "resources": {
     "title": "Resources",
     "subMenu": [
-      { "title": "Guides", "subtitle": "Lorem ipsum dolor sit amet" },
-      { "title": "Api Reference", "subtitle": "Lorem ipsum dolor sit amet" },
-      { "title": "Roadmap", "subtitle": "Lorem ipsum dolor sit amet" },
-      { "title": "Changelog", "subtitle": "Lorem ipsum dolor sit amet" },
-      { "title": "Integrations", "subtitle": "Lorem ipsum dolor sit amet" }
+      {
+        "title": "Guides",
+        "subtitle": "Lorem ipsum dolor sit amet",
+        "url": "https://docs.meilisearch.com/learn/"
+      },
+      {
+        "title": "Api Reference",
+        "subtitle": "Lorem ipsum dolor sit amet",
+        "url": "https://docs.meilisearch.com/reference/api/"
+      },
+      {
+        "title": "Roadmap",
+        "subtitle": "Lorem ipsum dolor sit amet",
+        "url": "https://roadmap.meilisearch.com/tabs/5-ideas"
+      },
+      {
+        "title": "Changelog",
+        "subtitle": "Lorem ipsum dolor sit amet",
+        "url": "https://github.com/meilisearch/meilisearch/releases"
+      },
+      {
+        "title": "Integrations",
+        "subtitle": "Lorem ipsum dolor sit amet",
+        "url": "https://github.com/meilisearch/integration-guides"
+      }
     ]
   },
-  "logIn": "Log In",
-  "getStarted": "Get Started"
+  "logIn": {
+    "title": "Join the Cloud beta",
+    "url": "https://meilisearch.typeform.com/to/FtnzvZfh"
+  },
+  "getStarted": {
+    "title": "Get Started",
+    "url": "https://docs.meilisearch.com/learn/getting_started/"
+  }
 }
