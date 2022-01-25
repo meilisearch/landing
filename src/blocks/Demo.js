@@ -88,22 +88,29 @@ const StyledIcon = styled.div`
   }
 `
 
+const KeypointTitle = styled(Typography)`
+  margin-top: 8px;
+  display: block;
+`
+
+const KeypointWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
 const Keypoint = ({ keypoint, color, ...props }) => {
   const Icon = keypoint.icon
   return (
-    <div {...props}>
+    <KeypointWrapper {...props}>
       <StyledIcon as={Icon} color={color} />
-      <Typography
-        variant="title3"
-        forwardedAs="h3"
-        style={{ marginTop: 8, display: 'block' }}
-      >
+      <KeypointTitle variant="title3" forwardedAs="h3">
         {keypoint.title}
-      </Typography>
+      </KeypointTitle>
       <KeypointDescription variant="small">
         {keypoint.description}
       </KeypointDescription>
-    </div>
+    </KeypointWrapper>
   )
 }
 
