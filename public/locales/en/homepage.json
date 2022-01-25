@@ -6,7 +6,7 @@
   "hero": {
     "title": "Shape a <strong>delightful</strong> <strong>search</strong> experience in a snap",
     "description": "An open source, lightning fast, and hyper relevant search-engine that fits effortlessly into your apps, websites, and workflow.",
-    "cta1": "Join Slack",
+    "cta1": "Join our Slack",
     "cta2": "Documentation"
   },
   "demo": {
@@ -36,7 +36,7 @@
   "openSource": {
     "preTitle": "Open Source",
     "title": "Nothing <strong>good</strong> is built alone",
-    "description": "Join the MeiliSquad, our fast growing community.",
+    "description": "Join our welcoming and fast growing community.",
     "cta": "Browse on Github",
     "keypoints": [
       { "title": "Downloads" },
