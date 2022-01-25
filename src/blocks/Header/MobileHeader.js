@@ -33,6 +33,9 @@ const Backdrop = styled(DialogBackdrop)`
   z-index: 50;
   inset: 106px 0 0 0;
   padding-top: 64px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    display: none;
+  }
 `
 
 const DialogFooter = styled(Grid)`
