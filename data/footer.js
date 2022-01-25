@@ -32,7 +32,7 @@ const getFooterData = (t = () => {}) => ({
         },
         {
           title: t('menu.0.submenu.5.title'),
-          href: 'https://github.com/meilisearch/MeiliSearch/releases',
+          href: 'https://github.com/meilisearch/meilisearch/releases',
           target: '_blank',
         },
         {

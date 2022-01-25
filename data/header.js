@@ -51,7 +51,7 @@ const getHeaderData = (t = () => {}) => ({
           title: t('resources.subMenu.3.title'),
           subtitle: t('resources.subMenu.3.subtitle'),
           icon: GithubOutlined,
-          href: 'https://github.com/meilisearch/MeiliSearch/releases',
+          href: 'https://github.com/meilisearch/meilisearch/releases',
           target: '_blank',
         },
         {

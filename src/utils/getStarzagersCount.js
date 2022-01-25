@@ -1,7 +1,7 @@
 const getStargazersCount = async () => {
   try {
     const res = await fetch(
-      'https://api.github.com/repos/meilisearch/MeiliSearch'
+      'https://api.github.com/repos/meilisearch/meilisearch'
     )
     const { stargazers_count = null } = await res.json()
     return stargazers_count
