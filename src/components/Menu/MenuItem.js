@@ -9,7 +9,7 @@ const Content = styled.div`
   width: 100%;
   outline: none;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   background-color: transparent;
   transition: background-color 300ms;
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -56,14 +56,6 @@ const Title = styled(Typography)`
   }
 `
 
-const SubTitle = styled(Typography)`
-  display: none;
-  color: ${get('colors.valhalla.100')};
-  @media (min-width: ${get('breakpoints.lg')}) {
-    display: inline-block;
-  }
-`
-
 const Text = styled.div`
   display: flex;
   flex-direction: column;
@@ -72,7 +64,6 @@ const Text = styled.div`
 `
 
 const StyledIcon = styled.img`
-  margin-top: 6px;
   width: 16px;
   flex-shrink: 0;
   color: ${get('colors.hotPink')};
@@ -81,7 +72,7 @@ const StyledIcon = styled.img`
   }
 `
 
-const MenuItem = ({ title, subtitle, icon, href, ...props }) => {
+const MenuItem = ({ title, icon, href, ...props }) => {
   return (
     <NextLink href={href} passHref>
       <ReakitMenuItem as={StyledMenuItem} {...props}>
@@ -89,7 +80,6 @@ const MenuItem = ({ title, subtitle, icon, href, ...props }) => {
           {icon && <StyledIcon as={icon} alt={title} />}
           <Text>
             <Title variant="navigation">{title}</Title>
-            {subtitle && <SubTitle variant="small">{subtitle}</SubTitle>}
           </Text>
         </Content>
       </ReakitMenuItem>
@@ -103,10 +93,6 @@ MenuItem.propTypes = {
    */
   title: PropTypes.string,
   /**
-   * Description of the link
-   */
-  subtitle: PropTypes.string,
-  /**
    * Icon to display next to the next
    */
   icon: PropTypes.any,
@@ -114,7 +100,6 @@ MenuItem.propTypes = {
 
 MenuItem.defaultProps = {
   title: null,
-  subtitle: null,
   icon: null,
 }
 
