@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Meilisearch",
-    "description": "An open source, blazingly fast and hyper relevant search-engine that will improve your search experience"
+    "description": "An open-source, blazingly fast, and hyper-relevant search engine that will improve your search experience"
   },
   "hero": {
     "title": "Shape a <strong>delightful</strong> <strong>search</strong> experience in a snap",
-    "description": "An open source, lightning fast, and hyper relevant search-engine that fits effortlessly into your apps, websites, and workflow.",
+    "description": "An open-source, lightning-fast, and hyper-relevant search engine that fits effortlessly into your apps, websites, and workflow.",
     "cta1": {
       "title": "Join our Slack",
       "url": "https://slack.meilisearch.com/"
@@ -18,7 +18,7 @@
   "demo": {
     "preTitle": "Why Meilisearch?",
     "title": "The next generation of search",
-    "description": "Meilisearch is a flexible, powerful, user-focused search engine that can be added to any website or application. It aims to save users time and improve product experience.",
+    "description": "Meilisearch is a flexible and powerful user-focused search engine that can be added to any website or application.",
     "keypoints": [
       {
         "title": "Lightning fast",
@@ -30,7 +30,7 @@
       },
       {
         "title": "Flexible",
-        "description": "Send data to Meilisearch however you want—no need to match a schema or transform your data into a compatible format."
+        "description": "Send data to Meilisearch however you want—no need to match a schema or convert your dataset to a compatible format."
       },
       {
         "title": "Typo tolerant",
@@ -43,7 +43,7 @@
     }
   },
   "openSource": {
-    "preTitle": "Open Source",
+    "preTitle": "Open source",
     "title": "Nothing <strong>good</strong> is built alone",
     "description": "Join our welcoming and fast growing community.",
     "cta": {
@@ -58,10 +58,10 @@
         "title": "Contributors"
       },
       {
-        "title": "Servers in Production"
+        "title": "Servers in production"
       },
       {
-        "title": "Developer Community"
+        "title": "Developer community"
       }
     ]
   },
@@ -69,7 +69,7 @@
     {
       "preTitle": "Step 1",
       "title": "Connect",
-      "description": "In less than 5 minutes, your data is ready to be searched. Connect your codebase to Meilisearch with our official libraries.",
+      "description": "Start searching through your dataset in less than 5 minutes and quickly connect your codebase to Meilisearch with our official libraries.",
       "cta": {
         "title": "See all integrations",
         "url": "https://github.com/meilisearch/integration-guides"
@@ -78,11 +78,11 @@
     {
       "preTitle": "Step 2",
       "title": "Customize",
-      "description": "Meilisearch is designed to work out of the box. But because every project is different, you can customize it in just a few minutes to make any searches enjoyable.",
+      "description": "Meilisearch is designed to work out-of-the-box, no configuration needed. But we know every project is different, so we made it easy to customize your instance in just a few minutes.",
       "cards": [
         {
           "title": "Filters",
-          "description": "Enhance your user's search by adding custom filters and build a faceted search in a few lines of code."
+          "description": "Enhance your user's search experience with custom filters and build a faceted search interface in a few lines of code."
         },
         {
           "title": "Geo search",
@@ -90,19 +90,19 @@
         },
         {
           "title": "Language detection",
-          "description": "Meilisearch supports all languages and is able to detect them automatically. "
+          "description": "Meilisearch supports all languages and detects them automatically. "
         },
         {
           "title": "Sort by",
-          "description": "Sort your result based on price, date, or whatever you have in mind."
+          "description": "Sort results based on price, date, or pretty much anything else your users need."
         },
         {
           "title": "Custom relevancy",
-          "description": "Let's break the rules. Play with our main rules or create your own. "
+          "description": "Let's break the rules. Use our default ranking rules or create your own."
         },
         {
-          "title": "API Keys",
-          "description": "Secure your data by managing API keys with dedicated access and permissions."
+          "title": "API keys",
+          "description": "Secure your data with API keys that allow fine-grained permissions management."
         }
       ],
       "cta": {
@@ -115,7 +115,7 @@
       "title": "Deploy",
       "firstSection": {
         "title": "Open Source",
-        "description": "Did we tell you that we are building in public? Start using Meilisearch now by downloading our open source version.<br /><br />You can also deploy Meilisearch on any cloud provider such as AWS, GCP or Digital Ocean with our integrations. It's up to you.",
+        "description": "Did we tell you that everything we do is completely public? Start using Meilisearch now by downloading our open source version.<br /><br />You can also deploy Meilisearch on any cloud provider such as AWS, GCP or Digital Ocean with our integrations. Use Meilisearch however you want: it's all up to you.",
         "cta": {
           "title": "Get Started",
           "url": "https://docs.meilisearch.com/learn/getting_started/"
@@ -123,7 +123,7 @@
       },
       "secondSection": {
         "title": "Cloud",
-        "description": "Need to go fast? We take care of everything so you just have to focus on the most important thing, customizing your users' search experience.<br/><br/>You can now enter the waiting list for the beta of our cloud by completing the form.",
+        "description": "Need to go fast? Meilisearch Cloud takes care of everything so you just have to focus on the most important thing: making sure your users' have a great search experience.<br/><br/>Enter the waiting list for our Cloud beta by completing the form linked below.",
         "cta": {
           "title": "Apply for the beta",
           "url": "https://meilisearch.typeform.com/to/FtnzvZfh"
@@ -132,13 +132,13 @@
     }
   ],
   "cards": {
-    "preTitle": "Become an actor",
+    "preTitle": "Become a contributor",
     "title": "Join the community",
-    "description": "Join our community to make the search accessible to everyone. Whether you are a contributor, a user or you need answers to your questions we will be there for you.",
+    "description": "Join our community and help us make fast and relevant search accessible to everyone. Whether you are a contributor, a user, or you just need answers to questions about Meilisearch, we are here for you.",
     "cards": [
       {
         "title": "Github",
-        "description": "Open issues, PRs, request features and vote on them!",
+        "description": "Open issues and PRs, request new features, and vote on the ones that matter the most to you!",
         "cta": {
           "title": "Start contributing",
           "url": "https://github.com/meilisearch/meilisearch"
