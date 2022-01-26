@@ -18,7 +18,7 @@ const getFooterData = (t = () => {}) => ({
         {
           title: t('menu.0.submenu.2.title'),
           href: t('menu.0.submenu.2.url'),
-          target: '',
+          target: '_blank',
         },
         {
           title: t('menu.0.submenu.3.title'),
@@ -48,12 +48,12 @@ const getFooterData = (t = () => {}) => ({
         {
           title: t('menu.1.submenu.0.title'),
           href: t('menu.1.submenu.0.url'),
-          target: '',
+          target: '_blank',
         },
         {
           title: t('menu.1.submenu.1.title'),
           href: t('menu.1.submenu.1.url'),
-          target: '',
+          target: '_blank',
         },
         {
           title: t('menu.1.submenu.2.title'),
@@ -68,12 +68,12 @@ const getFooterData = (t = () => {}) => ({
         {
           title: t('menu.2.submenu.0.title'),
           href: t('menu.2.submenu.0.url'),
-          target: '',
+          target: '_blank',
         },
         {
           title: t('menu.2.submenu.1.title'),
           href: t('menu.2.submenu.1.url'),
-          target: '',
+          target: '_blank',
         },
         {
           title: t('menu.2.submenu.2.title'),
@@ -83,12 +83,12 @@ const getFooterData = (t = () => {}) => ({
         {
           title: t('menu.2.submenu.3.title'),
           href: t('menu.2.submenu.3.url'),
-          target: '',
+          target: '_blank',
         },
         {
           title: t('menu.2.submenu.4.title'),
           href: t('menu.2.submenu.4.url'),
-          target: '',
+          target: '_blank',
         },
       ],
     },
