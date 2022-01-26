@@ -4,21 +4,36 @@
     "url": "https://docs.meilisearch.com/"
   },
   "blog": {
-    "title":"Blog",
+    "title": "Blog",
     "url": "https://blog.meilisearch.com/"
   },
   "jobs": {
     "title": "Jobs",
-    "url" :"https://jobs.lever.co/meili"
+    "url": "https://jobs.lever.co/meili"
   },
   "resources": {
     "title": "Resources",
     "subMenu": [
-      { "title": "Guides" },
-      { "title": "Api Reference" },
-      { "title": "Roadmap" },
-      { "title": "Changelog" },
-      { "title": "Integrations" }
+      {
+        "title": "Guides",
+        "url": "https://docs.meilisearch.com/learn/"
+      },
+      {
+        "title": "Api Reference",
+        "url": "https://docs.meilisearch.com/reference/api/"
+      },
+      {
+        "title": "Roadmap",
+        "url": "https://roadmap.meilisearch.com/tabs/5-ideas"
+      },
+      {
+        "title": "Changelog",
+        "url": "https://github.com/meilisearch/meilisearch/releases"
+      },
+      {
+        "title": "Integrations",
+        "url": "https://github.com/meilisearch/integration-guides"
+      }
     ]
   },
   "logIn": {
