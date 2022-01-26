@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Meilisearch",
-    "description": "An open-source, blazingly fast and hyper-relevant search engine that will improve your search experience"
+    "description": "An open-source, blazingly fast, and hyper-relevant search engine that will improve your search experience"
   },
   "hero": {
     "title": "Shape a <strong>delightful</strong> <strong>search</strong> experience in a snap",
@@ -90,7 +90,7 @@
         },
         {
           "title": "Language detection",
-          "description": "Meilisearch supports all languages and is able to detect them automatically. "
+          "description": "Meilisearch supports all languages and detects them automatically. "
         },
         {
           "title": "Sort by",
@@ -98,11 +98,11 @@
         },
         {
           "title": "Custom relevancy",
-          "description": "Let's break the rules. Use with our default ranking rules or create your own."
+          "description": "Let's break the rules. Use our default ranking rules or create your own."
         },
         {
           "title": "API Keys",
-          "description": "Secure your data with API keys that allow fine-grained permissions management."
+          "description": "Secure your data with API keys that allow fine-grained access and permission management."
         }
       ],
       "cta": {
@@ -134,7 +134,7 @@
   "cards": {
     "preTitle": "Become an actor",
     "title": "Join the community",
-    "description": "Join our community and help us make good, fast, and relevant search accessible to everyone. Whether you are a contributor, a user, or you just need answers to questions about Meilisearch, we are here for you.",
+    "description": "Join our community and help us make fast and relevant search accessible to everyone. Whether you are a contributor, a user, or you just need answers to questions about Meilisearch, we are here for you.",
     "cards": [
       {
         "title": "Github",
