@@ -1,7 +1,16 @@
 {
-  "documentation": "Documentation",
-  "blog": "Blog",
-  "jobs": "Jobs",
+  "documentation": {
+    "title": "Documentation",
+    "url": "https://docs.meilisearch.com/"
+  },
+  "blog": {
+    "title":"Blog",
+    "url": "https://blog.meilisearch.com/"
+  },
+  "jobs": {
+    "title": "Jobs",
+    "url" :"https://jobs.lever.co/meili"
+  },
   "resources": {
     "title": "Resources",
     "subMenu": [
@@ -12,6 +21,12 @@
       { "title": "Integrations" }
     ]
   },
-  "logIn": "Log In",
-  "getStarted": "Get Started"
+  "logIn": {
+    "title": "Join the Cloud beta",
+    "url": "https://meilisearch.typeform.com/to/FtnzvZfh"
+  },
+  "getStarted": {
+    "title": "Get Started",
+    "url": "https://docs.meilisearch.com/learn/getting_started/"
+  }
 }

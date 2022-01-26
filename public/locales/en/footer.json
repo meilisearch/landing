@@ -4,25 +4,32 @@
       "title": "Resources",
       "submenu": [
         {
-          "title": "Documentation"
+          "title": "Documentation",
+          "url": "https://docs.meilisearch.com/"
         },
         {
-          "title": "Blog"
+          "title": "Blog",
+          "url": "https://blog.meilisearch.com/"
         },
         {
-          "title": "Guides"
+          "title": "Cookbooks",
+          "url": "https://docs.meilisearch.com/learn/cookbooks/"
         },
         {
-          "title": "API Reference"
+          "title": "API Reference",
+          "url": "https://docs.meilisearch.com/reference/api/"
         },
         {
-          "title": "Roadmap"
+          "title": "Roadmap",
+          "url": "https://roadmap.meilisearch.com/"
         },
         {
-          "title": "Changelog"
+          "title": "Changelog",
+          "url": "https://github.com/meilisearch/meilisearch/releases"
         },
         {
-          "title": "Integrations"
+          "title": "Integrations",
+          "url": "https://github.com/meilisearch/integration-guides"
         }
       ]
     },
@@ -30,13 +37,16 @@
       "title": "Connect",
       "submenu": [
         {
-          "title": "Support"
+          "title": "Support",
+          "url": "https://slack.meilisearch.com/"
         },
         {
-          "title": "Github"
+          "title": "Github",
+          "url": "https://github.com/meilisearch"
         },
         {
-          "title": "Slack"
+          "title": "Slack",
+          "url": "https://slack.meilisearch.com/"
         }
       ]
     },
@@ -44,22 +54,24 @@
       "title": "Company",
       "submenu": [
         {
-          "title": "About us"
+          "title": "About us",
+          "url": "https://www.welcometothejungle.com/fr/companies/meilisearch"
         },
         {
-          "title": "Contact us"
+          "title": "Contact us",
+          "url": "https://docs.meilisearch.com/learn/what_is_meilisearch/contact.html#contact-us"
         },
         {
-          "title": "Career"
+          "title": "Career",
+          "url": "https://jobs.lever.co/meili"
         },
         {
-          "title": "Code of conduct"
+          "title": "Code of conduct",
+          "url": "https://github.com/meilisearch/MeiliSearch/blob/main/CODE_OF_CONDUCT.md"
         },
         {
-          "title": "Privacy Policy"
-        },
-        {
-          "title": "Terms of service"
+          "title": "Privacy Policy",
+          "url": "https://meilisearch.notion.site/Privacy-Policy-47f207efc5244de0820ffd19f0d844d8"
         }
       ]
     }
