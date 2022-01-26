@@ -14,31 +14,11 @@
   "resources": {
     "title": "Resources",
     "subMenu": [
-      {
-        "title": "Guides",
-        "subtitle": "Lorem ipsum dolor sit amet",
-        "url": "https://docs.meilisearch.com/learn/"
-      },
-      {
-        "title": "Api Reference",
-        "subtitle": "Lorem ipsum dolor sit amet",
-        "url": "https://docs.meilisearch.com/reference/api/"
-      },
-      {
-        "title": "Roadmap",
-        "subtitle": "Lorem ipsum dolor sit amet",
-        "url": "https://roadmap.meilisearch.com/tabs/5-ideas"
-      },
-      {
-        "title": "Changelog",
-        "subtitle": "Lorem ipsum dolor sit amet",
-        "url": "https://github.com/meilisearch/meilisearch/releases"
-      },
-      {
-        "title": "Integrations",
-        "subtitle": "Lorem ipsum dolor sit amet",
-        "url": "https://github.com/meilisearch/integration-guides"
-      }
+      { "title": "Guides" },
+      { "title": "Api Reference" },
+      { "title": "Roadmap" },
+      { "title": "Changelog" },
+      { "title": "Integrations" }
     ]
   },
   "logIn": {
