@@ -107,7 +107,7 @@ const Second = ({ section, color }) => {
         <Description
           dangerouslySetInnerHTML={{ __html: section.description }}
         />
-        <Cta color={color}>
+        <Cta color={color} href={section.cta.url}>
           <Typography variant="ctaBig">{section.cta.title}</Typography>
         </Cta>
       </ContentColumn>
