@@ -138,7 +138,7 @@
     "cards": [
       {
         "title": "Github",
-        "description": "Open issues and PRs, request new features and vote on the ones that matter the most to you!",
+        "description": "Open issues and PRs, request new features, and vote on the ones that matter the most to you!",
         "cta": {
           "title": "Start contributing",
           "url": "https://github.com/meilisearch/meilisearch"
