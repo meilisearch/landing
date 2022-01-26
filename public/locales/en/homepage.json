@@ -18,7 +18,7 @@
   "demo": {
     "preTitle": "Why Meilisearch?",
     "title": "The next generation of search",
-    "description": "Meilisearch is a flexible, powerful, user-focused search engine that can be added to any website or application.",
+    "description": "Meilisearch is a flexible and powerful user-focused search engine that can be added to any website or application.",
     "keypoints": [
       {
         "title": "Lightning fast",
@@ -43,7 +43,7 @@
     }
   },
   "openSource": {
-    "preTitle": "Open Source",
+    "preTitle": "Open source",
     "title": "Nothing <strong>good</strong> is built alone",
     "description": "Join our welcoming and fast growing community.",
     "cta": {
@@ -58,10 +58,10 @@
         "title": "Contributors"
       },
       {
-        "title": "Servers in Production"
+        "title": "Servers in production"
       },
       {
-        "title": "Developer Community"
+        "title": "Developer community"
       }
     ]
   },
@@ -101,7 +101,7 @@
           "description": "Let's break the rules. Use our default ranking rules or create your own."
         },
         {
-          "title": "API Keys",
+          "title": "API keys",
           "description": "Secure your data with API keys that allow fine-grained access and permission management."
         }
       ],
@@ -123,7 +123,7 @@
       },
       "secondSection": {
         "title": "Cloud",
-        "description": "Need to go fast? Meilisearch cloud takes care of everything so you just have to focus on the most important thing: making sure your users' have a great search experience.<br/><br/>Enter the waiting list for the beta of our cloud by completing the form.",
+        "description": "Need to go fast? Meilisearch cloud takes care of everything so you just have to focus on the most important thing: making sure your users' have a great search experience.<br/><br/>Enter the waiting list for our cloud beta by completing the form linked below.",
         "cta": {
           "title": "Apply for the beta",
           "url": "https://meilisearch.typeform.com/to/FtnzvZfh"
@@ -138,7 +138,7 @@
     "cards": [
       {
         "title": "Github",
-        "description": "Open issues, PRs, request features and vote on them!",
+        "description": "Open issues and PRs, request new features and vote on the ones that matter the most to you!",
         "cta": {
           "title": "Start contributing",
           "url": "https://github.com/meilisearch/meilisearch"
