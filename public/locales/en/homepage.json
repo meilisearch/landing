@@ -102,7 +102,7 @@
         },
         {
           "title": "API keys",
-          "description": "Secure your data with API keys that allow fine-grained access and permission management."
+          "description": "Secure your data with API keys that allow fine-grained permissions management."
         }
       ],
       "cta": {
