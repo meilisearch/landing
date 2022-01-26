@@ -7,37 +7,37 @@ const getFooterData = (t = () => {}) => ({
       submenu: [
         {
           title: t('menu.0.submenu.0.title'),
-          href: 'https://docs.meilisearch.com/',
+          href: t('menu.0.submenu.0.url'),
           target: '_blank',
         },
         {
           title: t('menu.0.submenu.1.title'),
-          href: 'https://blog.meilisearch.com/',
+          href: t('menu.0.submenu.1.url'),
           target: '_blank',
         },
         {
           title: t('menu.0.submenu.2.title'),
-          href: '',
+          href: t('menu.0.submenu.2.url'),
           target: '',
         },
         {
           title: t('menu.0.submenu.3.title'),
-          href: 'https://docs.meilisearch.com/reference/api/',
+          href: t('menu.0.submenu.3.url'),
           target: '_blank',
         },
         {
           title: t('menu.0.submenu.4.title'),
-          href: 'https://roadmap.meilisearch.com/',
+          href: t('menu.0.submenu.4.url'),
           target: '_blank',
         },
         {
           title: t('menu.0.submenu.5.title'),
-          href: 'https://github.com/meilisearch/meilisearch/releases',
+          href: t('menu.0.submenu.5.url'),
           target: '_blank',
         },
         {
           title: t('menu.0.submenu.6.title'),
-          href: 'https://github.com/meilisearch/integration-guides',
+          href: t('menu.0.submenu.6.url'),
           target: '_blank',
         },
       ],
@@ -47,17 +47,17 @@ const getFooterData = (t = () => {}) => ({
       submenu: [
         {
           title: t('menu.1.submenu.0.title'),
-          href: '',
+          href: t('menu.1.submenu.0.url'),
           target: '',
         },
         {
           title: t('menu.1.submenu.1.title'),
-          href: '',
+          href: t('menu.1.submenu.1.url'),
           target: '',
         },
         {
           title: t('menu.1.submenu.2.title'),
-          href: 'https://slack.meilisearch.com/',
+          href: t('menu.1.submenu.2.url'),
           target: '_blank',
         },
       ],
@@ -67,32 +67,27 @@ const getFooterData = (t = () => {}) => ({
       submenu: [
         {
           title: t('menu.2.submenu.0.title'),
-          href: '',
+          href: t('menu.2.submenu.0.url'),
           target: '',
         },
         {
           title: t('menu.2.submenu.1.title'),
-          href: '',
+          href: t('menu.2.submenu.1.url'),
           target: '',
         },
         {
           title: t('menu.2.submenu.2.title'),
-          href: 'https://www.welcometothejungle.com/fr/companies/meilisearch',
+          href: t('menu.2.submenu.2.url'),
           target: '_blank',
         },
         {
           title: t('menu.2.submenu.3.title'),
-          href: '',
+          href: t('menu.2.submenu.3.url'),
           target: '',
         },
         {
           title: t('menu.2.submenu.4.title'),
-          href: '',
-          target: '',
-        },
-        {
-          title: t('menu.2.submenu.5.title'),
-          href: '',
+          href: t('menu.2.submenu.4.url'),
           target: '',
         },
       ],
