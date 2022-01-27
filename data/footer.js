@@ -60,6 +60,11 @@ const getFooterData = (t = () => {}) => ({
           href: t('menu.1.submenu.2.url'),
           target: '_blank',
         },
+        {
+          title: t('menu.1.submenu.3.title'),
+          href: t('menu.1.submenu.3.url'),
+          target: '_blank',
+        },
       ],
     },
     {
