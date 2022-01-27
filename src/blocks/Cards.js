@@ -121,7 +121,7 @@ const Card = ({ title, description, color, icon: Icon, cta }) => (
     <Cta
       variant="secondary"
       color={get('colors.white')}
-      href={cta.url}
+      href={cta.href}
       target={cta.target}
     >
       <Typography variant="ctaBig">{cta.title}</Typography>
