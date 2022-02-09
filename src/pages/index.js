@@ -25,10 +25,10 @@ const Hero = styled(BaseHero)`
     margin-top: 98px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 148px;
+    margin-top: 48px;
   }
   @media (min-width: ${get('breakpoints.xl')}) {
-    margin-top: 250px;
+    margin-top: 200px;
   }
 `
 
