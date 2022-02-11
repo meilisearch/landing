@@ -104,7 +104,7 @@ const getFooterData = (t = () => {}) => ({
       icon: Github,
       href: 'https://github.com/meilisearch',
       target: '_blank',
-      title: 'Github',
+      title: 'GitHub',
     },
     {
       icon: Twitter,
