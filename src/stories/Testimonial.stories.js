@@ -1,5 +1,7 @@
 import React from 'react'
 import Testimonial from 'components/Testimonial'
+import { useTranslation } from 'next-i18next'
+import getHomepageData from '../../data/homepage'
 
 export default {
   title: 'Components/Testimonial',
@@ -8,15 +10,9 @@ export default {
   },
 }
 
-const tweet = {
-  text: 'Wow <a href="https://twitter.com/meilisearch/" target="_blank">@meilisearch</a> is an incredible piece of software. Would love to have one of the devs do a talk at <a href="https://twitter.com/RustDublin/" target="_blank">@RustDublin</a>',
-  author: {
-    realName: 'Anton Whalley 🦀',
-    pseudo: '@dhigit9',
-    profilePicture:
-      'https://pbs.twimg.com/profile_images/1457815736659980293/MEl3ePpS_400x400.jpg',
-    twitterLink: 'https://twitter.com/dhigit9/',
-  },
-}
+export const Default = () => {
+  const { t } = useTranslation('homepage')
+  const { testimonials } = getHomepageData(t)
 
-export const Default = () => <Testimonial tweet={tweet} />
+  return <Testimonial testimonial={testimonials.list[0]} />
+}

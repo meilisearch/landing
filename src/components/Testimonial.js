@@ -13,6 +13,7 @@ const Card = styled.article`
   height: 368px;
   width: 232px;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   align-items: flex-start;
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -77,35 +78,37 @@ const AuthorInfos = styled.div`
   margin-left: 22px;
 `
 
-const Testimonial = ({ tweet, ...props }) => {
+const Testimonial = ({ testimonial, ...props }) => {
   return (
-    <Card {...props}>
-      <TwitterIcon />
-      <div style={{ flex: 1 }}>
-        <Text
-          variant="small"
-          dangerouslySetInnerHTML={{ __html: tweet.text }}
-        />
-      </div>
-      <Author>
-        <ProfilePicture
-          layout="fixed"
-          width={56}
-          height={56}
-          src={tweet.author.profilePicture}
-        />
-        <AuthorInfos>
-          <AuthorName>{tweet.author.realName}</AuthorName>
-          <AuthorLink
-            rel="author"
-            href={tweet.author.twitterLink}
-            target="_blank"
-          >
-            {tweet.author.pseudo}
-          </AuthorLink>
-        </AuthorInfos>
-      </Author>
-    </Card>
+    <Link href={testimonial.link} target="_blank">
+      <Card {...props}>
+        <TwitterIcon />
+        <div style={{ flex: 1 }}>
+          <Text
+            variant="small"
+            dangerouslySetInnerHTML={{ __html: testimonial.text }}
+          />
+        </div>
+        <Author>
+          <ProfilePicture
+            layout="fixed"
+            width={56}
+            height={56}
+            src={testimonial.author.profilePicture}
+          />
+          <AuthorInfos>
+            <AuthorName>{testimonial.author.realName}</AuthorName>
+            <AuthorLink
+              rel="author"
+              href={testimonial.author.authorLink}
+              target="_blank"
+            >
+              {testimonial.author.pseudo}
+            </AuthorLink>
+          </AuthorInfos>
+        </Author>
+      </Card>
+    </Link>
   )
 }
 
