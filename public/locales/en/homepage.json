@@ -47,7 +47,7 @@
     "title": "Nothing <strong>good</strong> is built alone",
     "description": "Join our welcoming and fast growing community.",
     "cta": {
-      "title": "Browse on Github",
+      "title": "Browse on GitHub",
       "url": "https://github.com/meilisearch/meilisearch"
     },
     "keypoints": [
@@ -137,7 +137,7 @@
     "description": "Join our community and help us make fast and relevant search accessible to everyone. Whether you are a contributor, a user, or you just need answers to questions about Meilisearch, we are here for you.",
     "cards": [
       {
-        "title": "Github",
+        "title": "GitHub",
         "description": "Open issues and PRs, request new features, and vote on the ones that matter the most to you!",
         "cta": {
           "title": "Start contributing",
