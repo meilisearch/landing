@@ -66,10 +66,12 @@ const AuthorName = styled(Typography)`
 `
 
 const AuthorLink = styled(Link)`
-  color: ${get('colors.valhalla.300')};
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: ${get('fontWeight.normal')};
+  span {
+    color: ${get('colors.valhalla.300')};
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: ${get('fontWeight.normal')};
+  }
 `
 
 const AuthorInfos = styled.div`
@@ -103,7 +105,7 @@ const Testimonial = ({ testimonial, ...props }) => {
               href={testimonial.author.authorLink}
               target="_blank"
             >
-              {testimonial.author.pseudo}
+              <Typography>{testimonial.author.pseudo}</Typography>
             </AuthorLink>
           </AuthorInfos>
         </Author>
