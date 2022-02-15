@@ -13,4 +13,14 @@ module.exports = {
   images: {
     domains: ['pbs.twimg.com'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/privacy',
+        destination:
+          'https://meilisearch.notion.site/Privacy-Policy-47f207efc5244de0820ffd19f0d844d8',
+        permanent: true,
+      },
+    ]
+  },
 }
