@@ -5,6 +5,7 @@ import get from 'utils/get'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
 import Testimonial from 'components/Testimonial'
+import { RightArrow } from 'components/icons'
 
 const Section = styled.section`
   background-color: ${get('colors.dodgerBlue')};
@@ -136,7 +137,13 @@ const Testimonials = ({ testimonialsProps: testimonials, ...props }) => {
               href={testimonials.cta.href}
               target={testimonials.cta.target}
             >
-              <Typography variant="ctaBig">{testimonials.cta.title}</Typography>
+              <Typography
+                variant="ctaBig"
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <RightArrow width={20} style={{ marginRight: 12 }} />
+                {testimonials.cta.title}
+              </Typography>
             </Cta>
           </Content>
           <Decorator />
