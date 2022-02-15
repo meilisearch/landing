@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
 import { Twitter } from 'components/icons'
-import Link from 'components/Link'
 import Typography from 'components/Typography'
 import Image from 'next/image'
 
@@ -36,9 +35,9 @@ const Text = styled(Typography)`
   color: ${get('colors.valhalla.400')};
   font-weight: 400;
 
-  a {
+  strong {
     color: ${get('colors.dodgerBlue')};
-    font-family: inherit;
+    font-weight: inherit;
   }
 `
 
@@ -65,13 +64,11 @@ const AuthorName = styled(Typography)`
   font-weight: ${get('fontWeight.bold')};
 `
 
-const AuthorLink = styled(Link)`
-  span {
-    color: ${get('colors.valhalla.300')};
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: ${get('fontWeight.normal')};
-  }
+const UserName = styled(Typography)`
+  color: ${get('colors.valhalla.300')};
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: ${get('fontWeight.normal')};
 `
 
 const AuthorInfos = styled.div`
@@ -82,35 +79,27 @@ const AuthorInfos = styled.div`
 
 const Testimonial = ({ testimonial, ...props }) => {
   return (
-    <Link href={testimonial.link} target="_blank">
-      <Card {...props}>
-        <TwitterIcon />
-        <div style={{ flex: 1 }}>
-          <Text
-            variant="small"
-            dangerouslySetInnerHTML={{ __html: testimonial.text }}
-          />
-        </div>
-        <Author>
-          <ProfilePicture
-            layout="fixed"
-            width={56}
-            height={56}
-            src={testimonial.author.profilePicture}
-          />
-          <AuthorInfos>
-            <AuthorName>{testimonial.author.realName}</AuthorName>
-            <AuthorLink
-              rel="author"
-              href={testimonial.author.authorLink}
-              target="_blank"
-            >
-              <Typography>{testimonial.author.pseudo}</Typography>
-            </AuthorLink>
-          </AuthorInfos>
-        </Author>
-      </Card>
-    </Link>
+    <Card {...props}>
+      <TwitterIcon />
+      <div style={{ flex: 1 }}>
+        <Text
+          variant="small"
+          dangerouslySetInnerHTML={{ __html: testimonial.text }}
+        />
+      </div>
+      <Author>
+        <ProfilePicture
+          layout="fixed"
+          width={56}
+          height={56}
+          src={testimonial.author.profilePicture}
+        />
+        <AuthorInfos>
+          <AuthorName>{testimonial.author.realName}</AuthorName>
+          <UserName>{testimonial.author.pseudo}</UserName>
+        </AuthorInfos>
+      </Author>
+    </Card>
   )
 }
 

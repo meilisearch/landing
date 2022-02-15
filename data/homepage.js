@@ -227,15 +227,13 @@ const getHomepageData = (t = () => {}) => ({
   testimonials: {
     list: [
       {
-        text: 'Wow <a href="https://twitter.com/meilisearch/" target="_blank">@meilisearch</a> is an incredible piece of software. Would love to have one of the devs do a talk at <a href="https://twitter.com/RustDublin/" target="_blank">@RustDublin</a>',
+        text: 'Wow <strong>@meilisearch</strong> is an incredible piece of software. Would love to have one of the devs do a talk at <strong>@RustDublin</strong>',
         author: {
           realName: 'Anton Whalley 🦀',
           pseudo: '@dhigit9',
           profilePicture:
             'https://pbs.twimg.com/profile_images/1487580746659373061/WBj_Flm__400x400.jpg',
-          authorLink: 'https://twitter.com/dhigit9/',
         },
-        link: 'https://twitter.com/dhigit9/status/1451716049456582656',
       },
       {
         text: 'We decided to use it over Elasticsearch for all these reasons, it’s not that easy to find such a great software being easy to use and developer-first. When HA (work in progress) will be released it will be enterprise-ready too ❤️',
@@ -244,9 +242,7 @@ const getHomepageData = (t = () => {}) => ({
           pseudo: '@theraloss',
           profilePicture:
             'https://pbs.twimg.com/profile_images/1452988537662496776/m-EJ567Y_400x400.jpg',
-          authorLink: 'https://twitter.com/theraloss',
         },
-        link: 'https://twitter.com/theraloss/status/1450723032339820549',
       },
       {
         text: '100% agree! It’s mindblowing fast 🔥',
@@ -255,9 +251,7 @@ const getHomepageData = (t = () => {}) => ({
           pseudo: '@Bjornftw',
           profilePicture:
             'https://pbs.twimg.com/profile_images/1447442527305490433/nivzG1I4_400x400.jpg',
-          authorLink: 'https://twitter.com/Bjornftw',
         },
-        link: 'https://twitter.com/Bjornftw/status/1450482638393905159',
       },
       {
         text: 'Meilisearch is such a powerful tool, we use it on our project, and has been such a help!',
@@ -266,42 +260,34 @@ const getHomepageData = (t = () => {}) => ({
           pseudo: '@orphikkkk',
           profilePicture:
             'https://pbs.twimg.com/profile_images/1360809851371233283/LnH_1uRA_400x400.jpg',
-          authorLink: 'https://twitter.com/orphikkkk',
         },
-        link: 'https://twitter.com/orphikkkk/status/1460958283062075394',
       },
       {
-        text: '👉 66<br/>Trying Implementing full text search and still using regex & find, try <a href="https://twitter.com/meilisearch/" target="_blank">@meilisearch</a> and if seeking for some realtime search sync replica of db to meiliseach and search using filters It just works Awesome!',
+        text: '👉 66<br/>Trying Implementing full text search and still using regex & find, try <strong>@meilisearch</strong> and if seeking for some realtime search sync replica of db to meiliseach and search using filters It just works Awesome!',
         author: {
           realName: 'Mitesh Metha',
           pseudo: '@miteshmetha',
           profilePicture:
             'https://pbs.twimg.com/profile_images/1466428901283049472/CHiTtFOM_400x400.jpg',
-          authorLink: 'https://twitter.com/miteshmetha',
         },
-        link: 'https://twitter.com/miteshmetha/status/1460676213924499458',
       },
       {
-        text: 'Quickly made a full app search for Financial Freedom. <a href="https://twitter.com/meilisearch/" target="_blank">@meilisearch</a> is beyond powerful... (yes, that’s test data 🤓)',
+        text: 'Quickly made a full app search for Financial Freedom. <strong>@meilisearch</strong> is beyond powerful... (yes, that’s test data 🤓)',
         author: {
           realName: 'Dan Pastori',
           pseudo: '@danpastori',
           profilePicture:
             'https://pbs.twimg.com/profile_images/940746430464929792/o5MP2lgT_400x400.jpg',
-          authorLink: 'https://twitter.com/danpastori',
         },
-        link: 'https://twitter.com/danpastori/status/1458879462930620417',
       },
       {
-        text: 'Super impressed with <a href="https://twitter.com/meilisearch/" target="_blank">@meilisearch</a>. Spun up a VPS, installed it, imported a piece of my corpus and my goodness, the search is FAST 🤯',
+        text: 'Super impressed with <strong>@meilisearch</strong>. Spun up a VPS, installed it, imported a piece of my corpus and my goodness, the search is FAST 🤯',
         author: {
           realName: 'jelle',
           pseudo: '@jellevliet',
           profilePicture:
             'https://pbs.twimg.com/profile_images/1470349013140529152/rgxS7KW-_400x400.jpg',
-          authorLink: 'https://twitter.com/jellevliet',
         },
-        link: 'https://twitter.com/jellevliet/status/1455848012572418050',
       },
     ],
     description:
