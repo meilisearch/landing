@@ -70,6 +70,9 @@ const Content = styled.div`
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: 3 / 11;
   }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding: 0 32px;
+  }
 `
 
 const Cta = styled(Button)`
