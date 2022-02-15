@@ -130,7 +130,12 @@ const Testimonials = ({ testimonialsProps: testimonials, ...props }) => {
         <Grid style={{ position: 'relative' }}>
           <Content>
             <Typography variant="title3">{testimonials.description}</Typography>
-            <Cta color={get('colors.white')} variant="secondary">
+            <Cta
+              color={get('colors.white')}
+              variant="secondary"
+              href={testimonials.cta.href}
+              target={testimonials.cta.target}
+            >
               <Typography variant="ctaBig">{testimonials.cta.title}</Typography>
             </Cta>
           </Content>

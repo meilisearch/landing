@@ -290,12 +290,11 @@ const getHomepageData = (t = () => {}) => ({
         },
       },
     ],
-    description:
-      'Already 23k users have been convinced by MeiliSearch. How about giving it a try?',
+    description: t('testimonials.description'),
     cta: {
-      title: '→ Get started',
-      href: '',
-      target: '',
+      title: t('testimonials.cta.title'),
+      href: t('testimonials.cta.url'),
+      target: '_blank',
     },
   },
 })
