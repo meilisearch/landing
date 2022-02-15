@@ -52,9 +52,6 @@ const Carousel = styled.div`
     ${p => p.$nbTestimonials} * 252px + ${p => p.$nbTestimonials - 1} * 16px
   );
   animation: ${scroll} 45s linear infinite;
-  &:hover {
-    animation-play-state: paused;
-  }
 `
 
 const Text = styled.div`
