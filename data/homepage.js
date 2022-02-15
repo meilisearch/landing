@@ -224,6 +224,79 @@ const getHomepageData = (t = () => {}) => ({
       },
     ],
   },
+  testimonials: {
+    list: [
+      {
+        text: 'Wow <strong>@meilisearch</strong> is an incredible piece of software. Would love to have one of the devs do a talk at <strong>@RustDublin</strong>',
+        author: {
+          realName: 'Anton Whalley 🦀',
+          pseudo: '@dhigit9',
+          profilePicture:
+            'https://pbs.twimg.com/profile_images/1487580746659373061/WBj_Flm__400x400.jpg',
+        },
+      },
+      {
+        text: 'We decided to use it over Elasticsearch for all these reasons, it’s not that easy to find such a great software being easy to use and developer-first. When HA (work in progress) will be released it will be enterprise-ready too ❤️',
+        author: {
+          realName: 'Danilo Polani',
+          pseudo: '@theraloss',
+          profilePicture:
+            'https://pbs.twimg.com/profile_images/1452988537662496776/m-EJ567Y_400x400.jpg',
+        },
+      },
+      {
+        text: '100% agree! It’s mindblowing fast 🔥',
+        author: {
+          realName: 'Björn Antonissen',
+          pseudo: '@Bjornftw',
+          profilePicture:
+            'https://pbs.twimg.com/profile_images/1447442527305490433/nivzG1I4_400x400.jpg',
+        },
+      },
+      {
+        text: 'Meilisearch is such a powerful tool, we use it on our project, and has been such a help!',
+        author: {
+          realName: 'Sajag Dhungana 👨🏻‍💻',
+          pseudo: '@orphikkkk',
+          profilePicture:
+            'https://pbs.twimg.com/profile_images/1360809851371233283/LnH_1uRA_400x400.jpg',
+        },
+      },
+      {
+        text: '👉 66<br/>Trying Implementing full text search and still using regex & find, try <strong>@meilisearch</strong> and if seeking for some realtime search sync replica of db to meiliseach and search using filters It just works Awesome!',
+        author: {
+          realName: 'Mitesh Metha',
+          pseudo: '@miteshmetha',
+          profilePicture:
+            'https://pbs.twimg.com/profile_images/1466428901283049472/CHiTtFOM_400x400.jpg',
+        },
+      },
+      {
+        text: 'Quickly made a full app search for Financial Freedom. <strong>@meilisearch</strong> is beyond powerful... (yes, that’s test data 🤓)',
+        author: {
+          realName: 'Dan Pastori',
+          pseudo: '@danpastori',
+          profilePicture:
+            'https://pbs.twimg.com/profile_images/940746430464929792/o5MP2lgT_400x400.jpg',
+        },
+      },
+      {
+        text: 'Super impressed with <strong>@meilisearch</strong>. Spun up a VPS, installed it, imported a piece of my corpus and my goodness, the search is FAST 🤯',
+        author: {
+          realName: 'jelle',
+          pseudo: '@jellevliet',
+          profilePicture:
+            'https://pbs.twimg.com/profile_images/1470349013140529152/rgxS7KW-_400x400.jpg',
+        },
+      },
+    ],
+    description: t('testimonials.description'),
+    cta: {
+      title: t('testimonials.cta.title'),
+      href: t('testimonials.cta.url'),
+      target: '_blank',
+    },
+  },
 })
 
 export default getHomepageData

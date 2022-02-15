@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
 import { Twitter } from 'components/icons'
-import Link from 'components/Link'
 import Typography from 'components/Typography'
 import Image from 'next/image'
 
@@ -13,6 +12,7 @@ const Card = styled.article`
   height: 368px;
   width: 232px;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   align-items: flex-start;
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -35,9 +35,9 @@ const Text = styled(Typography)`
   color: ${get('colors.valhalla.400')};
   font-weight: 400;
 
-  a {
+  strong {
     color: ${get('colors.dodgerBlue')};
-    font-family: inherit;
+    font-weight: inherit;
   }
 `
 
@@ -64,7 +64,7 @@ const AuthorName = styled(Typography)`
   font-weight: ${get('fontWeight.bold')};
 `
 
-const AuthorLink = styled(Link)`
+const UserName = styled(Typography)`
   color: ${get('colors.valhalla.300')};
   font-size: 12px;
   line-height: 18px;
@@ -77,14 +77,14 @@ const AuthorInfos = styled.div`
   margin-left: 22px;
 `
 
-const Testimonial = ({ tweet, ...props }) => {
+const Testimonial = ({ testimonial, ...props }) => {
   return (
     <Card {...props}>
       <TwitterIcon />
       <div style={{ flex: 1 }}>
         <Text
           variant="small"
-          dangerouslySetInnerHTML={{ __html: tweet.text }}
+          dangerouslySetInnerHTML={{ __html: testimonial.text }}
         />
       </div>
       <Author>
@@ -92,17 +92,11 @@ const Testimonial = ({ tweet, ...props }) => {
           layout="fixed"
           width={56}
           height={56}
-          src={tweet.author.profilePicture}
+          src={testimonial.author.profilePicture}
         />
         <AuthorInfos>
-          <AuthorName>{tweet.author.realName}</AuthorName>
-          <AuthorLink
-            rel="author"
-            href={tweet.author.twitterLink}
-            target="_blank"
-          >
-            {tweet.author.pseudo}
-          </AuthorLink>
+          <AuthorName>{testimonial.author.realName}</AuthorName>
+          <UserName>{testimonial.author.pseudo}</UserName>
         </AuthorInfos>
       </Author>
     </Card>

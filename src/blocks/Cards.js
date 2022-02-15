@@ -15,7 +15,7 @@ const Section = styled.section`
     margin: 0 -32px;
     padding: 58px 32px;
   }
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
     padding: 96px 32px;
   }
 `

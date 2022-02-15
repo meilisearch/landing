@@ -16,6 +16,7 @@ import {
   Linkedin as LinkedinIcon,
   Plug as PlugIcon,
   Puzzle as PuzzleIcon,
+  RightArrow as RightArrowIcon,
   Roadmap as RoadmapIcon,
   Slack as SlackIcon,
   SortBy as SortByIcon,
@@ -59,6 +60,7 @@ export const Lightning = () => <LightningIcon height={56} />
 export const Linkedin = () => <LinkedinIcon height={56} />
 export const Plug = () => <PlugIcon height={56} />
 export const Puzzle = () => <PuzzleIcon height={56} />
+export const RightArrow = () => <RightArrowIcon height={56} />
 export const Roadmap = () => <RoadmapIcon height={56} />
 export const Slack = () => <SlackIcon height={56} />
 export const SortBy = () => <SortByIcon height={56} />
