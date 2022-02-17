@@ -160,7 +160,9 @@ const SearchContainer = styled.div`
 const MobileSearchContainer = styled(SearchContainer)`
   display: flex;
   justify-content: center;
-  margin-top: 48px;
+  margin: 48px auto 0;
+  width: 100%;
+  max-width: 344px;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
   }
