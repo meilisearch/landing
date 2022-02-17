@@ -49,12 +49,11 @@ const StyledSearchbox = styled(IsSearchbox)`
     line-height: 22px;
     transition: border-color 300ms, color 300ms, background-color 300ms;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: ${get('colors.lila')};
       background-color: ${get('colors.lila.200')};
     }
-    &:active {
+    &:focus {
       border-color: ${get('colors.lila')};
       background-color: ${get('colors.white')};
     }
