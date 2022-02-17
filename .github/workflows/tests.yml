@@ -47,7 +47,9 @@ jobs:
           wait-on: 'http://localhost:3000'
           command: yarn cy:run
           config-file: cypress.json
-          env: NEXT_PUBLIC_DEMO_MOVIES_HOST=${{secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST}},NEXT_PUBLIC_DEMO_MOVIES_API_KEY=${{secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY}}
+        env:
+          CYPRESS_NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST}}
+          CYPRESS_NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY}}
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
