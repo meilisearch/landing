@@ -25,6 +25,14 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
+    services:
+      meilisearch:
+        image: getmeili/meilisearch:v0.24.0
+        env:
+          MEILI_MASTER_KEY: 'masterKey'
+          MEILI_NO_ANALYTICS: 'true'
+        ports:
+          - '7700:7700'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -49,8 +57,8 @@ jobs:
           command: yarn cy:run
           config-file: cypress.json
         env:
-          NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST}}
-          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY}}
+          NEXT_PUBLIC_DEMO_MOVIES_HOST: http://meilisearch:7700
+          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: masterKey
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
