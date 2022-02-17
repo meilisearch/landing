@@ -43,12 +43,14 @@ jobs:
       - name: Browser tests
         uses: cypress-io/github-action@v2
         with:
-          build: yarn build
+          build: NEXT_PUBLIC_DEMO_MOVIES_HOST="${NEXT_PUBLIC_DEMO_MOVIES_HOST}" NEXT_PUBLIC_DEMO_MOVIES_API_KEY="${NEXT_PUBLIC_DEMO_MOVIES_API_KEY}" yarn build
           start: yarn start
           wait-on: 'http://localhost:3000'
           command: yarn cy:run
           config-file: cypress.json
-          env: NEXT_PUBLIC_DEMO_MOVIES_HOST=${{secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST}}, NEXT_PUBLIC_DEMO_MOVIES_API_KEY=${{secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY}}
+        env:
+          NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST}}
+          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY}}
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
