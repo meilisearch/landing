@@ -51,7 +51,7 @@ const StyledSearchbox = styled(IsSearchbox)`
 
     &:hover {
       border-color: ${get('colors.lila')};
-      background-color: ${get('colors.lila.200')};
+      background-color: ${get('colors.lila.100')};
     }
     &:focus {
       border-color: ${get('colors.lila')};
