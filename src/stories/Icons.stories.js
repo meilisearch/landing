@@ -14,6 +14,7 @@ import {
   Key as KeyIcon,
   Lightning as LightningIcon,
   Linkedin as LinkedinIcon,
+  MagnifyingGlass as MagnifyingGlassIcon,
   Plug as PlugIcon,
   Puzzle as PuzzleIcon,
   RightArrow as RightArrowIcon,
@@ -58,6 +59,7 @@ export const Integrations = () => <IntegrationsIcon height={56} />
 export const Key = () => <KeyIcon height={56} />
 export const Lightning = () => <LightningIcon height={56} />
 export const Linkedin = () => <LinkedinIcon height={56} />
+export const MagnifyingGlass = () => <MagnifyingGlassIcon height={56} />
 export const Plug = () => <PlugIcon height={56} />
 export const Puzzle = () => <PuzzleIcon height={56} />
 export const RightArrow = () => <RightArrowIcon height={56} />

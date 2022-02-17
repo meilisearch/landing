@@ -16,6 +16,7 @@ export default {
         'title1',
         'title2',
         'title3',
+        'title4',
         'preTitle',
         'navigation',
         'small',
@@ -52,10 +53,17 @@ Title2.args = {
   variant: 'title2',
   children: 'I’m the title2 variant',
 }
+
 export const Title3 = Template.bind({})
 Title3.args = {
   variant: 'title3',
   children: 'I’m the title3 variant',
+}
+
+export const Title4 = Template.bind({})
+Title4.args = {
+  variant: 'title4',
+  children: 'I’m the title4 variant',
 }
 
 export const PreTitle = Template.bind({})

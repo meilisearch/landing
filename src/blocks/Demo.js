@@ -4,8 +4,8 @@ import Grid from 'components/Grid'
 import get from 'utils/get'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
+import InteractiveSearch from 'components/InteractiveSearch'
 import PreTitle from 'components/PreTitle'
-import Image from 'next/image'
 import PropTypes from 'prop-types'
 
 const LeftColumn = styled.div`
@@ -21,15 +21,6 @@ const LeftColumn = styled.div`
   }
   @media (min-width: ${get('breakpoints.xl')}) {
     padding-right: 68px;
-  }
-`
-
-const MobileImage = styled.div`
-  display: block;
-  margin: 48px auto 0;
-  max-width: 284px;
-  @media (min-width: ${get('breakpoints.lg')}) {
-    display: none;
   }
 `
 
@@ -158,12 +149,20 @@ const Decorator = styled.div`
   }
 `
 
-const SearchImage = styled.div`
+const SearchContainer = styled.div`
   width: 100%;
+  height: 460px;
   margin-right: -38px;
-  margin-top: -168px;
-  @media (min-width: ${get('breakpoints.xl')}) {
-    margin-top: -124px;
+  z-index: 2;
+  position: relative;
+`
+
+const MobileSearchContainer = styled(SearchContainer)`
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    display: none;
   }
 `
 
@@ -172,15 +171,9 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
     <Grid style={{ alignItems: 'center' }}>
       <LeftColumn>
         <Decorator />
-        <SearchImage>
-          <Image
-            src={demoProps.demoImage}
-            alt="Demo"
-            layout="responsive"
-            width={395}
-            height={460}
-          />
-        </SearchImage>
+        <SearchContainer>
+          <InteractiveSearch />
+        </SearchContainer>
       </LeftColumn>
       <Content>
         <PreTitle color={color} preTitle={demoProps.preTitle} />
@@ -188,15 +181,9 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
           {demoProps.title}
         </Title>
         <Description>{demoProps.description}</Description>
-        <MobileImage>
-          <Image
-            src={demoProps.demoImage}
-            alt="Demo"
-            layout="responsive"
-            width={326}
-            height={293}
-          />
-        </MobileImage>
+        <MobileSearchContainer>
+          <InteractiveSearch />
+        </MobileSearchContainer>
         <Keypoints>
           {demoProps.keypoints?.map(keypoint => (
             <Keypoint key={keypoint.title} keypoint={keypoint} color={color} />

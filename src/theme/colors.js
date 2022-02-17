@@ -5,6 +5,7 @@ const colors = {
     700: '#373C9F',
   },
   lila: {
+    200: '#E6D3F8',
     DEFAULT: '#AD6DE7',
     700: '#794CA2',
   },

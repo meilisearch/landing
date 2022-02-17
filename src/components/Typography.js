@@ -127,6 +127,16 @@ const variants = {
       line-height: 22px;
     `,
   },
+  title4: {
+    tag: 'span',
+    style: css`
+      font-family: Poppins;
+      font-weight: ${get('fontWeight.medium')};
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: -0.02em;
+    `,
+  },
 }
 
 const StyledTypography = styled.span`
@@ -158,6 +168,7 @@ Typography.propTypes = {
     'title1',
     'title2',
     'title3',
+    'title4',
     'preTitle',
     'navigation',
     'small',
