@@ -48,6 +48,7 @@ const StyledSearchbox = styled(IsSearchbox)`
     font-size: 18px;
     line-height: 22px;
     transition: border-color 300ms, color 300ms, background-color 300ms;
+    -webkit-appearance: none;
 
     &:hover {
       border-color: ${get('colors.lila')};
