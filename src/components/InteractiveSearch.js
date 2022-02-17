@@ -73,14 +73,14 @@ const Hit = ({ hit }) => (
 
 const InteractiveSearch = props => {
   // if (
-  //   !process.env?.NEXT_PUBLIC_DEMO_MOVIES_HOST ||
-  //   !process.env?.NEXT_PUBLIC_DEMO_MOVIES_API_KEY
+  //   !process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST ||
+  //   !process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY
   // )
   //   return null
 
   const searchClient = instantMeiliSearch(
-    process.env?.NEXT_PUBLIC_DEMO_MOVIES_HOST,
-    process.env?.NEXT_PUBLIC_DEMO_MOVIES_API_KEY,
+    process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST,
+    process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY,
     {
       paginationTotalHits: 4,
       primaryKey: 'id',
