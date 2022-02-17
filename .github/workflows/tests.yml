@@ -43,7 +43,7 @@ jobs:
       - name: Browser tests
         uses: cypress-io/github-action@v2
         with:
-          build: NEXT_PUBLIC_DEMO_MOVIES_HOST=$NEXT_PUBLIC_DEMO_MOVIES_HOST NEXT_PUBLIC_DEMO_MOVIES_API_KEY=$NEXT_PUBLIC_DEMO_MOVIES_API_KEY yarn build
+          build: yarn build
           start: yarn start
           wait-on: 'http://localhost:3000'
           command: yarn cy:run
