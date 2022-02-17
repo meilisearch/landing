@@ -56,6 +56,10 @@ const MovieInfos = styled.div`
   align-items: flex-start;
 `
 
+const Container = styled.div`
+  width: 100%;
+`
+
 const Hit = ({ hit }) => (
   <Card>
     <Poster>
@@ -91,12 +95,12 @@ const InteractiveSearch = props => {
     []
   )
   return (
-    <div {...props}>
+    <Container {...props}>
       <InstantSearch indexName="movies" searchClient={searchClient}>
         <Searchbox />
         <Hits hitComponent={Hit} />
       </InstantSearch>
-    </div>
+    </Container>
   )
 }
 
