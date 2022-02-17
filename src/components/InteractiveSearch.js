@@ -50,6 +50,12 @@ const MovieYear = styled.div`
   color: ${get('colors.valhalla.300')};
 `
 
+const MovieInfos = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
 const Hit = ({ hit }) => (
   <Card>
     <Poster>
@@ -61,13 +67,13 @@ const Hit = ({ hit }) => (
         alt={hit.title}
       />
     </Poster>
-    <div>
+    <MovieInfos>
       <MovieTitle
         variant="title4"
         dangerouslySetInnerHTML={{ __html: hit._highlightResult.title.value }}
       />
       <MovieYear>{new Date(hit.release_date).getFullYear()}</MovieYear>
-    </div>
+    </MovieInfos>
   </Card>
 )
 
