@@ -40,7 +40,8 @@ const getHomepageData = (t = () => {}) => ({
     },
   },
   demo: {
-    demoImage: '/images/demo-search.svg',
+    searchStats: (nbHits, timeInMs) =>
+      t('demo.searchStats', { nbHits, timeInMs }),
     preTitle: t('demo.preTitle'),
     title: t('demo.title'),
     description: t('demo.description'),

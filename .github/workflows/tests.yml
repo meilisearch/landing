@@ -25,6 +25,14 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
+    services:
+      meilisearch:
+        image: getmeili/meilisearch:v0.24.0
+        env:
+          MEILI_MASTER_KEY: 'masterKey'
+          MEILI_NO_ANALYTICS: 'true'
+        ports:
+          - '7700:7700'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -43,10 +51,14 @@ jobs:
       - name: Browser tests
         uses: cypress-io/github-action@v2
         with:
-          start: yarn dev
+          build: yarn build
+          start: yarn start
           wait-on: 'http://localhost:3000'
           command: yarn cy:run
           config-file: cypress.json
+        env:
+          NEXT_PUBLIC_DEMO_MOVIES_HOST: http://meilisearch:7700
+          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: masterKey
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
@@ -57,4 +69,3 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
-
