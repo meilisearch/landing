@@ -18,6 +18,7 @@
   "demo": {
     "preTitle": "Why Meilisearch?",
     "title": "The next generation of search",
+    "searchStats": "<strong>{{nbHits}}</strong> results in <strong>{{timeInMs}}</strong> ms",
     "description": "Meilisearch is a flexible and powerful user-focused search engine that can be added to any website or application.",
     "keypoints": [
       {

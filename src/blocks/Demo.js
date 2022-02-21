@@ -174,7 +174,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
       <LeftColumn>
         <Decorator />
         <SearchContainer>
-          <InteractiveSearch />
+          <InteractiveSearch searchStats={demoProps.searchStats} />
         </SearchContainer>
       </LeftColumn>
       <Content>
@@ -184,7 +184,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
         </Title>
         <Description>{demoProps.description}</Description>
         <MobileSearchContainer>
-          <InteractiveSearch />
+          <InteractiveSearch searchStats={demoProps.searchStats} />
         </MobileSearchContainer>
         <Keypoints>
           {demoProps.keypoints?.map(keypoint => (

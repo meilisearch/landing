@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
-import { InstantSearch, Hits as ISHits } from 'react-instantsearch-dom'
+import { InstantSearch, Hits as ISHits, Stats } from 'react-instantsearch-dom'
 import Searchbox from 'components/Searchbox'
 import get from 'utils/get'
 import Image from 'next/image'
@@ -19,10 +19,12 @@ const Card = styled.div`
 const Hits = styled(ISHits)`
   ul {
     padding-left: 0;
-    margin-top: 12px;
+    margin: 0;
   }
   li {
     list-style-type: none;
+  }
+  li + li {
     margin-top: 12px;
   }
 `
@@ -58,6 +60,8 @@ const MovieInfos = styled.div`
 
 const Container = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
 `
 
 const Hit = ({ hit }) => (
@@ -81,7 +85,22 @@ const Hit = ({ hit }) => (
   </Card>
 )
 
-const InteractiveSearch = props => {
+const StatsText = styled(Typography)`
+  color: ${get('colors.white')};
+  font-family: Inter;
+  font-style: normal;
+  font-weight: ${get('fontWeight.semibold')};
+  font-size: 12px;
+  line-height: 150%;
+  margin: 6px 0;
+  text-align: right;
+  display: block;
+  strong {
+    font-weight: ${get('fontWeight.bold')};
+  }
+`
+
+const InteractiveSearch = ({ searchStats, ...props }) => {
   const searchClient = React.useMemo(
     () =>
       instantMeiliSearch(
@@ -98,6 +117,19 @@ const InteractiveSearch = props => {
     <Container {...props}>
       <InstantSearch indexName="movies" searchClient={searchClient}>
         <Searchbox />
+        <Stats
+          translations={{
+            stats(nbHits, processingTimeMS) {
+              return (
+                <StatsText
+                  dangerouslySetInnerHTML={{
+                    __html: searchStats(nbHits, processingTimeMS),
+                  }}
+                />
+              )
+            },
+          }}
+        />
         <Hits hitComponent={Hit} />
       </InstantSearch>
     </Container>
