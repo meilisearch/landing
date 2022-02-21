@@ -81,7 +81,6 @@ const Searchbox = props => {
   }, [])
   return (
     <StyledSearchbox
-      autoFocus
       submit={<MagnifyingGlass width={20} />}
       reset={<Cross width={11} />}
       translations={{
