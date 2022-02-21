@@ -119,7 +119,7 @@
         "description": "Did we tell you that everything we do is completely public? Start using Meilisearch now by downloading our open source version.<br /><br />You can also deploy Meilisearch on any cloud provider such as AWS, GCP or DigitalOcean with our integrations. Use Meilisearch however you want: it's all up to you.",
         "cta": {
           "title": "Get Started",
-          "url": "https://docs.meilisearch.com/learn/getting_started/"
+          "url": "https://docs.meilisearch.com/learn/getting_started/quick_start.html"
         }
       },
       "secondSection": {
@@ -167,7 +167,7 @@
     "description": "Already 23k users have been convinced by MeiliSearch. How about giving it a try?",
     "cta": {
       "title": "Get started",
-      "url": "https://docs.meilisearch.com/learn/getting_started/"
+      "url": "https://docs.meilisearch.com/learn/getting_started/quick_start.html"
     }
   }
 }
