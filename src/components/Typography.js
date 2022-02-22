@@ -137,6 +137,15 @@ const variants = {
       letter-spacing: -0.02em;
     `,
   },
+  typo1: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-weight: ${get('fontWeight.normal')};
+      font-size: 13px;
+      line-height: 19.5px;
+    `,
+  },
 }
 
 const StyledTypography = styled.span`
@@ -173,6 +182,7 @@ Typography.propTypes = {
     'navigation',
     'small',
     'ctaBig',
+    'typo1',
   ]),
 }
 
