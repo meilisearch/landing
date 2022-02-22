@@ -22,6 +22,8 @@ export default {
         'small',
         'ctaBig',
         'typo1',
+        'typo2',
+        'typo3',
       ],
       control: {
         type: 'select',
@@ -95,4 +97,16 @@ export const Typo1 = Template.bind({})
 Typo1.args = {
   variant: 'typo1',
   children: 'I’m the typo1 variant',
+}
+
+export const Typo2 = Template.bind({})
+Typo2.args = {
+  variant: 'typo2',
+  children: 'I’m the typo2 variant',
+}
+
+export const Typo3 = Template.bind({})
+Typo3.args = {
+  variant: 'typo3',
+  children: 'I’m the typo3 variant',
 }
