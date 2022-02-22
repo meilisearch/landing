@@ -26,6 +26,7 @@ const colors = {
     100: '#FAFBFE',
     DEFAULT: '#EDEEF7',
   },
+  luckyPoint: '#281969',
 }
 
 export default colors
