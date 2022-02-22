@@ -42,6 +42,7 @@ const getHomepageData = (t = () => {}) => ({
   demo: {
     searchStats: (nbHits, timeInMs) =>
       t('demo.searchStats', { nbHits, timeInMs }),
+    placeholderSearch: t('demo.placeholderSearch'),
     preTitle: t('demo.preTitle'),
     title: t('demo.title'),
     description: t('demo.description'),

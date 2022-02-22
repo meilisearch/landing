@@ -50,6 +50,14 @@ const StyledSearchbox = styled(IsSearchbox)`
     transition: border-color 300ms, color 300ms, background-color 300ms;
     -webkit-appearance: none;
 
+    ::placeholder {
+      color: ${get('colors.valhalla.200')};
+      font-family: Inter;
+      font-weight: ${get('fontWeight.normal')};
+      font-size: 14px;
+      line-height: 150%;
+    }
+
     &:hover {
       border-color: ${get('colors.lila')};
       background-color: ${get('colors.lila.100')};
@@ -72,7 +80,7 @@ const StyledSearchbox = styled(IsSearchbox)`
   }
 `
 
-const Searchbox = props => {
+const Searchbox = ({ placeholderSearch = null, ...props }) => {
   React.useEffect(() => {
     const submitButton = document.getElementsByClassName(
       'ais-SearchBox-submit'
@@ -86,7 +94,7 @@ const Searchbox = props => {
       translations={{
         submitTitle: null,
         resetTitle: null,
-        placeholder: null,
+        placeholder: placeholderSearch,
       }}
       {...props}
     />

@@ -88,8 +88,7 @@ const Hit = ({ hit }) => (
 const StatsText = styled(Typography)`
   color: ${get('colors.white')};
   font-family: Inter;
-  font-style: normal;
-  font-weight: ${get('fontWeight.semibold')};
+  font-weight: ${get('fontWeight.normal')};
   font-size: 12px;
   line-height: 150%;
   margin: 6px 0;
@@ -100,7 +99,7 @@ const StatsText = styled(Typography)`
   }
 `
 
-const InteractiveSearch = ({ searchStats, ...props }) => {
+const InteractiveSearch = ({ searchStats, placeholderSearch, ...props }) => {
   const searchClient = React.useMemo(
     () =>
       instantMeiliSearch(
@@ -116,7 +115,7 @@ const InteractiveSearch = ({ searchStats, ...props }) => {
   return (
     <Container {...props}>
       <InstantSearch indexName="movies" searchClient={searchClient}>
-        <Searchbox />
+        <Searchbox placeholderSearch={placeholderSearch} />
         <Stats
           translations={{
             stats(nbHits, processingTimeMS) {
