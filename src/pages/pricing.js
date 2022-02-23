@@ -5,28 +5,28 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import getPricingPageData from '../../data/pricing'
 import PageContent from 'components/PageContent'
-import Typography from 'components/Typography'
-import { Header, Footer } from 'blocks'
+import { Header, Footer, FAQ } from 'blocks'
+import get from 'utils/get'
 
 const Pricing = ({ stargazers_count }) => {
   const { t } = useTranslation('pricing')
-  const { hero } = getPricingPageData(t)
+  const { faq } = getPricingPageData(t)
   return (
     <>
       <Head>
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
       </Head>
-      <Header stargazers_count={formatStargazers(stargazers_count)} />
-      <PageContent>
-        <Typography
-          style={{ color: 'white' }}
-          variant="h1"
-          forwardedAs="h1"
-          dangerouslySetInnerHTML={{ __html: hero.title }}
+      <div style={{ backgroundColor: get('colors.valhalla.800') }}>
+        <Header
+          stargazers_count={formatStargazers(stargazers_count)}
+          style={{ backgroundColor: get('colors.valhalla.800') }}
         />
-      </PageContent>
-      <Footer />
+        <PageContent>
+          <FAQ faq={faq} />
+        </PageContent>
+        <Footer />
+      </div>
     </>
   )
 }

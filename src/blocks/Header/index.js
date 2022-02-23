@@ -23,11 +23,11 @@ const Wrapper = styled.header`
   }
 `
 
-const Header = ({ stargazers_count }) => {
+const Header = ({ stargazers_count, ...props }) => {
   const { t } = useTranslation('header')
   const headerProps = getHeaderData(t)
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <DesktopHeader
         headerProps={headerProps}
         stargazers_count={stargazers_count}

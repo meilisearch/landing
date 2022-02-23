@@ -146,24 +146,6 @@ const variants = {
       line-height: 19.5px;
     `,
   },
-  typo2: {
-    tag: 'span',
-    style: css`
-      font-family: Work Sans;
-      font-weight: ${get('fontWeight.bold')};
-      font-size: 16px;
-      line-height: 24px;
-    `,
-  },
-  typo3: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-weight: ${get('fontWeight.medium')};
-      font-size: 16px;
-      line-height: 24px;
-    `,
-  },
 }
 
 const StyledTypography = styled.span`
@@ -201,8 +183,6 @@ Typography.propTypes = {
     'small',
     'ctaBig',
     'typo1',
-    'typo2',
-    'typo3',
   ]),
 }
 
