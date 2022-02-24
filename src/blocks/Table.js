@@ -61,17 +61,15 @@ const Tables = styled.div`
 `
 
 const Decorator1 = styled.div`
-  @media (min-width: ${get('breakpoints.md')}) {
-    background: url(images/decorator1.svg) no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 984px;
-    right: 0;
-    bottom: 0;
-    left: -425px;
-    width: 706px;
-    height: 704px;
-  }
+  background: url(images/decorator1.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 984px;
+  right: 0;
+  bottom: 0;
+  left: -425px;
+  width: 706px;
+  height: 704px;
   @media (min-width: ${get('breakpoints.lg')}) {
     top: 1018px;
     left: -332px;
@@ -83,15 +81,13 @@ const Decorator1 = styled.div`
 `
 
 const Decorator2 = styled.div`
-  @media (min-width: ${get('breakpoints.md')}) {
-    background: url(images/decorator7.svg) no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: 120px;
-    right: -158px;
-    width: 471px;
-    height: 600px;
-  }
+  background: url(images/decorator7.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 120px;
+  right: -158px;
+  width: 471px;
+  height: 600px;
   @media (min-width: ${get('breakpoints.lg')}) {
     bottom: 221px;
     right: -166px;
