@@ -81,7 +81,10 @@ const InfoText = styled(Typography)`
 const Info = ({ info }) => {
   if (typeof info === 'string' || info instanceof String) {
     return (
-      <InfoText variant="small" dangerouslySetInnerHTML={{ __html: info }} />
+      <InfoText
+        variant="copySmall"
+        dangerouslySetInnerHTML={{ __html: info }}
+      />
     )
   }
   if (typeof info == 'boolean' && info === true) {
@@ -105,7 +108,7 @@ const TableComponent = ({ table }) => (
       {table.tbody.map((tbody, index) => (
         <Tr key={index}>
           <Td>
-            <Typography variant="body">{tbody.title}</Typography>
+            <Typography variant="copy">{tbody.title}</Typography>
           </Td>
           <Td>
             <Info info={tbody.openSource} />

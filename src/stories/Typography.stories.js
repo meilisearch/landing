@@ -22,6 +22,8 @@ export default {
         'small',
         'ctaBig',
         'typo1',
+        'copy',
+        'copySmall',
       ],
       control: {
         type: 'select',
@@ -95,4 +97,16 @@ export const Typo1 = Template.bind({})
 Typo1.args = {
   variant: 'typo1',
   children: 'I’m the typo1 variant',
+}
+
+export const Copy = Template.bind({})
+Copy.args = {
+  variant: 'copy',
+  children: 'I’m the copy variant',
+}
+
+export const CopySmall = Template.bind({})
+CopySmall.args = {
+  variant: 'copySmall',
+  children: 'I’m the copySmall variant',
 }
