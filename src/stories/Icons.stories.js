@@ -5,11 +5,13 @@ import {
   Chat as ChatIcon,
   Cross as CrossIcon,
   Earth as EarthIcon,
+  Excluded as ExcludedIcon,
   Filter as FilterIcon,
   Github as GithubIcon,
   GithubOutlined as GithubOutlinedIcon,
   Guides as GuidesIcon,
   Hamburger as HamburgerIcon,
+  Included as IncludedIcon,
   Integrations as IntegrationsIcon,
   Key as KeyIcon,
   Lightning as LightningIcon,
@@ -50,11 +52,13 @@ export const Arrow = () => <ArrowIcon height={56} />
 export const Chat = () => <ChatIcon height={56} />
 export const Cross = () => <CrossIcon height={56} />
 export const Earth = () => <EarthIcon height={56} />
+export const Excluded = () => <ExcludedIcon height={56} />
 export const Filter = () => <FilterIcon height={56} />
 export const Github = () => <GithubIcon height={56} />
 export const GithubOutlined = () => <GithubOutlinedIcon height={56} />
 export const Guides = () => <GuidesIcon height={56} />
 export const Hamburger = () => <HamburgerIcon height={56} />
+export const Included = () => <IncludedIcon height={56} />
 export const Integrations = () => <IntegrationsIcon height={56} />
 export const Key = () => <KeyIcon height={56} />
 export const Lightning = () => <LightningIcon height={56} />

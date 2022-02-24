@@ -64,12 +64,12 @@ const getPricingPageData = (t = () => {}) => ({
     title: t('table.title'),
     tables: [
       {
-        th: [
+        thead: [
           t('table.searchCapabilities'),
           t('table.openSource'),
           t('table.cloud'),
         ],
-        td: [
+        tbody: [
           {
             title: t('table.customizableRelevency'),
             openSource: true,
@@ -133,12 +133,12 @@ const getPricingPageData = (t = () => {}) => ({
         ],
       },
       {
-        th: [
+        thead: [
           t('table.projectManagement'),
           t('table.openSource'),
           t('table.cloud'),
         ],
-        td: [
+        tbody: [
           {
             title: t('table.interfaceToBrowseDocuments'),
             openSource: t('table.miniDashboard'),
@@ -172,12 +172,12 @@ const getPricingPageData = (t = () => {}) => ({
         ],
       },
       {
-        th: [
+        thead: [
           t('table.operationalManagement'),
           t('table.openSource'),
           t('table.cloud'),
         ],
-        td: [
+        tbody: [
           {
             title: t('table.provider'),
             openSource: t('table.yourInfrastructure'),
@@ -226,8 +226,8 @@ const getPricingPageData = (t = () => {}) => ({
         ],
       },
       {
-        th: [t('table.support'), t('table.openSource'), t('table.cloud')],
-        td: [
+        thead: [t('table.support'), t('table.openSource'), t('table.cloud')],
+        tbody: [
           {
             title: t('table.emailSupport'),
             openSource: false,
