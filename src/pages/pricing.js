@@ -5,12 +5,12 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import getPricingPageData from '../../data/pricing'
 import PageContent from 'components/PageContent'
-import { Header, Footer, FAQ } from 'blocks'
+import { Header, Footer, FAQ, Table } from 'blocks'
 import get from 'utils/get'
 
 const Pricing = ({ stargazers_count }) => {
   const { t } = useTranslation('pricing')
-  const { faq } = getPricingPageData(t)
+  const { faq, table } = getPricingPageData(t)
   return (
     <>
       <Head>
@@ -23,6 +23,7 @@ const Pricing = ({ stargazers_count }) => {
           style={{ backgroundColor: get('colors.valhalla.800') }}
         />
         <PageContent>
+          <Table table={table} />
           <FAQ faq={faq} />
         </PageContent>
         <Footer />
