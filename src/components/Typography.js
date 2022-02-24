@@ -87,7 +87,7 @@ const variants = {
         font-size: 12px;
         line-height: 150%;
       }
-      @media (min-width: ${get('breakpoints.lg')}) {
+      @media (min-width: ${get('breakpoints.xl')}) {
         font-size: 14px;
         line-height: 21px;
       }
@@ -146,6 +146,41 @@ const variants = {
       line-height: 19.5px;
     `,
   },
+  copy: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-weight: ${get('fontWeight.normal')};
+      font-size: 13px;
+      line-height: 150%;
+      @media (min-width: ${get('breakpoints.md')}) {
+        font-weight: ${get('fontWeight.medium')};
+        font-size: 15px;
+        line-height: 140%;
+      }
+      @media (min-width: ${get('breakpoints.lg')}) {
+        font-size: 16px;
+        line-height: 150%;
+      }
+    `,
+  },
+  copySmall: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-weight: ${get('fontWeight.normal')};
+      font-size: 11px;
+      line-height: 150%;
+      @media (min-width: ${get('breakpoints.md')}) {
+        font-size: 13px;
+        line-height: 150%;
+      }
+      @media (min-width: ${get('breakpoints.lg')}) {
+        font-size: 14px;
+        line-height: 150%;
+      }
+    `,
+  },
 }
 
 const StyledTypography = styled.span`
@@ -183,6 +218,8 @@ Typography.propTypes = {
     'small',
     'ctaBig',
     'typo1',
+    'copy',
+    'copySmall',
   ]),
 }
 
