@@ -1,15 +1,18 @@
 import React from 'react'
+import Table from 'components/Table'
 import { useTranslation } from 'next-i18next'
-import { Table } from 'blocks'
 import getPricingPageData from '../../data/pricing'
 
 export default {
-  title: 'Blocks/Table',
+  title: 'Components/Table',
+  parameters: {
+    layout: 'padded',
+  },
 }
 
 export const Default = () => {
   const { t } = useTranslation('pricing')
   const { table } = getPricingPageData(t)
 
-  return <Table table={table} />
+  return <Table table={table.tables[2]} />
 }
