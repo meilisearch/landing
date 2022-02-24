@@ -83,20 +83,20 @@
   "faq": {
     "title": "FAQs",
     "question1": "What is the best server size for my needs?",
-    "answer1": "Lorem ipsum",
+    "answer1": "You can start by testing our price calculator. If you need more help, don’t hesitate to contact us.",
     "question2": "Do you offer custom invoicing?",
     "answer2": "Yes, we offer custom invoicing for Enterprise customers. Contact our sales team to learn more.",
     "question3": "Can I switch from my self-hosted project to a cloud project?",
-    "answer3": "Lorem ipsum",
+    "answer3": "Yes",
     "question4": "Is Meilisearch cloud highly available?",
-    "answer4": "Lorem ipsum",
+    "answer4": "Yes, no need to sell you 3 nodes, Meillisearch is highly available by default. It’s totally transparent for you.",
     "question5": "I have never used a search engine before. Can I use Meilisearch anyway?",
-    "answer5": "Lorem ipsum",
+    "answer5": "Of course! No knowledge of ElasticSearch or Solr is required to use Meilisearch. Meilisearch is really easy to use and thus accessible to all kinds of developers. Take a quick tour to learn the basics of Meilisearch! We also provide a lot of tools, including SDKs, to help you integrate easily Meilisearch in your project. We're adding new tools every day! Plus, you can contact us if you need any help. We will answer for sure!",
     "question6": "Do I need to configure Meilisearch to get it working?",
-    "answer6": "Lorem ipsum",
+    "answer6": "Meilisearch configuration works out-of-the-box. It means, by default, Meilisearch configures necessary settings for providing a powerful and relevant search. For example, without requiring any configuration, Meilisearch is typo tolerant. Type \"create an index\" in the documentation search bar to experience the typo tolerance of our search engine. To find out more about the relevancy of Meilisearch, take a look at this detailed explanation. However, Meilisearch is of course highly customizable in order to adapt the search to your needs by setting synonyms, stop words, and custom ranking rules.",
     "question7": "How to know if Meilisearch perfectly fits my use cases?",
     "answer7": "Since Meilisearch is an open-source and easy-to-use tool, you can give it a try using your data. Follow this guide to get a quick start! Besides, we published a comparison between Meilisearch and other search engines with the goal of providing an overview of Meilisearch alternatives.",
     "question8": "Which languages can Meilisearch handle?",
-    "answer8": "Lorem ipsum"
+    "answer8": "Meilisearch works perfectly with English, kanji, and Romance languages. If you have any hesitation about your language handling, please contact us."
   }
 }
