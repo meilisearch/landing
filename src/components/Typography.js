@@ -112,7 +112,7 @@ const variants = {
       font-family: Inter;
       font-size: 13px;
       line-height: 19.5px;
-      @media (min-width: ${get('breakpoints.lg')}) {
+      @media (min-width: ${get('breakpoints.xl')}) {
         font-size: 14px;
         line-height: 21px;
       }
