@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import PricingCard from 'components/PricingCard'
 import get from 'utils/get'
-import { darken } from 'utils/colors'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
 
@@ -32,7 +31,7 @@ const OpenSource = ({ openSource }) => {
   return (
     <OpenSourcePlanWrapper>
       <PricingCard>
-        <PricingCard.Header $bgColor={darken(get('colors.dodgerBlue'), 60)}>
+        <PricingCard.Header $bgColor={get('colors.dodgerBlue.800')}>
           <Typography variant="title2" style={{ color: get('colors.white') }}>
             {openSource.title}
           </Typography>

@@ -3,6 +3,7 @@ const colors = {
   dodgerBlue: {
     DEFAULT: '#4F55E3',
     700: '#373C9F',
+    800: '#2B2F7D',
   },
   lila: {
     100: '#F7F0FD',
