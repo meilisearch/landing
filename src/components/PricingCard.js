@@ -5,18 +5,21 @@ const PricingCard = styled.div`
   border: 2px solid ${get('colors.dodgerBlue')};
   border-radius: 16px;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `
 
 const PricingCardHeaderWrapper = styled.div`
   background-color: ${p => p.$bgColor || get('colors.dodgerBlue')};
   color: ${get('colors.white')};
   padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
   min-height: 164px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const Decorator = styled.div`
@@ -30,22 +33,39 @@ const Decorator = styled.div`
   z-index: 1;
 `
 
+const HeaderContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+`
+
 const PricingCardHeader = ({ children, ...props }) => (
   <PricingCardHeaderWrapper {...props}>
-    <div style={{ ZIndex: 2 }}>{children}</div>
-    <Decorator />
+    <HeaderContent>{children}</HeaderContent>
+    <Decorator className="decorator" />
   </PricingCardHeaderWrapper>
 )
 
 const PricingCardBody = styled.div`
-  background-color: transparent;
   color: ${get('colors.ashes.100')};
+  background-color: ${p => p.$bgColor || get('colors.valhalla')};
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 28px 16px;
 
   @media (min-width: ${get('breakpoints.md')}) {
     padding: 28px 24px;
   }
-  @media (min-width: ${get('breakpoints.md')}) {
+  @media (min-width: ${get('breakpoints.lg')}) {
+    padding: 24px 26px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
     padding: 28px 32px;
   }
 `

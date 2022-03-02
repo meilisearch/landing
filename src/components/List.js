@@ -5,6 +5,7 @@ import get from 'utils/get'
 
 const Ul = styled.ul`
   padding: 0;
+  margin: 0;
   > li + li {
     margin-top: 4px;
   }
@@ -20,6 +21,7 @@ const Li = styled.li`
     height: 18px;
     background-color: ${p => p.$bulletColor};
     content: '';
+    flex-shrink: 0;
     mask: url(/icons/check.svg) no-repeat 50% 50%;
     mask-size: cover;
     margin-right: 8px;
