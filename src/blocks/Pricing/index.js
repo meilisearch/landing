@@ -6,6 +6,7 @@ import Cloud from './Cloud'
 import OpenSource from './OpenSource'
 
 const Section = styled.section`
+  z-index: 2;
   margin-bottom: 58px;
   @media (min-width: ${get('breakpoints.md')}) {
     margin-bottom: 82px;
