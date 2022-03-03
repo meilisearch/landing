@@ -42,7 +42,7 @@ const Title = styled(Typography)`
 const Description = styled(Typography)`
   ${get('colors.ashes.100')};
   -index: 2;
-  margin-top: 24px;
+  margin-top: 45px;
   padding: 0 16px;
   max-width: 380px;
   opacity: 0.9;
@@ -63,18 +63,22 @@ const StarsLeft = styled.div`
   background: url(/images/pricing-hero-stars-left.svg) no-repeat;
   background-size: contain;
   position: absolute;
-  width: 85px;
-  height: 235px;
-  top: 0;
-  left: -80px;
+  width: 48px;
+  height: 135px;
+  top: 12px;
+  left: -12px;
   right: auto;
   bottom: auto;
   z-index: 1;
   @media (min-width: ${get('breakpoints.md')}) {
+    width: 103px;
+    height: 185px;
     top: 0;
-    left: -100px;
+    left: -70px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
+    width: 85px;
+    height: 235px;
     top: 0;
     left: -120px;
   }
@@ -83,18 +87,22 @@ const StarsRight = styled.div`
   background: url(/images/pricing-hero-stars-right.svg) no-repeat;
   background-size: contain;
   position: absolute;
-  width: 85px;
-  height: 235px;
+  width: 41px;
+  height: 136px;
   top: 0;
-  right: -76px;
+  right: -8px;
   left: auto;
   bottom: auto;
   z-index: 1;
   @media (min-width: ${get('breakpoints.md')}) {
+    width: 63px;
+    height: 186px;
     top: 0;
-    right: -96px;
+    right: -66px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
+    width: 85px;
+    height: 235px;
     top: 0;
     right: -116px;
   }
