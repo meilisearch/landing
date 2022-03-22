@@ -32,11 +32,7 @@ const getPricingPageData = (t = () => {}) => ({
             {
               title: t('pricing.resource3Description'),
               price: t('pricing.resource3Pricing'),
-            },
-            {
-              title: t('pricing.resource4Description'),
-              price: t('pricing.resource4Pricing'),
-            },
+            }
           ],
           cta: {
             title: t('pricing.startNow'),
@@ -49,8 +45,7 @@ const getPricingPageData = (t = () => {}) => ({
           keypoints: [
             t('pricing.premierSupport'),
             t('pricing.premiumSLA'),
-            t('pricing.dedicatedServer'),
-            t('pricing.customTerms'),
+            t('pricing.dedicatedServer')
           ],
           cta: {
             title: t('pricing.contactSales'),
@@ -142,32 +137,32 @@ const getPricingPageData = (t = () => {}) => ({
           {
             title: t('table.interfaceToBrowseDocuments'),
             openSource: t('table.miniDashboard'),
-            cloud: true,
+            cloud: t('table.comingSoon'),
           },
           {
             title: t('table.interfaceToConfigureSearch'),
             openSource: false,
-            cloud: true,
+            cloud: t('table.comingSoon'),
           },
           {
             title: t('table.interfaceToManageApiKeys'),
             openSource: false,
-            cloud: true,
+            cloud: t('table.comingSoon'),
           },
           {
             title: t('table.interfaceToViewLogs'),
             openSource: false,
-            cloud: true,
+            cloud: t('table.comingSoon'),
           },
           {
             title: t('table.interfaceToViewTasks'),
             openSource: false,
-            cloud: true,
+            cloud: t('table.comingSoon'),
           },
           {
             title: t('table.searchAnalytics'),
             openSource: false,
-            cloud: true,
+            cloud: t('table.comingSoon'),
           },
         ],
       },
@@ -178,11 +173,6 @@ const getPricingPageData = (t = () => {}) => ({
           t('table.cloud'),
         ],
         tbody: [
-          {
-            title: t('table.provider'),
-            openSource: t('table.yourInfrastructure'),
-            cloud: t('table.digitalOceanAwsGcpAzure'),
-          },
           {
             title: t('table.highAvailability'),
             openSource: t('table.manual'),
@@ -214,11 +204,6 @@ const getPricingPageData = (t = () => {}) => ({
             cloud: true,
           },
           {
-            title: t('table.dedicatedServer'),
-            openSource: t('table.yourInfrastructure'),
-            cloud: t('table.contactSales'),
-          },
-          {
             title: t('table.customServerSize'),
             openSource: t('table.yourInfrastructure'),
             cloud: t('table.contactSales'),
@@ -234,22 +219,12 @@ const getPricingPageData = (t = () => {}) => ({
             cloud: true,
           },
           {
-            title: t('table.emailSupportSla'),
-            openSource: false,
-            cloud: t('table.contactSales'),
-          },
-          {
             title: t('table.SlaForUptime'),
             openSource: false,
             cloud: t('table.contactSales'),
           },
           {
-            title: t('table.onBoardingSupport'),
-            openSource: false,
-            cloud: t('table.contactSales'),
-          },
-          {
-            title: t('table.dedicatedCustomerSuccessEngineed'),
+            title: t('table.premierSupport'),
             openSource: false,
             cloud: t('table.contactSales'),
           },
@@ -283,15 +258,7 @@ const getPricingPageData = (t = () => {}) => ({
       {
         question: t('faq.question6'),
         answer: t('faq.answer6'),
-      },
-      {
-        question: t('faq.question7'),
-        answer: t('faq.answer7'),
-      },
-      {
-        question: t('faq.question8'),
-        answer: t('faq.answer8'),
-      },
+      }
     ],
   },
 })
