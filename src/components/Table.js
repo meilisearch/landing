@@ -64,15 +64,17 @@ const Tbody = styled.tbody`
   tr:first-child > td {
     padding-top: 32px;
   }
-  button, input[type="submit"], input[type="reset"] {
+  button,
+  input[type='submit'],
+  input[type='reset'] {
     background: none;
-    color: #FF5CAA;
+    color: ${get('colors.hotPink')};
     border: none;
     padding: 0;
     font: inherit;
     outline: inherit;
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: ${get('fontWeight.semibold')};
     cursor: pointer;
   }
 `

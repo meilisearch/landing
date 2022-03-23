@@ -32,7 +32,7 @@ const getPricingPageData = (t = () => {}) => ({
             {
               title: t('pricing.resource3Description'),
               price: t('pricing.resource3Pricing'),
-            }
+            },
           ],
           cta: {
             title: t('pricing.startNow'),
@@ -45,7 +45,7 @@ const getPricingPageData = (t = () => {}) => ({
           keypoints: [
             t('pricing.premierSupport'),
             t('pricing.premiumSLA'),
-            t('pricing.dedicatedServer')
+            t('pricing.dedicatedServer'),
           ],
           cta: {
             title: t('pricing.contactSales'),
@@ -258,7 +258,7 @@ const getPricingPageData = (t = () => {}) => ({
       {
         question: t('faq.question6'),
         answer: t('faq.answer6'),
-      }
+      },
     ],
   },
 })
