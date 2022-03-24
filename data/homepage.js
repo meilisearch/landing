@@ -15,6 +15,14 @@ import {
   Github,
   Slack,
   Roadmap,
+  Ruby,
+  Javascript,
+  Java,
+  Python,
+  Php,
+  Go,
+  Swift,
+  React,
 } from 'components/icons'
 import get from 'utils/get'
 
@@ -186,6 +194,85 @@ const getHomepageData = (t = () => {}) => ({
       },
     },
   ],
+  developer: {
+    sdkList: [
+      {
+        language: 'javascript',
+        logo: <Javascript />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-js/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'java',
+        logo: <Java />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-java/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'python',
+        logo: <Python />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-python/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'ruby',
+        logo: <Ruby />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-ruby/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'php',
+        logo: <Php />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-php/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'go',
+        logo: <Go />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-go/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'swift',
+        logo: <Swift />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-swift/main/.code-samples.meilisearch.yaml',
+      },
+      // {
+      //   language: 'symfony (pas de code samples)',
+      // logo: <Symfony />,
+      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
+      // },
+      // {
+      // language: 'laravel (pas de code samples)',
+      // logo: <Laravel />,
+      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
+      // },
+      // {
+      //   language: 'angular (pas de code samples)',
+      // logo: <Angular />,
+      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
+      // },
+      // {
+      //   language: 'react (pas de code samples)',
+      // logo: <React />,
+      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
+      // },
+      // {
+      //   language: 'vue (pas de code samples)',
+      // logo: <Vue />,
+      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
+      // },
+      {
+        language: '.Net',
+        logo: <React />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-dotnet/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'dart',
+        logo: <React />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-dart/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        language: 'rust',
+        logo: <React />,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-rust/main/.code-samples.meilisearch.yaml',
+      },
+    ],
+  },
   cards: {
     preTitle: t('cards.preTitle'),
     title: t('cards.title'),
