@@ -1,4 +1,5 @@
 export { default as Api } from './Api'
+export { default as Code } from './Code'
 export { default as Angular } from './Angular'
 export { default as Arrow } from './Arrow'
 export { default as Blog } from './Blog'

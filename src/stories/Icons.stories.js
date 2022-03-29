@@ -5,6 +5,7 @@ import {
   Arrow as ArrowIcon,
   Blog as BlogIcon,
   Chat as ChatIcon,
+  Code as CodeIcon,
   Cross as CrossIcon,
   Documentation as DocumentationIcon,
   Earth as EarthIcon,
@@ -66,6 +67,7 @@ export const Angular = () => <AngularIcon height={56} />
 export const Arrow = () => <ArrowIcon height={56} />
 export const Blog = () => <BlogIcon height={56} />
 export const Chat = () => <ChatIcon height={56} />
+export const Code = () => <CodeIcon height={56} />
 export const Cross = () => <CrossIcon height={56} />
 export const Documentation = () => <DocumentationIcon height={56} />
 export const Earth = () => <EarthIcon height={56} />

@@ -3,6 +3,8 @@ const yaml = require('js-yaml')
 
 const getCodeSamples = async sdkList => {
   const fetchPromises = sdkList.map(async sdk => {
+    // eslint-disable-next-line no-unused-vars
+    const { logo, ...sdkProps } = sdk
     try {
       const fetchedContent = await (
         await fetch(sdk.url, { method: 'GET' })
@@ -10,8 +12,8 @@ const getCodeSamples = async sdkList => {
 
       const codeSample = yaml.load(fetchedContent)
       return {
+        ...sdkProps,
         code: codeSample.faceted_search_filter_1,
-        language: sdk.language,
       }
     } catch (e) {
       console.log(e)

@@ -133,6 +133,25 @@
       }
     }
   ],
+  "developer": {
+    "title": "The best developer<br/>experience",
+    "seeAllIntegrations": "See all integrations",
+    "buildWith": "Build with {{language}}",
+    "description": "At MeiliSearch we take the developer experience to heart. That's why we work hard to make our API self explanatory and develop our SDKs to let you concentrate on what matters the most.",
+    "documentation": "Documentation",
+    "documentationText": "Every developer knows there’s nothing worse than documentation that’s outdated, disorganized, or incomplete. Our team of technical writers works hard to ensure that our docs aren’t just accurate; they’re exceptional.",
+    "documentationCta": "Github Link",
+    "developerHub": "Developer Hub",
+    "developerHubText": "Everything you need to help you with meilisearch is here.",
+    "developerHubList": [
+      "Release notes",
+      "Demos",
+      "Integrations",
+      "Playground",
+      "Contributor program"
+    ],
+    "comingSoon": "Coming Soon"
+  },
   "cards": {
     "preTitle": "Become a contributor",
     "title": "Join the community",
