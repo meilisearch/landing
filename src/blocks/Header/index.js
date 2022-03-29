@@ -5,6 +5,9 @@ import get from 'utils/get'
 import getHeaderData from '../../../data/header'
 import DesktopHeader from './DesktopHeader'
 import MobileHeader from './MobileHeader'
+import formatStargazers from 'utils/formatStargazers'
+import useSWRImmutable from 'swr/immutable'
+import fetcher from 'utils/fetcher'
 
 const Wrapper = styled.header`
   height: 113px;
@@ -23,18 +26,25 @@ const Wrapper = styled.header`
   }
 `
 
-const Header = ({ stargazers_count }) => {
+const Header = () => {
   const { t } = useTranslation('header')
   const headerProps = getHeaderData(t)
+
+  const { data, error } = useSWRImmutable(
+    'https://api.github.com/repos/meilisearch/meilisearch',
+    fetcher
+  )
+  if (error) console.log(error)
+
   return (
     <Wrapper>
       <DesktopHeader
         headerProps={headerProps}
-        stargazers_count={stargazers_count}
+        stargazers_count={formatStargazers(data.stargazers_count)}
       />
       <MobileHeader
         headerProps={headerProps}
-        stargazers_count={stargazers_count}
+        stargazersCount={formatStargazers(data.stargazers_count)}
       />
     </Wrapper>
   )
