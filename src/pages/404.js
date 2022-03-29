@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import Head from 'next/head'
 import { Header } from 'blocks'
-import getStarzagersCount from 'utils/getStarzagersCount'
-import formatStargazers from 'utils/formatStargazers'
 import get from 'utils/get'
 import Button from 'components/Button'
 import Typography from 'components/Typography'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BasePageContent from 'components/PageContent'
+import fetcher from 'utils/fetcher'
+import { SWRConfig } from 'swr'
 
 const PageContent = styled(BasePageContent)`
   color: ${get('colors.white')};
@@ -59,7 +59,7 @@ const Cta = styled.div`
   }
 `
 
-const Custom404 = ({ stargazers_count }) => {
+const Custom404 = ({ fallback }) => {
   const { t } = useTranslation('404')
   return (
     <>
@@ -67,7 +67,9 @@ const Custom404 = ({ stargazers_count }) => {
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
       </Head>
-      <Header stargazers_count={formatStargazers(stargazers_count)} />
+      <SWRConfig value={{ fallback }}>
+        <Header />
+      </SWRConfig>
       <PageContent>
         <Title variant="title1">404</Title>
         <Description variant="title2">{t('description')}</Description>
@@ -83,10 +85,15 @@ const Custom404 = ({ stargazers_count }) => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
-    const stargazers_count = await getStarzagersCount()
+    const meiliRepoInfos = await fetcher(
+      'https://api.github.com/repos/meilisearch/meilisearch'
+    )
     return {
       props: {
-        stargazers_count: stargazers_count,
+        fallback: {
+          'https://api.github.com/repos/meilisearch/meilisearch':
+            meiliRepoInfos,
+        },
         ...(await serverSideTranslations(locale, ['404', 'header'])),
       },
     }
