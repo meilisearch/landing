@@ -11,7 +11,8 @@ const getPricingPageData = (t = () => {}) => ({
       planDescription: t('pricing.freeDescription'),
       cta: {
         title: t('pricing.download'),
-        href: '/',
+        href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
+        target: '_blank',
       },
     },
     cloud: {
@@ -36,7 +37,8 @@ const getPricingPageData = (t = () => {}) => ({
           ],
           cta: {
             title: t('pricing.startNow'),
-            href: '/',
+            href: 'https://meilisearch.typeform.com/to/FtnzvZfh',
+            target: '_blank',
           },
         },
         {
@@ -49,7 +51,7 @@ const getPricingPageData = (t = () => {}) => ({
           ],
           cta: {
             title: t('pricing.contactSales'),
-            href: '/',
+            href: 'javascript:$crisp.push(["do", "chat:open"])',
           },
         },
       ],
