@@ -64,7 +64,7 @@ const Text = styled.div`
 `
 
 const StyledIcon = styled.img`
-  width: 16px;
+  width: 20px;
   flex-shrink: 0;
   color: ${get('colors.hotPink')};
   @media (min-width: ${get('breakpoints.lg')}) {
