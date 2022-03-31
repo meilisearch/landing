@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import getStarzagersCount from 'utils/getStarzagersCount'
-import formatStargazers from 'utils/formatStargazers'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import getPricingPageData from '../../data/pricing'
@@ -15,6 +13,8 @@ import {
   Pricing as BasePricingBlock,
 } from 'blocks'
 import get from 'utils/get'
+import { SWRConfig } from 'swr'
+import fetcher from 'utils/fetcher'
 
 const HeroBlock = styled(PricingHero)`
   margin-top: 72px;
@@ -39,7 +39,7 @@ const PricingBlock = styled(BasePricingBlock)`
   }
 `
 
-const Pricing = ({ stargazers_count }) => {
+const Pricing = ({ fallback }) => {
   const { t } = useTranslation('pricing')
   const { hero, faq, table, pricing } = getPricingPageData(t)
   return (
@@ -49,10 +49,9 @@ const Pricing = ({ stargazers_count }) => {
         <meta name="description" content={t('meta.description')} />
       </Head>
       <div style={{ backgroundColor: get('colors.valhalla.800') }}>
-        <Header
-          stargazers_count={formatStargazers(stargazers_count)}
-          style={{ backgroundColor: get('colors.valhalla.800') }}
-        />
+        <SWRConfig value={{ fallback }}>
+          <Header style={{ backgroundColor: get('colors.valhalla.800') }} />
+        </SWRConfig>
         <PageContent>
           <HeroBlock hero={hero} />
           <PricingBlock pricing={pricing} />
@@ -67,10 +66,15 @@ const Pricing = ({ stargazers_count }) => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
-    const stargazers_count = await getStarzagersCount()
+    const meiliRepoInfos = await fetcher(
+      'https://api.github.com/repos/meilisearch/meilisearch'
+    )
     return {
       props: {
-        stargazers_count: stargazers_count,
+        fallback: {
+          'https://api.github.com/repos/meilisearch/meilisearch':
+            meiliRepoInfos,
+        },
         ...(await serverSideTranslations(locale, [
           'pricing',
           'header',
