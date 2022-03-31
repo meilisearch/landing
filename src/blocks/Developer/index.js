@@ -3,23 +3,22 @@ import styled from 'styled-components'
 import get from 'utils/get'
 import TitleSection from './TitleSection'
 import Terminal from './Terminal'
+import Text from './Text'
 
 const Section = styled.section`
-  margin: 0 -16px;
+  display: none;
   @media (min-width: ${get('breakpoints.md')}) {
+    display: block;
     margin: 0 -32px;
   }
 `
-
-const Body = styled.div``
 
 const Developer = ({ developerProps, code_samples, ...props }) => {
   return (
     <Section {...props}>
       <TitleSection developerProps={developerProps} />
-      <Body>
-        <Terminal developerProps={developerProps} code_samples={code_samples} />
-      </Body>
+      <Terminal developerProps={developerProps} code_samples={code_samples} />
+      <Text developerProps={developerProps} />
     </Section>
   )
 }

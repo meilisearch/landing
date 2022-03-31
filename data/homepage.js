@@ -208,12 +208,13 @@ const getHomepageData = (t = () => {}) => ({
       href: pkgName => `https://github.com/meilisearch/${pkgName}`,
       target: '_blank',
     },
+    image: '/images/developer.svg',
     description: t('developer.description'),
     documentation: t('developer.documentation'),
     documentationText: t('developer.documentationText'),
     documentationCta: {
-      link: t('developer.documentationCta'),
-      url: '/',
+      title: t('developer.documentationCta'),
+      href: '/',
       target: '_blank',
     },
     developerHub: t('developer.developerHub'),
@@ -225,11 +226,7 @@ const getHomepageData = (t = () => {}) => ({
       t('developer.developerHubList.3'),
       t('developer.developerHubList.4'),
     ],
-    comingSoonCta: {
-      title: t('developer.comingSoon'),
-      href: '/',
-      target: '_blank',
-    },
+    comingSoon: t('developer.comingSoon'),
     sdkList: [
       {
         name: 'javascript', // Displayed on the left column

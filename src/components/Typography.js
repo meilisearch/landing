@@ -248,12 +248,21 @@ const variants = {
       },
     },
   },
+  typo4: {
+    tag: 'span',
+    style: css`
+      font-family: Inter;
+      font-size: 15px;
+      line-height: 22px;
+    `,
+  },
 }
 
 const StyledTypography = styled.span`
   margin: 0;
   display: inline-block;
   ${p => p.$variant.style};
+  color: ${p => p.$color || get('colors.white')};
 `
 
 const Typography = ({ variant = 'body.m.default', forwardedAs, ...props }) => {

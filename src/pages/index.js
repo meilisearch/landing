@@ -108,7 +108,6 @@ const Home = ({ code_samples }) => {
       </Head>
       <Header />
       <PageContent>
-        <Developer developerProps={developer} code_samples={code_samples} />
         <Hero heroProps={hero} />
         <Demo demoProps={demo} color={get('colors.lila')} />
         <OpenSource
@@ -130,6 +129,7 @@ const Home = ({ code_samples }) => {
           steps={stepsAnchor}
           color={get('colors.dodgerBlue')}
         />
+        <Developer developerProps={developer} code_samples={code_samples} />
         <Cards cardsProps={cards} />
         <Testimonials testimonialsProps={testimonials} />
       </PageContent>
