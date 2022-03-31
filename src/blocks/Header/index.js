@@ -44,7 +44,7 @@ const Header = props => {
       />
       <MobileHeader
         headerProps={headerProps}
-        stargazersCount={formatStargazers(data.stargazers_count)}
+        stargazers_count={formatStargazers(data.stargazers_count)}
       />
     </Wrapper>
   )
