@@ -1,62 +1,70 @@
 import {
-  ApiReference,
+  Api,
+  Blog,
+  Documentation,
   GithubOutlined,
   Guides,
-  Integrations,
-  Roadmap,
+  Puzzle,
+  Roadmap2,
 } from '../src/components/icons'
 
 const getHeaderData = (t = () => {}) => ({
   links: [
     {
-      title: t('documentation.title'),
-      href: t('documentation.url'),
-      target: '_blank',
-    },
-    {
-      title: t('blog.title'),
-      href: t('blog.url'),
-      target: '_blank',
-    },
-    {
-      title: t('jobs.title'),
-      href: t('jobs.url'),
-      target: '_blank',
+      title: t('pricing.title'),
+      href: t('pricing.url'),
     },
     {
       title: t('resources.title'),
       subMenu: [
         {
-          title: t('resources.subMenu.0.title'),
+          title: t('documentation.title'),
+          icon: Documentation,
+          href: t('documentation.url'),
+          target: '_blank',
+        },
+        {
+          title: t('blog.title'),
+          icon: Blog,
+          href: t('blog.url'),
+          target: '_blank',
+        },
+        {
+          title: t('guides.title'),
           icon: Guides,
-          href: t('resources.subMenu.0.url'),
+          href: t('guides.url'),
           target: '_blank',
         },
         {
-          title: t('resources.subMenu.1.title'),
-          icon: ApiReference,
-          href: t('resources.subMenu.1.url'),
+          title: t('roadmap.title'),
+          icon: Roadmap2,
+          href: t('roadmap.url'),
           target: '_blank',
         },
         {
-          title: t('resources.subMenu.2.title'),
-          icon: Roadmap,
-          href: t('resources.subMenu.2.url'),
+          title: t('apiReference.title'),
+          icon: Api,
+          href: t('apiReference.url'),
           target: '_blank',
         },
         {
-          title: t('resources.subMenu.3.title'),
+          title: t('changelog.title'),
           icon: GithubOutlined,
-          href: t('resources.subMenu.3.url'),
+          href: t('changelog.url'),
           target: '_blank',
         },
         {
-          title: t('resources.subMenu.4.title'),
-          icon: Integrations,
-          href: t('resources.subMenu.4.url'),
+          title: t('integrations.title'),
+          icon: Puzzle,
+          href: t('integrations.url'),
           target: '_blank',
         },
       ],
+    },
+    {
+      title: t('jobs.title'),
+      href: t('jobs.url'),
+      target: '_blank',
     },
   ],
   cta1: {

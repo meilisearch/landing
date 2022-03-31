@@ -1,9 +1,11 @@
 import React from 'react'
 import {
-  ApiReference as ApiReferenceIcon,
+  Api as ApiIcon,
   Arrow as ArrowIcon,
+  Blog as BlogIcon,
   Chat as ChatIcon,
   Cross as CrossIcon,
+  Documentation as DocumentationIcon,
   Earth as EarthIcon,
   Excluded as ExcludedIcon,
   Filter as FilterIcon,
@@ -12,7 +14,6 @@ import {
   Guides as GuidesIcon,
   Hamburger as HamburgerIcon,
   Included as IncludedIcon,
-  Integrations as IntegrationsIcon,
   Key as KeyIcon,
   Lightning as LightningIcon,
   Linkedin as LinkedinIcon,
@@ -21,6 +22,7 @@ import {
   Puzzle as PuzzleIcon,
   RightArrow as RightArrowIcon,
   Roadmap as RoadmapIcon,
+  Roadmap2 as Roadmap2Icon,
   Slack as SlackIcon,
   SortBy as SortByIcon,
   Star as StarIcon,
@@ -47,10 +49,12 @@ export default {
   ],
 }
 
-export const ApiReference = () => <ApiReferenceIcon height={56} />
+export const Api = () => <ApiIcon height={56} />
 export const Arrow = () => <ArrowIcon height={56} />
+export const Blog = () => <BlogIcon height={56} />
 export const Chat = () => <ChatIcon height={56} />
 export const Cross = () => <CrossIcon height={56} />
+export const Documentation = () => <DocumentationIcon height={56} />
 export const Earth = () => <EarthIcon height={56} />
 export const Excluded = () => <ExcludedIcon height={56} />
 export const Filter = () => <FilterIcon height={56} />
@@ -59,7 +63,6 @@ export const GithubOutlined = () => <GithubOutlinedIcon height={56} />
 export const Guides = () => <GuidesIcon height={56} />
 export const Hamburger = () => <HamburgerIcon height={56} />
 export const Included = () => <IncludedIcon height={56} />
-export const Integrations = () => <IntegrationsIcon height={56} />
 export const Key = () => <KeyIcon height={56} />
 export const Lightning = () => <LightningIcon height={56} />
 export const Linkedin = () => <LinkedinIcon height={56} />
@@ -68,6 +71,7 @@ export const Plug = () => <PlugIcon height={56} />
 export const Puzzle = () => <PuzzleIcon height={56} />
 export const RightArrow = () => <RightArrowIcon height={56} />
 export const Roadmap = () => <RoadmapIcon height={56} />
+export const Roadmap2 = () => <Roadmap2Icon height={56} />
 export const Slack = () => <SlackIcon height={56} />
 export const SortBy = () => <SortByIcon height={56} />
 export const Star = () => <StarIcon height={56} />
