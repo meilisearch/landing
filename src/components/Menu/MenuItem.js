@@ -79,7 +79,7 @@ const MenuItem = ({ title, icon, href, ...props }) => {
         <Content>
           {icon && <StyledIcon as={icon} alt={title} />}
           <Text>
-            <Title variant="navigation">{title}</Title>
+            <Title>{title}</Title>
           </Text>
         </Content>
       </ReakitMenuItem>
