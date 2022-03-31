@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import getStarzagersCount from 'utils/getStarzagersCount'
-import formatStargazers from 'utils/formatStargazers'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {
@@ -19,6 +17,8 @@ import {
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
 import PageContent from 'components/PageContent'
+import { SWRConfig } from 'swr'
+import fetcher from 'utils/fetcher'
 
 const Hero = styled(BaseHero)`
   margin-top: 54px;
@@ -92,7 +92,7 @@ const Step3 = styled(BaseStep3)`
   }
 `
 
-const Home = ({ stargazers_count }) => {
+const Home = ({ fallback }) => {
   const { t } = useTranslation('homepage')
   const { hero, demo, openSource, steps, cards, testimonials } =
     getHomepageData(t)
@@ -106,7 +106,9 @@ const Home = ({ stargazers_count }) => {
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
       </Head>
-      <Header stargazers_count={formatStargazers(stargazers_count)} />
+      <SWRConfig value={{ fallback }}>
+        <Header />
+      </SWRConfig>
       <PageContent>
         <Hero heroProps={hero} />
         <Demo demoProps={demo} color={get('colors.lila')} />
@@ -139,10 +141,15 @@ const Home = ({ stargazers_count }) => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
-    const stargazers_count = await getStarzagersCount()
+    const meiliRepoInfos = await fetcher(
+      'https://api.github.com/repos/meilisearch/meilisearch'
+    )
     return {
       props: {
-        stargazers_count: stargazers_count,
+        fallback: {
+          'https://api.github.com/repos/meilisearch/meilisearch':
+            meiliRepoInfos,
+        },
         ...(await serverSideTranslations(locale, [
           'homepage',
           'header',
