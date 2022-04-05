@@ -40,11 +40,11 @@ const Header = props => {
     <Wrapper {...props}>
       <DesktopHeader
         headerProps={headerProps}
-        stargazers_count={formatStargazers(data.stargazers_count)}
+        stargazers_count={formatStargazers(data?.stargazers_count)}
       />
       <MobileHeader
         headerProps={headerProps}
-        stargazers_count={formatStargazers(data.stargazers_count)}
+        stargazers_count={formatStargazers(data?.stargazers_count)}
       />
     </Wrapper>
   )
