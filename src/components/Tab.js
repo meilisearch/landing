@@ -22,9 +22,6 @@ const TabElement = styled(ReakitTab)`
   padding: 0;
   opacity: 0.4;
   transition: opacity 300ms;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: transparent;
 
   &:hover {
     opacity: 1;
@@ -33,7 +30,6 @@ const TabElement = styled(ReakitTab)`
 
   &[aria-selected='true'] {
     opacity: 1;
-    border-bottom-color: ${get('colors.white')};
   }
 `
 

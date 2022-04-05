@@ -14,6 +14,15 @@ const MobilePlansWrapper = styled.div`
   }
 `
 
+const TabElement = styled(Tab.Tab)`
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  &[aria-selected='true'] {
+    border-bottom-color: ${get('colors.white')};
+  }
+`
+
 const Tabs = ({ tab, cloud }) => {
   return (
     <Tab.TabList
@@ -21,12 +30,12 @@ const Tabs = ({ tab, cloud }) => {
       aria-label="cloud plans"
       style={{ textAlign: 'center' }}
     >
-      <Tab.Tab {...tab}>
+      <TabElement {...tab}>
         <Typography variant="title.xs">{cloud.plans[0].title}</Typography>
-      </Tab.Tab>
-      <Tab.Tab {...tab}>
+      </TabElement>
+      <TabElement {...tab}>
         <Typography variant="title.xs">{cloud.plans[1].title}</Typography>
-      </Tab.Tab>
+      </TabElement>
     </Tab.TabList>
   )
 }

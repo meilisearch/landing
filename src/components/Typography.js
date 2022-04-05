@@ -262,7 +262,6 @@ const StyledTypography = styled.span`
   margin: 0;
   display: inline-block;
   ${p => p.$variant.style};
-  color: ${p => p.$color || get('colors.white')};
 `
 
 const Typography = ({ variant = 'body.m.default', forwardedAs, ...props }) => {
