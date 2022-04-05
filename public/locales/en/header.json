@@ -1,4 +1,8 @@
 {
+  "pricing": {
+    "title": "Pricing",
+    "url": "/pricing"
+  },
   "documentation": {
     "title": "Documentation",
     "url": "https://docs.meilisearch.com/"
@@ -11,30 +15,28 @@
     "title": "Jobs",
     "url": "https://jobs.lever.co/meili"
   },
+  "guides": {
+    "title": "Guides",
+    "url": "https://docs.meilisearch.com/learn/"
+  },
+  "apiReference": {
+    "title": "Api Reference",
+    "url": "https://docs.meilisearch.com/reference/api/"
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "url": "https://roadmap.meilisearch.com/tabs/5-ideas"
+  },
+  "changelog": {
+    "title": "Changelog",
+    "url": "https://github.com/meilisearch/meilisearch/releases"
+  },
+  "integrations": {
+    "title": "Integrations",
+    "url": "https://github.com/meilisearch/integration-guides"
+  },
   "resources": {
-    "title": "Resources",
-    "subMenu": [
-      {
-        "title": "Guides",
-        "url": "https://docs.meilisearch.com/learn/"
-      },
-      {
-        "title": "Api Reference",
-        "url": "https://docs.meilisearch.com/reference/api/"
-      },
-      {
-        "title": "Roadmap",
-        "url": "https://roadmap.meilisearch.com/tabs/5-ideas"
-      },
-      {
-        "title": "Changelog",
-        "url": "https://github.com/meilisearch/meilisearch/releases"
-      },
-      {
-        "title": "Integrations",
-        "url": "https://github.com/meilisearch/integration-guides"
-      }
-    ]
+    "title": "Resources"
   },
   "logIn": {
     "title": "Join the Cloud beta",

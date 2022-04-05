@@ -64,7 +64,7 @@ const Text = styled.div`
 `
 
 const StyledIcon = styled.img`
-  width: 16px;
+  width: 20px;
   flex-shrink: 0;
   color: ${get('colors.hotPink')};
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -79,7 +79,7 @@ const MenuItem = ({ title, icon, href, ...props }) => {
         <Content>
           {icon && <StyledIcon as={icon} alt={title} />}
           <Text>
-            <Title variant="navigation">{title}</Title>
+            <Title>{title}</Title>
           </Text>
         </Content>
       </ReakitMenuItem>

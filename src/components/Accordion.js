@@ -40,10 +40,21 @@ const Arrow = styled(BaseArrow)`
   transition: transform 300ms;
 `
 
+const Question = styled(Typography)`
+  font-weight: ${get('fontWeight.semibold')};
+  @media (min-width: ${get('breakpoints.md')}) {
+    font-weight: ${get('fontWeight.bold')};
+  }
+`
+
 const Answer = styled(Typography)`
   color: ${get('colors.valhalla.200')};
   margin-top: -8px;
   padding: 0px 16px 20px;
+  font-weight: ${get('fontWeight.normal')};
+  @media (min-width: ${get('breakpoints.md')}) {
+    font-weight: ${get('fontWeight.medium')};
+  }
   a {
     color: inherit;
     text-decoration: underline;
@@ -54,10 +65,10 @@ const Accordion = ({ question, answer }) => {
   return (
     <Details>
       <Summary>
-        <Typography variant="typo2">{question}</Typography>
+        <Question variant="body">{question}</Question>
         <Arrow />
       </Summary>
-      <Answer variant="typo3" dangerouslySetInnerHTML={{ __html: answer }} />
+      <Answer variant="body" dangerouslySetInnerHTML={{ __html: answer }} />
     </Details>
   )
 }

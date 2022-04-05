@@ -3,6 +3,7 @@ const colors = {
   dodgerBlue: {
     DEFAULT: '#4F55E3',
     700: '#373C9F',
+    800: '#2B2F7D',
   },
   lila: {
     100: '#F7F0FD',
@@ -20,7 +21,9 @@ const colors = {
     300: '#9080A5',
     400: '#584078',
     DEFAULT: '#21004B',
+    600: '#1C0040',
     700: '#170035',
+    800: '#120029',
   },
   ashes: {
     100: '#FAFBFE',
