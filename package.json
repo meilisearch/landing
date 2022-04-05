@@ -13,7 +13,7 @@
     "cy:run": "cypress run",
     "test": "npx concurrently --kill-others -s first \"yarn dev\" \"cypress run\"",
     "test:watch": "npx concurrently --kill-others -s first \"yarn dev\" \"cypress open\"",
-    "storybook": "start-storybook -p 6006 -s ./public",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
