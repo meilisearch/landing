@@ -46,6 +46,10 @@ const Tables = styled.div`
   table + table {
     margin-top: 28px;
   }
+  a {
+    cursor: pointer;
+  }
+
   @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 72px;
     table + table {
