@@ -8,7 +8,6 @@ const getFooterData = (t = () => {}) => ({
         {
           title: t('menu.0.submenu.0.title'),
           href: t('menu.0.submenu.0.url'),
-          target: '_blank',
         },
         {
           title: t('menu.0.submenu.1.title'),
@@ -38,6 +37,11 @@ const getFooterData = (t = () => {}) => ({
         {
           title: t('menu.0.submenu.6.title'),
           href: t('menu.0.submenu.6.url'),
+          target: '_blank',
+        },
+        {
+          title: t('menu.0.submenu.7.title'),
+          href: t('menu.0.submenu.7.url'),
           target: '_blank',
         },
       ],
