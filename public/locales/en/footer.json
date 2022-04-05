@@ -4,6 +4,10 @@
       "title": "Resources",
       "submenu": [
         {
+          "title": "Pricing",
+          "url": "/pricing"
+        },
+        {
           "title": "Documentation",
           "url": "https://docs.meilisearch.com/"
         },
