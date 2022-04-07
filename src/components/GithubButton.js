@@ -13,7 +13,7 @@ const GithubLink = styled.a`
   border-radius: 48px;
   border-width: 1px;
   border-style: solid;
-  border-color: ${get('colors.valhalla.400')};
+  border-color: ${get('colors.valhalla.300')};
   background-color: rgba(0, 0, 0, 0.15);
   transition: border-color 300ms, background-color 300ms;
   outline: none;

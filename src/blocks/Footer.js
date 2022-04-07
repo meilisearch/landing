@@ -104,7 +104,7 @@ const Social = ({ social }) => {
 }
 
 const Copyright = styled(Typography)`
-  color: ${get('colors.valhalla.100')};
+  color: ${get('colors.ashes.600')};
   opacity: 0.9;
   margin-top: 24px;
   text-align: center;
