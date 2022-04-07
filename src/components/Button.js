@@ -3,15 +3,15 @@ import PropTypes from 'prop-types'
 import { Button as ReakitButton } from 'reakit/Button'
 import Link from 'components/Link'
 import get from 'utils/get'
-import { darken } from 'utils/colors'
+import getColorName from 'utils/getColorName'
 
 const variants = {
   primary: css`
     background-color: ${p => p.$color};
     &:hover,
     &:focus {
-      background-color: ${p => darken(p.$color, 40)};
-      border-color: ${p => darken(p.$color, 40)};
+      background-color: ${p => get(`colors.${getColorName(p.$color)}.600`)};
+      border-color: ${p => get(`colors.${getColorName(p.$color)}.600`)};
     }
   `,
   secondary: css`
