@@ -233,8 +233,7 @@ const getHomepageData = (t = () => {}) => ({
         author: {
           realName: 'Anton Whalley 🦀',
           pseudo: '@dhigit9',
-          profilePicture:
-            'https://pbs.twimg.com/profile_images/1487580746659373061/WBj_Flm__400x400.jpg',
+          profilePicture: '/images/dhigit9.jpeg',
         },
       },
       {
@@ -242,8 +241,7 @@ const getHomepageData = (t = () => {}) => ({
         author: {
           realName: 'Danilo Polani',
           pseudo: '@theraloss',
-          profilePicture:
-            'https://pbs.twimg.com/profile_images/1452988537662496776/m-EJ567Y_400x400.jpg',
+          profilePicture: '/images/theraloss.jpeg',
         },
       },
       {
@@ -251,8 +249,7 @@ const getHomepageData = (t = () => {}) => ({
         author: {
           realName: 'Björn Antonissen',
           pseudo: '@Bjornftw',
-          profilePicture:
-            'https://pbs.twimg.com/profile_images/1447442527305490433/nivzG1I4_400x400.jpg',
+          profilePicture: '/images/bjornftw.jpeg',
         },
       },
       {
@@ -260,8 +257,7 @@ const getHomepageData = (t = () => {}) => ({
         author: {
           realName: 'Sajag Dhungana 👨🏻‍💻',
           pseudo: '@orphikkkk',
-          profilePicture:
-            'https://pbs.twimg.com/profile_images/1360809851371233283/LnH_1uRA_400x400.jpg',
+          profilePicture: '/images/orphikkkk.jpeg',
         },
       },
       {
@@ -269,8 +265,7 @@ const getHomepageData = (t = () => {}) => ({
         author: {
           realName: 'Mitesh Metha',
           pseudo: '@miteshmetha',
-          profilePicture:
-            'https://pbs.twimg.com/profile_images/1466428901283049472/CHiTtFOM_400x400.jpg',
+          profilePicture: '/images/miteshmetha.jpeg',
         },
       },
       {
@@ -278,8 +273,7 @@ const getHomepageData = (t = () => {}) => ({
         author: {
           realName: 'Dan Pastori',
           pseudo: '@danpastori',
-          profilePicture:
-            'https://pbs.twimg.com/profile_images/940746430464929792/o5MP2lgT_400x400.jpg',
+          profilePicture: '/images/danpastori.jpeg',
         },
       },
       {
@@ -287,8 +281,7 @@ const getHomepageData = (t = () => {}) => ({
         author: {
           realName: 'jelle',
           pseudo: '@jellevliet',
-          profilePicture:
-            'https://pbs.twimg.com/profile_images/1470349013140529152/rgxS7KW-_400x400.jpg',
+          profilePicture: '/images/jellevliet.jpeg',
         },
       },
     ],
