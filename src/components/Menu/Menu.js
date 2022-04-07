@@ -10,7 +10,7 @@ const MenuContent = styled.div`
   @media (min-width: ${get('breakpoints.lg')}) {
     border: 1px solid ${get('colors.valhalla.300')};
     border-radius: 8px;
-    background-color: ${get('colors.valhalla')};
+    background-color: ${get('colors.valhalla.600')};
     padding-left: 0;
     max-width: 360px;
   }
