@@ -35,7 +35,7 @@ const Summary = styled.summary`
 const Arrow = styled(BaseArrow)`
   width: 15px;
   margin-left: 16px;
-  color: ${get('colors.valhalla.200')};
+  color: ${get('colors.ashes.900')};
   transform: rotate(0deg);
   transition: transform 300ms;
 `
@@ -48,7 +48,7 @@ const Question = styled(Typography)`
 `
 
 const Answer = styled(Typography)`
-  color: ${get('colors.valhalla.200')};
+  color: ${get('colors.ashes.900')};
   margin-top: -8px;
   padding: 0px 16px 20px;
   font-weight: ${get('fontWeight.normal')};

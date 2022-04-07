@@ -63,7 +63,7 @@ const Keypoints = styled.div`
 `
 
 const KeypointDescription = styled(Typography)`
-  color: ${get('colors.valhalla.100')};
+  color: ${get('colors.ashes.600')};
   margin-top: 8px;
   display: inline-block;
   opacity: 0.9;

@@ -6,7 +6,7 @@ import { Included, Excluded } from 'components/icons'
 
 const Table = styled.table`
   width: 100%;
-  color: ${get('colors.valhalla.100')};
+  color: ${get('colors.ashes.600')};
   border-radius: 8px;
   border: 1px solid ${get('colors.valhalla.400')};
   padding: 12px 12px 0 12px;
@@ -75,7 +75,7 @@ const Td = styled.td`
 `
 
 const InfoText = styled(Typography)`
-  color: ${get('colors.valhalla.200')};
+  color: ${get('colors.ashes.900')};
 `
 
 const Info = ({ info }) => {
@@ -90,7 +90,7 @@ const Info = ({ info }) => {
   if (typeof info == 'boolean' && info === true) {
     return <Included width={22} color={get('colors.hotPink')} />
   }
-  return <Excluded width={22} color={get('colors.valhalla.400')} />
+  return <Excluded width={22} color={get('colors.valhalla.300')} />
 }
 
 const TableComponent = ({ table }) => (

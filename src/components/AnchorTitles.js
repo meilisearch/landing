@@ -32,7 +32,7 @@ const PreTitleLink = ({ preTitle, anchorLink, color, current, ...props }) => (
   <div {...props}>
     <MobilePreTitle
       variant="preTitle"
-      color={current ? color : get('colors.valhalla.400')}
+      color={current ? color : get('colors.valhalla.100')}
       preTitle={preTitle}
       $current={current}
       {...props}
@@ -40,7 +40,7 @@ const PreTitleLink = ({ preTitle, anchorLink, color, current, ...props }) => (
     <DeskptopLink href={anchorLink}>
       <PreTitle
         variant="preTitle"
-        color={current ? color : get('colors.valhalla.400')}
+        color={current ? color : get('colors.valhalla.100')}
         preTitle={preTitle}
         $current={current}
         {...props}

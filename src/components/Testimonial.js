@@ -23,7 +23,7 @@ const Card = styled.article`
 
 const TwitterIcon = styled(Twitter)`
   height: 18px;
-  color: ${get('colors.valhalla.200')};
+  color: ${get('colors.ashes.900')};
   @media (min-width: ${get('breakpoints.lg')}) {
     height: 24px;
   }

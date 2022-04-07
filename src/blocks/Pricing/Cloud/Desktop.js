@@ -40,8 +40,8 @@ const SecondColumn = styled.div`
   }
   @media (min-width: ${get('breakpoints.xl')}) {
     background-color: ${get('colors.valhalla.600')};
-    margin: -24px -26px -24px -30px;
-    padding: 24px 26px 24px 30px;
+    margin: -32px -32px -28px -30px;
+    padding: 28px 26px 24px 30px;
   }
 `
 
