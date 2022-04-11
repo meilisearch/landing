@@ -32,7 +32,7 @@
     "swr": "^1.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
+    "@babel/core": "^7.17.9",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.4.9",
