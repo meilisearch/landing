@@ -125,7 +125,7 @@
       },
       "secondSection": {
         "title": "Cloud",
-        "description": "Need to go fast? Meilisearch Cloud takes care of everything so you just have to focus on the most important thing: making sure your users' have a great search experience.<br/><br/>Enter the waiting list for our Cloud beta by completing the form linked below.",
+        "description": "Need to go fast? Meilisearch Cloud takes care of everything so you just have to focus on the most important thing: making sure your users have a great search experience.<br/><br/>Enter the waiting list for our Cloud beta by completing the form linked below.",
         "cta": {
           "title": "Apply for the beta",
           "url": "https://meilisearch.typeform.com/to/FtnzvZfh"
@@ -165,7 +165,7 @@
     ]
   },
   "testimonials": {
-    "description": "Already 25k users have been convinced by MeiliSearch. How about giving it a try?",
+    "description": "Already 25k users have been convinced by Meilisearch. How about giving it a try?",
     "cta": {
       "title": "Get started",
       "url": "https://docs.meilisearch.com/learn/getting_started/quick_start.html"
