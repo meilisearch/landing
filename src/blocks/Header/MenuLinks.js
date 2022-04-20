@@ -40,7 +40,7 @@ const DesktopSubmenu = ({ link }) => {
   return (
     <DesktopMenuWrapper>
       <MenuDisclosure {...menuState}>
-        <Typography>{link.title}</Typography>
+        <Typography variant="body.l.bold">{link.title}</Typography>
       </MenuDisclosure>
       <Menu {...menuState} ariaLabel={link.title} style={{ marginLeft: 0 }}>
         {link.subMenu.map(item => (
@@ -65,7 +65,7 @@ const MobileSubmenu = ({ link }) => {
   return (
     <MobileMenuWrapper>
       <Disclosure {...disclosure}>
-        <Typography>{link.title}</Typography>
+        <Typography variant="body.l.bold">{link.title}</Typography>
       </Disclosure>
       <DisclosureContent
         {...disclosure}
@@ -94,7 +94,7 @@ const MenuLinks = ({ headerProps }) => (
         <Submenu link={link} key={link.title} />
       ) : (
         <Link href={link.href} target={link.target} key={link.title}>
-          <Typography>{link.title}</Typography>
+          <Typography variant="body.l.bold">{link.title}</Typography>
         </Link>
       )
     )}
