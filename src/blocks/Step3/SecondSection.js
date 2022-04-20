@@ -101,14 +101,14 @@ const Second = ({ section, color }) => {
         />
       </IllustrationColumn>
       <ContentColumn>
-        <Typography variant="title2" forwardedAs="h3">
+        <Typography variant="title.m" forwardedAs="h3">
           {section.title}
         </Typography>
         <Description
           dangerouslySetInnerHTML={{ __html: section.description }}
         />
         <Cta color={color} href={section.cta.url}>
-          <Typography variant="ctaBig">{section.cta.title}</Typography>
+          <Typography variant="body.s.bold">{section.cta.title}</Typography>
         </Cta>
       </ContentColumn>
     </Grid>
