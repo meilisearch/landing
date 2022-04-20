@@ -9,20 +9,23 @@ import Button from 'components/Button'
 import { RightArrow } from 'components/icons'
 
 const Container = styled.div`
-  flex: 1;
-  overflow: auto;
   position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 `
 
 const CodeSection = styled(Tab.TabPanel)`
   height: 100%;
-  position: relative;
+  position: absolute;
+  inset: 0;
 `
 
 const Cta = styled(Button)`
   position: absolute;
   right: 40px;
   bottom: 26px;
+  background-color: ${get('colors.valhalla.700')};
 `
 
 const RightColumn = ({ tab, sdkList, developerProps }) => {

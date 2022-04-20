@@ -6,6 +6,7 @@ import get from 'utils/get'
 import Link from 'components/Link'
 
 const Container = styled.div`
+  width: 190px;
   background-color: ${get('colors.valhalla.600')};
   display: flex;
   flex-direction: column;
@@ -14,12 +15,14 @@ const Container = styled.div`
 
   @media (min-width: ${get('breakpoints.xl')}) {
     padding: 26px 44px;
+    width: 218px;
   }
 `
 
 const SdkTab = styled(Tab.Tab)`
   display: flex;
   margin-top: 10px;
+  align-items: center;
 `
 
 const Language = styled(Typography)`
@@ -30,6 +33,7 @@ const Language = styled(Typography)`
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-left: 24px;
+  text-align: left;
 `
 
 const LinkToIntegrations = styled(Link)`

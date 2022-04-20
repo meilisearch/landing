@@ -33,9 +33,11 @@ const TerminalHead = styled.div`
 `
 
 const Head = () => {
+  const message = `✨ We're hiring !
+  Check https://jobs.lever.co/meili if you want to join us ✨`
   return (
     <TerminalHead>
-      <TerminalButton />
+      <TerminalButton onClick={() => console.log(message)} />
       <TerminalButton />
       <TerminalButton />
     </TerminalHead>

@@ -2,6 +2,7 @@ import heroAnimationDesktop from 'lotties/hero-desktop'
 import heroAnimationMobile from 'lotties/hero-mobile'
 import openSource from 'lotties/opensource'
 import {
+  Angular,
   Lightning,
   Plug,
   Puzzle,
@@ -24,6 +25,7 @@ import {
   Swift,
   React,
   Code,
+  Vue,
 } from 'components/icons'
 import get from 'utils/get'
 
@@ -229,7 +231,7 @@ const getHomepageData = (t = () => {}) => ({
     comingSoon: t('developer.comingSoon'),
     sdkList: [
       {
-        name: 'javascript', // Displayed on the left column
+        name: 'javascript', // Name displayed
         language: 'javascript', // Used by react-syntax-highlighter to have the proper coding style
         pkgName: 'meilisearch-js', // Link to the package
         logo: Javascript,
@@ -277,40 +279,34 @@ const getHomepageData = (t = () => {}) => ({
         logo: Swift,
         url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-swift/main/.code-samples.meilisearch.yaml',
       },
-      // {
-      // name  : 'symfony (pas de code samples)',
-      //   langage: 'symfony (pas de code samples)',
-      // logo: Symfony ,
-      // rl: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
-      // },
-      // {
-      // name: 'laravel (pas de code samples)',
-      // language: 'laravel (pas de code samples)',
-      // pkgName: 'laravel (pas de code samples)',
-      // logo: Laravel ,
-      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
-      // },
-      // {
-      // name  : 'angular (pas de code samples)',
-      //   language: 'angular (pas de code samples)',
-      // pkgName: 'angular (pas de code samples)',
-      // logo: Angular ,
-      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
-      // },
-      // {
-      // name  : 'react (pas de code samples)',
-      //   language: 'react (pas de code samples)',
-      // pkgName: 'react (pas de code samples)',
-      // logo: React ,
-      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
-      // },
-      // {
-      // name  : 'vue (pas de code samples)',
-      //   language: 'vue (pas de code samples)',
-      // pkgName: 'vue (pas de code samples)',
-      // logo: Vue ,
-      // url: 'https://raw.githubusercontent.com/meilisearch/documentation/master/.code-samples.meilisearch.yaml',
-      // },
+      {
+        name: 'angular',
+        language: 'js',
+        pkgName: 'meilisearch-angular',
+        logo: Angular,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-angular/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        name: 'react',
+        language: 'jsx',
+        pkgName: 'meilisearch-react',
+        logo: React,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-react/master/.code-samples.meilisearch.yaml',
+      },
+      {
+        name: 'vue',
+        language: 'html',
+        pkgName: 'meilisearch-vue',
+        logo: Vue,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-vue/master/.code-samples.meilisearch.yaml',
+      },
+      {
+        name: 'instant Meilisearch',
+        language: 'javascript',
+        pkgName: 'instant-meilisearch',
+        logo: React,
+        url: 'https://raw.githubusercontent.com/meilisearch/instant-meilisearch/main/.code-samples.meilisearch.yaml',
+      },
       {
         name: '.Net',
         language: 'dot',
@@ -332,6 +328,20 @@ const getHomepageData = (t = () => {}) => ({
         logo: React,
         url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-rust/main/.code-samples.meilisearch.yaml',
       },
+      {
+        name: 'rails',
+        language: 'ruby',
+        pkgName: 'meilisearch-rails',
+        logo: React,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-rails/main/.code-samples.meilisearch.yaml',
+      },
+      // {
+      //   name: 'symfony',
+      //   language: 'php',
+      //   pkgName: 'meilisearch-symfony',
+      //   logo: React,
+      //   url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-symfony/main/.code-samples.meilisearch.yaml',
+      // },
     ],
   },
   cards: {

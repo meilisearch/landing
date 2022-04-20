@@ -13,7 +13,7 @@ const getCodeSamples = async sdkList => {
       const codeSample = yaml.load(fetchedContent)
       return {
         ...sdkProps,
-        code: codeSample.faceted_search_filter_1,
+        code: codeSample.landing_getting_started_1,
       }
     } catch (e) {
       console.log(e)

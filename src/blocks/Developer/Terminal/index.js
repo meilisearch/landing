@@ -19,13 +19,10 @@ const StyledGrid = styled(Grid)`
 
 `
 
-const TerminalBody = styled(Grid)`
-  grid-template-columns: 190px 1fr;
-  @media (min-width: ${get('breakpoints.xl')}) {
-    grid-template-columns: 218px 1fr;
-  }
+const TerminalBody = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  grid-gap: 0;
 `
 
 const Terminal = ({ developerProps, code_samples }) => {
