@@ -11,7 +11,7 @@ const StyledPreTitle = styled(Typography)`
 
 const PreTitle = ({ preTitle, color, ...props }) => {
   return (
-    <StyledPreTitle variant="preTitle" $color={color} {...props}>
+    <StyledPreTitle variant="title.caps" $color={color} {...props}>
       {preTitle}
     </StyledPreTitle>
   )

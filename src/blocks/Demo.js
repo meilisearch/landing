@@ -95,10 +95,10 @@ const Keypoint = ({ keypoint, color, ...props }) => {
   return (
     <KeypointWrapper {...props}>
       <StyledIcon as={Icon} color={color} />
-      <KeypointTitle variant="title3" forwardedAs="h3">
+      <KeypointTitle variant="title.s" forwardedAs="h3">
         {keypoint.title}
       </KeypointTitle>
-      <KeypointDescription variant="small">
+      <KeypointDescription variant="body.s.default">
         {keypoint.description}
       </KeypointDescription>
     </KeypointWrapper>
@@ -182,7 +182,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
       </LeftColumn>
       <Content>
         <PreTitle color={color} preTitle={demoProps.preTitle} />
-        <Title variant="title2" forwardedAs="h2">
+        <Title variant="title.m" forwardedAs="h2">
           {demoProps.title}
         </Title>
         <Description>{demoProps.description}</Description>
@@ -203,7 +203,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
             href={demoProps.cta.url}
             target={demoProps.cta.target}
           >
-            <Typography>{demoProps.cta.title}</Typography>
+            <Typography variant="body.s.bold">{demoProps.cta.title}</Typography>
           </Button>
         </Cta>
       </Content>
