@@ -13,13 +13,13 @@ export default {
 export const Default = () => (
   <List>
     <List.Element>
-      <Typography variant="small">Release notes</Typography>
+      <Typography variant="body.s.default">Release notes</Typography>
     </List.Element>
     <List.Element>
-      <Typography variant="small">Demos</Typography>
+      <Typography variant="body.s.default">Demos</Typography>
     </List.Element>
     <List.Element>
-      <Typography variant="small">Integrations</Typography>
+      <Typography variant="body.s.default">Integrations</Typography>
     </List.Element>
   </List>
 )
@@ -31,13 +31,13 @@ const PinkLi = props => (
 export const HotPink = () => (
   <List>
     <PinkLi>
-      <Typography variant="small">Release notes</Typography>
+      <Typography variant="body.s.default">Release notes</Typography>
     </PinkLi>
     <PinkLi>
-      <Typography variant="small">Demos</Typography>
+      <Typography variant="body.s.default">Demos</Typography>
     </PinkLi>
     <PinkLi>
-      <Typography variant="small">Integrations</Typography>
+      <Typography variant="body.s.default">Integrations</Typography>
     </PinkLi>
   </List>
 )

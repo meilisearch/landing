@@ -24,27 +24,27 @@ const Template = args => <Button {...args} />
 export const DodgerBlue = Template.bind({})
 DodgerBlue.storyName = 'primary | dodgerBlue (default)'
 DodgerBlue.args = {
-  children: <Typography variant="ctaBig">Log in</Typography>,
+  children: <Typography variant="body.s.bold">Log in</Typography>,
 }
 
 export const HotPink = Template.bind({})
 HotPink.storyName = 'primary | hotPink'
 HotPink.args = {
-  children: <Typography variant="ctaBig">Log in</Typography>,
+  children: <Typography variant="body.s.bold">Log in</Typography>,
   color: get('colors.hotPink'),
 }
 
 export const Lila = Template.bind({})
 Lila.storyName = 'primary | lila'
 Lila.args = {
-  children: <Typography variant="ctaBig">Log in</Typography>,
+  children: <Typography variant="body.s.bold">Log in</Typography>,
   color: get('colors.lila'),
 }
 
 export const SecondaryHotPink = Template.bind({})
 SecondaryHotPink.storyName = 'secondary | hotPink'
 SecondaryHotPink.args = {
-  children: <Typography variant="ctaBig">Log in</Typography>,
+  children: <Typography variant="body.s.bold">Log in</Typography>,
   color: get('colors.hotPink'),
   variant: 'secondary',
 }
@@ -52,7 +52,7 @@ SecondaryHotPink.args = {
 export const SecondaryWhite = Template.bind({})
 SecondaryWhite.storyName = 'secondary | white'
 SecondaryWhite.args = {
-  children: <Typography variant="ctaBig">Log in</Typography>,
+  children: <Typography variant="body.s.bold">Log in</Typography>,
   color: get('colors.white'),
   variant: 'secondary',
 }
@@ -60,6 +60,6 @@ SecondaryWhite.args = {
 export const Link = Template.bind({})
 Link.storyName = 'as link'
 Link.args = {
-  children: <Typography variant="ctaBig">Log in</Typography>,
+  children: <Typography variant="body.s.bold">Log in</Typography>,
   href: '',
 }

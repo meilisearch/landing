@@ -39,6 +39,11 @@ const Poster = styled.div`
 `
 
 const MovieTitle = styled(Typography)`
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 21.1092px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
   color: ${get('colors.valhalla')};
   ais-highlight-0000000000 {
     color: ${get('colors.lila')};
@@ -77,7 +82,6 @@ const Hit = ({ hit }) => (
     </Poster>
     <MovieInfos>
       <MovieTitle
-        variant="title4"
         dangerouslySetInnerHTML={{ __html: hit._highlightResult.title.value }}
       />
       <MovieYear>{new Date(hit.release_date).getFullYear()}</MovieYear>
