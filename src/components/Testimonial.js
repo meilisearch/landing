@@ -83,7 +83,7 @@ const Testimonial = ({ testimonial, ...props }) => {
       <TwitterIcon />
       <div style={{ flex: 1 }}>
         <Text
-          variant="small"
+          variant="body.s.default"
           dangerouslySetInnerHTML={{ __html: testimonial.text }}
         />
       </div>
