@@ -44,7 +44,7 @@ const TitleSection = ({ developerProps }) => {
         <TitleContent>
           <PreTitle width={48} />
           <Title
-            variant="title1"
+            variant="title.xl"
             forwardedAs="h2"
             dangerouslySetInnerHTML={{ __html: developerProps.title }}
           />

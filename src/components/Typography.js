@@ -248,14 +248,6 @@ const variants = {
       },
     },
   },
-  typo4: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-size: 15px;
-      line-height: 22px;
-    `,
-  },
 }
 
 const StyledTypography = styled.span`

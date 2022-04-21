@@ -37,7 +37,7 @@ const Language = styled(Typography)`
 `
 
 const LinkToIntegrations = styled(Link)`
-  margin-top: 32px;
+  margin: 32px -16px 0;
   span {
     text-decoration: underline;
   }
@@ -67,7 +67,9 @@ const LeftColumn = ({ tab, sdkList, developerProps }) => {
         href={developerProps.seeAllIntegrations.href}
         target={developerProps.seeAllIntegrations.target}
       >
-        <Typography>{developerProps.seeAllIntegrations.title}</Typography>
+        <Typography variant="body.m.link">
+          {developerProps.seeAllIntegrations.title}
+        </Typography>
       </LinkToIntegrations>
     </Container>
   )

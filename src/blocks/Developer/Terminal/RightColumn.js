@@ -43,7 +43,6 @@ const RightColumn = ({ tab, sdkList, developerProps }) => {
             language={sdk.language}
             style={dracula}
             showLineNumbers
-            wrapLongLines
             customStyle={customStyle}
           >
             {sdk.code}

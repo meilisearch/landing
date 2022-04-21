@@ -59,16 +59,18 @@ const Documentation = ({ developerProps }) => {
   return (
     <div>
       <DocumentationCard>
-        <Typography variant="title3">{developerProps.documentation}</Typography>
+        <Typography variant="title.s">
+          {developerProps.documentation}
+        </Typography>
         <Typography
-          variant="small"
+          variant="body.s.default"
           color={get('colors.ashes.600')}
           style={{ marginTop: 24 }}
         >
           {developerProps.documentationText}
         </Typography>
         <Button href={cta.href} target={cta.target} style={{ marginTop: 24 }}>
-          <Typography variant="ctaBig">{cta.title}</Typography>
+          <Typography variant="body.s.bold">{cta.title}</Typography>
         </Button>
       </DocumentationCard>
     </div>
@@ -86,9 +88,9 @@ const DeveloperHub = ({ developerProps }) => {
   return (
     <div>
       <DeveloperHubCard>
-        <Typography variant="title3">{developerProps.developerHub}</Typography>
+        <Typography variant="title.s">{developerProps.developerHub}</Typography>
         <Typography
-          variant="small"
+          variant="body.s.default"
           color={get('colors.ashes.600')}
           style={{ marginTop: 24 }}
         >
@@ -97,7 +99,10 @@ const DeveloperHub = ({ developerProps }) => {
         <List>
           {developerProps.developerHubList.map((elem, index) => (
             <List.Element key={index}>
-              <Typography variant="small" color={get('colors.ashes.600')}>
+              <Typography
+                variant="body.s.default"
+                color={get('colors.ashes.600')}
+              >
                 {elem}
               </Typography>
             </List.Element>
@@ -108,7 +113,7 @@ const DeveloperHub = ({ developerProps }) => {
           color={get('colors.valhalla.300')}
           style={{ marginTop: 24 }}
         >
-          <Typography variant="ctaBig" color={get('colors.ashes.900')}>
+          <Typography variant="body.s.bold" color={get('colors.ashes.900')}>
             {developerProps.comingSoon}
           </Typography>
         </Button>
@@ -132,7 +137,7 @@ const Text = ({ developerProps }) => {
         </div>
       </Illustration>
       <Content>
-        <Typography variant="typo4">{developerProps.description}</Typography>
+        <Typography variant="title.xs">{developerProps.description}</Typography>
         <Documentation developerProps={developerProps} />
         <DeveloperHub developerProps={developerProps} />
       </Content>
