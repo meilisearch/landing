@@ -31,7 +31,7 @@ const Basic = ({ basicPlan }) => {
       <Resources>
         {basicPlan.resources.map((resource, index) => (
           <Resource key={index}>
-            <Typography variant="small">{resource.title}</Typography>
+            <Typography variant="body.s.default">{resource.title}</Typography>
             <Tag>{resource.price}</Tag>
           </Resource>
         ))}
@@ -41,7 +41,7 @@ const Basic = ({ basicPlan }) => {
         href={basicPlan.cta.href}
         target={basicPlan.cta.target}
       >
-        <Typography variant="ctaBig">{basicPlan.cta.title}</Typography>
+        <Typography variant="body.s.bold">{basicPlan.cta.title}</Typography>
       </Button>
     </>
   )

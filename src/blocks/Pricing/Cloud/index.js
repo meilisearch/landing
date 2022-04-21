@@ -33,7 +33,7 @@ const Cloud = ({ cloud, ...props }) => {
       <PricingCard>
         <PricingCardHeader>
           <HeaderContainer>
-            <Typography variant="title2">{cloud.title}</Typography>
+            <Typography variant="title.m">{cloud.title}</Typography>
             <Typography style={{ marginTop: 16 }}>
               {cloud.description}
             </Typography>

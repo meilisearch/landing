@@ -34,7 +34,7 @@ const FAQ = ({ faq }) => {
     <FAQWrapper>
       <Grid>
         <Content>
-          <Title variant="title2" forwardedAs="h2">
+          <Title variant="title.m" forwardedAs="h2">
             {faq.title}
           </Title>
           <Questions>

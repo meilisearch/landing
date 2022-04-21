@@ -82,7 +82,7 @@ const Info = ({ info }) => {
   if (typeof info === 'string' || info instanceof String) {
     return (
       <InfoText
-        variant="copySmall"
+        variant="body.s.default"
         dangerouslySetInnerHTML={{ __html: info }}
       />
     )
@@ -99,7 +99,7 @@ const TableComponent = ({ table }) => (
       <Tr>
         {table.thead.map((thead, index) => (
           <Th key={index}>
-            <Typography variant="preTitle">{thead}</Typography>
+            <Typography variant="title.caps">{thead}</Typography>
           </Th>
         ))}
       </Tr>
@@ -108,7 +108,7 @@ const TableComponent = ({ table }) => (
       {table.tbody.map((tbody, index) => (
         <Tr key={index}>
           <Td>
-            <Typography variant="copy">{tbody.title}</Typography>
+            <Typography variant="body.m.default">{tbody.title}</Typography>
           </Td>
           <Td>
             <Info info={tbody.openSource} />

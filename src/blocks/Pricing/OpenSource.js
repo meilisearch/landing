@@ -32,14 +32,14 @@ const OpenSource = ({ openSource }) => {
     <OpenSourcePlanWrapper>
       <PricingCard>
         <PricingCard.Header $bgColor={get('colors.dodgerBlue.800')}>
-          <Typography variant="title2" style={{ color: get('colors.white') }}>
+          <Typography variant="title.m" style={{ color: get('colors.white') }}>
             {openSource.title}
           </Typography>
         </PricingCard.Header>
         <PricingCard.Body $bgColor={get('colors.valhalla.600')}>
           <Infos>
             <div>
-              <Typography variant="title3">{openSource.plan}</Typography>
+              <Typography variant="title.xs">{openSource.plan}</Typography>
               <PlanDescription>{openSource.planDescription}</PlanDescription>
             </div>
             <Button
@@ -48,7 +48,9 @@ const OpenSource = ({ openSource }) => {
               style={{ marginTop: 28 }}
               variant="secondary"
             >
-              <Typography variant="ctaBig">{openSource.cta.title}</Typography>
+              <Typography variant="body.s.bold">
+                {openSource.cta.title}
+              </Typography>
             </Button>
           </Infos>
         </PricingCard.Body>

@@ -19,7 +19,7 @@ const TagWrapper = styled.div`
 const Tag = ({ children, ...props }) => {
   return (
     <TagWrapper {...props}>
-      <Typography variant="typo1">{children}</Typography>
+      <Typography variant="body.s.default">{children}</Typography>
     </TagWrapper>
   )
 }

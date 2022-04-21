@@ -107,7 +107,7 @@ const Table = ({ table }) => {
     <TableSection>
       <Grid style={{ position: 'relative' }}>
         <Content>
-          <Title variant="title2" forwardedAs="h2">
+          <Title variant="title.m" forwardedAs="h2">
             {table.title}
           </Title>
           <Tables>

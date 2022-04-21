@@ -12,7 +12,7 @@ const EnterprisePlan = ({ enterprisePlan }) => {
       <List style={{ marginTop: 16 }}>
         {enterprisePlan.keypoints.map((keypoint, index) => (
           <List.Element key={index} style={{ marginTop: 10 }}>
-            <Typography variant="small">{keypoint}</Typography>
+            <Typography variant="body.s.default">{keypoint}</Typography>
           </List.Element>
         ))}
       </List>
@@ -21,7 +21,9 @@ const EnterprisePlan = ({ enterprisePlan }) => {
         target={enterprisePlan.cta.target}
         style={{ marginTop: 18 }}
       >
-        <Typography variant="ctaBig">{enterprisePlan.cta.title}</Typography>
+        <Typography variant="body.s.bold">
+          {enterprisePlan.cta.title}
+        </Typography>
       </Button>
     </>
   )
