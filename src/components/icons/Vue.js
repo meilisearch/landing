@@ -3,7 +3,7 @@ import * as React from 'react'
 function SvgVue({ title, titleId, ...props }) {
   return (
     <svg
-      viewBox="0 0 28 24"
+      viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-labelledby={titleId}
@@ -11,11 +11,11 @@ function SvgVue({ title, titleId, ...props }) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M.379.479l13.58 23.425L27.539.48h-5.432l-8.148 14.055L5.743.48H.379z"
+        d="M9.217 12.388L25 39.613l15.783-27.225H34.47L25 28.723l-9.548-16.335H9.217z"
         fill="currentColor"
       />
       <path
-        d="M5.742.478L13.958 14.6 22.106.478h-5.025L13.958 5.91 10.767.478H5.742z"
+        d="M15.45 12.387L25 28.8l9.469-16.414h-5.84L25 18.7l-3.709-6.313h-5.84z"
         fill="currentColor"
         fillOpacity={0.6}
       />

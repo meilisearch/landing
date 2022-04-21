@@ -3,7 +3,7 @@ import * as React from 'react'
 function SvgAngular({ title, titleId, ...props }) {
   return (
     <svg
-      viewBox="0 0 28 30"
+      viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-labelledby={titleId}
@@ -13,14 +13,14 @@ function SvgAngular({ title, titleId, ...props }) {
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M13.959.601L.379 5.444 2.45 23.4l11.509 6.374V18.602H10.34l-1.707 4.26H5.469l8.489-19.036v.002V.6zm0 9.412l-.001-.002-2.48 5.965h2.48v-5.964z"
+        d="M25.001 8.716l-15.16 5.407 2.312 20.045 12.848 7.116V28.81h-4.04l-1.904 4.755h-3.534L25 12.316l.001.002V8.716zm0 10.506v-.002l-2.769 6.66h2.77v-6.658z"
         fill="currentColor"
       />
       <path
         opacity={0.6}
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M13.957 3.825V.6l13.58 4.843L25.466 23.4l-11.509 6.374V18.602h3.59l1.706 4.26h3.165l-8.46-19.036-.001.002v-.003zm0 12.151v-5.963l.001-.002 2.48 5.965h-2.481z"
+        d="M24.999 12.315V8.716l15.16 5.407-2.312 20.045-12.848 7.116V28.81h4.007l1.905 4.755h3.534L25 12.316 25 12.32v-.004zm0 13.565v-6.657L25 19.22l2.768 6.66H25z"
         fill="currentColor"
       />
     </svg>

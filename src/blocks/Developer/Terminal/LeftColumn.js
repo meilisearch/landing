@@ -37,9 +37,12 @@ const Language = styled(Typography)`
 `
 
 const LinkToIntegrations = styled(Link)`
-  margin: 32px -16px 0;
+  margin: 32px 0 0;
   span {
     text-decoration: underline;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin: 32px -16px 0;
   }
 `
 
