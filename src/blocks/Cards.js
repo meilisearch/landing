@@ -28,6 +28,7 @@ const LeftColumn = styled.div`
     grid-column: 3 / 11;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
+    max-width: 600px;
     grid-column: 1 / -1;
   }
 `
