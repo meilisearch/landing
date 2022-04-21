@@ -130,7 +130,9 @@ const Testimonials = ({ testimonialsProps: testimonials, ...props }) => {
       <Text>
         <Grid style={{ position: 'relative' }}>
           <Content>
-            <Typography variant="title3">{testimonials.description}</Typography>
+            <Typography variant="title.s">
+              {testimonials.description}
+            </Typography>
             <Cta
               color={get('colors.white')}
               variant="secondary"
@@ -138,7 +140,7 @@ const Testimonials = ({ testimonialsProps: testimonials, ...props }) => {
               target={testimonials.cta.target}
             >
               <Typography
-                variant="ctaBig"
+                variant="body.s.bold"
                 style={{ display: 'flex', alignItems: 'center' }}
               >
                 <RightArrow width={20} style={{ marginRight: 12 }} />
