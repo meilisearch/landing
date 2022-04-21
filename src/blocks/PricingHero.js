@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
 import Typography from 'components/Typography'
+import PreTitle from 'components/PreTitle'
 
 const Section = styled.section`
   color: ${get('colors.white')};
@@ -10,11 +11,6 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
-
-const PreTitle = styled(Typography)`
-  color: ${get('colors.hotPink')};
-  text-transform: uppercase;
 `
 
 const Title = styled(Typography)`
@@ -110,10 +106,10 @@ const StarsRight = styled.div`
 
 const PricingHero = ({ hero, ...props }) => (
   <Section {...props}>
-    <PreTitle variant="preTitle">{hero.preTitle}</PreTitle>
+    <PreTitle color={get('colors.hotPink')} preTitle={hero.preTitle} />
     <div style={{ position: 'relative' }}>
       <Title
-        variant="title1"
+        variant="title.xl"
         forwardedAs="h1"
         dangerouslySetInnerHTML={{ __html: hero.title }}
       />

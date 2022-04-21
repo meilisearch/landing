@@ -16,7 +16,7 @@ export const Default = () => {
   return (
     <PricingCard>
       <PricingCard.Header>
-        <Typography variant="title2">Open Source</Typography>
+        <Typography variant="title.m">Open Source</Typography>
       </PricingCard.Header>
       <PricingCard.Body>
         <Typography>
@@ -35,7 +35,7 @@ export const OtherColor = () => {
   return (
     <PricingCard>
       <PricingCard.Header $bgColor={darken(get('colors.dodgerBlue'), 60)}>
-        <Typography variant="title2">Open Source</Typography>
+        <Typography variant="title.m">Open Source</Typography>
       </PricingCard.Header>
       <PricingCard.Body>
         <Typography>

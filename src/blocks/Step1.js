@@ -131,7 +131,7 @@ const Step1 = ({
       <LeftColumn>
         <Content>
           <AnchorTitles links={steps} current={step.preTitle} color={color} />
-          <Title variant="title1" forwardedAs="h2" id={step.title}>
+          <Title variant="title.xl" forwardedAs="h2" id={step.title}>
             {step.title}
           </Title>
           <Description>{step.description}</Description>
@@ -141,7 +141,7 @@ const Step1 = ({
             color={color}
             style={{ marginTop: 32 }}
           >
-            <Typography variant="ctaBig">{step.cta.title}</Typography>
+            <Typography variant="body.s.bold">{step.cta.title}</Typography>
           </Button>
         </Content>
         <MobileImage $image={step.mobileImage} />

@@ -22,10 +22,10 @@ const Tabs = ({ tab, cloud }) => {
       style={{ textAlign: 'center' }}
     >
       <Tab.Tab {...tab}>
-        <Typography variant="title3">{cloud.plans[0].title}</Typography>
+        <Typography variant="title.xs">{cloud.plans[0].title}</Typography>
       </Tab.Tab>
       <Tab.Tab {...tab}>
-        <Typography variant="title3">{cloud.plans[1].title}</Typography>
+        <Typography variant="title.xs">{cloud.plans[1].title}</Typography>
       </Tab.Tab>
     </Tab.TabList>
   )

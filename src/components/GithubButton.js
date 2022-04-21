@@ -45,7 +45,7 @@ const GithubButton = ({
 }) => (
   <GithubLink href={href} rel="noreferrer" target="_blank" {...props}>
     <GithubLogo height={20} />
-    <Typography variant="preTitle">{count}</Typography>
+    <Typography variant="title.caps">{count}</Typography>
     <StarIcon />
   </GithubLink>
 )

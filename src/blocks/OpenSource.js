@@ -120,7 +120,7 @@ const Cta = ({ cta, color, ...props }) => (
     target={cta.target}
     {...props}
   >
-    <Typography variant="ctaBig">{cta.title}</Typography>
+    <Typography variant="body.s.bold">{cta.title}</Typography>
   </Button>
 )
 
@@ -170,7 +170,7 @@ const OpenSource = ({
           <Text>
             <PreTitle color={color} preTitle={OSProps.preTitle} />
             <Title
-              variant="title1"
+              variant="title.xl"
               forwardedAs="h2"
               $color={color}
               dangerouslySetInnerHTML={{ __html: OSProps.title }}

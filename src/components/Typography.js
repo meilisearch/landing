@@ -1,185 +1,252 @@
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import get from 'utils/get'
+import lodashGet from 'lodash.get'
 
 const variants = {
-  default: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-weight: ${get('fontWeight.medium')};
-      font-size: 15px;
-      line-height: 21px;
-    `,
+  title: {
+    xl: {
+      tag: 'span',
+      style: css`
+        font-family: Poppins;
+        font-weight: 700;
+        letter-spacing: -1%;
+        line-height: 140%;
+        font-size: 35px;
+        @media (min-width: ${get('breakpoints.md')}) {
+          font-size: 52px;
+        }
+        @media (min-width: ${get('breakpoints.xl')}) {
+          font-size: 64px;
+        }
+      `,
+    },
+    l: {
+      tag: 'span',
+      style: css`
+        font-family: Poppins;
+        font-weight: 700;
+        letter-spacing: -1%;
+        line-height: 140%;
+        font-size: 30px;
+        @media (min-width: ${get('breakpoints.md')}) {
+          font-size: 42px;
+        }
+        @media (min-width: ${get('breakpoints.xl')}) {
+          font-size: 52px;
+        }
+      `,
+    },
+    m: {
+      tag: 'span',
+      style: css`
+        font-family: Poppins;
+        font-weight: 600;
+        letter-spacing: -1%;
+        line-height: 140%;
+        font-size: 25px;
+        @media (min-width: ${get('breakpoints.md')}) {
+          font-size: 34px;
+        }
+        @media (min-width: ${get('breakpoints.xl')}) {
+          font-size: 40px;
+        }
+      `,
+    },
+    s: {
+      tag: 'span',
+      style: css`
+        font-family: Poppins;
+        font-weight: 600;
+        letter-spacing: -1%;
+        line-height: 140%;
+        font-size: 21px;
+        @media (min-width: ${get('breakpoints.md')}) {
+          font-size: 26px;
+        }
+        @media (min-width: ${get('breakpoints.xl')}) {
+          font-size: 32px;
+        }
+      `,
+    },
+    xs: {
+      tag: 'span',
+      style: css`
+        font-family: Poppins;
+        font-weight: 500;
+        line-height: 140%;
+        font-size: 18px;
+        @media (min-width: ${get('breakpoints.md')}) {
+          font-size: 22px;
+        }
+        @media (min-width: ${get('breakpoints.xl')}) {
+          font-size: 26px;
+        }
+      `,
+    },
+    caps: {
+      tag: 'span',
+      style: css`
+        font-family: Poppins;
+        font-weight: 700;
+        letter-spacing: 3%;
+        line-height: 140%;
+        text-transform: uppercase;
+        font-size: 11px;
+        @media (min-width: ${get('breakpoints.md')}) {
+          font-size: 13px;
+        }
+        @media (min-width: ${get('breakpoints.xl')}) {
+          font-size: 14px;
+        }
+      `,
+    },
   },
   body: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-size: 15px;
-      line-height: 21px;
-      @media (min-width: ${get('breakpoints.md')}) {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    `,
-  },
-  title1: {
-    tag: 'span',
-    style: css`
-      font-family: Poppins;
-      font-weight: ${get('fontWeight.bold')};
-      font-size: 32px;
-      line-height: 145%;
-      letter-spacing: -0.02em;
-      margin: 0;
-      @media (min-width: ${get('breakpoints.lg')}) {
-        font-size: 50px;
-        line-height: 150%;
-      }
-      @media (min-width: ${get('breakpoints.xl')}) {
-        font-size: 64px;
-        line-height: 96px;
-      }
-    `,
-  },
-  title2: {
-    tag: 'span',
-    style: css`
-      font-family: Poppins;
-      font-weight: ${get('fontWeight.semibold')};
-      letter-spacing: -0.02em;
-      font-size: 28px;
-      line-height: 40px;
-      @media (min-width: ${get('breakpoints.lg')}) {
-        font-size: 34px;
-        line-height: 51px;
-      }
-      @media (min-width: ${get('breakpoints.xl')}) {
-        font-size: 40px;
-        line-height: 60px;
-      }
-    `,
-  },
-  title3: {
-    tag: 'span',
-    style: css`
-      font-family: Poppins;
-      font-weight: ${get('fontWeight.semibold')};
-      font-size: 21px;
-      line-height: 30px;
-      letter-spacing: -0.02em;
-      @media (min-width: ${get('breakpoints.xl')}) {
-        font-size: 24px;
-        line-height: 36px;
-      }
-    `,
-  },
-  preTitle: {
-    tag: 'span',
-    style: css`
-      font-family: Poppins;
-      font-weight: ${get('fontWeight.bold')};
-      letter-spacing: 0.03em;
-      font-size: 11px;
-      line-height: 150%;
-      @media (min-width: ${get('breakpoints.lg')}) {
-        font-size: 12px;
-        line-height: 150%;
-      }
-      @media (min-width: ${get('breakpoints.xl')}) {
-        font-size: 14px;
-        line-height: 21px;
-      }
-    `,
-  },
-  navigation: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-weight: ${get('fontWeight.medium')};
-      font-size: 15px;
-      line-height: 21px;
-      @media (min-width: ${get('breakpoints.lg')}) {
-        font-size: 18px;
-        line-height: 22px;
-      }
-    `,
-  },
-  small: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-size: 13px;
-      line-height: 19.5px;
-      @media (min-width: ${get('breakpoints.xl')}) {
-        font-size: 14px;
-        line-height: 21px;
-      }
-    `,
-  },
-  ctaBig: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-weight: ${get('fontWeight.bold')};
-      font-size: 16px;
-      line-height: 22px;
-    `,
-  },
-  title4: {
-    tag: 'span',
-    style: css`
-      font-family: Poppins;
-      font-weight: ${get('fontWeight.medium')};
-      font-size: 14px;
-      line-height: 130%;
-      letter-spacing: -0.02em;
-    `,
-  },
-  typo1: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-weight: ${get('fontWeight.normal')};
-      font-size: 13px;
-      line-height: 19.5px;
-    `,
-  },
-  copy: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-weight: ${get('fontWeight.normal')};
-      font-size: 13px;
-      line-height: 150%;
-      @media (min-width: ${get('breakpoints.md')}) {
-        font-weight: ${get('fontWeight.medium')};
-        font-size: 15px;
-        line-height: 140%;
-      }
-      @media (min-width: ${get('breakpoints.lg')}) {
-        font-size: 16px;
-        line-height: 150%;
-      }
-    `,
-  },
-  copySmall: {
-    tag: 'span',
-    style: css`
-      font-family: Inter;
-      font-weight: ${get('fontWeight.normal')};
-      font-size: 11px;
-      line-height: 150%;
-      @media (min-width: ${get('breakpoints.md')}) {
-        font-size: 13px;
-        line-height: 150%;
-      }
-      @media (min-width: ${get('breakpoints.lg')}) {
-        font-size: 14px;
-        line-height: 150%;
-      }
-    `,
+    l: {
+      default: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          line-height: 150%;
+          font-size: 15px;
+          font-weight: 400;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 16px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 18px;
+          }
+        `,
+      },
+      bold: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          line-height: 150%;
+          font-size: 15px;
+          font-weight: 600;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 16px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 18px;
+          }
+        `,
+      },
+      link: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          line-height: 150%;
+          font-size: 15px;
+          font-weight: 600;
+          text-decoration: underline;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 16px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 18px;
+          }
+        `,
+      },
+    },
+    m: {
+      default: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 400;
+          line-height: 150%;
+          font-size: 14px;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 15px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 16px;
+          }
+        `,
+      },
+      bold: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 600;
+          line-height: 150%;
+          font-size: 14px;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 15px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 16px;
+          }
+        `,
+      },
+      link: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 600;
+          line-height: 150%;
+          font-size: 14px;
+          text-decoration: underline;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 15px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 16px;
+          }
+        `,
+      },
+    },
+    s: {
+      default: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 400;
+          line-height: 150%;
+          font-size: 12px;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 13px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 14px;
+          }
+        `,
+      },
+      bold: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 600;
+          line-height: 150%;
+          font-size: 12px;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 13px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 14px;
+          }
+        `,
+      },
+      link: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 600;
+          line-height: 150%;
+          font-size: 12px;
+          text-decoration: underline;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 13px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 14px;
+          }
+        `,
+      },
+    },
   },
 }
 
@@ -189,8 +256,9 @@ const StyledTypography = styled.span`
   ${p => p.$variant.style};
 `
 
-const Typography = ({ variant = 'default', forwardedAs, ...props }) => {
-  const safeVariant = variants[variant] || variants.default
+const Typography = ({ variant = 'body.m.default', forwardedAs, ...props }) => {
+  const safeVariant =
+    lodashGet(variants, variant) || lodashGet(variants, 'body.m.default')
   const { tag = 'span', style = css`` } = safeVariant
   return (
     <StyledTypography
@@ -207,24 +275,26 @@ Typography.propTypes = {
    * The variant name, used to display Typography with different styles
    */
   variant: PropTypes.oneOf([
-    'default',
-    'body',
-    'title1',
-    'title2',
-    'title3',
-    'title4',
-    'preTitle',
-    'navigation',
-    'small',
-    'ctaBig',
-    'typo1',
-    'copy',
-    'copySmall',
+    'title.xl',
+    'title.l',
+    'title.m',
+    'title.s',
+    'title.xs',
+    'title.caps',
+    'body.l.default',
+    'body.l.bold',
+    'body.l.link',
+    'body.m.default',
+    'body.m.bold',
+    'body.m.link',
+    'body.s.default',
+    'body.s.bold',
+    'body.s.link',
   ]),
 }
 
 Typography.defaultProps = {
-  variant: 'default',
+  variant: 'body.m.default',
 }
 
 export default Typography

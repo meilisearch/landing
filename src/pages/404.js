@@ -71,11 +71,11 @@ const Custom404 = ({ fallback }) => {
         <Header />
       </SWRConfig>
       <PageContent>
-        <Title variant="title1">404</Title>
-        <Description variant="title2">{t('description')}</Description>
+        <Title>404</Title>
+        <Description variant="title.m">{t('description')}</Description>
         <Cta>
           <Button href="/" variant="secondary" color={get('colors.hotPink')}>
-            <Typography variant="ctaBig">{t('cta')}</Typography>
+            <Typography variant="body.s.bold">{t('cta')}</Typography>
           </Button>
         </Cta>
       </PageContent>

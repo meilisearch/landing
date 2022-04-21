@@ -65,10 +65,13 @@ const Accordion = ({ question, answer }) => {
   return (
     <Details>
       <Summary>
-        <Question variant="body">{question}</Question>
+        <Question variant="body.m.bold">{question}</Question>
         <Arrow />
       </Summary>
-      <Answer variant="body" dangerouslySetInnerHTML={{ __html: answer }} />
+      <Answer
+        variant="body.m.default"
+        dangerouslySetInnerHTML={{ __html: answer }}
+      />
     </Details>
   )
 }

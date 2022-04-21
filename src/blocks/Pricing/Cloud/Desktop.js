@@ -49,7 +49,7 @@ const DesktopPlans = ({ cloud }) => {
   return (
     <DesktopPlansWrapper>
       <FirstColumn>
-        <Typography variant="title3">{cloud.plans[0].title}</Typography>
+        <Typography variant="title.xs">{cloud.plans[0].title}</Typography>
         <div
           style={{
             display: 'flex',
@@ -63,7 +63,7 @@ const DesktopPlans = ({ cloud }) => {
         </div>
       </FirstColumn>
       <SecondColumn>
-        <Typography variant="title3">{cloud.plans[1].title}</Typography>
+        <Typography variant="title.xs">{cloud.plans[1].title}</Typography>
         <Enterprise enterprisePlan={cloud.plans[1]} />
       </SecondColumn>
     </DesktopPlansWrapper>

@@ -199,10 +199,12 @@ const Card = ({ card, color }) => {
   return (
     <CardWrapper>
       <StyledIcon as={Icon} color={color} />
-      <CardTitle variant="title3" forwardedAs="h3">
+      <CardTitle variant="title.s" forwardedAs="h3">
         {card.title}
       </CardTitle>
-      <CardDescription variant="small">{card.description}</CardDescription>
+      <CardDescription variant="body.s.default">
+        {card.description}
+      </CardDescription>
     </CardWrapper>
   )
 }
@@ -245,14 +247,19 @@ const Step2 = ({
       <Decorator />
       <LeftColumn>
         <AnchorTitles links={steps} current={step.preTitle} color={color} />
-        <Title variant="title1" forwardedAs="h2" id={step.title} color={color}>
+        <Title
+          variant="title.xl"
+          forwardedAs="h2"
+          id={step.title}
+          color={color}
+        >
           {step.title}
         </Title>
         <Description>{step.description}</Description>
       </LeftColumn>
       <DesktopCta>
         <Button href={step.cta.url} target={step.cta.target} color={color}>
-          <Typography variant="ctaBig">{step.cta.title}</Typography>
+          <Typography variant="body.s.bold">{step.cta.title}</Typography>
         </Button>
       </DesktopCta>
       <RightColumn>
@@ -265,7 +272,7 @@ const Step2 = ({
       </Cards>
       <MobileCta>
         <Button href={step.cta.url} target={step.cta.target} color={color}>
-          <Typography variant="ctaBig">{step.cta.title}</Typography>
+          <Typography variant="body.s.bold">{step.cta.title}</Typography>
         </Button>
       </MobileCta>
     </Grid>

@@ -117,14 +117,16 @@ const Hero = ({ heroProps, ...props }) => (
     <Grid>
       <Content>
         <Title
-          variant="title1"
+          variant="title.xl"
           forwardedAs="h1"
           dangerouslySetInnerHTML={{ __html: heroProps.title }}
         />
         <MobileAnimation>
           <Lottie animation={heroProps.lottie.mobile} />
         </MobileAnimation>
-        <Description variant="body">{heroProps.description}</Description>
+        <Description variant="body.m.default">
+          {heroProps.description}
+        </Description>
         <Buttons>
           <Button
             href={heroProps.cta1.url}
@@ -132,14 +134,18 @@ const Hero = ({ heroProps, ...props }) => (
             color={get('colors.hotPink')}
             variant="secondary"
           >
-            <Typography>{heroProps.cta1.title}</Typography>
+            <Typography variant="body.s.bold">
+              {heroProps.cta1.title}
+            </Typography>
           </Button>
           <Button
             href={heroProps.cta2.url}
             target={heroProps.cta2.target}
             color={get('colors.hotPink')}
           >
-            <Typography>{heroProps.cta2.title}</Typography>
+            <Typography variant="body.s.bold">
+              {heroProps.cta2.title}
+            </Typography>
           </Button>
         </Buttons>
       </Content>

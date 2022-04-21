@@ -46,10 +46,6 @@ const MenuColumn = styled(Grid)`
   }
 `
 
-const MenuSectionTitle = styled(Typography)`
-  text-transform: uppercase;
-`
-
 const FooterLink = styled(Link)`
   display: block;
   margin-top: 8px;
@@ -133,16 +129,16 @@ const Footer = () => {
         <MenuColumn>
           {footerProps.menu.map(menu => (
             <div key={menu.title}>
-              <MenuSectionTitle variant="preTitle">
-                {menu.title}
-              </MenuSectionTitle>
+              <Typography variant="title.caps">{menu.title}</Typography>
               {menu.submenu.map(submenu => (
                 <FooterLink
                   href={submenu.href}
                   target={submenu.target}
                   key={submenu.title}
                 >
-                  <Typography variant="small">{submenu.title}</Typography>
+                  <Typography variant="body.s.default">
+                    {submenu.title}
+                  </Typography>
                 </FooterLink>
               ))}
             </div>
@@ -154,7 +150,9 @@ const Footer = () => {
               <Social social={social} key={index} />
             ))}
           </Socials>
-          <Copyright variant="small">{footerProps.copyright}</Copyright>
+          <Copyright variant="body.s.default">
+            {footerProps.copyright}
+          </Copyright>
         </BottomSection>
       </Grid>
     </Wrapper>
