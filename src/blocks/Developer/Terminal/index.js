@@ -31,7 +31,7 @@ const Terminal = ({ developerProps, code_samples }) => {
   const sdkList = code_samples.map(sdk => ({
     ...sdk,
     logo: developerProps.sdkList.find(
-      currentSdk => currentSdk.language === sdk.language
+      currentSdk => currentSdk.pkgName === sdk.pkgName
     ).logo,
   }))
 

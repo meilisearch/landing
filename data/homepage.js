@@ -5,7 +5,6 @@ import {
   Angular,
   Dart,
   Dotnet,
-  Instantmeilisearch,
   Rails,
   Rust,
   Symfony,
@@ -32,6 +31,7 @@ import {
   React,
   Code,
   Vue,
+  Instantmeilisearch,
 } from 'components/icons'
 import get from 'utils/get'
 

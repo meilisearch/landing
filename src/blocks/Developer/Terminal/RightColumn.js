@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import Tab from 'components/Tab'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import get from 'utils/get'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
 import { RightArrow } from 'components/icons'
+import dracula from 'theme/dracula'
 
 const Container = styled.div`
   position: relative;
@@ -34,6 +34,7 @@ const RightColumn = ({ tab, sdkList, developerProps }) => {
     margin: 0,
     height: '100%',
     backgroundColor: get('colors.valhalla.700'),
+    fontSize: 14,
   }
   return (
     <Container>
