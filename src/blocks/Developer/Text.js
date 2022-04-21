@@ -92,11 +92,11 @@ const DeveloperHub = ({ developerProps }) => {
         <Typography
           variant="body.s.default"
           color={get('colors.ashes.600')}
-          style={{ marginTop: 24 }}
+          style={{ margin: '24px 0' }}
         >
           {developerProps.developerHubText}
         </Typography>
-        <List>
+        <List style>
           {developerProps.developerHubList.map((elem, index) => (
             <List.Element key={index}>
               <Typography

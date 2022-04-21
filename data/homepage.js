@@ -208,7 +208,7 @@ const getHomepageData = (t = () => {}) => ({
     title: t('developer.title'),
     seeAllIntegrations: {
       title: t('developer.seeAllIntegrations'),
-      href: '/',
+      href: 'https://github.com/meilisearch/integration-guides',
       target: '_blank',
     },
     buildWith: {
@@ -222,7 +222,7 @@ const getHomepageData = (t = () => {}) => ({
     documentationText: t('developer.documentationText'),
     documentationCta: {
       title: t('developer.documentationCta'),
-      href: '/',
+      href: 'https://docs.meilisearch.com/',
       target: '_blank',
     },
     developerHub: t('developer.developerHub'),
