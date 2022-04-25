@@ -279,20 +279,6 @@ const getHomepageData = (t = () => {}) => ({
         url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-go/main/.code-samples.meilisearch.yaml',
       },
       {
-        name: 'swift',
-        language: 'swift',
-        pkgName: 'meilisearch-swift',
-        logo: Swift,
-        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-swift/main/.code-samples.meilisearch.yaml',
-      },
-      {
-        name: 'angular',
-        language: 'js',
-        pkgName: 'meilisearch-angular',
-        logo: Angular,
-        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-angular/main/.code-samples.meilisearch.yaml',
-      },
-      {
         name: '.Net',
         language: 'dot',
         pkgName: 'meilisearch-dotnet',
@@ -314,6 +300,20 @@ const getHomepageData = (t = () => {}) => ({
         url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-rust/main/.code-samples.meilisearch.yaml',
       },
       {
+        name: 'swift',
+        language: 'swift',
+        pkgName: 'meilisearch-swift',
+        logo: Swift,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-swift/main/.code-samples.meilisearch.yaml',
+      },
+      {
+        name: 'instant Meilisearch',
+        language: 'html',
+        pkgName: 'instant-meilisearch',
+        logo: Instantmeilisearch,
+        url: 'https://raw.githubusercontent.com/meilisearch/instant-meilisearch/main/.code-samples.meilisearch.yaml',
+      },
+      {
         name: 'react',
         language: 'jsx',
         pkgName: 'meilisearch-react',
@@ -328,11 +328,11 @@ const getHomepageData = (t = () => {}) => ({
         url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-vue/master/.code-samples.meilisearch.yaml',
       },
       {
-        name: 'instant Meilisearch',
-        language: 'html',
-        pkgName: 'instant-meilisearch',
-        logo: Instantmeilisearch,
-        url: 'https://raw.githubusercontent.com/meilisearch/instant-meilisearch/main/.code-samples.meilisearch.yaml',
+        name: 'angular',
+        language: 'js',
+        pkgName: 'meilisearch-angular',
+        logo: Angular,
+        url: 'https://raw.githubusercontent.com/meilisearch/meilisearch-angular/main/.code-samples.meilisearch.yaml',
       },
       {
         name: 'rails',
