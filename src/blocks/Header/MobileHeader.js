@@ -63,7 +63,7 @@ const Scrollable = styled(Grid)`
   justify-content: flex-start;
 `
 
-const MobileHeader = ({ headerProps, stargazers_count }) => {
+const MobileHeader = ({ headerProps }) => {
   const dialog = useDialogState({
     animated: true,
     unstable_initialFocusRef: null,
@@ -78,7 +78,7 @@ const MobileHeader = ({ headerProps, stargazers_count }) => {
         <Content {...dialog} aria-label="Menu">
           <Scrollable>
             <MenuLinks headerProps={headerProps} />
-            <GithubButton count={stargazers_count} style={{ marginTop: 44 }} />
+            <GithubButton style={{ marginTop: 44 }} />
           </Scrollable>
           <DialogFooter>
             <Ctas headerProps={headerProps} />

@@ -50,16 +50,13 @@ const GithubButton = ({
   const octokit = React.useMemo(
     () =>
       new Octokit({
-        auth: process.env.GITHUB_TOKEN_FOR_STARGAZERS_COUNT,
+        auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN_FOR_STARGAZERS_COUNT,
       }),
     []
   )
 
   React.useEffect(() => {
     const getStargazersCount = async () => {
-      const limit = await octokit.request('GET /rate_limit', {})
-      console.log({ limit })
-
       const repo = await octokit.rest.repos.get({
         owner: 'meilisearch',
         repo: 'meilisearch',

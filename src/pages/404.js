@@ -7,8 +7,6 @@ import Typography from 'components/Typography'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BasePageContent from 'components/PageContent'
-import fetcher from 'utils/fetcher'
-import { SWRConfig } from 'swr'
 
 const PageContent = styled(BasePageContent)`
   color: ${get('colors.white')};
@@ -59,7 +57,7 @@ const Cta = styled.div`
   }
 `
 
-const Custom404 = ({ fallback }) => {
+const Custom404 = () => {
   const { t } = useTranslation('404')
   return (
     <>
@@ -67,9 +65,7 @@ const Custom404 = ({ fallback }) => {
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
       </Head>
-      <SWRConfig value={{ fallback }}>
-        <Header />
-      </SWRConfig>
+      <Header />
       <PageContent>
         <Title>404</Title>
         <Description variant="title.m">{t('description')}</Description>
@@ -85,15 +81,8 @@ const Custom404 = ({ fallback }) => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
-    const meiliRepoInfos = await fetcher(
-      'https://api.github.com/repos/meilisearch/meilisearch'
-    )
     return {
       props: {
-        fallback: {
-          'https://api.github.com/repos/meilisearch/meilisearch':
-            meiliRepoInfos,
-        },
         ...(await serverSideTranslations(locale, ['404', 'header'])),
       },
     }

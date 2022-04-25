@@ -13,8 +13,6 @@ import {
   Pricing as BasePricingBlock,
 } from 'blocks'
 import get from 'utils/get'
-import { SWRConfig } from 'swr'
-import fetcher from 'utils/fetcher'
 
 const HeroBlock = styled(PricingHero)`
   margin-top: 72px;
@@ -39,7 +37,7 @@ const PricingBlock = styled(BasePricingBlock)`
   }
 `
 
-const Pricing = ({ fallback }) => {
+const Pricing = () => {
   const { t } = useTranslation('pricing')
   const { hero, faq, table, pricing } = getPricingPageData(t)
   return (
@@ -49,9 +47,7 @@ const Pricing = ({ fallback }) => {
         <meta name="description" content={t('meta.description')} />
       </Head>
       <div style={{ backgroundColor: get('colors.valhalla.800') }}>
-        <SWRConfig value={{ fallback }}>
-          <Header style={{ backgroundColor: get('colors.valhalla.800') }} />
-        </SWRConfig>
+        <Header style={{ backgroundColor: get('colors.valhalla.800') }} />
         <PageContent>
           <HeroBlock hero={hero} />
           <PricingBlock pricing={pricing} />
@@ -66,15 +62,8 @@ const Pricing = ({ fallback }) => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
-    const meiliRepoInfos = await fetcher(
-      'https://api.github.com/repos/meilisearch/meilisearch'
-    )
     return {
       props: {
-        fallback: {
-          'https://api.github.com/repos/meilisearch/meilisearch':
-            meiliRepoInfos,
-        },
         ...(await serverSideTranslations(locale, [
           'pricing',
           'header',
