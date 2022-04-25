@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@meilisearch/instant-meilisearch": "^0.5.10",
+    "@octokit/rest": "^18.12.0",
     "lodash.get": "^4.4.2",
     "next": "12.1.0",
     "next-i18next": "^11.0.0",
