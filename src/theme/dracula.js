@@ -1,3 +1,5 @@
+import get from 'utils/get'
+
 const dracula = {
   'code[class*="language-"]': {
     color: '#f8f8f2',
@@ -66,19 +68,19 @@ const dracula = {
     Opacity: '.7',
   },
   'property': {
-    color: '#ff79c6',
+    color: get('colors.hotPink'),
   },
   'tag': {
-    color: '#ff79c6',
+    color: get('colors.hotPink'),
   },
   'constant': {
-    color: '#ff79c6',
+    color: get('colors.hotPink'),
   },
   'symbol': {
-    color: '#ff79c6',
+    color: get('colors.hotPink'),
   },
   'deleted': {
-    color: '#ff79c6',
+    color: get('colors.hotPink'),
   },
   'boolean': {
     color: '#bd93f9',
@@ -87,22 +89,22 @@ const dracula = {
     color: '#bd93f9',
   },
   'selector': {
-    color: '#50fa7b',
+    color: get('colors.lila.400'),
   },
   'attr-name': {
-    color: '#50fa7b',
+    color: get('colors.lila.400'),
   },
   'string': {
-    color: '#50fa7b',
+    color: get('colors.lila.400'),
   },
   'char': {
-    color: '#50fa7b',
+    color: get('colors.lila.400'),
   },
   'builtin': {
-    color: '#50fa7b',
+    color: get('colors.lila.400'),
   },
   'inserted': {
-    color: '#50fa7b',
+    color: get('colors.lila.400'),
   },
   'operator': {
     color: '#f8f8f2',
@@ -124,19 +126,19 @@ const dracula = {
     color: '#f8f8f2',
   },
   'atrule': {
-    color: '#f1fa8c',
+    color: get('colors.candleLight.400'),
   },
   'attr-value': {
-    color: '#f1fa8c',
+    color: get('colors.candleLight.400'),
   },
   'function': {
-    color: '#f1fa8c',
+    color: get('colors.candleLight.400'),
   },
   'class-name': {
-    color: '#f1fa8c',
+    color: get('colors.candleLight.400'),
   },
   'keyword': {
-    color: '#8be9fd',
+    color: get('colors.tertiary'),
   },
   'regex': {
     color: '#ffb86c',
