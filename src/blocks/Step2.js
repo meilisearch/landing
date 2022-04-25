@@ -84,7 +84,7 @@ const Illustration = styled.div`
     height: 460px;
   }
   @media (min-width: ${get('breakpoints.xl')}) {
-    top: 172px;
+    top: 98px;
     background-size: 438px 654px;
     width: 438px;
     height: 654px;
