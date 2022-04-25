@@ -22,19 +22,22 @@ const CodeSection = styled(Tab.TabPanel)`
 `
 
 const Cta = styled(Button)`
+  background-color: ${get('colors.valhalla.700')};
+`
+
+const LinkContainer = styled.div`
   position: absolute;
   right: 40px;
   bottom: 26px;
-  background-color: ${get('colors.valhalla.700')};
 `
 
 const RightColumn = ({ tab, sdkList, developerProps }) => {
   const customStyle = {
-    padding: '21px 24px',
+    padding: '21px 24px 72px',
     margin: 0,
     height: '100%',
     backgroundColor: get('colors.valhalla.700'),
-    fontSize: 14,
+    fontSize: 12,
   }
   return (
     <Container>
@@ -48,15 +51,28 @@ const RightColumn = ({ tab, sdkList, developerProps }) => {
           >
             {sdk.code}
           </SyntaxHighlighter>
-          <Cta
-            variant="secondary"
-            color={get('colors.white')}
-            href={developerProps.buildWith.href(sdk.pkgName)}
-            target={developerProps.buildWith.target}
-          >
-            <RightArrow width={15} style={{ marginRight: 15 }} />
-            <Typography>{developerProps.buildWith.title(sdk.name)}</Typography>
-          </Cta>
+          <LinkContainer>
+            <Cta
+              variant="secondary"
+              color={get('colors.white')}
+              href={developerProps.seeAllIntegrations.href}
+              target={developerProps.seeAllIntegrations.target}
+            >
+              <Typography>{developerProps.seeAllIntegrations.title}</Typography>
+            </Cta>
+            <Cta
+              variant="secondary"
+              color={get('colors.white')}
+              href={developerProps.buildWith.href(sdk.pkgName)}
+              target={developerProps.buildWith.target}
+              style={{ marginLeft: 16 }}
+            >
+              <RightArrow width={15} style={{ marginRight: 15 }} />
+              <Typography>
+                {developerProps.buildWith.title(sdk.name)}
+              </Typography>
+            </Cta>
+          </LinkContainer>
         </CodeSection>
       ))}
     </Container>

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Tab from 'components/Tab'
 import Typography from 'components/Typography'
 import get from 'utils/get'
-import Link from 'components/Link'
 
 const Container = styled.div`
   width: 190px;
@@ -36,23 +35,13 @@ const Language = styled(Typography)`
   text-align: left;
 `
 
-const LinkToIntegrations = styled(Link)`
-  margin: 32px 0 0;
-  span {
-    text-decoration: underline;
-  }
-  @media (min-width: ${get('breakpoints.xl')}) {
-    margin: 32px -16px 0;
-  }
-`
-
 const SdkList = styled.div`
   button + button {
     margin-left: 0;
   }
 `
 
-const LeftColumn = ({ tab, sdkList, developerProps }) => {
+const LeftColumn = ({ tab, sdkList }) => {
   return (
     <Container>
       <SdkList forwardedAs={Tab.TabList} {...tab} aria-label="sdk-list">
@@ -60,22 +49,14 @@ const LeftColumn = ({ tab, sdkList, developerProps }) => {
           const Logo = sdk.logo
           return (
             <SdkTab {...tab} key={sdk.pkgName}>
-              <div style={{ width: 20 }}>
-                <Logo height={20} />
+              <div style={{ width: 24 }}>
+                <Logo height={24} />
               </div>
               <Language>{sdk.name}</Language>
             </SdkTab>
           )
         })}
       </SdkList>
-      <LinkToIntegrations
-        href={developerProps.seeAllIntegrations.href}
-        target={developerProps.seeAllIntegrations.target}
-      >
-        <Typography variant="body.m.link">
-          {developerProps.seeAllIntegrations.title}
-        </Typography>
-      </LinkToIntegrations>
     </Container>
   )
 }

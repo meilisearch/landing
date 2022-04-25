@@ -39,11 +39,7 @@ const Terminal = ({ developerProps, code_samples }) => {
     <StyledGrid>
       <Head />
       <TerminalBody>
-        <LeftColumn
-          tab={tab}
-          sdkList={sdkList}
-          developerProps={developerProps}
-        />
+        <LeftColumn tab={tab} sdkList={sdkList} />
         <RightColumn
           tab={tab}
           sdkList={sdkList}
