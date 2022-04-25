@@ -39,6 +39,15 @@ const Text = styled(Typography)`
     color: ${get('colors.dodgerBlue')};
     font-weight: inherit;
   }
+
+  ul {
+    padding-left: 0;
+    margin: 8px 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
 `
 
 const ProfilePicture = styled(Image)`
