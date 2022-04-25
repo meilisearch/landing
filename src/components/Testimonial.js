@@ -19,10 +19,14 @@ const Card = styled.article`
     height: 386px;
     width: 252px;
   }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding: 20px;
+  }
 `
 
 const TwitterIcon = styled(Twitter)`
   height: 18px;
+  flex-shrink: 0;
   color: ${get('colors.ashes.900')};
   @media (min-width: ${get('breakpoints.lg')}) {
     height: 24px;
@@ -38,6 +42,19 @@ const Text = styled(Typography)`
   strong {
     color: ${get('colors.dodgerBlue')};
     font-weight: inherit;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 8px 0 8px 4px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 8px;
   }
 `
 

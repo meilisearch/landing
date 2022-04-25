@@ -284,6 +284,14 @@ const getHomepageData = (t = () => {}) => ({
           profilePicture: '/images/jellevliet.jpeg',
         },
       },
+      {
+        text: 'Wow, <strong>@meilisearch</strong> is super fast... <br/>Building a custom UI on top of <strong>@meilisearch</strong> that allows you to view event data.<br/><ul><li>✅ Event data in real-time</li><li>✅ Click properties to filter</li><li>✅ Visualise...</li><li>✅ Much more...</li></ul>Maybe another open-source project... 🤩',
+        author: {
+          realName: 'David Boyne 🚀',
+          pseudo: '@boyney123',
+          profilePicture: '/images/david-boyne.png',
+        },
+      },
     ],
     description: t('testimonials.description'),
     cta: {
