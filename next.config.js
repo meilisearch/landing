@@ -1,4 +1,15 @@
-module.exports = {
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: "@mdx-js/react",
+  },
+})
+
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
   poweredByHeader: false,
   webpack5: true,
@@ -14,10 +25,9 @@ module.exports = {
     return [
       {
         source: '/privacy',
-        destination:
-          'https://meilisearch.notion.site/Privacy-Policy-47f207efc5244de0820ffd19f0d844d8',
+        destination: '/privacy-policy',
         permanent: true,
       },
     ]
   },
-}
+})

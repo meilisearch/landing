@@ -17,7 +17,9 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.1.1",
     "@meilisearch/instant-meilisearch": "^0.5.10",
+    "@next/mdx": "^12.1.5",
     "@octokit/rest": "^18.12.0",
     "@segment/analytics-next": "^1.36.0",
     "js-yaml": "^4.1.0",
