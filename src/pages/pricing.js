@@ -2,15 +2,9 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import getPricingPageData from '../../data/pricing'
 import PageContent from 'components/PageContent'
-import {
-  Header,
-  PricingHero,
-  Footer,
-  FAQ,
-  Table,
-  Pricing as BasePricingBlock,
-} from 'blocks'
+import { PricingHero, FAQ, Table, Pricing as BasePricingBlock } from 'blocks'
 import get from 'utils/get'
+import Layout from 'components/Layout'
 
 const HeroBlock = styled(PricingHero)`
   margin-top: 72px;
@@ -44,14 +38,14 @@ const Pricing = () => {
         <meta name="description" content={meta.description} />
       </Head>
       <div style={{ backgroundColor: get('colors.valhalla.800') }}>
-        <Header style={{ backgroundColor: get('colors.valhalla.800') }} />
-        <PageContent>
-          <HeroBlock hero={hero} />
-          <PricingBlock pricing={pricing} />
-          <Table table={table} />
-          <FAQ faq={faq} />
-        </PageContent>
-        <Footer />
+        <Layout headerStyle={{ backgroundColor: get('colors.valhalla.800') }}>
+          <PageContent>
+            <HeroBlock hero={hero} />
+            <PricingBlock pricing={pricing} />
+            <Table table={table} />
+            <FAQ faq={faq} />
+          </PageContent>
+        </Layout>
       </div>
     </>
   )

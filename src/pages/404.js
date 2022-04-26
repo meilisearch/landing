@@ -1,24 +1,31 @@
 import styled from 'styled-components'
 import Head from 'next/head'
-import { Header } from 'blocks'
 import get from 'utils/get'
 import Button from 'components/Button'
 import Typography from 'components/Typography'
 import BasePageContent from 'components/PageContent'
 import get404Data from '../../data/404'
+import Layout from 'components/Layout'
 
 const PageContent = styled(BasePageContent)`
   color: ${get('colors.white')};
   text-align: center;
-  padding: 62px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  height: 100vh;
+  margin-top: -112px;
+  padding-top: 132px;
+  padding-bottom: 62px;
 
   @media (min-width: ${get('breakpoints.lg')}) {
     justify-content: center;
     padding: 102px 0;
+
+    margin-top: -118px;
+    padding-top: 220px;
+    padding-bottom: 102px;
   }
 `
 
@@ -47,6 +54,10 @@ const Description = styled(Typography)`
   @media (min-width: ${get('breakpoints.lg')}) {
     max-width: 510px;
   }
+
+  @media (min-width: ${get('breakpoints.xl')}) {
+    max-width: 524px;
+  }
 `
 
 const Cta = styled.div`
@@ -64,16 +75,17 @@ const Custom404 = () => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <Header />
-      <PageContent>
-        <Title>404</Title>
-        <Description variant="title.m">{content.description}</Description>
-        <Cta>
-          <Button href="/" variant="secondary" color={get('colors.hotPink')}>
-            <Typography variant="body.s.bold">{content.cta}</Typography>
-          </Button>
-        </Cta>
-      </PageContent>
+      <Layout>
+        <PageContent>
+          <Title>404</Title>
+          <Description variant="title.m">{content.description}</Description>
+          <Cta>
+            <Button href="/" variant="secondary" color={get('colors.hotPink')}>
+              <Typography variant="body.s.bold">{content.cta}</Typography>
+            </Button>
+          </Cta>
+        </PageContent>
+      </Layout>
     </>
   )
 }
