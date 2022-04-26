@@ -96,8 +96,7 @@ const getFooterData = () => ({
         },
         {
           title: 'Privacy Policy',
-          href: 'https://meilisearch.notion.site/Privacy-Policy-47f207efc5244de0820ffd19f0d844d8',
-          target: '_blank',
+          href: '/privacy-policy',
         },
       ],
     },
