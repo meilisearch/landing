@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { Github, Star } from 'components/icons'
 import Typography from 'components/Typography'
 import get from 'utils/get'
+import { Octokit } from '@octokit/rest'
+import React from 'react'
+import formatStargazers from 'utils/formatStargazers'
 
 const GithubLink = styled.a`
   display: inline-flex;
@@ -39,22 +42,47 @@ const StarIcon = styled(Star)`
 `
 
 const GithubButton = ({
-  count = '',
   href = 'https://github.com/meilisearch/meilisearch',
   ...props
-}) => (
-  <GithubLink href={href} rel="noreferrer" target="_blank" {...props}>
-    <GithubLogo height={20} />
-    <Typography variant="title.caps">{count}</Typography>
-    <StarIcon />
-  </GithubLink>
-)
+}) => {
+  const [stargazersCount, setStargazersCount] = React.useState(null)
+
+  const octokit = React.useMemo(
+    () =>
+      new Octokit({
+        auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN_FOR_STARGAZERS_COUNT,
+      }),
+    []
+  )
+
+  React.useEffect(() => {
+    const getStargazersCount = async () => {
+      const repo = await octokit.rest.repos.get({
+        owner: 'meilisearch',
+        repo: 'meilisearch',
+      })
+      setStargazersCount(repo.data.stargazers_count)
+    }
+
+    getStargazersCount()
+  }, [octokit])
+
+  return (
+    <GithubLink href={href} rel="noreferrer" target="_blank" {...props}>
+      <GithubLogo height={20} />
+      {stargazersCount && (
+        <>
+          <Typography variant="title.caps">
+            {formatStargazers(stargazersCount)}
+          </Typography>
+          <StarIcon />
+        </>
+      )}
+    </GithubLink>
+  )
+}
 
 GithubButton.propTypes = {
-  /**
-   * The number of stargarzers to display
-   */
-  count: PropTypes.string,
   /**
    * Link to the github repository
    */
@@ -62,7 +90,6 @@ GithubButton.propTypes = {
 }
 
 GithubButton.defaultProps = {
-  count: null,
   href: 'https://github.com/meilisearch/meilisearch',
 }
 

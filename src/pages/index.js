@@ -17,8 +17,6 @@ import {
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
 import PageContent from 'components/PageContent'
-import { SWRConfig } from 'swr'
-import fetcher from 'utils/fetcher'
 
 const Hero = styled(BaseHero)`
   margin-top: 54px;
@@ -92,7 +90,7 @@ const Step3 = styled(BaseStep3)`
   }
 `
 
-const Home = ({ fallback }) => {
+const Home = () => {
   const { t } = useTranslation('homepage')
   const { hero, demo, openSource, steps, cards, testimonials } =
     getHomepageData(t)
@@ -106,9 +104,7 @@ const Home = ({ fallback }) => {
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
       </Head>
-      <SWRConfig value={{ fallback }}>
-        <Header />
-      </SWRConfig>
+      <Header />
       <PageContent>
         <Hero heroProps={hero} />
         <Demo demoProps={demo} color={get('colors.lila')} />
@@ -141,15 +137,8 @@ const Home = ({ fallback }) => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
-    const meiliRepoInfos = await fetcher(
-      'https://api.github.com/repos/meilisearch/meilisearch'
-    )
     return {
       props: {
-        fallback: {
-          'https://api.github.com/repos/meilisearch/meilisearch':
-            meiliRepoInfos,
-        },
         ...(await serverSideTranslations(locale, [
           'homepage',
           'header',

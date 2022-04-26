@@ -19,12 +19,12 @@ const Grid = styled.nav`
   }
 `
 
-const DesktopHeader = ({ headerProps, stargazers_count }) => {
+const DesktopHeader = ({ headerProps }) => {
   return (
     <Grid>
       <Logo />
       <MenuLinks headerProps={headerProps} />
-      <GithubButton count={stargazers_count} />
+      <GithubButton />
       <Ctas headerProps={headerProps} />
     </Grid>
   )
