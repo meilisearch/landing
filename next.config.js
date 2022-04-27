@@ -1,21 +1,14 @@
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
-  },
-})
-
-module.exports = withMDX({
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+module.exports = {
   reactStrictMode: true,
   poweredByHeader: false,
   webpack5: true,
   webpack: config => {
     // Unset client-side javascript that only works server-side
     config.resolve.fallback = { fs: false, module: false }
+    config.module.rules.push({
+      test: /\.mdx$/,
+      use: 'raw-loader',
+    })
     return config
   },
   images: {
@@ -30,4 +23,4 @@ module.exports = withMDX({
       },
     ]
   },
-})
+}

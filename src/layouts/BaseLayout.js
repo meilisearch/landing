@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Header, Footer } from 'blocks'
 
-const Layout = ({ headerStyle, children }) => {
+const BaseLayout = ({ headerStyle, children }) => {
   return (
     <div>
       <Header style={headerStyle} />
@@ -12,4 +12,4 @@ const Layout = ({ headerStyle, children }) => {
   )
 }
 
-export default Layout
+export default BaseLayout

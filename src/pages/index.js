@@ -15,7 +15,6 @@ import {
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
 import PageContent from 'components/PageContent'
-import Layout from 'components/Layout'
 
 const Hero = styled(BaseHero)`
   margin-top: 54px;
@@ -110,34 +109,32 @@ const Home = ({ code_samples }) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <Layout>
-        <PageContent>
-          <Hero heroProps={hero} />
-          <Demo demoProps={demo} color={get('colors.lila')} />
-          <OpenSource
-            openSourceProps={openSource}
-            color={get('colors.hotPink')}
-          />
-          <Step1
-            step1Props={steps[0]}
-            steps={stepsAnchor}
-            color={get('colors.lila')}
-          />
-          <Step2
-            step2Props={steps[1]}
-            steps={stepsAnchor}
-            color={get('colors.hotPink')}
-          />
-          <Step3
-            step3Props={steps[2]}
-            steps={stepsAnchor}
-            color={get('colors.dodgerBlue')}
-          />
-          <Developer developerProps={developer} code_samples={code_samples} />
-          <Cards cardsProps={cards} />
-          <Testimonials testimonialsProps={testimonials} />
-        </PageContent>
-      </Layout>
+      <PageContent>
+        <Hero heroProps={hero} />
+        <Demo demoProps={demo} color={get('colors.lila')} />
+        <OpenSource
+          openSourceProps={openSource}
+          color={get('colors.hotPink')}
+        />
+        <Step1
+          step1Props={steps[0]}
+          steps={stepsAnchor}
+          color={get('colors.lila')}
+        />
+        <Step2
+          step2Props={steps[1]}
+          steps={stepsAnchor}
+          color={get('colors.hotPink')}
+        />
+        <Step3
+          step3Props={steps[2]}
+          steps={stepsAnchor}
+          color={get('colors.dodgerBlue')}
+        />
+        <Developer developerProps={developer} code_samples={code_samples} />
+        <Cards cardsProps={cards} />
+        <Testimonials testimonialsProps={testimonials} />
+      </PageContent>
     </>
   )
 }
