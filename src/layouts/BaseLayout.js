@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Header, Footer } from 'blocks'
 
-const BaseLayout = ({ headerStyle, children }) => {
+const BaseLayout = ({ children }) => {
   return (
     <div>
-      <Header style={headerStyle} />
+      <Header />
       {children}
       <Footer />
     </div>
