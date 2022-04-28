@@ -19,6 +19,7 @@
   "dependencies": {
     "@meilisearch/instant-meilisearch": "^0.5.10",
     "@octokit/rest": "^18.12.0",
+    "js-yaml": "^4.1.0",
     "lodash.get": "^4.4.2",
     "next": "12.1.0",
     "next-i18next": "^11.0.0",
@@ -28,6 +29,7 @@
     "react-intersection-observer": "^8.33.1",
     "react-lottie": "^1.2.3",
     "react-lottie-wrapper": "^1.1.8",
+    "react-syntax-highlighter": "^15.5.0",
     "reakit": "^1.3.11",
     "styled-components": "^5.3.5"
   },

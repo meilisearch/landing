@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import getCodeSamples from 'utils/getCodeSamples'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {
@@ -7,6 +8,7 @@ import {
   Header,
   Hero as BaseHero,
   Demo as BaseDemo,
+  Developer,
   Footer,
   OpenSource as BaseOpenSource,
   Step1 as BaseStep1,
@@ -90,9 +92,9 @@ const Step3 = styled(BaseStep3)`
   }
 `
 
-const Home = () => {
+const Home = ({ code_samples }) => {
   const { t } = useTranslation('homepage')
-  const { hero, demo, openSource, steps, cards, testimonials } =
+  const { hero, demo, developer, openSource, steps, cards, testimonials } =
     getHomepageData(t)
   const stepsAnchor = steps.map(step => ({
     preTitle: step.preTitle,
@@ -127,6 +129,7 @@ const Home = () => {
           steps={stepsAnchor}
           color={get('colors.dodgerBlue')}
         />
+        <Developer developerProps={developer} code_samples={code_samples} />
         <Cards cardsProps={cards} />
         <Testimonials testimonialsProps={testimonials} />
       </PageContent>
@@ -137,8 +140,11 @@ const Home = () => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
+    const sdkList = getHomepageData().developer.sdkList
+    const code_samples = await getCodeSamples(sdkList)
     return {
       props: {
+        code_samples,
         ...(await serverSideTranslations(locale, [
           'homepage',
           'header',

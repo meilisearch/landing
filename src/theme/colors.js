@@ -1,6 +1,7 @@
 const colors = {
   white: '#FFF',
   dodgerBlue: {
+    300: '#9FA1F0',
     DEFAULT: '#4F55E3',
     600: '#232ADC',
     700: '#1C22B0',
@@ -8,12 +9,22 @@ const colors = {
   },
   lila: {
     100: '#F5EDFC',
+    400: '#C392ED',
     DEFAULT: '#AD6DE7',
     600: '#8E33DE',
+  },
+  tertiary: {
+    300: '#A8F0ED',
+    400: '#85EAE5',
+    DEFAULT: '#51E1D9',
   },
   hotPink: {
     DEFAULT: '#FF5CAA',
     600: '#FF1786',
+  },
+  candleLight: {
+    400: '#FFE27D',
+    DEFAULT: '#FFDA58',
   },
   valhalla: {
     100: '#705B8C',
