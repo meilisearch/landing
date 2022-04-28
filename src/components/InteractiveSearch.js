@@ -45,6 +45,7 @@ const MovieTitle = styled(Typography)`
   line-height: 32px;
   letter-spacing: -0.02em;
   color: ${get('colors.valhalla')};
+  text-align: left;
   ais-highlight-0000000000 {
     color: ${get('colors.lila')};
   }
