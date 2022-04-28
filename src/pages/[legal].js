@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import glob from 'glob'
 import Typography from 'components/Typography'
@@ -8,9 +9,16 @@ import get from 'utils/get'
 import PreTitle from 'components/PreTitle'
 import Link from 'components/Link'
 import { useRouter } from 'next/router'
+import ResourceCenter from 'layouts/ResourceCenter'
+
+const Container = styled.div`
+  padding-top: 48px;
+  background-color: ${get('colors.valhalla.800')};
+`
 
 const Markdown = styled.div`
   color: ${get('colors.ashes.900')};
+  margin-top: 16px;
   font-family: Inter;
   h1 {
     color: ${get('colors.white')};
@@ -30,53 +38,83 @@ const Markdown = styled.div`
   }
 `
 
-const LegalLinks = styled.div`
+const LeftColumn = styled.div`
   color: ${get('colors.ashes.900')};
-  margin: 80px 0;
-  .active {
+`
+
+const PagesName = styled(Typography)`
+  margin-top: 6px;
+  padding-left: 20px;
+  border-left: 3px solid transparent;
+
+  &.active {
     color: ${get('colors.hotPink')};
+    font-weight: ${get('fontWeight.bold')};
+    border-left: 3px solid ${get('colors.hotPink')};
+  }
+  &:first-letter {
+    text-transform: uppercase;
   }
 `
 
+const LeftColumnTitle = styled(Typography)`
+  color: ${get('colors.white')};
+  margin-bottom: 16px;
+`
+
+const MiddleColumn = styled(ResourceCenter.MiddleColumn)`
+  padding: 0 16px;
+`
+
 const LegalPage = ({ markdownBody, legalPages }) => {
+  const { t } = useTranslation('legal')
+
   const router = useRouter()
-  console.log(router)
   return (
-    <>
-      <LegalLinks>
-        {legalPages.map(legalPage => (
-          <Link
-            href={`/${legalPage}`}
-            key={legalPage}
-            className={router.asPath == `/${legalPage}` ? 'active' : ''}
-          >
-            <Typography style={{ display: 'block' }}>
-              {legalPage.replace(new RegExp('-', 'g'), ' ')}
-            </Typography>
-          </Link>
-        ))}
-      </LegalLinks>
-      <div>
-        <PreTitle preTitle="Legal" color={get('colors.hotPink')} />
-        <Markdown>
-          <ReactMarkdown
-            components={{
-              h1: props => (
-                <Typography variant="title.m" forwardedAs="h1" {...props} />
-              ),
-              h2: props => (
-                <Typography variant="title.s" forwardedAs="h2" {...props} />
-              ),
-              h3: props => (
-                <Typography variant="title.xs" forwardedAs="h3" {...props} />
-              ),
-            }}
-          >
-            {markdownBody}
-          </ReactMarkdown>
-        </Markdown>
-      </div>
-    </>
+    <Container>
+      <ResourceCenter>
+        <ResourceCenter.LeftColumn>
+          <LeftColumn>
+            <LeftColumnTitle
+              variant="body.s.bold"
+              style={{ color: get('colors.white') }}
+            >
+              {t('legal')}
+            </LeftColumnTitle>
+            {legalPages.map(legalPage => (
+              <Link href={`/${legalPage}`} key={legalPage}>
+                <PagesName
+                  style={{ display: 'block' }}
+                  className={router.asPath === `/${legalPage}` ? 'active' : ''}
+                >
+                  {legalPage.replace(new RegExp('-', 'g'), ' ')}
+                </PagesName>
+              </Link>
+            ))}
+          </LeftColumn>
+        </ResourceCenter.LeftColumn>
+        <MiddleColumn>
+          <PreTitle preTitle={t('legal')} color={get('colors.hotPink')} />
+          <Markdown>
+            <ReactMarkdown
+              components={{
+                h1: props => (
+                  <Typography variant="title.m" forwardedAs="h1" {...props} />
+                ),
+                h2: props => (
+                  <Typography variant="title.s" forwardedAs="h2" {...props} />
+                ),
+                h3: props => (
+                  <Typography variant="title.xs" forwardedAs="h3" {...props} />
+                ),
+              }}
+            >
+              {markdownBody}
+            </ReactMarkdown>
+          </Markdown>
+        </MiddleColumn>
+      </ResourceCenter>
+    </Container>
   )
 }
 
@@ -101,7 +139,7 @@ export async function getStaticProps({ locale, params }) {
   return {
     props: {
       legalPages,
-      ...(await serverSideTranslations(locale, ['header', 'footer'])),
+      ...(await serverSideTranslations(locale, ['header', 'footer', 'legal'])),
       markdownBody: data.content,
     },
   }
