@@ -12,7 +12,7 @@ const TerminalHead = styled.div`
   background-color: ${get('colors.valhalla.700')};
   grid-column: 1/-1;
   height: 44px;
-  border-bottom: 2px solid ${get('colors.valhalla.100')};
+  border-bottom: 2px solid ${get('colors.white')};
   padding: 0 16px;
   display: flex;
   align-items: center;

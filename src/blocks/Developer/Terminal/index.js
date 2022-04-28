@@ -12,7 +12,7 @@ const StyledGrid = styled(Grid)`
   margin-top: -124px;
   background-color ${get('colors.valhalla.700')};
   border-radius: 16px;
-  border: 2px solid ${get('colors.valhalla.100')};
+  border: 2px solid ${get('colors.white')};
   overflow: hidden;
   grid-gap: 0 16px;
   grid-template-columns: 1fr;
