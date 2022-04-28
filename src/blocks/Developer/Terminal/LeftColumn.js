@@ -20,7 +20,6 @@ const Container = styled.div`
 
 const SdkTab = styled(Tab.Tab)`
   display: flex;
-  margin-top: 0;
   align-items: center;
 `
 
@@ -49,10 +48,10 @@ const LeftColumn = ({ tab, sdkList }) => {
           const Logo = sdk.logo
           return (
             <SdkTab {...tab} key={sdk.pkgName}>
-              <div style={{ width: 24 }}>
-                <Logo height={24} />
+              <div style={{ width: 28 }}>
+                <Logo height={28} />
               </div>
-              <Language>{sdk.name}</Language>
+              <Language variant="body.xs.bold">{sdk.name}</Language>
             </SdkTab>
           )
         })}
