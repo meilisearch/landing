@@ -247,6 +247,54 @@ const variants = {
         `,
       },
     },
+    xs: {
+      default: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 400;
+          line-height: 150%;
+          font-size: 10px;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 11px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 12px;
+          }
+        `,
+      },
+      bold: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 600;
+          line-height: 150%;
+          font-size: 10px;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 11px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 12px;
+          }
+        `,
+      },
+      link: {
+        tag: 'span',
+        style: css`
+          font-family: Inter;
+          font-weight: 600;
+          line-height: 150%;
+          text-decoration: underline;
+          font-size: 10px;
+          @media (min-width: ${get('breakpoints.md')}) {
+            font-size: 11px;
+          }
+          @media (min-width: ${get('breakpoints.xl')}) {
+            font-size: 12px;
+          }
+        `,
+      },
+    },
   },
 }
 
@@ -290,6 +338,9 @@ Typography.propTypes = {
     'body.s.default',
     'body.s.bold',
     'body.s.link',
+    'body.xs.default',
+    'body.xs.bold',
+    'body.xs.link',
   ]),
 }
 
