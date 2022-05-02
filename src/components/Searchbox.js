@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { SearchBox as IsSearchbox } from 'react-instantsearch-dom'
 import { MagnifyingGlass, Cross } from 'components/icons'
 import get from 'utils/get'
+import { AnalyticsBrowser } from '@segment/analytics-next'
+import _debounce from 'lodash.debounce'
 
 const StyledSearchbox = styled(IsSearchbox)`
   width: 100%;
@@ -81,12 +83,35 @@ const StyledSearchbox = styled(IsSearchbox)`
 `
 
 const Searchbox = ({ placeholderSearch = null, ...props }) => {
+  const [analytics, setAnalytics] = React.useState(undefined)
+  const writeKey = process.env.NEXT_PUBLIC_SEGMENT_KEY
+
+  const sendDataToSegment = e => {
+    if (e.target.value) {
+      analytics?.track('demo-search', {
+        query: e.target.value,
+      })
+    }
+  }
+
   React.useEffect(() => {
-    const submitButton = document.getElementsByClassName(
-      'ais-SearchBox-submit'
-    )[0]
-    submitButton.setAttribute('tabindex', -1)
+    const disableMagnifyingGlassFocus = () => {
+      const submitButton = document.getElementsByClassName(
+        'ais-SearchBox-submit'
+      )[0]
+      submitButton.setAttribute('tabindex', -1)
+    }
+    disableMagnifyingGlassFocus()
   }, [])
+
+  React.useEffect(() => {
+    const loadAnalytics = async () => {
+      let [response] = await AnalyticsBrowser.load({ writeKey })
+      setAnalytics(response)
+    }
+    loadAnalytics()
+  }, [writeKey])
+
   return (
     <StyledSearchbox
       submit={<MagnifyingGlass width={20} />}
@@ -96,6 +121,7 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
         resetTitle: null,
         placeholder: placeholderSearch,
       }}
+      onChange={_debounce(sendDataToSegment, 1000)}
       {...props}
     />
   )
