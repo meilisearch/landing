@@ -88,8 +88,12 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
 
   const sendDataToSegment = e => {
     if (e.target.value) {
+      const processingTimeInMs = document.querySelector(
+        '.ais-Stats-text strong:nth-child(2)'
+      ).innerText
       analytics?.track('demo-search', {
         query: e.target.value,
+        processingTimeInMs,
       })
     }
   }
