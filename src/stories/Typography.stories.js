@@ -26,6 +26,9 @@ export default {
         'body.s.default',
         'body.s.bold',
         'body.s.link',
+        'body.xs.default',
+        'body.xs.bold',
+        'body.xs.link',
       ],
       control: {
         type: 'select',
@@ -139,4 +142,25 @@ BodySLink.storyName = 'body | S | link'
 BodySLink.args = {
   variant: 'body.s.link',
   children: 'I’m the body.s.link variant',
+}
+
+export const BodyXsDefault = Template.bind({})
+BodyXsDefault.storyName = 'body | XS | default'
+BodyXsDefault.args = {
+  variant: 'body.xs.default',
+  children: 'I’m the body.xs.default variant',
+}
+
+export const BodyXsBold = Template.bind({})
+BodyXsBold.storyName = 'body | XS | bold'
+BodyXsBold.args = {
+  variant: 'body.xs.bold',
+  children: 'I’m the body.xs.bold variant',
+}
+
+export const BodyXsLink = Template.bind({})
+BodyXsLink.storyName = 'body | XS | link'
+BodyXsLink.args = {
+  variant: 'body.xs.link',
+  children: 'I’m the body.xs.link variant',
 }
