@@ -7,6 +7,7 @@ import get from 'utils/get'
 const StyledPreTitle = styled(Typography)`
   color: ${p => p.$color};
   text-transform: uppercase;
+  display: block;
 `
 
 const PreTitle = ({ preTitle, color, ...props }) => {
