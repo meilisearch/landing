@@ -69,6 +69,7 @@ const StyledSearchbox = styled(IsSearchbox)`
   }
   button[type='reset'] {
     right: 16px;
+    height: 16px;
     opacity: 1;
     cursor: pointer;
     &[hidden] {
@@ -90,7 +91,7 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
   return (
     <StyledSearchbox
       submit={<MagnifyingGlass width={20} />}
-      reset={<Cross width={11} />}
+      reset={<Cross width={16} />}
       translations={{
         submitTitle: null,
         resetTitle: null,

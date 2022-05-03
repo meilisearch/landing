@@ -71,8 +71,8 @@ const MobileHeader = ({ headerProps }) => {
   return (
     <Grid as="nav">
       <Logo />
-      <DialogDisclosure {...dialog} style={{ color: 'white' }}>
-        {dialog.visible ? <Cross height={15} /> : <Hamburger height={24} />}
+      <DialogDisclosure {...dialog} style={{ color: 'white', height: 24 }}>
+        {dialog.visible ? <Cross height={24} /> : <Hamburger height={24} />}
       </DialogDisclosure>
       <Backdrop {...dialog}>
         <Content {...dialog} aria-label="Menu">
