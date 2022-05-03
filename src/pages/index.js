@@ -140,8 +140,12 @@ const Home = ({ code_samples }) => {
 
 export const getStaticProps = async ({ locale }) => {
   try {
-    const sdkList = getHomepageData().developer.sdkList
-    const code_samples = await getCodeSamples(sdkList)
+    let code_samples = []
+    if (process.env.NODE_ENV !== 'development') {
+      const sdkList = getHomepageData().developer.sdkList
+      code_samples = await getCodeSamples(sdkList)
+    }
+
     return {
       props: {
         code_samples,
