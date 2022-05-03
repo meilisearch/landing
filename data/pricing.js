@@ -35,6 +35,7 @@ const getPricingPageData = (t = () => {}) => ({
           cta: {
             title: t('pricing.startNow'),
             href: 'https://meilisearch.typeform.com/to/FtnzvZfh',
+            target: '_blank',
           },
         },
         {
