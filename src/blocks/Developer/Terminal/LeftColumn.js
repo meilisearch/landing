@@ -34,7 +34,7 @@ const Language = styled(Typography)`
   text-align: left;
 `
 
-const SdkList = styled.div`
+const SdkList = styled(Tab.TabList)`
   button + button {
     margin-left: 0;
   }
@@ -43,7 +43,7 @@ const SdkList = styled.div`
 const LeftColumn = ({ tab, sdkList }) => {
   return (
     <Container>
-      <SdkList forwardedAs={Tab.TabList} {...tab} aria-label="sdk-list">
+      <SdkList {...tab} aria-label="sdk-list">
         {sdkList.map(sdk => {
           const Logo = sdk.logo
           return (
