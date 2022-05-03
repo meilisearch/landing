@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
-import Basic from './Basic'
+import Dedicated from './Dedicated'
 import Enterprise from './Enterprise'
 import Typography from 'components/Typography'
 
@@ -59,7 +59,7 @@ const DesktopPlans = ({ cloud }) => {
             flex: 1,
           }}
         >
-          <Basic basicPlan={cloud.plans[0]} />
+          <Dedicated dedicatedPlan={cloud.plans[0]} />
         </div>
       </FirstColumn>
       <SecondColumn>
