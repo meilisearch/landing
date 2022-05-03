@@ -7,7 +7,7 @@ import DesktopHeader from './DesktopHeader'
 import MobileHeader from './MobileHeader'
 
 const Wrapper = styled.header`
-  height: 113px;
+  height: 98px;
   background-color: ${get('colors.valhalla')};
   display: flex;
   justify-content: center;
@@ -17,9 +17,7 @@ const Wrapper = styled.header`
   padding: 0 16px;
 
   @media (min-width: ${get('breakpoints.lg')}) {
-    height: 118px;
-    padding-top: 40px;
-    padding-bottom: 32px;
+    height: 88px;
   }
 `
 
