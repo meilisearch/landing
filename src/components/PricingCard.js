@@ -57,17 +57,6 @@ const PricingCardBody = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 28px 16px;
-
-  @media (min-width: ${get('breakpoints.md')}) {
-    padding: 28px 24px;
-  }
-  @media (min-width: ${get('breakpoints.lg')}) {
-    padding: 24px 26px;
-  }
-  @media (min-width: ${get('breakpoints.xl')}) {
-    padding: 28px 32px;
-  }
 `
 
 PricingCard.Header = PricingCardHeader

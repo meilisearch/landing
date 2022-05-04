@@ -6,8 +6,9 @@ import Dedicated from './Dedicated'
 import Enterprise from './Enterprise'
 import Tab from 'components/Tab'
 import Typography from 'components/Typography'
+import Column from '../Column'
 
-const MobilePlansWrapper = styled.div`
+const MobilePlansWrapper = styled(Column)`
   display: block;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;

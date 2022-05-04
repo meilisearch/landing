@@ -4,6 +4,7 @@ import PricingCard from 'components/PricingCard'
 import get from 'utils/get'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
+import Column from './Column'
 
 const OpenSourcePlanWrapper = styled.div`
   grid-column: 1 / -1;
@@ -19,11 +20,7 @@ const PlanDescription = styled(Typography)`
   margin-top: 12px;
 `
 
-const Infos = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+const Infos = styled(Column)`
   height: 100%;
 `
 
