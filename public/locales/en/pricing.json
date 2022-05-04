@@ -19,7 +19,7 @@
     "enterprise": "Enterprise",
     "dedicatedDescription": "For production applications.<br/>Starting from ",
     "dedicatedTooltip": "$30/month",
-    "dedicatedTooltipText": "Tooltip test",
+    "dedicatedTooltipText": "Estimation based on $0.042 per hour.",
     "highlyAvailable": "Highly available by default",
     "multipleRegion": "Multiple region available",
     "dedicatedRam": "Up to 128Gb of RAM",
