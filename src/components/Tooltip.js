@@ -17,23 +17,14 @@ const TooltipReference = styled(ReakitTooltipReference)`
 `
 
 const TextContainer = styled.div`
-  background-color: ${get('colors.valhalla.600')};
-  padding: 12px 8px;
+  background-color: ${get('colors.white')};
   border-radius: 8px;
-  color: ${get('colors.white')};
-  border: 1px solid ${get('colors.valhalla.100')};
-  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  opacity: 0;
-  transform-origin: top center;
-  transform: translate3d(0, -20px, 0);
-  [data-enter] & {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+  padding: 12px 10px;
+  color: ${get('colors.valhalla.100')};
 `
 
 function Tooltip({ children, title, ...props }) {
-  const tooltip = useTooltipState({ animated: 150 })
+  const tooltip = useTooltipState({ placement: 'bottom' })
   return (
     <>
       <TooltipReference {...tooltip} ref={children.ref} {...children.props}>
