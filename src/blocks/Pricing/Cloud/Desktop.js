@@ -1,69 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
-import Basic from './Basic'
+import Dedicated from './Dedicated'
 import Enterprise from './Enterprise'
-import Typography from 'components/Typography'
+import Column from '../Column'
 
 const DesktopPlansWrapper = styled.div`
   display: none;
   @media (min-width: ${get('breakpoints.lg')}) {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 `
 
-const FirstColumn = styled.div`
-  width: 60%;
+const FirstColumn = styled(Column)`
   padding-right: 24px;
-  display: flex;
-  flex-direction: column;
-  @media (min-width: ${get('breakpoints.lg')}) {
-    padding-right: 30px;
-  }
-  @media (min-width: ${get('breakpoints.xl')}) {
-    padding-right: 60px;
-  }
+  background-color: ${get('colors.valhalla.700')};
 `
 
-const SecondColumn = styled.div`
-  width: 40%;
-  display: flex;
+const SecondColumn = styled(Column)`
   flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  @media (min-width: ${get('breakpoints.lg')}) {
-    background-color: ${get('colors.valhalla.600')};
-    margin: -24px -26px -24px 0;
-    padding: 24px 26px 24px 30px;
-  }
-  @media (min-width: ${get('breakpoints.xl')}) {
-    background-color: ${get('colors.valhalla.600')};
-    margin: -32px -32px -28px -30px;
-    padding: 28px 26px 24px 30px;
-  }
+  background-color: ${get('colors.valhalla.600')};
 `
 
 const DesktopPlans = ({ cloud }) => {
   return (
     <DesktopPlansWrapper>
       <FirstColumn>
-        <Typography variant="title.xs">{cloud.plans[0].title}</Typography>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            flex: 1,
-          }}
-        >
-          <Basic basicPlan={cloud.plans[0]} />
-        </div>
+        <Dedicated dedicatedPlan={cloud.plans[0]} />
       </FirstColumn>
       <SecondColumn>
-        <Typography variant="title.xs">{cloud.plans[1].title}</Typography>
         <Enterprise enterprisePlan={cloud.plans[1]} />
       </SecondColumn>
     </DesktopPlansWrapper>

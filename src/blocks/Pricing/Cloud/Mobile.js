@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { useTabState } from 'reakit/Tab'
 import get from 'utils/get'
-import Basic from './Basic'
+import Dedicated from './Dedicated'
 import Enterprise from './Enterprise'
 import Tab from 'components/Tab'
 import Typography from 'components/Typography'
+import Column from '../Column'
 
-const MobilePlansWrapper = styled.div`
+const MobilePlansWrapper = styled(Column)`
   display: block;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
@@ -50,7 +51,7 @@ const MobilePlans = ({ cloud }) => {
         {...tab}
         style={{ opacity: 0.9, color: get('colors.ashes') }}
       >
-        <Basic basicPlan={cloud.plans[0]} />
+        <Dedicated dedicatedPlan={cloud.plans[0]} />
       </Tab.TabPanel>
       <Tab.TabPanel
         {...tab}

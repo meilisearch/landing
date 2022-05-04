@@ -20,20 +20,17 @@ const getPricingPageData = (t = () => {}) => ({
       description: t('pricing.cloudDescription'),
       plans: [
         {
-          title: t('pricing.basic'),
-          resources: [
-            {
-              title: t('pricing.resource1Description'),
-              price: t('pricing.resource1Pricing'),
-            },
-            {
-              title: t('pricing.resource2Description'),
-              price: t('pricing.resource2Pricing'),
-            },
-            {
-              title: t('pricing.resource3Description'),
-              price: t('pricing.resource3Pricing'),
-            },
+          title: t('pricing.dedicated'),
+          description: t('pricing.dedicatedDescription'),
+          tooltip: {
+            cta: t('pricing.dedicatedTooltip'),
+            text: t('pricing.dedicatedTooltipText'),
+          },
+          keypoints: [
+            t('pricing.highlyAvailable'),
+            t('pricing.multipleRegion'),
+            t('pricing.dedicatedRam'),
+            t('pricing.dedicatedStorage'),
           ],
           cta: {
             title: t('pricing.startNow'),
