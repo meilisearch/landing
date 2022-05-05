@@ -1,0 +1,32 @@
+[
+  {
+    "id": 107,
+    "title": "Snatch",
+    "release_date": "2000-09-01",
+    "poster_path": "https://image.tmdb.org/t/p/w780/56mOJth6DJ6JhgoE2jtpilVqJO.jpg"
+  },
+  {
+    "id": 104,
+    "title": "Run Lola Run",
+    "release_date": "1998-03-03",
+    "poster_path": "https://image.tmdb.org/t/p/w780/yBt6rkxRTP15nyOZOJt9pOgXDW0.jpg"
+  },
+  {
+    "id": 162,
+    "title": "Edward Scissorhands",
+    "release_date": "1990-12-05",
+    "poster_path": "https://image.tmdb.org/t/p/w780/1RFIbuW9Z3eN9Oxw2KaQG5DfLmD.jpg"
+  },
+  {
+    "id": 389,
+    "title": "12 Angry Men",
+    "release_date": "1957-04-10",
+    "poster_path": "https://image.tmdb.org/t/p/w780/e02s4wmTAExkKg0yF4dEG98ZRpK.jpg"
+  },
+  {
+    "id": 18,
+    "title": "The Fifth Element",
+    "release_date": "1997-05-02",
+    "poster_path": "https://image.tmdb.org/t/p/w780/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg"
+  }
+]

@@ -2,20 +2,18 @@
 const { MeiliSearch } = require('meilisearch')
 
 const {
-  NEXT_PUBLIC_DEMO_MOVIES_API_KEY: API_KEY,
-  NEXT_PUBLIC_DEMO_MOVIES_HOST: HOST,
+  NEXT_PUBLIC_DEMO_MOVIES_API_KEY: apiKey,
+  NEXT_PUBLIC_DEMO_MOVIES_HOST: host,
 } = Cypress.env()
 
 Cypress.Commands.add('addDocuments', async (uid, documents) => {
   try {
     const client = new MeiliSearch({
-      host: HOST,
-      apiKey: API_KEY,
+      host,
+      apiKey,
     })
-    const index = client.index(uid)
-    await client.createIndex(uid)
-    const { updateId } = await index.addDocuments(documents)
-    await index.waitForPendingUpdate(updateId)
+    const task = await client.index('movies').addDocuments(documents)
+    await client.waitForTask(task.uid)
   } catch (e) {
     console.log({ e })
   }

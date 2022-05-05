@@ -57,6 +57,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "meilisearch": "^0.25.0",
     "prettier": "^2.5.1",
     "storybook-addon-next-router": "^4.0.0",
     "scroll-to-bottomjs": "^1.1.0"
