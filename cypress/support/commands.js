@@ -12,8 +12,7 @@ Cypress.Commands.add('addDocuments', async (uid, documents) => {
       host,
       apiKey,
     })
-    const task = await client.index('movies').addDocuments(documents)
-    await client.waitForTask(task.uid)
+    await client.index(uid).addDocuments(documents)
   } catch (e) {
     console.log({ e })
   }
