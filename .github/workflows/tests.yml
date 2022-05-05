@@ -25,6 +25,13 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
+    services:
+      meilisearch:
+        image: getmeili/meilisearch:latest
+        env:
+          MEILI_NO_ANALYTICS: 'true'
+        ports:
+          - '7700:7700'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
