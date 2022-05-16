@@ -1,5 +1,5 @@
 const WAITING_TIME = 5000
-let scrollToBottom = require('scroll-to-bottomjs')
+// let scrollToBottom = require('scroll-to-bottomjs')
 
 describe(`Homepage`, () => {
   before(() => {
@@ -18,9 +18,18 @@ describe(`Homepage`, () => {
 
   it('Should match snapshot', () => {
     cy.visit('/')
-    cy.window().then(cyWindow =>
-      scrollToBottom({ remoteWindow: cyWindow, frequency: 50, timing: 10 })
-    )
-    cy.percySnapshot('home-hero-responsive')
+    cy.get('.hero').should('be.visible')
+    cy.get('.demo').should('be.visible')
+    cy.get('.openSource').should('be.visible')
+    cy.get('.step1').should('be.visible')
+    cy.get('.step2').should('be.visible')
+    cy.get('.step3').should('be.visible')
+    cy.get('.developer').should('be.visible')
+    cy.get('.cards').should('be.visible')
+    cy.get('.testimonials').should('be.visible')
+    // cy.window().then(cyWindow =>
+    //   scrollToBottom({ remoteWindow: cyWindow, frequency: 50, timing: 10 })
+    // )
+    cy.percySnapshot('home-hero-responsive', { widths: [768, 1024, 1440] })
   })
 })
