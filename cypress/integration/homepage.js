@@ -3,6 +3,7 @@ let scrollToBottom = require('scroll-to-bottomjs')
 
 describe(`Homepage`, () => {
   before(() => {
+    cy.log(Cypress.env())
     // Creates the movies index with documents in it
     cy.fixture('movies.json').then(movies => {
       cy.addDocuments('movies', movies)
@@ -22,6 +23,7 @@ describe(`Homepage`, () => {
     })
     it('Has a demo block', () => {
       cy.get('.demo').should('be.visible')
+      cy.log(Cypress.env())
     })
     it('Has an openSource block', () => {
       cy.get('.openSource').should('be.visible')
@@ -46,10 +48,16 @@ describe(`Homepage`, () => {
     })
   })
   it('Should take a snapshot', () => {
+    cy.visit('/')
+    cy.wait(WAITING_TIME)
+    // Scroll the entire page to load lazy images
     cy.window().then(cyWindow =>
       scrollToBottom({ remoteWindow: cyWindow, frequency: 80, timing: 10 })
     )
     cy.wait(WAITING_TIME)
+    cy.get("img[alt='Developer']").should('be.visible')
+    cy.get('.meilisearch-logo-footer').should('be.visible')
+    cy.get('.ais-Hits-list').should('be.visible')
     cy.percySnapshot('home-hero-responsive')
   })
 })

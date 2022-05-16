@@ -45,6 +45,7 @@ const Footer = () => {
             width={213}
             layout="fixed"
             alt="Meilisearch Logo"
+            chassName="meilisearch-logo-footer"
           />
           <Newsletter newsletterProps={footerProps.newsletter} />
         </LogoSection>
