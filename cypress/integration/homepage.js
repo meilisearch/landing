@@ -18,8 +18,9 @@ describe(`Homepage`, () => {
 
   it('Should match snapshot', () => {
     cy.visit('/')
-    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
-    cy.wait(10000)
-    cy.percySnapshot('home-hero-responsive', { widths: [768, 1024, 1440] })
+    cy.window().then(cyWindow =>
+      scrollToBottom({ remoteWindow: cyWindow, frequency: 50, timing: 10 })
+    )
+    cy.percySnapshot('home-hero-responsive')
   })
 })

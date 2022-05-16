@@ -133,7 +133,6 @@ const Text = ({ developerProps }) => {
             width={330}
             layout="responsive"
             alt="Developer"
-            className="developer"
           />
         </div>
       </Illustration>
