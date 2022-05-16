@@ -1,9 +1,9 @@
 const WAITING_TIME = 5000
-// let scrollToBottom = require('scroll-to-bottomjs')
+let scrollToBottom = require('scroll-to-bottomjs')
 
 describe(`Homepage`, () => {
   before(() => {
-    // Recreate the movies index with documents in it
+    // Creates the movies index with documents in it
     cy.fixture('movies.json').then(movies => {
       cy.addDocuments('movies', movies)
       cy.wait(WAITING_TIME)
@@ -16,20 +16,40 @@ describe(`Homepage`, () => {
     cy.url().should('match', new RegExp(Cypress.config('baseUrl')))
   })
 
-  it('Should match snapshot', () => {
-    cy.visit('/')
-    cy.get('.hero').should('be.visible')
-    cy.get('.demo').should('be.visible')
-    cy.get('.openSource').should('be.visible')
-    cy.get('.step1').should('be.visible')
-    cy.get('.step2').should('be.visible')
-    cy.get('.step3').should('be.visible')
-    cy.get('.developer').should('be.visible')
-    cy.get('.cards').should('be.visible')
-    cy.get('.testimonials').should('be.visible')
-    // cy.window().then(cyWindow =>
-    //   scrollToBottom({ remoteWindow: cyWindow, frequency: 50, timing: 10 })
-    // )
-    cy.percySnapshot('home-hero-responsive', { widths: [768, 1024, 1440] })
+  context('Has blocks', () => {
+    it('Has an hero block', () => {
+      cy.get('.hero').should('be.visible')
+    })
+    it('Has a demo block', () => {
+      cy.get('.demo').should('be.visible')
+    })
+    it('Has an openSource block', () => {
+      cy.get('.openSource').should('be.visible')
+    })
+    it('Has a step1 block', () => {
+      cy.get('.step1').should('be.visible')
+    })
+    it('Has a step2 block', () => {
+      cy.get('.step2').should('be.visible')
+    })
+    it('Has a step3 block', () => {
+      cy.get('.step3').should('be.visible')
+    })
+    it('Has a developer block', () => {
+      cy.get('.developer').should('be.visible')
+    })
+    it('Has a cards block', () => {
+      cy.get('.cards').should('be.visible')
+    })
+    it('Has a testimonials block', () => {
+      cy.get('.testimonials').should('be.visible')
+    })
+  })
+  it('Should take a snapshot', () => {
+    cy.window().then(cyWindow =>
+      scrollToBottom({ remoteWindow: cyWindow, frequency: 80, timing: 10 })
+    )
+    cy.wait(WAITING_TIME)
+    cy.percySnapshot('home-hero-responsive')
   })
 })

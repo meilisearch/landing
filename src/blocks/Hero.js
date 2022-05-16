@@ -122,10 +122,7 @@ const Hero = ({ heroProps, ...props }) => (
           dangerouslySetInnerHTML={{ __html: heroProps.title }}
         />
         <MobileAnimation>
-          <Lottie
-            animation={heroProps.lottie.mobile}
-            className="hide-in-percy"
-          />
+          <Lottie animation={heroProps.lottie.mobile} />
         </MobileAnimation>
         <Description variant="body.m.default">
           {heroProps.description}
@@ -154,10 +151,7 @@ const Hero = ({ heroProps, ...props }) => (
       </Content>
       <RightColumn>
         <DesktopAnimation>
-          <Lottie
-            animation={heroProps.lottie.desktop}
-            className="hide-in-percy"
-          />
+          <Lottie animation={heroProps.lottie.desktop} />
         </DesktopAnimation>
       </RightColumn>
     </Grid>

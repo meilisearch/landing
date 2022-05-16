@@ -110,6 +110,7 @@ const Testimonial = ({ testimonial, ...props }) => {
           width={56}
           height={56}
           src={testimonial.author.profilePicture}
+          className="hide-in-percy"
         />
         <AuthorInfos>
           <AuthorName>{testimonial.author.realName}</AuthorName>

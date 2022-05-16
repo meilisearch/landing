@@ -72,7 +72,7 @@ const GithubButton = ({
       <GithubLogo height={20} />
       {stargazersCount && (
         <>
-          <Typography variant="title.caps">
+          <Typography variant="title.caps" className="hide-in-percy">
             {formatStargazers(stargazersCount)}
           </Typography>
           <StarIcon />

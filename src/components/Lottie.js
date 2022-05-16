@@ -19,6 +19,7 @@ const LottieAnimation = ({ animation, options = {}, ariaLabel, ...props }) => {
       ariaRole={null}
       ariaLabel={ariaLabel}
       tabIndex={-1}
+      className="hide-in-percy"
       {...props}
     />
   )
