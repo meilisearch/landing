@@ -18,10 +18,8 @@ describe(`Homepage`, () => {
 
   it('Should match snapshot', () => {
     cy.visit('/')
-    cy.wait(WAITING_TIME)
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
-    cy.wait(WAITING_TIME)
-    cy.get('.developer').should('be.visible')
+    cy.wait(10000)
     cy.percySnapshot('home-hero-responsive', { widths: [768, 1024, 1440] })
   })
 })
