@@ -137,7 +137,7 @@
     "title": "The best developer<br/>experience",
     "seeAllIntegrations": "See all integrations",
     "buildWith": "Build with {{language}}",
-    "description": "At MeiliSearch, we take the developer experience to heart. That's why we work hard to make our API self-explanatory and develop our SDKs to let you concentrate on what matters the most.",
+    "description": "At Meilisearch, we take the developer experience to heart. That's why we work hard to make our API self-explanatory and develop our SDKs to let you concentrate on what matters the most.",
     "documentation": "Documentation",
     "documentationText": "Every developer knows there's nothing worse than outdated, disorganized, or incomplete documentation. Our team of technical writers works hard to ensure that our documentation isn't just accurate; it's exceptional.",
     "documentationCta": "Documentation",
