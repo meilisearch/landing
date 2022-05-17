@@ -8,72 +8,72 @@ import {
   Roadmap2,
 } from '../src/components/icons'
 
-const getHeaderData = (t = () => {}) => ({
+const getHeaderData = () => ({
   links: [
     {
-      title: t('pricing.title'),
-      href: t('pricing.url'),
+      title: 'Pricing',
+      href: '/pricing',
     },
     {
-      title: t('resources.title'),
+      title: 'Resources',
       subMenu: [
         {
-          title: t('documentation.title'),
+          title: 'Documentation',
           icon: Documentation,
-          href: t('documentation.url'),
+          href: 'https://docs.meilisearch.com/',
           target: '_blank',
         },
         {
-          title: t('blog.title'),
+          title: 'Blog',
           icon: Blog,
-          href: t('blog.url'),
+          href: 'https://blog.meilisearch.com/',
           target: '_blank',
         },
         {
-          title: t('guides.title'),
+          title: 'Guides',
           icon: Guides,
-          href: t('guides.url'),
+          href: 'https://docs.meilisearch.com/learn/',
           target: '_blank',
         },
         {
-          title: t('roadmap.title'),
+          title: 'Roadmap',
           icon: Roadmap2,
-          href: t('roadmap.url'),
+          href: 'https://roadmap.meilisearch.com/tabs/5-ideas',
           target: '_blank',
         },
         {
-          title: t('apiReference.title'),
+          title: 'API Reference',
           icon: Api,
-          href: t('apiReference.url'),
+          href: 'https://docs.meilisearch.com/reference/api/',
           target: '_blank',
         },
         {
-          title: t('changelog.title'),
+          title: 'Changelog',
           icon: GithubOutlined,
-          href: t('changelog.url'),
+          href: 'https://github.com/meilisearch/meilisearch/releases',
           target: '_blank',
         },
         {
-          title: t('integrations.title'),
+          title: 'Integrations',
           icon: Puzzle,
-          href: t('integrations.url'),
+          href: 'https://github.com/meilisearch/integration-guides',
           target: '_blank',
         },
       ],
     },
     {
-      title: t('jobs.title'),
-      href: t('jobs.url'),
+      title: 'Jobs',
+      href: 'https://jobs.lever.co/meili',
       target: '_blank',
     },
   ],
   cta1: {
-    title: t('logIn.title'),
-    href: t('logIn.url'),
+    title: 'Join the Cloud beta',
+    href: 'https://meilisearch.typeform.com/to/FtnzvZfh',
   },
   cta2: {
-    title: t('getStarted.title'),
-    href: t('getStarted.url'),
+    title: 'Get Started',
+    href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
   },
 })
 

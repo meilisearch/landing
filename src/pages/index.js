@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 import getCodeSamples from 'utils/getCodeSamples'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {
   Cards,
   Header,
@@ -93,9 +91,16 @@ const Step3 = styled(BaseStep3)`
 `
 
 const Home = ({ code_samples }) => {
-  const { t } = useTranslation('homepage')
-  const { hero, demo, developer, openSource, steps, cards, testimonials } =
-    getHomepageData(t)
+  const {
+    meta,
+    hero,
+    demo,
+    developer,
+    openSource,
+    steps,
+    cards,
+    testimonials,
+  } = getHomepageData()
   const stepsAnchor = steps.map(step => ({
     preTitle: step.preTitle,
     title: step.title,
@@ -103,8 +108,8 @@ const Home = ({ code_samples }) => {
   return (
     <>
       <Head>
-        <title>{t('meta.title')}</title>
-        <meta name="description" content={t('meta.description')} />
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
       </Head>
       <Header />
       <PageContent>
@@ -138,7 +143,7 @@ const Home = ({ code_samples }) => {
   )
 }
 
-export const getStaticProps = async ({ locale }) => {
+export const getStaticProps = async () => {
   try {
     let code_samples = []
     if (process.env.NODE_ENV !== 'development') {
@@ -149,11 +154,6 @@ export const getStaticProps = async ({ locale }) => {
     return {
       props: {
         code_samples,
-        ...(await serverSideTranslations(locale, [
-          'homepage',
-          'header',
-          'footer',
-        ])),
       },
     }
   } catch (err) {
