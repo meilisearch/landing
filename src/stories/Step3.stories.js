@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'next-i18next'
 import { Step3 } from 'blocks'
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
@@ -9,8 +8,7 @@ export default {
 }
 
 export const Default = () => {
-  const { t } = useTranslation('homepage')
-  const { steps: stepsProps } = getHomepageData(t)
+  const { steps: stepsProps } = getHomepageData()
 
   return (
     <Step3
@@ -24,8 +22,7 @@ export const Default = () => {
 }
 
 export const OtherColor = () => {
-  const { t } = useTranslation('homepage')
-  const { steps: stepsProps } = getHomepageData(t)
+  const { steps: stepsProps } = getHomepageData()
 
   return (
     <Step3

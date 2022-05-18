@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'next-i18next'
 import { Hero } from 'blocks'
 import getHomepageData from '../../data/homepage'
 
@@ -8,8 +7,7 @@ export default {
 }
 
 export const Default = () => {
-  const { t } = useTranslation('homepage')
-  const { hero: heroProps } = getHomepageData(t)
+  const { hero: heroProps } = getHomepageData()
 
   return <Hero heroProps={heroProps} />
 }

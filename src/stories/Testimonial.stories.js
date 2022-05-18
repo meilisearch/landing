@@ -1,6 +1,5 @@
 import React from 'react'
 import Testimonial from 'components/Testimonial'
-import { useTranslation } from 'next-i18next'
 import getHomepageData from '../../data/homepage'
 
 export default {
@@ -11,8 +10,7 @@ export default {
 }
 
 export const Default = () => {
-  const { t } = useTranslation('homepage')
-  const { testimonials } = getHomepageData(t)
+  const { testimonials } = getHomepageData()
 
   return <Testimonial testimonial={testimonials.list[0]} />
 }
