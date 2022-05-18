@@ -1,4 +1,3 @@
-const { i18n } = require('./next-i18next.config')
 
 module.exports = {
   reactStrictMode: true,
@@ -9,7 +8,6 @@ module.exports = {
     config.resolve.fallback = { fs: false, module: false }
     return config
   },
-  i18n,
   images: {
     domains: ['pbs.twimg.com', 'image.tmdb.org'],
   },
