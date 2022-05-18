@@ -1,10 +1,8 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import theme from '../src/theme'
-import { I18nextProvider } from 'react-i18next'
-import i18n from './i18n'
-import * as nextImage from 'next/image';
+import * as nextImage from 'next/image'
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -24,14 +22,10 @@ const GlobalStyle = createGlobalStyle`
 
 export const decorators = [
   (Story) => (
-    <I18nextProvider i18n={i18n}>
-      <Suspense fallback="Loading localization…">
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Story />
-        </ThemeProvider>
-      </Suspense>
-    </I18nextProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Story />
+    </ThemeProvider>
   ),
 ]
 
