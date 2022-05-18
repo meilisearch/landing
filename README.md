@@ -110,31 +110,6 @@ or
 npm run storybook
 ```
 
-## Internationalization
-
-To add a new language, add it inside the `locales` array of the `next-i18next.config.js` file.
-Then, the easiest way to add the translations is to duplicate one of the existing folder inside `public/locales` and translate its content.
-For example, you might want to duplicate the `en` folder and rename it in `fr`. Then, you can translate its content.
-Don't forget to restart your server to see your changes !
-
 ## Data folder
 
 The `data` folder contains every useful data that can change over time like the header menu (order, title, links, ...), the footer or even the social links. This type of content is put in the `data` directory instead of directly in the components and / or pages themselves, in order to find and edit them easily. Furthermore, they can this way be reused in Storybook for components and blocks previews.
-If your data has text (and therefore might be translated), you will need to pass the path to the text in the corresponding translation file (see above).
-
-For example if you want to add a link inside the header, you need to add the title link inside the `public/locales/{lang}/header.json` like this:
-
-```js
-  "myKey": "My new link name",
-```
-
-Then, you need to go to the `data/header.js` file and add the following:
-
-```js
-  {
-    title: t('myKey'),
-    href: 'my-link-url',
-  },
-```
-
-This way, we centralise in one place (inside the `data` folder) the header information (links names and urls, order of the links, submenus, ...), but we keep the ability to translate it if needed at the same time .
