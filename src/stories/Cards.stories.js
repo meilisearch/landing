@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'next-i18next'
 import { Cards } from 'blocks'
 import getHomepageData from '../../data/homepage'
 
@@ -11,8 +10,7 @@ export default {
 }
 
 export const Default = () => {
-  const { t } = useTranslation('homepage')
-  const { cards: cardsProps } = getHomepageData(t)
+  const { cards: cardsProps } = getHomepageData()
 
   return <Cards cardsProps={cardsProps} />
 }

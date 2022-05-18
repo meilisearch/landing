@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import getPricingPageData from '../../data/pricing'
 import PageContent from 'components/PageContent'
 import {
@@ -38,13 +36,12 @@ const PricingBlock = styled(BasePricingBlock)`
 `
 
 const Pricing = () => {
-  const { t } = useTranslation('pricing')
-  const { hero, faq, table, pricing } = getPricingPageData(t)
+  const { meta, hero, faq, table, pricing } = getPricingPageData()
   return (
     <>
       <Head>
-        <title>{t('meta.title')}</title>
-        <meta name="description" content={t('meta.description')} />
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
       </Head>
       <div style={{ backgroundColor: get('colors.valhalla.800') }}>
         <Header style={{ backgroundColor: get('colors.valhalla.800') }} />
@@ -58,22 +55,6 @@ const Pricing = () => {
       </div>
     </>
   )
-}
-
-export const getStaticProps = async ({ locale }) => {
-  try {
-    return {
-      props: {
-        ...(await serverSideTranslations(locale, [
-          'pricing',
-          'header',
-          'footer',
-        ])),
-      },
-    }
-  } catch (err) {
-    console.log(err)
-  }
 }
 
 export default Pricing

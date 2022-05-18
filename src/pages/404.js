@@ -4,9 +4,8 @@ import { Header } from 'blocks'
 import get from 'utils/get'
 import Button from 'components/Button'
 import Typography from 'components/Typography'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import BasePageContent from 'components/PageContent'
+import get404Data from '../../data/404'
 
 const PageContent = styled(BasePageContent)`
   color: ${get('colors.white')};
@@ -58,37 +57,25 @@ const Cta = styled.div`
 `
 
 const Custom404 = () => {
-  const { t } = useTranslation('404')
+  const { meta, content } = get404Data()
   return (
     <>
       <Head>
-        <title>{t('meta.title')}</title>
-        <meta name="description" content={t('meta.description')} />
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
       </Head>
       <Header />
       <PageContent>
         <Title>404</Title>
-        <Description variant="title.m">{t('description')}</Description>
+        <Description variant="title.m">{content.description}</Description>
         <Cta>
           <Button href="/" variant="secondary" color={get('colors.hotPink')}>
-            <Typography variant="body.s.bold">{t('cta')}</Typography>
+            <Typography variant="body.s.bold">{content.cta}</Typography>
           </Button>
         </Cta>
       </PageContent>
     </>
   )
-}
-
-export const getStaticProps = async ({ locale }) => {
-  try {
-    return {
-      props: {
-        ...(await serverSideTranslations(locale, ['404', 'header'])),
-      },
-    }
-  } catch (err) {
-    console.log(err)
-  }
 }
 
 export default Custom404

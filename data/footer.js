@@ -1,108 +1,108 @@
 import { Github, Twitter, Linkedin, Slack } from '../src/components/icons'
 
-const getFooterData = (t = () => {}) => ({
+const getFooterData = () => ({
   menu: [
     {
-      title: t('menu.0.title'),
+      title: 'Resources',
       submenu: [
         {
-          title: t('menu.0.submenu.0.title'),
-          href: t('menu.0.submenu.0.url'),
+          title: 'Pricing',
+          href: '/pricing',
         },
         {
-          title: t('menu.0.submenu.1.title'),
-          href: t('menu.0.submenu.1.url'),
+          title: 'Documentation',
+          href: 'https://docs.meilisearch.com/',
           target: '_blank',
         },
         {
-          title: t('menu.0.submenu.2.title'),
-          href: t('menu.0.submenu.2.url'),
+          title: 'Blog',
+          href: 'https://blog.meilisearch.com/',
           target: '_blank',
         },
         {
-          title: t('menu.0.submenu.3.title'),
-          href: t('menu.0.submenu.3.url'),
+          title: 'Cookbooks',
+          href: 'https://docs.meilisearch.com/learn/cookbooks/',
           target: '_blank',
         },
         {
-          title: t('menu.0.submenu.4.title'),
-          href: t('menu.0.submenu.4.url'),
+          title: 'API Reference',
+          href: 'https://docs.meilisearch.com/reference/api/',
           target: '_blank',
         },
         {
-          title: t('menu.0.submenu.5.title'),
-          href: t('menu.0.submenu.5.url'),
+          title: 'Roadmap',
+          href: 'https://roadmap.meilisearch.com/',
           target: '_blank',
         },
         {
-          title: t('menu.0.submenu.6.title'),
-          href: t('menu.0.submenu.6.url'),
+          title: 'Changelog',
+          href: 'https://github.com/meilisearch/meilisearch/releases',
           target: '_blank',
         },
         {
-          title: t('menu.0.submenu.7.title'),
-          href: t('menu.0.submenu.7.url'),
+          title: 'Integrations',
+          href: 'https://github.com/meilisearch/integration-guides',
           target: '_blank',
         },
       ],
     },
     {
-      title: t('menu.1.title'),
+      title: 'Connect',
       submenu: [
         {
-          title: t('menu.1.submenu.0.title'),
-          href: t('menu.1.submenu.0.url'),
+          title: 'Support',
+          href: 'https://slack.meilisearch.com/',
           target: '_blank',
         },
         {
-          title: t('menu.1.submenu.1.title'),
-          href: t('menu.1.submenu.1.url'),
+          title: 'Github',
+          href: 'https://github.com/meilisearch',
           target: '_blank',
         },
         {
-          title: t('menu.1.submenu.2.title'),
-          href: t('menu.1.submenu.2.url'),
+          title: 'Slack',
+          href: 'https://slack.meilisearch.com/',
           target: '_blank',
         },
         {
-          title: t('menu.1.submenu.3.title'),
-          href: t('menu.1.submenu.3.url'),
+          title: 'Newsletter',
+          href: 'https://meilisearch.us2.list-manage.com/subscribe?u=27870f7b71c908a8b359599fb&id=79582d828e',
           target: '_blank',
         },
       ],
     },
     {
-      title: t('menu.2.title'),
+      title: 'Company',
       submenu: [
         {
-          title: t('menu.2.submenu.0.title'),
-          href: t('menu.2.submenu.0.url'),
+          title: 'About us',
+          href: 'https://www.welcometothejungle.com/fr/companies/meilisearch',
           target: '_blank',
         },
         {
-          title: t('menu.2.submenu.1.title'),
-          href: t('menu.2.submenu.1.url'),
+          title: 'Contact us',
+          href: 'https://docs.meilisearch.com/learn/what_is_meilisearch/contact.html#contact-us',
           target: '_blank',
         },
         {
-          title: t('menu.2.submenu.2.title'),
-          href: t('menu.2.submenu.2.url'),
+          title: 'Career',
+          href: 'https://jobs.lever.co/meili',
           target: '_blank',
         },
         {
-          title: t('menu.2.submenu.3.title'),
-          href: t('menu.2.submenu.3.url'),
+          title: 'Code of conduct',
+          href: 'https://github.com/meilisearch/MeiliSearch/blob/main/CODE_OF_CONDUCT.md',
           target: '_blank',
         },
         {
-          title: t('menu.2.submenu.4.title'),
-          href: t('menu.2.submenu.4.url'),
+          title: 'Privacy Policy',
+          href: 'https://meilisearch.notion.site/Privacy-Policy-47f207efc5244de0820ffd19f0d844d8',
           target: '_blank',
         },
       ],
     },
   ],
-  copyright: t('copyright'),
+  copyright: '©2022 Meilisearch - All rights reserved.',
   socials: [
     {
       icon: Github,

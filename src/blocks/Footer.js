@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useTranslation } from 'next-i18next'
 import get from 'utils/get'
 import getFooterData from '../../data/footer'
 import Grid from 'components/Grid'
@@ -112,8 +111,7 @@ const Copyright = styled(Typography)`
 `
 
 const Footer = () => {
-  const { t } = useTranslation('footer')
-  const footerProps = getFooterData(t)
+  const footerProps = getFooterData()
   return (
     <Wrapper>
       <Grid>

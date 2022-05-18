@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'next-i18next'
 import { Menu, MenuDisclosure, MenuItem } from 'components/Menu'
 import Typography from 'components/Typography'
 import { useMenuState } from 'reakit/Menu'
@@ -15,8 +14,7 @@ export default {
 
 export const Default = () => {
   const menuState = useMenuState()
-  const { t } = useTranslation('header')
-  const headerProps = getHeaderData(t)
+  const headerProps = getHeaderData()
 
   const menuList = headerProps.links.find(link => link.subMenu)
   return (
@@ -35,8 +33,7 @@ export const Default = () => {
 
 export const Animated = () => {
   const menuState = useMenuState({ animated: 300, loop: true })
-  const { t } = useTranslation('header')
-  const headerProps = getHeaderData(t)
+  const headerProps = getHeaderData()
 
   const menuList = headerProps.links.find(link => link.subMenu)
 

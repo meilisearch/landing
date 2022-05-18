@@ -2,7 +2,6 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from 'theme/GlobalStyle'
 import Script from 'next/script'
 import theme from 'theme'
-import { appWithTranslation } from 'next-i18next'
 
 // Template for every page
 export function App({ Component, pageProps }) {
@@ -39,4 +38,4 @@ export function App({ Component, pageProps }) {
   )
 }
 
-export default appWithTranslation(App)
+export default App

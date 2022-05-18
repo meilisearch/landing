@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'next-i18next'
 import { PricingHero as Hero } from 'blocks'
 import getPricingPageData from '../../data/pricing'
 
@@ -8,8 +7,7 @@ export default {
 }
 
 export const Default = () => {
-  const { t } = useTranslation('pricing')
-  const { hero } = getPricingPageData(t)
+  const { hero } = getPricingPageData()
 
   return <Hero hero={hero} />
 }

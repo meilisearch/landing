@@ -35,20 +35,27 @@ import {
 } from 'components/icons'
 import get from 'utils/get'
 
-const getHomepageData = (t = () => {}) => ({
+const getHomepageData = () => ({
+  meta: {
+    title: 'Meilisearch',
+    description:
+      'An open-source, blazingly fast, and hyper-relevant search engine that will improve your search experience',
+  },
   hero: {
-    title: t('hero.title'),
-    description: t('hero.description'),
+    title:
+      'Shape a <strong>delightful</strong> <strong>search</strong> experience in a snap',
+    description:
+      'An open-source, lightning-fast, and hyper-relevant search engine that fits effortlessly into your apps, websites, and workflow.',
     mobileBackground: '/images/hero-mobile.svg',
     desktopBackground: '/images/hero-desktop.svg',
     cta1: {
-      title: t('hero.cta1.title'),
-      url: t('hero.cta1.url'),
+      title: 'Join our Slack',
+      url: 'https://slack.meilisearch.com/',
       target: '_blank',
     },
     cta2: {
-      title: t('hero.cta2.title'),
-      url: t('hero.cta2.url'),
+      title: 'Documentation',
+      url: 'https://docs.meilisearch.com/',
       target: '_blank',
     },
     lottie: {
@@ -58,183 +65,201 @@ const getHomepageData = (t = () => {}) => ({
   },
   demo: {
     searchStats: (nbHits, timeInMs) =>
-      t('demo.searchStats', { nbHits, timeInMs }),
-    placeholderSearch: t('demo.placeholderSearch'),
-    preTitle: t('demo.preTitle'),
-    title: t('demo.title'),
-    description: t('demo.description'),
+      `<strong>${nbHits}</strong> results in <strong>${timeInMs}</strong> ms`,
+    placeholderSearch: 'Try me...',
+    preTitle: 'Why Meilisearch?',
+    title: 'The next generation of search',
+    description:
+      'Meilisearch is a flexible and powerful user-focused search engine that can be added to any website or application.',
     keypoints: [
       {
         icon: Lightning,
-        title: t('demo.keypoints.0.title'),
-        description: t('demo.keypoints.0.description'),
+        title: 'Lightning fast',
+        description:
+          "Search-as-you-type returns answers in less than 50 milliseconds. That's faster than the blink of an eye!",
       },
       {
         icon: Plug,
-        title: t('demo.keypoints.1.title'),
-        description: t('demo.keypoints.1.description'),
+        title: 'Plug ‘n play',
+        description:
+          'Deploy in a matter of minutes. Smart presets let you start searching through your data with zero configuration. ',
       },
       {
         icon: Puzzle,
-        title: t('demo.keypoints.2.title'),
-        description: t('demo.keypoints.2.description'),
+        title: 'Flexible',
+        description:
+          'Send data to Meilisearch however you want—no need to match a schema or convert your dataset to a compatible format.',
       },
       {
         icon: Typo,
-        title: t('demo.keypoints.3.title'),
-        description: t('demo.keypoints.3.description'),
+        title: 'Typo tolerant',
+        description:
+          "Everyone makes mistakes! If typos break your search experience, many users will leave thinking what they were looking for just wasn't there.",
       },
     ],
     cta: {
-      title: t('demo.cta.title'),
-      url: t('demo.cta.url'),
+      title: 'Start now',
+      url: 'https://docs.meilisearch.com/learn/getting_started/',
       target: '',
     },
   },
   openSource: {
-    preTitle: t('openSource.preTitle'),
-    title: t('openSource.title'),
-    description: t('openSource.description'),
+    preTitle: 'Open source',
+    title: 'Nothing <strong>good</strong> is built alone',
+    description: 'Join our welcoming and fast growing community.',
     cta: {
-      title: t('openSource.cta.title'),
-      url: t('openSource.cta.url'),
+      title: 'Browse on GitHub',
+      url: 'https://github.com/meilisearch/meilisearch',
       target: '_blank',
     },
     lottie: openSource,
     keypoints: [
       {
         number: '10M',
-        title: t('openSource.keypoints.0.title'),
+        title: 'Downloads',
       },
       {
         number: '300',
-        title: t('openSource.keypoints.1.title'),
+        title: 'Contributors',
       },
       {
         number: '3000',
-        title: t('openSource.keypoints.2.title'),
+        title: 'Servers in production',
       },
       {
         number: '23K',
-        title: t('openSource.keypoints.3.title'),
+        title: 'Developer community',
       },
     ],
   },
   steps: [
     {
-      preTitle: t('steps.0.preTitle'),
-      title: t('steps.0.title'),
-      description: t('steps.0.description'),
+      preTitle: 'Step 1',
+      title: 'Connect',
+      description:
+        'Start searching through your dataset in less than 5 minutes and quickly connect your codebase to Meilisearch with our official libraries.',
       cta: {
-        title: t('steps.0.cta.title'),
-        url: t('steps.0.cta.url'),
+        title: 'See all integrations',
+        url: 'https://github.com/meilisearch/integration-guides',
         target: '_blank',
       },
       image: '/images/step1.svg',
       mobileImage: '/images/step1-mobile.svg',
     },
     {
-      preTitle: t('steps.1.preTitle'),
-      title: t('steps.1.title'),
-      description: t('steps.1.description'),
+      preTitle: 'Step 2',
+      title: 'Customize',
+      description:
+        'Meilisearch is designed to work out-of-the-box, no configuration needed. But we know every project is different, so we made it easy to customize your instance in just a few minutes.',
       cards: [
         {
           icon: Filter,
-          title: t('steps.1.cards.0.title'),
-          description: t('steps.1.cards.0.description'),
+          title: 'Filters',
+          description:
+            "Enhance your user's search experience with custom filters and build a faceted search interface in a few lines of code.",
         },
         {
           icon: Earth,
-          title: t('steps.1.cards.1.title'),
-          description: t('steps.1.cards.1.description'),
+          title: 'Geo search',
+          description:
+            "Search in the real world. No need for a PhD, we've got you covered.",
         },
         {
           icon: Chat,
-          title: t('steps.1.cards.2.title'),
-          description: t('steps.1.cards.2.description'),
+          title: 'Language detection',
+          description:
+            'Meilisearch supports all languages and detects them automatically. ',
         },
         {
           icon: SortBy,
-          title: t('steps.1.cards.3.title'),
-          description: t('steps.1.cards.3.description'),
+          title: 'Sort by',
+          description:
+            'Sort results based on price, date, or pretty much anything else your users need.',
         },
         {
           icon: Wrench,
-          title: t('steps.1.cards.4.title'),
-          description: t('steps.1.cards.4.description'),
+          title: 'Custom relevancy',
+          description:
+            "Let's break the rules. Use our default ranking rules or create your own.",
         },
         {
           icon: Key,
-          title: t('steps.1.cards.5.title'),
-          description: t('steps.1.cards.5.description'),
+          title: 'API keys',
+          description:
+            'Secure your data with API keys that allow fine-grained permissions management.',
         },
       ],
       cta: {
-        title: t('steps.1.cta.title'),
-        url: t('steps.1.cta.url'),
-        target: '',
+        title: 'See all features',
+        url: 'https://docs.meilisearch.com/learn/what_is_meilisearch/features.html',
+        target: '_blank',
       },
       image: '/images/step2.svg',
     },
     {
-      preTitle: t('steps.2.preTitle'),
-      title: t('steps.2.title'),
+      preTitle: 'Step 3',
+      title: 'Deploy',
       firstSection: {
-        title: t('steps.2.firstSection.title'),
-        description: t('steps.2.firstSection.description'),
+        title: 'Open Source',
+        description:
+          "Did we tell you that everything we do is completely public? Start using Meilisearch now by downloading our open source version.<br /><br />You can also deploy Meilisearch on any cloud provider such as AWS, GCP or DigitalOcean with our integrations. Use Meilisearch however you want: it's all up to you.",
         image: '/images/step3.svg',
         mobileImage: '/images/step3-mobile.svg',
         cta: {
-          title: t('steps.2.firstSection.cta.title'),
-          url: t('steps.2.firstSection.cta.url'),
+          title: 'Get Started',
+          url: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
           target: '',
         },
       },
       secondSection: {
-        title: t('steps.2.secondSection.title'),
-        description: t('steps.2.secondSection.description'),
+        title: 'Cloud',
+        description:
+          'Need to go fast? Meilisearch Cloud takes care of everything so you just have to focus on the most important thing: making sure your users have a great search experience.<br/><br/>Enter the waiting list for our Cloud beta by completing the form linked below.',
         image: '/images/step3-2.svg',
         mobileImage: '/images/step3-2-mobile.svg',
         cta: {
-          title: t('steps.2.secondSection.cta.title'),
-          url: t('steps.2.secondSection.cta.url'),
-          target: '',
+          title: 'Apply for the beta',
+          url: 'https://meilisearch.typeform.com/to/FtnzvZfh',
+          target: '_blank',
         },
       },
     },
   ],
   developer: {
     preTitle: Code,
-    title: t('developer.title'),
+    title: 'The best developer<br/>experience',
     seeAllIntegrations: {
-      title: t('developer.seeAllIntegrations'),
+      title: 'See all integrations',
       href: 'https://github.com/meilisearch/integration-guides',
       target: '_blank',
     },
     buildWith: {
-      title: language => t('developer.buildWith', { language }),
+      title: language => `Build with ${language}`,
       href: pkgName => `https://github.com/meilisearch/${pkgName}`,
       target: '_blank',
     },
     image: '/images/developer.svg',
-    description: t('developer.description'),
-    documentation: t('developer.documentation'),
-    documentationText: t('developer.documentationText'),
+    description:
+      "At MeiliSearch, we take the developer experience to heart. That's why we work hard to make our API self-explanatory and develop our SDKs to let you concentrate on what matters the most.",
+    documentation: 'Documentation',
+    documentationText:
+      "Every developer knows there's nothing worse than outdated, disorganized, or incomplete documentation. Our team of technical writers works hard to ensure that our documentation isn't just accurate; it's exceptional.",
     documentationCta: {
-      title: t('developer.documentationCta'),
+      title: 'Documentation',
       href: 'https://docs.meilisearch.com/',
       target: '_blank',
     },
-    developerHub: t('developer.developerHub'),
-    developerHubText: t('developer.developerHubText'),
+    developerHub: 'Developer Hub',
+    developerHubText:
+      'Everything you need to help you with meilisearch is here.',
     developerHubList: [
-      t('developer.developerHubList.0'),
-      t('developer.developerHubList.1'),
-      t('developer.developerHubList.2'),
-      t('developer.developerHubList.3'),
-      t('developer.developerHubList.4'),
+      'Release notes',
+      'Demos',
+      'Integrations',
+      'Playground',
+      'Contributor program',
     ],
-    comingSoon: t('developer.comingSoon'),
+    comingSoon: 'Coming Soon',
     sdkList: [
       {
         name: 'javascript', // Name displayed
@@ -351,40 +376,42 @@ const getHomepageData = (t = () => {}) => ({
     ],
   },
   cards: {
-    preTitle: t('cards.preTitle'),
-    title: t('cards.title'),
-    description: t('cards.description'),
+    preTitle: 'Become a contributor',
+    title: 'Join the community',
+    description:
+      'Join our community and help us make fast and relevant search accessible to everyone. Whether you are a contributor, a user, or you just need answers to questions about Meilisearch, we are here for you.',
     cards: [
       {
         color: get('colors.dodgerBlue'),
         icon: Github,
-        title: t('cards.cards.0.title'),
-        description: t('cards.cards.0.description'),
+        title: 'GitHub',
+        description:
+          'Open issues and PRs, request new features, and vote on the ones that matter the most to you!',
         cta: {
-          title: t('cards.cards.0.cta.title'),
-          href: t('cards.cards.0.cta.url'),
+          title: 'Start contributing',
+          href: 'https://github.com/meilisearch/meilisearch',
           target: '_blank',
         },
       },
       {
         color: get('colors.lila'),
         icon: Slack,
-        title: t('cards.cards.1.title'),
-        description: t('cards.cards.1.description'),
+        title: 'Slack',
+        description: 'Join us on our team chat and ask questions!',
         cta: {
-          title: t('cards.cards.1.cta.title'),
-          href: t('cards.cards.1.cta.url'),
+          title: 'Join the discussion',
+          href: 'https://slack.meilisearch.com/',
           target: '_blank',
         },
       },
       {
         color: get('colors.hotPink'),
         icon: Roadmap,
-        title: t('cards.cards.2.title'),
-        description: t('cards.cards.2.description'),
+        title: 'Roadmap',
+        description: 'Check what we will be working on in the next few weeks!',
         cta: {
-          title: t('cards.cards.2.cta.title'),
-          href: t('cards.cards.2.cta.url'),
+          title: 'Open the roadmap',
+          href: 'https://roadmap.meilisearch.com/',
           target: '_blank',
         },
       },
@@ -457,10 +484,11 @@ const getHomepageData = (t = () => {}) => ({
         },
       },
     ],
-    description: t('testimonials.description'),
+    description:
+      'Already 25k users have been convinced by Meilisearch. How about giving it a try?',
     cta: {
-      title: t('testimonials.cta.title'),
-      href: t('testimonials.cta.url'),
+      title: 'Get started',
+      href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
       target: '_blank',
     },
   },
