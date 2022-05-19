@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-import glob from 'glob'
 import Typography from 'components/Typography'
 import get from 'utils/get'
 import PreTitle from 'components/PreTitle'
@@ -65,8 +64,8 @@ const MiddleColumn = styled(ResourceCenter.MiddleColumn)`
   padding: 0 16px;
 `
 
-const LegalPage = ({ markdownBody, legalPages }) => {
-  const { content } = getLegalData()
+const LegalPage = ({ markdownBody }) => {
+  const { text, menu } = getLegalData()
   const router = useRouter()
   return (
     <Container>
@@ -77,22 +76,22 @@ const LegalPage = ({ markdownBody, legalPages }) => {
               variant="body.s.bold"
               style={{ color: get('colors.white') }}
             >
-              {content.legal}
+              {text.legal}
             </LeftColumnTitle>
-            {legalPages.map(legalPage => (
-              <Link href={`/${legalPage}`} key={legalPage}>
+            {menu.map(legalPage => (
+              <Link href={legalPage.href} key={legalPage.title}>
                 <PagesName
                   style={{ display: 'block' }}
-                  className={router.asPath === `/${legalPage}` ? 'active' : ''}
+                  className={router.asPath === legalPage.href ? 'active' : ''}
                 >
-                  {legalPage.replace(new RegExp('-', 'g'), ' ')}
+                  {legalPage.title}
                 </PagesName>
               </Link>
             ))}
           </LeftColumn>
         </ResourceCenter.LeftColumn>
         <MiddleColumn>
-          <PreTitle preTitle={content.legal} color={get('colors.hotPink')} />
+          <PreTitle preTitle={text.legal} color={get('colors.hotPink')} />
           <Markdown>
             <ReactMarkdown
               components={{
@@ -116,37 +115,25 @@ const LegalPage = ({ markdownBody, legalPages }) => {
   )
 }
 
-const getLegalPages = () => {
-  const markdownPages = glob.sync('src/pages/**/*.mdx')
-
-  const slugs = markdownPages.map(file => {
-    const parts = file.split('/')
-    return parts[parts.length - 1].replace('.mdx', '')
-  })
-
-  return slugs
-}
-
 export async function getStaticProps({ params }) {
   const { legal } = params
   const content = await import(`./${legal}.mdx`)
   const data = matter(content.default)
 
-  const legalPages = getLegalPages()
-
   return {
     props: {
-      legalPages,
       markdownBody: data.content,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const slugs = getLegalPages()
+  // Get the list of the legal pages
+  const { menu } = getLegalData()
 
-  const paths = slugs.map(slug => ({
-    params: { legal: slug },
+  // Get the urls in the form "privacy-policy"
+  const paths = menu.map(page => ({
+    params: { legal: page.href.replace('/', '') },
   }))
 
   return {
