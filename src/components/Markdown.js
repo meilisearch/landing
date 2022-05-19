@@ -30,6 +30,9 @@ const StyledMarkdown = styled.div`
       font-size: ;
     }
   }
+  li {
+    margin: 8px 0;
+  }
 `
 
 const Markdown = ({ children }) => {
