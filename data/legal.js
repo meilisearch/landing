@@ -1,6 +1,6 @@
-const getLegalData = (t = () => {}) => ({
+const getLegalData = () => ({
   text: {
-    legal: t('legal.legal'),
+    legal: 'Legal',
   },
   menu: [
     {
