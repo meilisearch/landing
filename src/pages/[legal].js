@@ -6,7 +6,7 @@ import get from 'utils/get'
 import PreTitle from 'components/PreTitle'
 import Link from 'components/Link'
 import { useRouter } from 'next/router'
-import ResourceCenter from 'layouts/ResourceCenter'
+import LegalLayout from 'layouts/LegalLayout'
 import getLegalData from '../../data/legal'
 
 const Container = styled.div`
@@ -60,7 +60,7 @@ const LeftColumnTitle = styled(Typography)`
   margin-bottom: 16px;
 `
 
-const MiddleColumn = styled(ResourceCenter.MiddleColumn)`
+const MiddleColumn = styled(LegalLayout.MiddleColumn)`
   padding: 0 16px;
 `
 
@@ -69,8 +69,8 @@ const LegalPage = ({ markdownBody }) => {
   const router = useRouter()
   return (
     <Container>
-      <ResourceCenter>
-        <ResourceCenter.LeftColumn>
+      <LegalLayout>
+        <LegalLayout.LeftColumn>
           <LeftColumn>
             <LeftColumnTitle
               variant="body.s.bold"
@@ -89,7 +89,7 @@ const LegalPage = ({ markdownBody }) => {
               </Link>
             ))}
           </LeftColumn>
-        </ResourceCenter.LeftColumn>
+        </LegalLayout.LeftColumn>
         <MiddleColumn>
           <PreTitle preTitle={text.legal} color={get('colors.hotPink')} />
           <Markdown>
@@ -110,7 +110,7 @@ const LegalPage = ({ markdownBody }) => {
             </ReactMarkdown>
           </Markdown>
         </MiddleColumn>
-      </ResourceCenter>
+      </LegalLayout>
     </Container>
   )
 }
