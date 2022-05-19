@@ -13,7 +13,6 @@ const Wrapper = styled.header`
   position: sticky;
   top: 0;
   z-index: 50;
-  padding: 0 16px;
 
   @media (min-width: ${get('breakpoints.lg')}) {
     height: 88px;

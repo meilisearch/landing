@@ -16,6 +16,7 @@ const Grid = styled.nav`
     padding: 0;
     margin: 0 auto;
     max-width: 1328px;
+    padding: 0 24px;
   }
 `
 
