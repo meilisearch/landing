@@ -98,6 +98,10 @@ const getFooterData = () => ({
           title: 'Privacy Policy',
           href: '/privacy-policy',
         },
+        {
+          title: 'Terms of use',
+          href: '/terms-of-use',
+        },
       ],
     },
   ],
