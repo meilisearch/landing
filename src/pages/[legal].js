@@ -10,55 +10,104 @@ import get from 'utils/get'
 import Typography from 'components/Typography'
 
 const Container = styled.div`
-  padding-top: 48px;
   background-color: ${get('colors.valhalla.800')};
+  padding: 0 0 86px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    padding: 48px 0 64px;
+    padding-top: 54px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    padding: 0 0 160px;
+    padding-top: 96px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding: 0 0 96px;
+    padding-top: 82px;
+  }
 `
 
 const LeftColumn = styled(LegalLayout.LeftColumn)`
   color: ${get('colors.ashes.900')};
+  background-color: ${get('colors.valhalla.800')};
 `
 
-const PagesName = styled(Typography)`
-  margin-top: 6px;
-  padding-left: 20px;
-  border-left: 3px solid transparent;
+const MenuLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  > a + a {
+    margin-left: 24px;
+  }
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    > a + a {
+      margin-left: 0;
+    }
+  }
+`
+
+const MenuLink = styled(Link)`
+  display: inline-block;
+  transition: color 100ms;
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    border-left: 3px solid transparent;
+    padding-left: 20px;
+    margin-top: 6px;
+  }
+
+  &:hover,
+  &:focus {
+    color: ${get('colors.white')};
+  }
 
   &.active {
     color: ${get('colors.hotPink')};
     font-weight: ${get('fontWeight.bold')};
-    border-left: 3px solid ${get('colors.hotPink')};
-  }
-  &:first-letter {
-    text-transform: uppercase;
+    @media (min-width: ${get('breakpoints.md')}) {
+      border-left: 3px solid ${get('colors.hotPink')};
+    }
   }
 `
 
 const LeftColumnTitle = styled(Typography)`
-  color: ${get('colors.white')};
-  margin-bottom: 16px;
-`
-
-const MiddleColumn = styled(LegalLayout.MiddleColumn)`
-  padding: 0 16px;
+  display: none;
+  @media (min-width: ${get('breakpoints.md')}) {
+    display: block;
+    color: ${get('colors.white')};
+    margin-bottom: 16px;
+  }
 `
 
 const Menu = ({ menu }) => {
   const router = useRouter()
   return (
-    <>
+    <MenuLinks>
       {menu.map(legalPage => (
-        <Link href={legalPage.href} key={legalPage.title}>
-          <PagesName
-            style={{ display: 'block' }}
-            className={router.asPath === legalPage.href ? 'active' : ''}
-          >
+        <MenuLink
+          href={legalPage.href}
+          key={legalPage.title}
+          className={router.asPath === legalPage.href ? 'active' : ''}
+        >
+          <Typography style={{ display: 'block' }}>
             {legalPage.title}
-          </PagesName>
-        </Link>
+          </Typography>
+        </MenuLink>
       ))}
-    </>
+    </MenuLinks>
   )
 }
+
+const MiddleColumn = styled(LegalLayout.MiddleColumn)`
+  margin-top: 26px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 0;
+  }
+`
 
 const LegalPage = ({ markdownBody }) => {
   const { text, menu } = getLegalData()
