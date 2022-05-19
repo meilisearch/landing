@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import glob from 'glob'
 import Typography from 'components/Typography'
 import get from 'utils/get'
@@ -10,6 +8,7 @@ import PreTitle from 'components/PreTitle'
 import Link from 'components/Link'
 import { useRouter } from 'next/router'
 import ResourceCenter from 'layouts/ResourceCenter'
+import getLegalData from '../../data/legal'
 
 const Container = styled.div`
   padding-top: 48px;
@@ -67,8 +66,7 @@ const MiddleColumn = styled(ResourceCenter.MiddleColumn)`
 `
 
 const LegalPage = ({ markdownBody, legalPages }) => {
-  const { t } = useTranslation('legal')
-
+  const { content } = getLegalData()
   const router = useRouter()
   return (
     <Container>
@@ -79,7 +77,7 @@ const LegalPage = ({ markdownBody, legalPages }) => {
               variant="body.s.bold"
               style={{ color: get('colors.white') }}
             >
-              {t('legal')}
+              {content.legal}
             </LeftColumnTitle>
             {legalPages.map(legalPage => (
               <Link href={`/${legalPage}`} key={legalPage}>
@@ -94,7 +92,7 @@ const LegalPage = ({ markdownBody, legalPages }) => {
           </LeftColumn>
         </ResourceCenter.LeftColumn>
         <MiddleColumn>
-          <PreTitle preTitle={t('legal')} color={get('colors.hotPink')} />
+          <PreTitle preTitle={content.legal} color={get('colors.hotPink')} />
           <Markdown>
             <ReactMarkdown
               components={{
@@ -129,7 +127,7 @@ const getLegalPages = () => {
   return slugs
 }
 
-export async function getStaticProps({ locale, params }) {
+export async function getStaticProps({ params }) {
   const { legal } = params
   const content = await import(`./${legal}.mdx`)
   const data = matter(content.default)
@@ -139,7 +137,6 @@ export async function getStaticProps({ locale, params }) {
   return {
     props: {
       legalPages,
-      ...(await serverSideTranslations(locale, ['header', 'footer', 'legal'])),
       markdownBody: data.content,
     },
   }
