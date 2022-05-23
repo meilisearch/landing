@@ -15,8 +15,8 @@ const LeftColumn = styled.div`
   position: sticky;
   top: 98px;
   height: 50px;
-  margin: 0 -200px;
-  padding: 0 216px;
+  margin: 0;
+  padding: 0 16px;
   border-color: ${hexToRgb(get('colors.ashes.900'), 0.2)};
   border-style: solid;
   border-width: 1px 0px 1px 0px;
