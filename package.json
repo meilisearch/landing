@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js .",
     "lint:fix": "eslint --ext .js . --fix",
     "icons": "npx @svgr/cli --title-prop --no-dimensions --replace-attr-values \"#000=currentColor\" -d src/components/icons src/components/icons/svg && eslint ./src/components/icons --fix",
-    "cy:run": "percy exec -- cypress run",
+    "cy:run": "percy exec -- cypress run --record",
     "cy:open": "percy exec -- cypress open",
     "test": "npx concurrently --kill-others -s first \"yarn dev\" \"yarn cy:run\"",
     "test:watch": "npx concurrently --kill-others -s first \"yarn dev\" \"yarn cy:open\"",
