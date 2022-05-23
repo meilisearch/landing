@@ -2,6 +2,7 @@
   "baseUrl": "http://localhost:3000",
   "viewportWidth": 1440,
   "viewportHeight": 900,
+  "projectId": "4ja87b",
   "env": {
     "NEXT_PUBLIC_DEMO_MOVIES_HOST": "http://0.0.0.0:7700",
     "NEXT_PUBLIC_DEMO_MOVIES_API_KEY": "masterKey"
