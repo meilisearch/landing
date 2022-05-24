@@ -13,16 +13,13 @@ const Container = styled.div`
   background-color: ${get('colors.valhalla.800')};
   padding: 0 0 86px;
   @media (min-width: ${get('breakpoints.md')}) {
-    padding: 48px 0 64px;
-    padding-top: 54px;
+    padding: 54px 0 64px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    padding: 0 0 160px;
-    padding-top: 96px;
+    padding: 96 0 160px;
   }
   @media (min-width: ${get('breakpoints.xl')}) {
-    padding: 0 0 96px;
-    padding-top: 82px;
+    padding: 82 0 96px;
   }
 `
 

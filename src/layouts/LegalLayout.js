@@ -20,6 +20,8 @@ const GridWrapper = styled.div`
   border-color: ${hexToRgb(get('colors.ashes.900'), 0.2)};
   border-style: solid;
   border-width: 1px 0px 1px 0px;
+  display: flex;
+  z-index: 1;
 
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: 1 / 4;
@@ -27,19 +29,23 @@ const GridWrapper = styled.div`
     margin: 0;
     padding: 0;
     border: none;
+    display: block;
   }
 `
 
 const StickyWrapper = styled.div`
   @media (min-width: ${get('breakpoints.md')}) {
     position: sticky;
-    top: 132px;
+    top: calc(98px + 54px);
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    top: calc(88px + 54px);
   }
 `
 
-const LeftColumn = props => (
-  <GridWrapper>
-    <StickyWrapper {...props} />
+const LeftColumn = ({ children, ...props }) => (
+  <GridWrapper {...props}>
+    <StickyWrapper>{children}</StickyWrapper>
   </GridWrapper>
 )
 
