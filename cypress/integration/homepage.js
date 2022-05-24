@@ -3,7 +3,6 @@ let scrollToBottom = require('scroll-to-bottomjs')
 
 describe(`Homepage`, () => {
   before(() => {
-    cy.log(Cypress.env())
     // Creates the movies index with documents in it
     cy.fixture('movies.json').then(movies => {
       cy.addDocuments('movies', movies)
@@ -49,7 +48,7 @@ describe(`Homepage`, () => {
   it('Should take a snapshot', () => {
     cy.visit('/')
     cy.wait(WAITING_TIME)
-    cy.log(Cypress.env())
+    cy.log(JSON.stringify(Cypress.env()))
     // Scroll the entire page to load lazy images
     cy.window().then(cyWindow =>
       scrollToBottom({ remoteWindow: cyWindow, frequency: 80, timing: 10 })
