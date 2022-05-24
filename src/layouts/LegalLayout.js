@@ -10,7 +10,7 @@ const ResourceCenter = styled(Grid)`
   }
 `
 
-const LeftColumn = styled.div`
+const GridWrapper = styled.div`
   grid-column: 1 / -1;
   position: sticky;
   top: 98px;
@@ -23,13 +23,25 @@ const LeftColumn = styled.div`
 
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: 1 / 4;
-    position: initial;
     height: auto;
     margin: 0;
     padding: 0;
     border: none;
   }
 `
+
+const StickyWrapper = styled.div`
+  @media (min-width: ${get('breakpoints.md')}) {
+    position: sticky;
+    top: 132px;
+  }
+`
+
+const LeftColumn = props => (
+  <GridWrapper>
+    <StickyWrapper {...props} />
+  </GridWrapper>
+)
 
 const MiddleColumn = styled.div`
   grid-column: 1 / -1;
