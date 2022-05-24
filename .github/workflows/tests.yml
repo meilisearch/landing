@@ -59,7 +59,7 @@ jobs:
           group: merge
           tag: ${{ github.event_name }}
         env:
-          NEXT_PUBLIC_DEMO_MOVIES_HOST: 'http://meilisearch:7700'
+          NEXT_PUBLIC_DEMO_MOVIES_HOST: 'http://0.0.0.0:7700'
           NEXT_PUBLIC_DEMO_MOVIES_API_KEY: 'masterKey'
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -23,7 +23,6 @@ describe(`Homepage`, () => {
     })
     it('Has a demo block', () => {
       cy.get('.demo').should('be.visible')
-      cy.log(Cypress.env())
     })
     it('Has an openSource block', () => {
       cy.get('.openSource').should('be.visible')
@@ -50,6 +49,7 @@ describe(`Homepage`, () => {
   it('Should take a snapshot', () => {
     cy.visit('/')
     cy.wait(WAITING_TIME)
+    cy.log(Cypress.env())
     // Scroll the entire page to load lazy images
     cy.window().then(cyWindow =>
       scrollToBottom({ remoteWindow: cyWindow, frequency: 80, timing: 10 })
