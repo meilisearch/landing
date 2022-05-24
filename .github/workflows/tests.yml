@@ -22,17 +22,9 @@ jobs:
         run: yarn --dev
       - name: Run style check
         run: yarn lint
-  cypress-run:
+  cypress-tests:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
-    services:
-      meilisearch:
-        image: getmeili/meilisearch:v0.24.0
-        env:
-          MEILI_MASTER_KEY: 'masterKey'
-          MEILI_NO_ANALYTICS: 'true'
-        ports:
-          - '7700:7700'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -58,9 +50,10 @@ jobs:
           record: true
           group: merge
           tag: ${{ github.event_name }}
+          command-prefix: 'percy exec -- npx'
         env:
-          NEXT_PUBLIC_DEMO_MOVIES_HOST: http://meilisearch:7700
-          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: masterKey
+          NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
+          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}

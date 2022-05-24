@@ -136,7 +136,7 @@ const InteractiveSearch = ({
     threshold: 0.5,
   })
   return (
-    <Container ref={ref} {...props}>
+    <Container ref={ref} className="hide-in-percy" {...props}>
       <Animation>
         <Lottie
           animation={lottie}
