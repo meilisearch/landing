@@ -12,8 +12,8 @@
     "lint": "eslint --ext .js .",
     "lint:fix": "eslint --ext .js . --fix",
     "icons": "npx @svgr/cli --title-prop --no-dimensions --replace-attr-values \"#000=currentColor\" -d src/components/icons src/components/icons/svg && eslint ./src/components/icons --fix",
-    "cy:run": "cypress run",
     "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "test": "npx concurrently --kill-others -s first \"yarn dev\" \"yarn cy:run\"",
     "test:watch": "npx concurrently --kill-others -s first \"yarn dev\" \"yarn cy:open\"",
     "storybook": "start-storybook -p 6006",
@@ -57,7 +57,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
-    "meilisearch": "^0.23.0",
     "prettier": "^2.5.1",
     "storybook-addon-next-router": "^4.0.0",
     "scroll-to-bottomjs": "^1.1.0"
