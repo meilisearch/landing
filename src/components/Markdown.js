@@ -14,20 +14,31 @@ const StyledMarkdown = styled.div`
     display: block;
   }
   h2 {
-    color: ${get('colors.ashes.600')};
+    color: ${get('colors.ashes')};
     display: block;
-    margin: 32px 0 24px;
+    margin: 112px 0 24px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 80px;
+      border-bottom: 1px solid ${get('colors.ashes.900')};
+      opacity: 0.2;
+    }
   }
   h3 {
-    color: ${get('colors.hotPink')};
+    color: ${get('colors.ashes')};
     display: block;
-    margin: 24px 0 16px;
+    margin: 48px 0 24px;
   }
   a {
-    color: ${get('colors.white')};
+    color: ${get('colors.ashes')};
     border-bottom: 1px solid ${get('colors.hotPink')};
-    @media (min-width: ${get('breakpoints.md')}) {
-      font-size: ;
+    font-weight: ${get('fontWeight.semibold')};
+    &:hover {
+      border-bottom: 2px solid ${get('colors.hotPink')};
     }
   }
   li {
