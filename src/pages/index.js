@@ -3,11 +3,9 @@ import styled from 'styled-components'
 import getCodeSamples from 'utils/getCodeSamples'
 import {
   Cards,
-  Header,
   Hero as BaseHero,
   Demo as BaseDemo,
   Developer,
-  Footer,
   OpenSource as BaseOpenSource,
   Step1 as BaseStep1,
   Step2 as BaseStep2,
@@ -111,7 +109,6 @@ const Home = ({ code_samples }) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Head>
-      <Header />
       <PageContent>
         <Hero heroProps={hero} />
         <Demo demoProps={demo} color={get('colors.lila')} />
@@ -138,7 +135,6 @@ const Home = ({ code_samples }) => {
         <Cards cardsProps={cards} />
         <Testimonials testimonialsProps={testimonials} />
       </PageContent>
-      <Footer />
     </>
   )
 }

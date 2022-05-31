@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from 'theme/GlobalStyle'
 import Script from 'next/script'
 import theme from 'theme'
+import BaseLayout from 'layouts/BaseLayout'
 
 // Template for every page
 export function App({ Component, pageProps }) {
@@ -33,7 +34,9 @@ export function App({ Component, pageProps }) {
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       />
-      <Component {...pageProps} />
+      <BaseLayout>
+        <Component {...pageProps} />
+      </BaseLayout>
     </ThemeProvider>
   )
 }

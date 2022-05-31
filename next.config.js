@@ -5,6 +5,10 @@ module.exports = {
   webpack: config => {
     // Unset client-side javascript that only works server-side
     config.resolve.fallback = { fs: false, module: false }
+    config.module.rules.push({
+      test: /\.mdx$/,
+      use: 'raw-loader',
+    })
     return config
   },
   images: {
@@ -14,8 +18,7 @@ module.exports = {
     return [
       {
         source: '/privacy',
-        destination:
-          'https://meilisearch.notion.site/Privacy-Policy-47f207efc5244de0820ffd19f0d844d8',
+        destination: '/privacy-policy',
         permanent: true,
       },
     ]

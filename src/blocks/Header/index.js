@@ -4,16 +4,15 @@ import get from 'utils/get'
 import getHeaderData from '../../../data/header'
 import DesktopHeader from './DesktopHeader'
 import MobileHeader from './MobileHeader'
+import { useRouter } from 'next/router'
 
 const Wrapper = styled.header`
   height: 98px;
-  background-color: ${get('colors.valhalla')};
   display: flex;
   justify-content: center;
   position: sticky;
   top: 0;
   z-index: 50;
-  padding: 0 16px;
 
   @media (min-width: ${get('breakpoints.lg')}) {
     height: 88px;
@@ -22,9 +21,20 @@ const Wrapper = styled.header`
 
 const Header = props => {
   const headerProps = getHeaderData()
+  const router = useRouter()
+
+  const darkBgPages = ['/pricing', '/privacy-policy', '/terms-of-use']
+  const hasDarkBgColor = darkBgPages.includes(router.asPath)
 
   return (
-    <Wrapper {...props}>
+    <Wrapper
+      style={{
+        backgroundColor: hasDarkBgColor
+          ? get('colors.valhalla.800')
+          : get('colors.valhalla'),
+      }}
+      {...props}
+    >
       <DesktopHeader headerProps={headerProps} />
       <MobileHeader headerProps={headerProps} />
     </Wrapper>
