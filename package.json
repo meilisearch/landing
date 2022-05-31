@@ -19,7 +19,7 @@
   "dependencies": {
     "@meilisearch/instant-meilisearch": "^0.5.10",
     "@octokit/rest": "^18.12.0",
-    "@segment/analytics-next": "^1.36.0",
+    "@segment/analytics-next": "^1.38.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "lodash.debounce": "^4.0.8",
