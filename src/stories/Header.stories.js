@@ -10,7 +10,7 @@ export default {
 }
 
 const Template = args => {
-  return <Header {...args} stargazers_count="20.4K" />
+  return <Header {...args} />
 }
 
 export const Default = Template.bind({})
