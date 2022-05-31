@@ -29,7 +29,7 @@
 
 Our landing is available at this address: [https://www.meilisearch.com](https://www.meilisearch.com).
 
-If you find any bug on it, this is the right place to [open an issue](https://github.com/meilisearch/landing/issues/new) (make sure you have read our [contributing guidelines](./CONTRIBUTING.md) first). Thanks! 🙏
+If you find any bug on it, this is the right place to [open an issue](https://github.com/meilisearch/landing/issues/new).
 
 ## 🔎 Meilisearch
 
