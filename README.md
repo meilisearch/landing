@@ -22,7 +22,12 @@
   <img src="assets/landing.png" alt="Meilisearch's landing page" />
 </p>
 
-<hr />
+<br/>
+<hr/>
+
+If you are looking for the Meilisearch code, please see the [Meilisearch repository](https://github.com/meilisearch/meilisearch). This Repo is only for our [landing page](https://www.meilisearch.com/).
+
+<hr/>
 <br/>
 
 👋 Hi! Welcome on Meilisearch's landing repository.
@@ -30,6 +35,12 @@
 Our landing is available at this address: [https://www.meilisearch.com](https://www.meilisearch.com).
 
 If you find any bug on it, this is the right place to [open an issue](https://github.com/meilisearch/landing/issues/new).
+
+## 🔧 Stack
+
+This project was build with [Next.js](https://nextjs.org/) and [React JS](https://fr.reactjs.org/).
+
+The deployements are made on [Vercel](https://vercel.com/), and the website [https://www.meilisearch.com](https://www.meilisearch.com) is deployed based on the main branch of this repository.
 
 ## 🔎 Meilisearch
 
