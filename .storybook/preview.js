@@ -1,8 +1,9 @@
-import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import { createGlobalStyle } from 'styled-components'
-import theme from '../src/theme'
-import * as nextImage from 'next/image'
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import theme from '../src/theme';
+import * as nextImage from 'next/image';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -18,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   img {
     position: relative;
   }
-`
+`;
 
 export const decorators = [
   (Story) => (
@@ -27,7 +28,7 @@ export const decorators = [
       <Story />
     </ThemeProvider>
   ),
-]
+];
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -45,7 +46,14 @@ export const parameters = {
       },
     ],
   },
-}
+  nextRouter: {
+    Provider: RouterContext.Provider,
+    path: '/',
+    asPath: '/',
+    query: {},
+    push() {},
+  },
+};
 
 // Workaround for Next/Image not working in Storybook
 Object.defineProperty(nextImage, 'default', {
