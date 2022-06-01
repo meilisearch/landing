@@ -30,7 +30,7 @@ If you are looking for the Meilisearch code, please see the [Meilisearch reposit
 <hr/>
 <br/>
 
-👋 Hi! Welcome on Meilisearch's landing repository.
+👋 Hi! Welcome to Meilisearch's landing repository.
 
 Our landing is available at this address: [https://www.meilisearch.com](https://www.meilisearch.com).
 
