@@ -6,10 +6,8 @@ describe(`Pricing`, () => {
     cy.visit('/pricing')
     cy.wait(WAITING_TIME)
     // Scroll the entire page to load lazy images
-    cy.window().then(cyWindow =>
-      scrollToBottom({ remoteWindow: cyWindow, frequency: 80, timing: 10 })
-    )
+    cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
     cy.wait(WAITING_TIME)
-    cy.percySnapshot('pricing-responsive')
+    cy.percySnapshot('pricing-responsive', { widths: [375, 1024, 1440] })
   })
 })
