@@ -33,10 +33,10 @@ const LogoSection = styled.div`
   }
 `
 
-const Footer = () => {
+const Footer = props => {
   const footerProps = getFooterData()
   return (
-    <Wrapper>
+    <Wrapper className="footer" {...props}>
       <Grid>
         <LogoSection>
           <Image

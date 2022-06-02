@@ -1,8 +1,8 @@
-const WAITING_TIME = 5000
+const WAITING_TIME = 1000
 let scrollToBottom = require('scroll-to-bottomjs')
 
 describe(`Homepage`, () => {
-  it('Should take a snapshot of the homepage', () => {
+  it('Should take a snapshot of the home page', () => {
     cy.visit('/')
     cy.wait(WAITING_TIME)
     // Scroll the entire page to load lazy images
@@ -12,6 +12,6 @@ describe(`Homepage`, () => {
     cy.wait(WAITING_TIME)
     cy.get("img[alt='Developer']").should('be.visible')
     cy.get('.meilisearch-logo-footer').should('be.visible')
-    cy.percySnapshot('home-hero-responsive')
+    cy.percySnapshot('home-responsive')
   })
 })
