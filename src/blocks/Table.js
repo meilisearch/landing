@@ -102,9 +102,9 @@ const Decorator2 = styled.div`
   }
 `
 
-const Table = ({ table }) => {
+const Table = ({ table, ...props }) => {
   return (
-    <TableSection>
+    <TableSection {...props}>
       <Grid style={{ position: 'relative' }}>
         <Content>
           <Title variant="title.m" forwardedAs="h2">
