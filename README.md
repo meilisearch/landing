@@ -23,12 +23,6 @@
 </p>
 
 <br/>
-<hr/>
-
-If you are looking for the Meilisearch code, please see the [Meilisearch repository](https://github.com/meilisearch/meilisearch). This Repo is only for our [landing page](https://www.meilisearch.com/).
-
-<hr/>
-<br/>
 
 👋 Hi! Welcome to Meilisearch's landing repository.
 
@@ -44,24 +38,16 @@ The deployements are made on [Vercel](https://vercel.com/), and the website [htt
 
 ## 🔎 Meilisearch
 
-Our main repository is [Meilisearch](https://github.com/meilisearch/meilisearch).
+The Meilisearch code base is available in [this repository](https://github.com/meilisearch/meilisearch).
 
 You can learn more about Meilisearch and its features in our [documentation](https://docs.meilisearch.com).
 
-## 📚 Documentation
-
-Our [documentation website](https://docs.meilisearch.com) is hosted in a [public GitHub repository](https://github.com/meilisearch/documentation).
-
 ## 🤝 Contributing
 
-Hey! We're glad you're thinking about contributing to Meilisearch! Feel free to pick an [issue labeled as `good first issue`](https://github.com/meilisearch/landing/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), and to ask any question you need. Some points might not be clear and we are available to help you!
+We're glad you're thinking about contributing to Meilisearch's landing page! Feel free to pick an [issue labeled as `good first issue`](https://github.com/meilisearch/landing/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), and to ask any question you need. Some points might not be clear and we are available to help you!
 
 Also, we recommend following the [CONTRIBUTING](./CONTRIBUTING.md) to create your PR.
 
 ## 💌 Contact
 
 You want to get in touch with us? [Discover how](https://docs.meilisearch.com/learn/what_is_meilisearch/contact.html#contact-us).
-
-## We are hiring! 🌍
-
-You can check the open positions on [this page](https://jobs.lever.co/meili).
