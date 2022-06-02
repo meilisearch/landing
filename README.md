@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/meilisearch/integration-guides/main/assets/logos/logo.svg" alt="Meilisearch logo" width="200" height="200" />
+  <img src="./assets/meilisearch-landing.png" alt="Meilisearch landing page" width="700" />
 </p>
 
 <h1 align="center">Landing</h1>
