@@ -1,7 +1,7 @@
 {
   "version": 2,
   "snapshot": {
-    "widths": [375, 1024, 1440],
+    "widths": [1440],
     "percy-css": ".hide-in-percy {\n  visibility: hidden;\n}\n"
   }
 }
