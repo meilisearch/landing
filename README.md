@@ -1,8 +1,7 @@
 <p align="center">
-  <img src="./assets/meilisearch-landing.png" alt="Meilisearch landing page" width="700" />
+  <img src="./assets/meilisearch-landing-light.png?sanitize=true#gh-light-mode-only">
+  <img src="./assets/meilisearch-landing-dark.png?sanitize=true#gh-dark-mode-only">
 </p>
-
-<h1 align="center">Landing</h1>
 
 <h4 align="center">
   <a href="https://github.com/meilisearch/meilisearch">Meilisearch</a> |
@@ -14,7 +13,7 @@
 <br/>
 
 <p align="center">
-  <a href="https://github.com/meilisearch/landing-v2/blob/main/LICENCE"><img src="https://img.shields.io/badge/license-MIT-informational" alt="License"></a>
+  <a href="https://github.com/meilisearch/landing/blob/main/LICENCE"><img src="https://img.shields.io/badge/license-MIT-informational" alt="License"></a>
 </p>
 <br/>
 
@@ -24,9 +23,9 @@
 
 <br/>
 
-👋 Hi! Welcome to Meilisearch's landing repository.
+👋 Hi! Welcome to Meilisearch's landing page repository.
 
-Our landing is available at this address: [https://www.meilisearch.com](https://www.meilisearch.com).
+Our landing page is available at this address: [https://www.meilisearch.com](https://www.meilisearch.com).
 
 If you find any bug on it, this is the right place to [open an issue](https://github.com/meilisearch/landing/issues/new).
 
