@@ -240,7 +240,7 @@ const getHomepageData = () => ({
     },
     image: '/images/developer.svg',
     description:
-      "At MeiliSearch, we take the developer experience to heart. That's why we work hard to make our API self-explanatory and develop our SDKs to let you concentrate on what matters the most.",
+      "At Meilisearch, we take the developer experience to heart. That's why we work hard to make our API self-explanatory and develop our SDKs to let you concentrate on what matters the most.",
     documentation: 'Documentation',
     documentationText:
       "Every developer knows there's nothing worse than outdated, disorganized, or incomplete documentation. Our team of technical writers works hard to ensure that our documentation isn't just accurate; it's exceptional.",
@@ -251,7 +251,7 @@ const getHomepageData = () => ({
     },
     developerHub: 'Developer Hub',
     developerHubText:
-      'Everything you need to help you with meilisearch is here.',
+      'Everything you need to help you with Meilisearch is here.',
     developerHubList: [
       'Release notes',
       'Demos',
