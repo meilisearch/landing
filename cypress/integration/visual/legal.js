@@ -8,7 +8,7 @@ describe(`Legal`, () => {
     // Scroll the entire page to load lazy images
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
     cy.wait(WAITING_TIME)
-    cy.percySnapshot('privacy-policy', { widths: [1440] })
+    cy.percySnapshot('privacy-policy')
   })
   it('Should take a snapshot of the terms of use page', () => {
     cy.visit('/terms-of-use')
@@ -16,6 +16,6 @@ describe(`Legal`, () => {
     // Scroll the entire page to load lazy images
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
     cy.wait(WAITING_TIME)
-    cy.percySnapshot('terms-of-use', { widths: [1440] })
+    cy.percySnapshot('terms-of-use')
   })
 })

@@ -4,6 +4,6 @@ describe(`Legal`, () => {
   it('Should take a snapshot of the 404 page', () => {
     cy.visit('/test', { failOnStatusCode: false })
     cy.wait(WAITING_TIME)
-    cy.percySnapshot('404', { widths: [1440] })
+    cy.percySnapshot('404')
   })
 })
