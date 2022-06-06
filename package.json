@@ -53,6 +53,6 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1",
-    "storybook-addon-next-router": "^3.1.1"
+    "storybook-addon-next-router": "^4.0.0"
   }
 }
