@@ -17,13 +17,13 @@ First of all, thank you for contributing to Meilisearch! The goal of this docume
 
 ## How to Contribute
 
-1. Make sure that the contribution you want to make is explained or detailed in a GitHub issue! Find an [existing issue](https://github.com/meilisearch/landing-v2/issues) or [open a new one](https://github.com/meilisearch/landing-v2/issues/new).
-2. Once done, [fork the landing-v2 repository](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) in your own GitHub account. Ask a maintainer if you want your issue to be checked before making a PR.
+1. Make sure that the contribution you want to make is explained or detailed in a GitHub issue! Find an [existing issue](https://github.com/meilisearch/landing/issues) or [open a new one](https://github.com/meilisearch/landing/issues/new).
+2. Once done, [fork the landing repository](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) in your own GitHub account. Ask a maintainer if you want your issue to be checked before making a PR.
 3. [Create a new Git branch](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository).
 4. Review the [Development Workflow](#workflow) section that describes the steps to maintain the repository.
 5. Make the changes on your branch.
-6. [Submit the branch as a PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) pointing to the `main` branch of the main landing-v2 repository. A maintainer should comment and/or review your Pull Request within a few days. Although depending on the circumstances, it may take longer.<br>
-   We do not enforce a naming convention for the PRs, but **please use something descriptive of your changes**, having in mind that the title of your PR will be automatically added to the next [release changelog](https://github.com/meilisearch/landing-v2/releases).
+6. [Submit the branch as a PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) pointing to the `main` branch of the main landing repository. A maintainer should comment and/or review your Pull Request within a few days. Although depending on the circumstances, it may take longer.<br>
+   We do not enforce a naming convention for the PRs, but **please use something descriptive of your changes**.
 
 ## Development Workflow
 
@@ -39,6 +39,56 @@ or
 npm install
 ```
 
+### Run
+
+```bash
+yarn dev
+```
+
+or
+
+```bash
+npm run dev
+```
+
+### Generate build
+
+You can generate a build of this project with the following command:
+
+```bash
+yarn build
+```
+
+or
+
+```bash
+npm run build
+```
+
+### Run your build
+
+The above commands will generate an optimized version of the app, inside the `.next` folder.
+
+You can then serve it with:
+
+```bash
+yarn start
+```
+
+or
+
+```bash
+npm run start
+```
+
+Or serve it with any web server of your choice.
+
+Example:
+
+```bash
+serve .next
+```
+
 ### Tests and Linter <!-- omit in toc -->
 
 Each PR should pass the linter to be accepted.
@@ -47,7 +97,7 @@ Each PR should pass the linter to be accepted.
 yarn lint
 ```
 
-or :
+or
 
 ```bash
 npm run lint
@@ -55,17 +105,23 @@ npm run lint
 
 ### Storybook <!-- omit in toc -->
 
-This project's components are in Storybook. If you edit one of the components, please make sure that storybook is still up-to-date.
+Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively test components.
+
+This project's components and blocks are in Storybook. If you edit one of the components, please make sure that storybook is still up-to-date.
 
 ```bash
 yarn storybook
 ```
 
-or :
+or
 
 ```bash
 npm run storybook
 ```
+
+### Data folder
+
+The `data` folder contains every text and data that can change over time like the header menu (order, title, links, ...), the footer or even the social links. This type of content is put in the `data` directory instead of directly in the components and / or pages themselves, in order to find and edit them easily. Furthermore, they can this way be reused in Storybook for components and blocks previews.
 
 ## Git Guidelines
 
@@ -93,7 +149,7 @@ Some notes on GitHub PRs:
   The draft PR can be very useful if you want to show that you are working on something and make your work visible.
 - The branch related to the PR must be **up-to-date with `main`** before merging. Fortunately, this project [integrates a bot](https://github.com/meilisearch/integration-guides/blob/main/guides/bors.md) to automatically enforce this requirement without the PR author having to do it manually.
 - All PRs must be reviewed and approved by at least one maintainer.
-- The PR title should be accurate and descriptive of the changes. The title of the PR will be indeed automatically added to the next [release changelogs](https://github.com/meilisearch/interface/releases/).
+- The PR title should be accurate and descriptive of the changes.
 
 <hr>
 

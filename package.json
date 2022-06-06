@@ -1,7 +1,10 @@
 {
-  "name": "landing-v2",
+  "name": "landing",
   "version": "0.1.0",
   "private": true,
+  "description": "Meilisearch's landing page",
+  "author": "mdubus <morgane.dubus@meilisearch.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

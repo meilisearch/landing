@@ -1,8 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/meilisearch/integration-guides/main/assets/logos/logo.svg" alt="Meilisearch logo" width="200" height="200" />
+  <img src="./assets/meilisearch-landing-light.png?sanitize=true#gh-light-mode-only">
+  <img src="./assets/meilisearch-landing-dark.png?sanitize=true#gh-dark-mode-only">
 </p>
-
-<h1 align="center">Landing</h1>
 
 <h4 align="center">
   <a href="https://github.com/meilisearch/meilisearch">Meilisearch</a> |
@@ -11,105 +10,43 @@
   <a href="https://www.meilisearch.com">Website</a> |
   <a href="https://docs.meilisearch.com/faq">FAQ</a>
 </h4>
+<br/>
 
 <p align="center">
-  <a href="https://github.com/meilisearch/landing-v2/blob/main/LICENCE"><img src="https://img.shields.io/badge/license-MIT-informational" alt="License"></a>
+  <a href="https://github.com/meilisearch/landing/blob/main/LICENCE"><img src="https://img.shields.io/badge/license-MIT-informational" alt="License"></a>
 </p>
 <br/>
 
-<p align="center" style="font-weight:bold;" >Meilisearch's Landing</p>
-
-**Table of Contents**:
-
-- [Setup](#setup)
-- [Run](#run)
-- [Build](#build)
-  - [Generate build](#generate-build)
-  - [Run your build](#run-your-build)
-- [Storybook](#storybook)
+<p align="center">
+  <img src="assets/landing.png" alt="Meilisearch's landing page" />
+</p>
 
 <br/>
 
-## Setup
+👋 Hi! Welcome to Meilisearch's landing page repository.
 
-```bash
-yarn
-```
+Our landing page is available at this address: [https://www.meilisearch.com](https://www.meilisearch.com).
 
-or
+If you find any bug on it, this is the right place to [open an issue](https://github.com/meilisearch/landing/issues/new).
 
-```bash
-npm install
-```
+## 🔧 Stack
 
-## Run
+This project was build with [Next.js](https://nextjs.org/) and [React JS](https://fr.reactjs.org/).
 
-```bash
-yarn dev
-```
+The deployements are made on [Vercel](https://vercel.com/), and the website [https://www.meilisearch.com](https://www.meilisearch.com) is deployed based on the main branch of this repository.
 
-or
+## 🔎 Meilisearch
 
-```bash
-npm run dev
-```
+The Meilisearch code base is available in [this repository](https://github.com/meilisearch/meilisearch).
 
-Go to `http://localhost:3000/` and enjoy ! 🎉
+You can learn more about Meilisearch and its features in our [documentation](https://docs.meilisearch.com).
 
-## Build
+## 🤝 Contributing
 
-### Generate build
+We're glad you're thinking about contributing to Meilisearch's landing page! Feel free to pick an [issue labeled as `good first issue`](https://github.com/meilisearch/landing/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22), and to ask any question you need. Some points might not be clear and we are available to help you!
 
-You can generate a build of this project with the following command:
+Also, we recommend following the [CONTRIBUTING](./CONTRIBUTING.md) to create your PR.
 
-```bash
-yarn build
-```
+## 💌 Contact
 
-or
-
-```bash
-npm run build
-```
-
-### Run your build
-
-The above commands will generate an optimized version of the app, inside the `.next` folder.
-
-You can then serve it with:
-
-```bash
-yarn start
-```
-
-or
-
-```bash
-npm run start
-```
-
-Or serve it with any web server of your choice.
-
-Example:
-
-```bash
-serve .next
-```
-
-## Storybook
-
-Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively test components.
-
-```bash
-yarn storybook
-```
-
-or
-
-```bash
-npm run storybook
-```
-
-## Data folder
-
-The `data` folder contains every useful data that can change over time like the header menu (order, title, links, ...), the footer or even the social links. This type of content is put in the `data` directory instead of directly in the components and / or pages themselves, in order to find and edit them easily. Furthermore, they can this way be reused in Storybook for components and blocks previews.
+You want to get in touch with us? [Discover how](https://docs.meilisearch.com/learn/what_is_meilisearch/contact.html#contact-us).
