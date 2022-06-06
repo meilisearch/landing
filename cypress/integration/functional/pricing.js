@@ -1,9 +1,6 @@
-const WAITING_TIME = 1000
-
 describe(`Pricing`, () => {
   beforeEach(() => {
     cy.visit('/pricing')
-    cy.wait(WAITING_TIME)
   })
 
   it('Should visit the pricing page', () => {

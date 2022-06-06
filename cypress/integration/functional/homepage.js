@@ -1,9 +1,6 @@
-const WAITING_TIME = 1000
-
 describe(`Homepage`, () => {
   beforeEach(() => {
     cy.visit('/')
-    cy.wait(WAITING_TIME)
   })
 
   it('Should visit the home page', () => {
