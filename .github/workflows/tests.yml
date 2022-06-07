@@ -25,6 +25,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, ...]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -48,6 +52,7 @@ jobs:
           wait-on: http://localhost:3000
           config-file: cypress.json
           record: true
+          parallel: true
           group: merge
           tag: ${{ github.event_name }}
           command-prefix: 'percy exec -- npx'
