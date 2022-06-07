@@ -71,7 +71,7 @@ const RightColumn = ({ tab, sdkList, developerProps }) => {
               style={{ marginLeft: 24 }}
             >
               <RightArrow width={12} style={{ marginRight: 14 }} />
-              <Typography variant="body.s.bold">
+              <Typography variant="body.s.bold" className="notranslate">
                 {developerProps.buildWith.title(sdk.name)}
               </Typography>
             </Cta>

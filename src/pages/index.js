@@ -106,7 +106,7 @@ const Home = ({ code_samples }) => {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
+        <title className="notranslate">{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Head>
       <PageContent>
