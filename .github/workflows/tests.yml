@@ -50,7 +50,7 @@ jobs:
           build: yarn build
           start: yarn start
           wait-on: http://localhost:3000
-          config-file: cypress.json
+          config-file: cypress.config.js
           record: true
           parallel: true
           group: merge
