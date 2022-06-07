@@ -1,6 +1,6 @@
 const getPricingPageData = () => ({
   meta: {
-    title: 'Meilisearch | Pricing ',
+    title: 'Pricing ',
     description:
       'An open-source, blazingly fast, and hyper-relevant search engine that will improve your search experience',
   },

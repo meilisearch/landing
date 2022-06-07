@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'components/Head'
 import styled from 'styled-components'
 import getPricingPageData from '../../data/pricing'
 import PageContent from 'components/PageContent'
@@ -32,10 +32,7 @@ const Pricing = () => {
   const { meta, hero, faq, table, pricing } = getPricingPageData()
   return (
     <>
-      <Head>
-        <title className="notranslate">{meta.title}</title>
-        <meta name="description" content={meta.description} />
-      </Head>
+      <Head meta={meta} />
       <div style={{ backgroundColor: get('colors.valhalla.800') }}>
         <PageContent>
           <HeroBlock hero={hero} />

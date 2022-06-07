@@ -37,7 +37,7 @@ import get from 'utils/get'
 
 const getHomepageData = () => ({
   meta: {
-    title: 'Meilisearch',
+    title: '',
     description:
       'An open-source, blazingly fast, and hyper-relevant search engine that will improve your search experience',
   },
