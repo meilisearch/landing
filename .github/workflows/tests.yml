@@ -59,6 +59,7 @@ jobs:
         env:
           NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
           NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
+          NEXT_PUBLIC_ENVIRONMENT: test
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
