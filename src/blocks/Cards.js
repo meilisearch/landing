@@ -117,7 +117,9 @@ const StyledIcon = styled.div`
 const Card = ({ title, description, color, icon: Icon, cta }) => (
   <CardWrapper $color={color}>
     <StyledIcon as={Icon} />
-    <CardTitle variant="title.s">{title}</CardTitle>
+    <CardTitle variant="title.s" className={!title.translate && 'notranslate'}>
+      {title.name}
+    </CardTitle>
     <CardDescription>{description}</CardDescription>
     <Cta
       variant="secondary"

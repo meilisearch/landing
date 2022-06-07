@@ -80,7 +80,7 @@ const Custom404 = () => {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
+        <title className="notranslate">{meta.title}</title>
         <meta name="description" content={meta.description} />
       </Head>
       <Container>

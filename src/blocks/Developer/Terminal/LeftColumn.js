@@ -51,7 +51,9 @@ const LeftColumn = ({ tab, sdkList }) => {
               <div style={{ width: 28 }}>
                 <Logo height={28} />
               </div>
-              <Language variant="body.xs.bold">{sdk.name}</Language>
+              <Language variant="body.xs.bold" className="notranslate">
+                {sdk.name}
+              </Language>
             </SdkTab>
           )
         })}

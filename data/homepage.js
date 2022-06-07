@@ -384,7 +384,10 @@ const getHomepageData = () => ({
       {
         color: get('colors.dodgerBlue'),
         icon: Github,
-        title: 'GitHub',
+        title: {
+          name: 'GitHub',
+          translate: false,
+        },
         description:
           'Open issues and PRs, request new features, and vote on the ones that matter the most to you!',
         cta: {
@@ -396,7 +399,10 @@ const getHomepageData = () => ({
       {
         color: get('colors.lila'),
         icon: Slack,
-        title: 'Slack',
+        title: {
+          name: 'Slack',
+          translate: false,
+        },
         description: 'Join us on our team chat and ask questions!',
         cta: {
           title: 'Join the discussion',
@@ -407,7 +413,9 @@ const getHomepageData = () => ({
       {
         color: get('colors.hotPink'),
         icon: Roadmap,
-        title: 'Roadmap',
+        title: {
+          name: 'Roadmap',
+        },
         description: 'Check what we will be working on in the next few weeks!',
         cta: {
           title: 'Open the roadmap',
