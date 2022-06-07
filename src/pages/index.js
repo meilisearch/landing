@@ -142,10 +142,10 @@ const Home = ({ code_samples }) => {
 export const getStaticProps = async () => {
   try {
     let code_samples = []
-    // if (process.env.NODE_ENV !== 'development') {
-    const sdkList = getHomepageData().developer.sdkList
-    code_samples = await getCodeSamples(sdkList)
-    // }
+    if (process.env.NODE_ENV !== 'development') {
+      const sdkList = getHomepageData().developer.sdkList
+      code_samples = await getCodeSamples(sdkList)
+    }
 
     return {
       props: {
