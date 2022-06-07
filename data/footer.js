@@ -76,7 +76,7 @@ const getFooterData = () => ({
       submenu: [
         {
           title: 'About us',
-          href: 'https://www.welcometothejungle.com/fr/companies/meilisearch',
+          href: 'https://www.welcometothejungle.com/en/companies/meilisearch',
           target: '_blank',
         },
         {
