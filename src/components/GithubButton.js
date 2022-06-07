@@ -13,6 +13,7 @@ const GithubLink = styled.a`
   color: white;
   padding: 0 8px;
   height: 30px;
+  width: 100px;
   border-radius: 48px;
   border-width: 1px;
   border-style: solid;
