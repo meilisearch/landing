@@ -45,7 +45,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Browser tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
           build: yarn build
           start: yarn start
