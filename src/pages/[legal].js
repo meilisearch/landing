@@ -8,6 +8,7 @@ import LegalLayout from 'layouts/LegalLayout'
 import getLegalData from '../../data/legal'
 import get from 'utils/get'
 import Typography from 'components/Typography'
+import Head from 'components/Head'
 
 const Container = styled.div`
   background-color: ${get('colors.valhalla.800')};
@@ -106,32 +107,38 @@ const MiddleColumn = styled(LegalLayout.MiddleColumn)`
   }
 `
 
-const LegalPage = ({ markdownBody }) => {
+const LegalPage = ({ markdownBody, frontmatter }) => {
   const { text, menu } = getLegalData()
   return (
-    <Container>
-      <LegalLayout>
-        <LeftColumn>
-          <LeftColumnTitle variant="body.s.bold">{text.legal}</LeftColumnTitle>
-          <Menu menu={menu} />
-        </LeftColumn>
-        <MiddleColumn>
-          <PreTitle preTitle={text.legal} color={get('colors.hotPink')} />
-          <Markdown>{markdownBody}</Markdown>
-        </MiddleColumn>
-      </LegalLayout>
-    </Container>
+    <>
+      <Head meta={frontmatter.meta} />
+      <Container>
+        <LegalLayout>
+          <LeftColumn>
+            <LeftColumnTitle variant="body.s.bold">
+              {text.legal}
+            </LeftColumnTitle>
+            <Menu menu={menu} />
+          </LeftColumn>
+          <MiddleColumn>
+            <PreTitle preTitle={text.legal} color={get('colors.hotPink')} />
+            <Markdown>{markdownBody}</Markdown>
+          </MiddleColumn>
+        </LegalLayout>
+      </Container>
+    </>
   )
 }
 
 export async function getStaticProps({ params }) {
   const { legal } = params
   const content = await import(`./${legal}.mdx`)
-  const data = matter(content.default)
+  const { content: body, data } = matter(content.default)
 
   return {
     props: {
-      markdownBody: data.content,
+      markdownBody: body,
+      frontmatter: data,
     },
   }
 }

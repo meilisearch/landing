@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'components/Head'
 import styled from 'styled-components'
 import getCodeSamples from 'utils/getCodeSamples'
 import {
@@ -105,10 +105,7 @@ const Home = ({ code_samples }) => {
   }))
   return (
     <>
-      <Head>
-        <title className="notranslate">{meta.title}</title>
-        <meta name="description" content={meta.description} />
-      </Head>
+      <Head meta={meta} />
       <PageContent>
         <Hero heroProps={hero} />
         <Demo demoProps={demo} color={get('colors.lila')} />

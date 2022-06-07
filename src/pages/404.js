@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Head from 'next/head'
+import Head from 'components/Head'
 import get from 'utils/get'
 import Button from 'components/Button'
 import Typography from 'components/Typography'
@@ -79,10 +79,7 @@ const Custom404 = () => {
   const { meta, content } = get404Data()
   return (
     <>
-      <Head>
-        <title className="notranslate">{meta.title}</title>
-        <meta name="description" content={meta.description} />
-      </Head>
+      <Head meta={meta} />
       <Container>
         <PageContent>
           <Text>

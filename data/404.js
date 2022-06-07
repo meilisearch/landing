@@ -1,6 +1,6 @@
 const get404Data = () => ({
   meta: {
-    title: '',
+    title: '404',
     description: '',
   },
   content: {
