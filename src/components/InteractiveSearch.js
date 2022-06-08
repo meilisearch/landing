@@ -6,6 +6,8 @@ import Searchbox from 'components/Searchbox'
 import get from 'utils/get'
 import Image from 'next/image'
 import Typography from 'components/Typography'
+import Lottie from 'components/Lottie'
+import { useInView } from 'react-intersection-observer'
 
 const Card = styled.div`
   background-color: ${get('colors.white')};
@@ -104,7 +106,20 @@ const StatsText = styled(Typography)`
   }
 `
 
-const InteractiveSearch = ({ searchStats, placeholderSearch, ...props }) => {
+const Animation = styled.div`
+  position: absolute;
+  width: 136px;
+  height: 196px;
+  left: -62px;
+  top: -101px;
+`
+
+const InteractiveSearch = ({
+  searchStats,
+  placeholderSearch,
+  lottie,
+  ...props
+}) => {
   const searchClient = React.useMemo(
     () =>
       instantMeiliSearch(
@@ -117,8 +132,19 @@ const InteractiveSearch = ({ searchStats, placeholderSearch, ...props }) => {
       ),
     []
   )
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  })
   return (
-    <Container {...props}>
+    <Container ref={ref} {...props}>
+      <Animation>
+        <Lottie
+          animation={lottie}
+          options={{ loop: false }}
+          isPaused={!inView}
+          ariaLabel="animated arrows"
+        />
+      </Animation>
       <InstantSearch indexName="movies" searchClient={searchClient}>
         <Searchbox placeholderSearch={placeholderSearch} />
         <Stats
