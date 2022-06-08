@@ -29,6 +29,15 @@ const variants = {
   `,
 }
 
+const sizes = {
+  default: css`
+    height: 46px;
+  `,
+  small: css`
+    height: 38px;
+  `,
+}
+
 const StyledButton = styled(ReakitButton)`
   border-radius: 176px;
   border-width: 2px;
@@ -36,7 +45,6 @@ const StyledButton = styled(ReakitButton)`
   border-color: ${p => p.$color};
   // !important avoids conflict with "color: inherit" inside the Link component, if the Button is also a Link
   color: white !important;
-  height: 46px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -48,17 +56,20 @@ const StyledButton = styled(ReakitButton)`
   flex-shrink: 0;
 
   ${p => variants[p.$variant]};
+  ${p => sizes[p.$size]};
 `
 
 const Button = ({
   variant = 'primary',
   color = get('colors.dodgerBlue'),
+  size = 'default',
   href,
   ...props
 }) => (
   <StyledButton
     as={href ? Link : ReakitButton}
     href={href}
+    $size={size}
     $variant={variant}
     $color={color}
     {...props}
@@ -70,6 +81,10 @@ Button.propTypes = {
    * The variant name, used to display the Button with different styles
    */
   variant: PropTypes.oneOf(['primary', 'secondary']),
+  /**
+   * Size of the button
+   */
+  size: PropTypes.oneOf(['default', 'small']),
   /**
    * Color of the button
    */
@@ -83,6 +98,7 @@ Button.propTypes = {
 Button.defaultProps = {
   variant: 'primary',
   color: get('colors.dodgerBlue'),
+  size: 'default',
   href: null,
 }
 

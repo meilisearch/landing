@@ -16,6 +16,12 @@ export default {
         type: 'select',
       },
     },
+    size: {
+      options: ['default', 'small'],
+      control: {
+        type: 'select',
+      },
+    },
   },
 }
 
@@ -55,6 +61,13 @@ SecondaryWhite.args = {
   children: <Typography variant="body.s.bold">Log in</Typography>,
   color: get('colors.white'),
   variant: 'secondary',
+}
+
+export const Small = Template.bind({})
+Small.storyName = 'size | small'
+Small.args = {
+  children: <Typography variant="body.s.bold">Log in</Typography>,
+  size: 'small',
 }
 
 export const Link = Template.bind({})

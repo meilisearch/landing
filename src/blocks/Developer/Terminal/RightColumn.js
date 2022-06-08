@@ -23,7 +23,6 @@ const CodeSection = styled(Tab.TabPanel)`
 
 const Cta = styled(Button)`
   background-color: ${get('colors.valhalla.700')};
-  height: 38px;
 `
 
 const LinkContainer = styled.div`
@@ -54,6 +53,7 @@ const RightColumn = ({ tab, sdkList, developerProps }) => {
           </SyntaxHighlighter>
           <LinkContainer>
             <Cta
+              size="small"
               variant="secondary"
               color={get('colors.white')}
               href={developerProps.seeAllIntegrations.href}
@@ -64,6 +64,7 @@ const RightColumn = ({ tab, sdkList, developerProps }) => {
               </Typography>
             </Cta>
             <Cta
+              size="small"
               variant="secondary"
               color={get('colors.white')}
               href={developerProps.buildWith.href(sdk.pkgName)}
