@@ -1,6 +1,18 @@
 import { Github, Twitter, Linkedin, Slack } from '../src/components/icons'
 
 const getFooterData = () => ({
+  newsletter: {
+    title: 'Newsletter',
+    description:
+      'Subscribe and never miss out on our latest release, blog posts and news.',
+    placeholder: 'Enter your email',
+    cta: {
+      title: 'Submit',
+      target: '_blank',
+      href: email =>
+        `https://meilisearch.us2.list-manage.com/subscribe?u=27870f7b71c908a8b359599fb&id=79582d828e&MERGE0=${email}`,
+    },
+  },
   menu: [
     {
       title: 'Resources',
