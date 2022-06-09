@@ -10,8 +10,9 @@ describe(`Visual tests`, () => {
     )
     cy.wait(WAITING_TIME)
     cy.get("img[alt='Developer']").should('be.visible')
-    cy.get('[data-cy="meilisearch-logo-footer"]').should('be.visible')
     cy.get('[data-cy="meilisearch-logo-header"]').should('be.visible')
+    cy.get('[data-cy="developer-block-image"]').should('be.visible')
+    cy.get('[data-cy="meilisearch-logo-footer"]').should('be.visible')
     cy.percySnapshot('home-responsive', { widths: [375, 1024, 1440] })
   })
 

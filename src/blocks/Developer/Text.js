@@ -133,6 +133,7 @@ const Text = ({ developerProps }) => {
             width={330}
             layout="responsive"
             alt="Developer"
+            data-cy="developer-block-image"
           />
         </div>
       </Illustration>
