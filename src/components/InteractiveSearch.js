@@ -108,8 +108,8 @@ const StatsText = styled(Typography)`
 
 const Animation = styled.div`
   position: absolute;
-  width: 136px;
-  height: 196px;
+  width: 150px;
+  height: 216px;
   left: -62px;
   top: -101px;
 `
