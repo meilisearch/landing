@@ -10,8 +10,8 @@ describe(`Visual tests`, () => {
     )
     cy.wait(WAITING_TIME)
     cy.get("img[alt='Developer']").should('be.visible')
-    cy.get('.meilisearch-logo-footer').should('be.visible')
-    cy.get('.meilisearch-logo-header').should('be.visible')
+    cy.get('[data-cy="meilisearch-logo-footer"]').should('be.visible')
+    cy.get('[data-cy="meilisearch-logo-header"]').should('be.visible')
     cy.percySnapshot('home-responsive', { widths: [375, 1024, 1440] })
   })
 
@@ -20,7 +20,7 @@ describe(`Visual tests`, () => {
     // Scroll the entire page to load lazy images
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
     cy.wait(WAITING_TIME)
-    cy.get('.meilisearch-logo-header').should('be.visible')
+    cy.get('[data-cy="meilisearch-logo-header"]').should('be.visible')
     cy.percySnapshot('pricing-responsive', { widths: [375, 1024, 1440] })
   })
 
@@ -29,7 +29,7 @@ describe(`Visual tests`, () => {
     // Scroll the entire page to load lazy images
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
     cy.wait(WAITING_TIME)
-    cy.get('.meilisearch-logo-header').should('be.visible')
+    cy.get('[data-cy="meilisearch-logo-header"]').should('be.visible')
     cy.percySnapshot('privacy-policy')
   })
 
@@ -38,14 +38,14 @@ describe(`Visual tests`, () => {
     // Scroll the entire page to load lazy images
     cy.window().then(cyWindow => scrollToBottom({ remoteWindow: cyWindow }))
     cy.wait(WAITING_TIME)
-    cy.get('.meilisearch-logo-header').should('be.visible')
+    cy.get('[data-cy="meilisearch-logo-header"]').should('be.visible')
     cy.percySnapshot('terms-of-use')
   })
 
   it('Should take a snapshot of the 404 page', () => {
     cy.visit('/test', { failOnStatusCode: false })
     cy.wait(WAITING_TIME)
-    cy.get('.meilisearch-logo-header').should('be.visible')
+    cy.get('[data-cy="meilisearch-logo-header"]').should('be.visible')
     cy.percySnapshot('404')
   })
 })
