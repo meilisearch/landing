@@ -21,7 +21,7 @@ const Logos = styled.a`
 `
 
 const Logo = () => (
-  <Logos href="/" className="meilisearch-logo-header">
+  <Logos href="/" data-cy="meilisearch-logo-header">
     <Image
       src="/images/meili-logo.svg"
       height={35}

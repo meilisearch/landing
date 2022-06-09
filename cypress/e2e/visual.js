@@ -1,5 +1,5 @@
 const WAITING_TIME = 1000
-let scrollToBottom = require('scroll-to-bottomjs')
+const scrollToBottom = require('scroll-to-bottomjs')
 
 describe(`Visual tests`, () => {
   it('Should take a snapshot of the home page', () => {

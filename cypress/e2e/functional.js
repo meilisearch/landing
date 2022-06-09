@@ -9,23 +9,23 @@ describe(`Functional tests`, () => {
     })
 
     it('Should have blocks', () => {
-      cy.get('.header').should('be.visible')
-      cy.get('.hero').should('be.visible')
-      cy.get('.demo').should('be.visible')
-      cy.get('.openSource').should('be.visible')
-      cy.get('.step1').should('be.visible')
-      cy.get('.step2').should('be.visible')
-      cy.get('.step3').should('be.visible')
-      cy.get('.developer').should('be.visible')
-      cy.get('.cards').should('be.visible')
-      cy.get('.testimonials').should('be.visible')
-      cy.get('.footer').should('be.visible')
+      cy.get('[data-cy="header"]').should('be.visible')
+      cy.get('[data-cy="hero"]').should('be.visible')
+      cy.get('[data-cy="demo"]').should('be.visible')
+      cy.get('[data-cy="openSource"]').should('be.visible')
+      cy.get('[data-cy="step1"]').should('be.visible')
+      cy.get('[data-cy="step2"]').should('be.visible')
+      cy.get('[data-cy="step3"]').should('be.visible')
+      cy.get('[data-cy="developer"]').should('be.visible')
+      cy.get('[data-cy="cards"]').should('be.visible')
+      cy.get('[data-cy="testimonials"]').should('be.visible')
+      cy.get('[data-cy="footer"]').should('be.visible')
     })
 
     it('Should display movies in the interactive search', () => {
-      // Search for first only because 2 interactive search are displayed
-      // One for mobile & one for desktop
-      cy.get('.ais-Hits-list').first().children().should('have.length', 4)
+      cy.get('[data-cy="interactive-search-desktop"] > div > ul')
+        .children()
+        .should('have.length', 4)
     })
   })
 
@@ -42,12 +42,12 @@ describe(`Functional tests`, () => {
     })
 
     it('Should have blocks', () => {
-      cy.get('.header').should('be.visible')
-      cy.get('.pricingHero').should('be.visible')
-      cy.get('.pricingCards').should('be.visible')
-      cy.get('.pricingTable').should('be.visible')
-      cy.get('.pricingFaq').should('be.visible')
-      cy.get('.footer').should('be.visible')
+      cy.get('[data-cy="header"]').should('be.visible')
+      cy.get('[data-cy="pricingHero"]').should('be.visible')
+      cy.get('[data-cy="pricingCards"]').should('be.visible')
+      cy.get('[data-cy="pricingTable"]').should('be.visible')
+      cy.get('[data-cy="pricingFaq"]').should('be.visible')
+      cy.get('[data-cy="footer"]').should('be.visible')
     })
 
     it('Should have working accordions in the faq section', () => {
@@ -79,8 +79,10 @@ describe(`Functional tests`, () => {
   })
 
   context('404 page', () => {
-    it('Should visit the 404 page', () => {
+    beforeEach(() => {
       cy.visit('/test', { failOnStatusCode: false })
+    })
+    it('Should visit the 404 page', () => {
       cy.url().should('match', new RegExp(`${Cypress.config('baseUrl')}/test`))
       cy.contains('Sorry, the page you are looking for does not exist.')
     })

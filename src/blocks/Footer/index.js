@@ -36,7 +36,7 @@ const LogoSection = styled.div`
 const Footer = props => {
   const footerProps = getFooterData()
   return (
-    <Wrapper className="footer" {...props}>
+    <Wrapper data-cy="footer" {...props}>
       <Grid>
         <LogoSection>
           <Image
@@ -45,7 +45,7 @@ const Footer = props => {
             width={213}
             layout="fixed"
             alt="Meilisearch Logo"
-            className="meilisearch-logo-footer"
+            data-cy="meilisearch-logo-footer"
           />
           <Newsletter newsletterProps={footerProps.newsletter} />
         </LogoSection>
