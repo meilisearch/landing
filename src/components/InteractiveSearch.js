@@ -111,7 +111,7 @@ const Animation = styled.div`
   width: 150px;
   height: 216px;
   left: -62px;
-  top: -101px;
+  top: -112px;
 `
 
 const InteractiveSearch = ({
