@@ -16,18 +16,26 @@ import {
   GithubOutlined as GithubOutlinedIcon,
   Github as GithubIcon,
   Go as GoIcon,
+  GoRails as GoRailsIcon,
   Guides as GuidesIcon,
   Hamburger as HamburgerIcon,
+  HelloNext as HelloNextIcon,
+  HuggingFace as HuggingFaceIcon,
   Included as IncludedIcon,
   Instantmeilisearch as InstantmeilisearchIcon,
   Java as JavaIcon,
   Javascript as JavascriptIcon,
+  Juicebrothers as JuicebrothersIcon,
   Key as KeyIcon,
   Laravel as LaravelIcon,
   Lightning as LightningIcon,
   Linkedin as LinkedinIcon,
+  Literal as LiteralIcon,
+  LouisVuitton as LouisVuittonIcon,
   MagnifyingGlass as MagnifyingGlassIcon,
+  Palmes as PalmesIcon,
   Php as PhpIcon,
+  PlatformSh as PlatformShIcon,
   Plug as PlugIcon,
   Puzzle as PuzzleIcon,
   Python as PythonIcon,
@@ -83,18 +91,26 @@ export const Filter = () => <FilterIcon height={56} />
 export const GithubOutlined = () => <GithubOutlinedIcon height={56} />
 export const Github = () => <GithubIcon height={56} />
 export const Go = () => <GoIcon height={56} />
+export const GoRails = () => <GoRailsIcon height={56} />
 export const Guides = () => <GuidesIcon height={56} />
 export const Hamburger = () => <HamburgerIcon height={56} />
+export const HelloNext = () => <HelloNextIcon height={56} />
+export const HuggingFace = () => <HuggingFaceIcon height={56} />
 export const Included = () => <IncludedIcon height={56} />
 export const Instantmeilisearch = () => <InstantmeilisearchIcon height={56} />
 export const Java = () => <JavaIcon height={56} />
 export const Javascript = () => <JavascriptIcon height={56} />
+export const Juicebrothers = () => <JuicebrothersIcon height={56} />
 export const Key = () => <KeyIcon height={56} />
 export const Laravel = () => <LaravelIcon height={56} />
 export const Lightning = () => <LightningIcon height={56} />
 export const Linkedin = () => <LinkedinIcon height={56} />
+export const Literal = () => <LiteralIcon height={56} />
+export const LouisVuitton = () => <LouisVuittonIcon height={56} />
 export const MagnifyingGlass = () => <MagnifyingGlassIcon height={56} />
+export const Palmes = () => <PalmesIcon height={56} />
 export const Php = () => <PhpIcon height={56} />
+export const PlatformSh = () => <PlatformShIcon height={56} />
 export const Plug = () => <PlugIcon height={56} />
 export const Puzzle = () => <PuzzleIcon height={56} />
 export const Python = () => <PythonIcon height={56} />
