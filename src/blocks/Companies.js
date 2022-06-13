@@ -18,7 +18,7 @@ const Section = styled.section`
     padding: 62px 32px;
   }
   @media (min-width: ${get('breakpoints.xl')}) {
-    padding: 72px 0 112px;
+    padding: 72px 0 104px;
   }
 `
 
