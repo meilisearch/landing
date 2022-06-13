@@ -11,6 +11,7 @@ import {
   Step2 as BaseStep2,
   Step3 as BaseStep3,
   Testimonials,
+  Companies as BaseCompanies,
 } from 'blocks'
 import getHomepageData from '../../data/homepage'
 import get from 'utils/get'
@@ -29,13 +30,29 @@ const Hero = styled(BaseHero)`
   }
 `
 
-const Demo = styled(BaseDemo)`
-  margin-top: 72px;
+const Companies = styled(BaseCompanies)`
+  margin-top: 68px;
   @media (min-width: ${get('breakpoints.md')}) {
-    margin-top: 178px;
+    margin-top: 82px;
   }
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 266px;
+    margin-top: 136px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 180px;
+  }
+`
+
+const Demo = styled(BaseDemo)`
+  margin-top: 68px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 86px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    margin-top: 70px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    margin-top: 136px;
   }
 `
 
@@ -92,6 +109,7 @@ const Home = ({ code_samples }) => {
   const {
     meta,
     hero,
+    companies,
     demo,
     developer,
     openSource,
@@ -109,6 +127,7 @@ const Home = ({ code_samples }) => {
       <PageContent>
         <Hero heroProps={hero} data-cy="hero" />
         <Demo demoProps={demo} color={get('colors.lila')} data-cy="demo" />
+        <Companies companiesProps={companies} />
         <OpenSource
           openSourceProps={openSource}
           color={get('colors.hotPink')}
