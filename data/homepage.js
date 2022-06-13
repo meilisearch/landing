@@ -76,16 +76,24 @@ const getHomepageData = () => ({
     title: 'Trusted by amazing companies',
     companies: [
       {
-        title: 'Go Rails',
-        icon: GoRails,
+        title: 'Louis Vuitton',
+        icon: LouisVuitton,
+      },
+      {
+        title: 'Hugging Face',
+        icon: HuggingFace,
       },
       {
         title: 'Hellonext',
         icon: Hellonext,
       },
       {
-        title: 'Hugging Face',
-        icon: HuggingFace,
+        title: 'Platform.sh',
+        icon: PlatformSh,
+      },
+      {
+        title: 'Go Rails',
+        icon: GoRails,
       },
       {
         title: 'Juicebrothers',
@@ -96,16 +104,8 @@ const getHomepageData = () => ({
         icon: Literal,
       },
       {
-        title: 'Louis Vuitton',
-        icon: LouisVuitton,
-      },
-      {
         title: 'Palmes',
         icon: Palmes,
-      },
-      {
-        title: 'Platform.sh',
-        icon: PlatformSh,
       },
     ],
   },
