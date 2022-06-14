@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'next/image'
+import Image from 'components/Image'
 import get from 'utils/get'
 
 const MeilisearchName = styled.div`

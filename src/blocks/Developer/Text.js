@@ -1,6 +1,6 @@
 import BaseGrid from 'components/Grid'
 import Typography from 'components/Typography'
-import Image from 'next/image'
+import Image from 'components/Image'
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
@@ -133,7 +133,6 @@ const Text = ({ developerProps }) => {
             width={330}
             layout="responsive"
             alt="Developer"
-            data-cy="developer-block-image"
           />
         </div>
       </Illustration>
