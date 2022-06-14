@@ -27,6 +27,10 @@ jobs:
     container:
       image: cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
       options: --user 1001
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -45,11 +49,12 @@ jobs:
           start: yarn start
           wait-on: http://localhost:3000
           config-file: cypress.config.js
+          browser: chrome
           record: true
           parallel: true
           group: merge
           tag: ${{ github.event_name }}
-          command-prefix: 'percy exec -- npx'
+          command-prefix: 'percy exec --parallel -- npx'
         env:
           NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
           NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
@@ -58,6 +63,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      - name: finalize_percy
+        run: npx percy build:finalize
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
