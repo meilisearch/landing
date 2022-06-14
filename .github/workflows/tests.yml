@@ -65,6 +65,8 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       - name: finalize_percy
         run: npx percy build:finalize
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
