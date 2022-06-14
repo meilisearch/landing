@@ -140,7 +140,6 @@ const InteractiveSearch = ({
       <Animation>
         <Lottie
           animation={lottie}
-          options={{ loop: false }}
           isPaused={!inView}
           ariaLabel="animated arrows"
         />
