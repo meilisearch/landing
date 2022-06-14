@@ -1,6 +1,7 @@
 import heroAnimationDesktop from 'lotties/hero-desktop'
 import heroAnimationMobile from 'lotties/hero-mobile'
 import openSource from 'lotties/opensource'
+import animatedArrows from 'lotties/animatedArrows'
 import {
   Angular,
   Dart,
@@ -67,6 +68,7 @@ const getHomepageData = () => ({
     searchStats: (nbHits, timeInMs) =>
       `<strong>${nbHits}</strong> results in <strong>${timeInMs}</strong> ms`,
     placeholderSearch: 'Try me...',
+    lottie: animatedArrows,
     preTitle: 'Why Meilisearch?',
     title: 'The next generation of search',
     description:
