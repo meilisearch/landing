@@ -49,7 +49,6 @@ jobs:
           start: yarn start
           wait-on: http://localhost:3000
           config-file: cypress.config.js
-          browser: chrome
           record: true
           parallel: true
           group: merge
