@@ -126,8 +126,8 @@ const Home = ({ code_samples }) => {
       <Head meta={meta} />
       <PageContent>
         <Hero heroProps={hero} data-cy="hero" />
+        <Companies companiesProps={companies} data-cy="companies" />
         <Demo demoProps={demo} color={get('colors.lila')} data-cy="demo" />
-        <Companies companiesProps={companies} />
         <OpenSource
           openSourceProps={openSource}
           color={get('colors.hotPink')}
