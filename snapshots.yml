@@ -1,0 +1,12 @@
+- name: 'home-responsive'
+  url: /
+  widths: [375, 1024, 1440]
+- name: 'pricing-responsive'
+  url: /pricing
+  widths: [375, 1024, 1440]
+- name: 'privacy-policy'
+  url: /privacy-policy
+- name: 'terms-of-use'
+  url: /terms-of-use
+- name: '404'
+  url: /test

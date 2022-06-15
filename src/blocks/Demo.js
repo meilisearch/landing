@@ -178,6 +178,7 @@ const Demo = ({ demoProps, color = get('colors.lila'), ...props }) => (
             searchStats={demoProps.searchStats}
             placeholderSearch={demoProps.placeholderSearch}
             lottie={demoProps.lottie}
+            data-cy="interactive-search-desktop"
           />
         </SearchContainer>
       </LeftColumn>

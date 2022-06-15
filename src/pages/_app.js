@@ -4,11 +4,15 @@ import Script from 'next/script'
 import theme from 'theme'
 import BaseLayout from 'layouts/BaseLayout'
 
-// Template for every page
-export function App({ Component, pageProps }) {
+const Scripts = () => {
+  if (
+    process.env.NODE_ENV !== 'production' ||
+    process.env.NEXT_PUBLIC_ENVIRONMENT === 'test'
+  ) {
+    return null
+  }
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <>
       <Script
         id="crisp-script"
         dangerouslySetInnerHTML={{
@@ -24,16 +28,26 @@ export function App({ Component, pageProps }) {
         id="hotjar-script"
         dangerouslySetInnerHTML={{
           __html: `
-          (function(h,o,t,j,a,r){
-              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-              h._hjSettings={hjid:1035453,hjsv:6};
-              a=o.getElementsByTagName('head')[0];
-              r=o.createElement('script');r.async=1;
-              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-              a.appendChild(r);
-          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1035453,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       />
+    </>
+  )
+}
+
+// Template for every page
+export function App({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Scripts />
       <BaseLayout>
         <Component {...pageProps} />
       </BaseLayout>

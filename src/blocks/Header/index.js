@@ -33,6 +33,7 @@ const Header = props => {
           ? get('colors.valhalla.800')
           : get('colors.valhalla'),
       }}
+      data-cy="header"
       {...props}
     >
       <DesktopHeader headerProps={headerProps} />

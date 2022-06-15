@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import get from 'utils/get'
 import { Twitter } from 'components/icons'
 import Typography from 'components/Typography'
-import Image from 'next/image'
+import Image from 'components/Image'
 
 const Card = styled.article`
   background-color: ${get('colors.white')};

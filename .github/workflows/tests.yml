@@ -13,64 +13,78 @@ jobs:
   linter_check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: '12.x'
+          node-version: 16
       - name: Install dependencies
         run: yarn --dev
       - name: Run style check
         run: yarn lint
   cypress-run:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
-    services:
-      meilisearch:
-        image: getmeili/meilisearch:v0.24.0
-        env:
-          MEILI_MASTER_KEY: 'masterKey'
-          MEILI_NO_ANALYTICS: 'true'
-        ports:
-          - '7700:7700'
+    container:
+      image: cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
+      options: --user 1001
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: '12.x'
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            ./node_modules
-          key: ${{ hashFiles('yarn.lock') }}
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
       - name: Install dependencies
         run: yarn
       - name: Browser tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
           build: yarn build
           start: yarn start
-          wait-on: 'http://localhost:3000'
-          config-file: cypress.json
+          wait-on: http://localhost:3000
+          config-file: cypress.config.js
+          browser: chrome
           record: true
           group: merge
           tag: ${{ github.event_name }}
         env:
-          NEXT_PUBLIC_DEMO_MOVIES_HOST: http://meilisearch:7700
-          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: masterKey
+          NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
+          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
+          NEXT_PUBLIC_ENVIRONMENT: test
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-videos
           path: cypress/videos
+  percy:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
+      NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
+      NEXT_PUBLIC_ENVIRONMENT: test
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
+      - name: Install dependencies
+        run: yarn
+      - name: Build website
+        run: yarn build
+      - name: Percy Test
+        run: yarn test:ci:percy
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

@@ -1,6 +1,6 @@
 import BaseGrid from 'components/Grid'
 import Typography from 'components/Typography'
-import Image from 'next/image'
+import Image from 'components/Image'
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import get from 'utils/get'
 import getFooterData from '../../../data/footer'
 import Grid from 'components/Grid'
-import Image from 'next/image'
+import Image from 'components/Image'
 import Newsletter from './Newsletter'
 import BottomSection from './BottomSection'
 import MenuSection from './MenuSection'
@@ -33,10 +33,10 @@ const LogoSection = styled.div`
   }
 `
 
-const Footer = () => {
+const Footer = props => {
   const footerProps = getFooterData()
   return (
-    <Wrapper>
+    <Wrapper data-cy="footer" {...props}>
       <Grid>
         <LogoSection>
           <Image

@@ -4,7 +4,7 @@ import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 import { InstantSearch, Hits as ISHits, Stats } from 'react-instantsearch-dom'
 import Searchbox from 'components/Searchbox'
 import get from 'utils/get'
-import Image from 'next/image'
+import Image from 'components/Image'
 import Typography from 'components/Typography'
 import Lottie from 'components/Lottie'
 import { useInView } from 'react-intersection-observer'
@@ -136,7 +136,7 @@ const InteractiveSearch = ({
     threshold: 0.5,
   })
   return (
-    <Container ref={ref} {...props}>
+    <Container ref={ref} className="hide-in-percy" {...props}>
       <Animation>
         <Lottie
           animation={lottie}

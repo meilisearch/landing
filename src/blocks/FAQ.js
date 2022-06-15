@@ -29,9 +29,9 @@ const Questions = styled.div`
   }
 `
 
-const FAQ = ({ faq }) => {
+const FAQ = ({ faq, ...props }) => {
   return (
-    <FAQWrapper>
+    <FAQWrapper {...props}>
       <Grid>
         <Content>
           <Title variant="title.m" forwardedAs="h2">

@@ -107,30 +107,38 @@ const Home = ({ code_samples }) => {
     <>
       <Head meta={meta} />
       <PageContent>
-        <Hero heroProps={hero} />
-        <Demo demoProps={demo} color={get('colors.lila')} />
+        <Hero heroProps={hero} data-cy="hero" />
+        <Demo demoProps={demo} color={get('colors.lila')} data-cy="demo" />
         <OpenSource
           openSourceProps={openSource}
           color={get('colors.hotPink')}
+          data-cy="openSource"
         />
         <Step1
           step1Props={steps[0]}
           steps={stepsAnchor}
           color={get('colors.lila')}
+          data-cy="step1"
         />
         <Step2
           step2Props={steps[1]}
           steps={stepsAnchor}
           color={get('colors.hotPink')}
+          data-cy="step2"
         />
         <Step3
           step3Props={steps[2]}
           steps={stepsAnchor}
           color={get('colors.dodgerBlue')}
+          data-cy="step3"
         />
-        <Developer developerProps={developer} code_samples={code_samples} />
-        <Cards cardsProps={cards} />
-        <Testimonials testimonialsProps={testimonials} />
+        <Developer
+          developerProps={developer}
+          code_samples={code_samples}
+          data-cy="developer"
+        />
+        <Cards cardsProps={cards} data-cy="cards" />
+        <Testimonials testimonialsProps={testimonials} data-cy="testimonials" />
       </PageContent>
     </>
   )
