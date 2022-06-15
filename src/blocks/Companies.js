@@ -32,6 +32,9 @@ const CompaniesList = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px 16px;
   margin-top: 48px;
+  svg {
+    width: 100%;
+  }
   @media (min-width: ${get('breakpoints.md')}) {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 32px 16px;
