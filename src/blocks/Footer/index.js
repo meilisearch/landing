@@ -45,7 +45,6 @@ const Footer = props => {
             width={213}
             layout="fixed"
             alt="Meilisearch Logo"
-            data-cy="meilisearch-logo-footer"
           />
           <Newsletter newsletterProps={footerProps.newsletter} />
         </LogoSection>
