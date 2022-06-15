@@ -33,6 +33,14 @@ import {
   Code,
   Vue,
   Instantmeilisearch,
+  GoRails,
+  Hellonext,
+  HuggingFace,
+  Juicebrothers,
+  Literal,
+  LouisVuitton,
+  Palmes,
+  PlatformSh,
 } from 'components/icons'
 import get from 'utils/get'
 
@@ -63,6 +71,43 @@ const getHomepageData = () => ({
       desktop: heroAnimationDesktop,
       mobile: heroAnimationMobile,
     },
+  },
+  companies: {
+    title: 'Trusted by amazing companies',
+    companies: [
+      {
+        title: 'Louis Vuitton',
+        icon: LouisVuitton,
+      },
+      {
+        title: 'Hugging Face',
+        icon: HuggingFace,
+      },
+      {
+        title: 'Hellonext',
+        icon: Hellonext,
+      },
+      {
+        title: 'Platform.sh',
+        icon: PlatformSh,
+      },
+      {
+        title: 'Go Rails',
+        icon: GoRails,
+      },
+      {
+        title: 'Juicebrothers',
+        icon: Juicebrothers,
+      },
+      {
+        title: 'Literal',
+        icon: Literal,
+      },
+      {
+        title: 'Palmes',
+        icon: Palmes,
+      },
+    ],
   },
   demo: {
     searchStats: (nbHits, timeInMs) =>

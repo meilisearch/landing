@@ -1,4 +1,5 @@
 export { default as Cards } from './Cards'
+export { default as Companies } from './Companies'
 export { default as Demo } from './Demo'
 export { default as Developer } from './Developer'
 export { default as FAQ } from './FAQ'

@@ -11,6 +11,7 @@ describe(`Functional tests`, () => {
     it('Should have blocks', () => {
       cy.get('[data-cy="header"]').should('be.visible')
       cy.get('[data-cy="hero"]').should('be.visible')
+      cy.get('[data-cy="companies"]').should('be.visible')
       cy.get('[data-cy="demo"]').should('be.visible')
       cy.get('[data-cy="openSource"]').should('be.visible')
       cy.get('[data-cy="step1"]').should('be.visible')
