@@ -4,24 +4,10 @@ import Typography from 'components/Typography'
 import get from 'utils/get'
 import { Arrow as BaseArrow } from 'components/icons'
 
-const Details = styled.details`
-  background: ${get('colors.valhalla.700')};
-  border: 1px solid ${get('colors.valhalla.400')};
-  border-radius: 8px;
-
-  &[open] {
-    summary > svg {
-      transform: rotate(180deg);
-    }
-  }
-`
-
 const Summary = styled.summary`
   color: ${get('colors.white')};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 22px 16px;
+  outline: none;
 
   &:hover {
     cursor: pointer;
@@ -29,6 +15,35 @@ const Summary = styled.summary`
   ::marker {
     display: none;
     content: '';
+  }
+
+  // Fix for Safari
+  ::-webkit-details-marker {
+    display: none;
+    content: '';
+  }
+`
+
+// Fix for Safari
+const SummaryContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const Details = styled.details`
+  background: ${get('colors.valhalla.700')};
+  border: 1px solid ${get('colors.valhalla.400')};
+  border-radius: 8px;
+
+  &:focus-within {
+    border: 1px solid ${get('colors.valhalla.300')};
+  }
+
+  &[open] {
+    summary > div > svg {
+      transform: rotate(180deg);
+    }
   }
 `
 
@@ -65,8 +80,10 @@ const Accordion = ({ question, answer }) => {
   return (
     <Details>
       <Summary>
-        <Question variant="body.m.bold">{question}</Question>
-        <Arrow />
+        <SummaryContent>
+          <Question variant="body.m.bold">{question}</Question>
+          <Arrow />
+        </SummaryContent>
       </Summary>
       <Answer
         variant="body.m.default"
