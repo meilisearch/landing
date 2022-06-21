@@ -22,7 +22,7 @@ import {
   GoRails as GoRailsIcon,
   Guides as GuidesIcon,
   Hamburger as HamburgerIcon,
-  HelloNext as HelloNextIcon,
+  Hellonext as HellonextIcon,
   HuggingFace as HuggingFaceIcon,
   Included as IncludedIcon,
   Instantmeilisearch as InstantmeilisearchIcon,
@@ -106,7 +106,7 @@ export const Go = () => <GoIcon height={56} />
 export const GoRails = () => <GoRailsIcon height={56} />
 export const Guides = () => <GuidesIcon height={56} />
 export const Hamburger = () => <HamburgerIcon height={56} />
-export const HelloNext = () => <HelloNextIcon height={56} />
+export const Hellonext = () => <HellonextIcon height={56} />
 export const HuggingFace = () => <HuggingFaceIcon height={56} />
 export const Included = () => <IncludedIcon height={56} />
 export const Instantmeilisearch = () => <InstantmeilisearchIcon height={56} />
