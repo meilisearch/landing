@@ -121,29 +121,29 @@ const getPricingPageData = () => ({
         options: [
           {
             title: '< 10 000',
-            value: '',
+            value: '10000',
           },
           {
             title: '10 000 - 500 000',
-            value: '',
+            value: '500000',
           },
           {
             title: '500 000 - 1 000 000',
-            value: '',
+            value: '1000000',
           },
           {
             title: '1 000 000 - 5 000 000',
-            value: '',
+            value: '5000000',
           },
           {
             title: '> 5 000 000',
-            value: '',
+            value: '5000001',
           },
         ],
       },
       {
         title: 'What <strong>feature</strong> are you interested in?',
-        subTitle: 'Multiple choice possible',
+        subtitle: 'Multiple choice possible',
         multipleChoices: true,
         name: 'feature',
         options: [
@@ -171,23 +171,23 @@ const getPricingPageData = () => ({
         options: [
           {
             title: '< 10 000',
-            value: '',
+            value: '10000',
           },
           {
             title: '10 000 - 500 000',
-            value: '',
+            value: '500000',
           },
           {
             title: '500 000 - 1 000 000',
-            value: '',
+            value: '1000000',
           },
           {
             title: '1 000 000 - 5 000 000',
-            value: '',
+            value: '5000000',
           },
           {
             title: '> 5 000 000',
-            value: '',
+            value: '5000001',
           },
         ],
       },
@@ -198,19 +198,19 @@ const getPricingPageData = () => ({
         options: [
           {
             title: '< 1KB',
-            value: '',
+            value: '1',
           },
           {
             title: '1 KB - 10 KB',
-            value: '',
+            value: '10',
           },
           {
             title: '10 KB - 100 KB',
-            value: '',
+            value: '100',
           },
           {
             title: '> 100 KB',
-            value: '',
+            value: '101',
           },
         ],
       },
