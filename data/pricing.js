@@ -1,3 +1,15 @@
+import {
+  B2CApp,
+  Ecommerce,
+  GeographicSearch,
+  Media,
+  NumericSorting,
+  Other,
+  SaasApp,
+  SiteSearch,
+  TextualSearch,
+} from 'components/icons'
+
 const getPricingPageData = () => ({
   meta: {
     title: 'Pricing ',
@@ -57,6 +69,196 @@ const getPricingPageData = () => ({
           },
         },
       ],
+    },
+  },
+  pricingAssistant: {
+    preTitle: 'Pricing assistant',
+    title: 'We can help you to choose the <strong>right plan</strong>',
+    next: 'Next',
+    previous: 'Previous',
+    steps: [
+      {
+        title: 'What is your <strong>use case</strong>?',
+        multipleChoices: false,
+        name: 'useCase',
+        options: [
+          {
+            title: 'SaaS Application',
+            icon: SaasApp,
+            value: 'saas',
+          },
+          {
+            title: 'B2C Application',
+            icon: B2CApp,
+            value: 'b2c',
+          },
+          {
+            title: 'Site search',
+            icon: SiteSearch,
+            value: 'site',
+          },
+          {
+            title: 'E-commerce',
+            icon: Ecommerce,
+            value: 'ecommerce',
+          },
+          {
+            title: 'Media',
+            icon: Media,
+            value: 'media',
+          },
+          {
+            title: 'Other',
+            icon: Other,
+            value: 'other',
+          },
+        ],
+      },
+      {
+        title: 'How many <strong>searches per month</strong> do you have?',
+        multipleChoices: false,
+        name: 'searchesPerMonth',
+        options: [
+          {
+            title: '< 10 000',
+            value: '',
+          },
+          {
+            title: '10 000 - 500 000',
+            value: '',
+          },
+          {
+            title: '500 000 - 1 000 000',
+            value: '',
+          },
+          {
+            title: '1 000 000 - 5 000 000',
+            value: '',
+          },
+          {
+            title: '> 5 000 000',
+            value: '',
+          },
+        ],
+      },
+      {
+        title: 'What <strong>feature</strong> are you interested in?',
+        subTitle: 'Multiple choice possible',
+        multipleChoices: true,
+        name: 'feature',
+        options: [
+          {
+            title: 'Textual search',
+            icon: TextualSearch,
+            value: 'textual',
+          },
+          {
+            title: 'Geografic filters/sorting',
+            icon: GeographicSearch,
+            value: 'geo',
+          },
+          {
+            title: 'Numeric and/or textual filters/sorting',
+            icon: NumericSorting,
+            value: 'numeric',
+          },
+        ],
+      },
+      {
+        title: 'How many <strong>documents</strong> do you have?',
+        multipleChoices: false,
+        name: 'documentsNumber',
+        options: [
+          {
+            title: '< 10 000',
+            value: '',
+          },
+          {
+            title: '10 000 - 500 000',
+            value: '',
+          },
+          {
+            title: '500 000 - 1 000 000',
+            value: '',
+          },
+          {
+            title: '1 000 000 - 5 000 000',
+            value: '',
+          },
+          {
+            title: '> 5 000 000',
+            value: '',
+          },
+        ],
+      },
+      {
+        title: 'What is the total <strong>size of your documents</strong>?',
+        multipleChoices: false,
+        name: 'documentsTotalSize',
+        options: [
+          {
+            title: '< 1KB',
+            value: '',
+          },
+          {
+            title: '1 KB - 10 KB',
+            value: '',
+          },
+          {
+            title: '10 KB - 100 KB',
+            value: '',
+          },
+          {
+            title: '> 100 KB',
+            value: '',
+          },
+        ],
+      },
+      {
+        title: 'What <strong>update frequency</strong> do you need?',
+        multipleChoices: false,
+        name: 'frequency',
+        options: [
+          {
+            title: 'Every week',
+            value: 'week',
+          },
+          {
+            title: 'Every day',
+            value: 'day',
+          },
+          {
+            title: 'Every hour',
+            value: 'hour',
+          },
+          {
+            title: 'Every minute',
+            value: 'minute',
+          },
+          {
+            title: 'Continuously',
+            value: 'continuously',
+          },
+        ],
+      },
+    ],
+    recommandations: {
+      title: 'Our recommandation',
+      description: 'Here is the recommended plan based on your business needs.',
+      tryAgain: 'Try again',
+      options: {
+        custom: {
+          preTitle: 'Enterprise',
+          title: 'Custom quote',
+          description:
+            'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
+          cta: {
+            title: 'Contact sales',
+            href: '',
+            target: '',
+          },
+        },
+      },
     },
   },
   table: {
