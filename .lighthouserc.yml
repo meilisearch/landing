@@ -1,0 +1,18 @@
+ci:
+  assert:
+    preset: lighthouse:recommended
+    assertions:
+      aria-allowed-attr: warn
+      button-name: warn
+      color-contrast: warn
+      csp-xss: warn
+      errors-in-console: warn
+      external-anchors-use-rel-noopener: warn
+      html-has-lang: warn
+      image-size-responsive: warn
+      installable-manifest: warn
+      maskable-icon: warn
+      meta-description: warn
+      service-worker: wn
+      splash-screen: warn
+      themed-omnibox: warn
