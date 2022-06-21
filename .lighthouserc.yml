@@ -1,7 +1,9 @@
 ci:
+  collect:
+    staticDistDir: '.next'
   assert:
     preset: lighthouse:recommended
-    assertions:
+    assertions: # Those assertions should be removed when fixed in the code
       aria-allowed-attr: warn
       button-name: warn
       color-contrast: warn

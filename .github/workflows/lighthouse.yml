@@ -18,4 +18,4 @@ jobs:
         env:
           NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
           NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
-      - run: lhci autorun --collect.staticDistDir=./.next
+      - run: lhci autorun
