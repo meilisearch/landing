@@ -12,4 +12,4 @@ jobs:
           node-version: 14
       - run: yarn install && yarn global add -g @lhci/cli@0.8.x
       - run: yarn build
-      - run: lhci autorun
+      - run: lhci autorun --collect.staticDistDir=./.next
