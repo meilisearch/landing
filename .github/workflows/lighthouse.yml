@@ -1,9 +1,9 @@
 name: lighthouse
 on:
   pull_request:
-  push:
-    branches:
-      - lighthouse-ci
+  push: # to be removed when opening PR
+    branches: # to be removed when opening PR
+      - lighthouse-ci # to be removed when opening PR
 
 jobs:
   lighthouseci:
@@ -15,4 +15,7 @@ jobs:
           node-version: 14
       - run: yarn install && yarn global add -g @lhci/cli@0.8.x
       - run: yarn build
+        env:
+          NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
+          NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
       - run: lhci autorun --collect.staticDistDir=./.next
