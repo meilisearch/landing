@@ -108,11 +108,7 @@ const DeveloperHub = ({ developerProps }) => {
             </List.Element>
           ))}
         </List>
-        <Button
-          disabled
-          color={get('colors.valhalla.300')}
-          style={{ marginTop: 24 }}
-        >
+        <Button disabled style={{ marginTop: 24 }}>
           <Typography variant="body.s.bold" color={get('colors.ashes.900')}>
             {developerProps.comingSoon}
           </Typography>
