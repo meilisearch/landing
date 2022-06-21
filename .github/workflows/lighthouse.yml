@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: yarn install && yarn global add -g @lhci/cli@0.8.x
+      - run: yarn install && yarn global add @lhci/cli@0.8.x
       - run: yarn build
         env:
           NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
