@@ -33,7 +33,7 @@ const VisibleCheckBox = styled(IconCard)`
   }
   ${HiddenCheckBox}[aria-checked="true"]:hover + &,
   ${HiddenCheckBox}[aria-checked="true"]:focus + & {
-    border: 1px solid ${get('colors.white')};
+    border-color: ${p => get(`colors.${getColorName(p.$color)}.300`)};
   }
 `
 

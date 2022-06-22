@@ -19,6 +19,7 @@ const colors = {
     DEFAULT: '#51E1D9',
   },
   hotPink: {
+    300: '#FFAED4',
     DEFAULT: '#FF5CAA',
     600: '#FF1786',
   },

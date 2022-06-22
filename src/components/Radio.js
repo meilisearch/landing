@@ -34,7 +34,7 @@ const CardRadio = styled.div`
   }
   ${HiddenRadio}[aria-checked="true"]:hover + &,
   ${HiddenRadio}[aria-checked="true"]:focus + & {
-    border: 1px solid ${get('colors.white')};
+    border: 1px solid ${p => get(`colors.${getColorName(p.$color)}.300`)};
   }
 `
 
