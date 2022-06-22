@@ -7,13 +7,14 @@ import RadioList from './RadioList'
 import CheckboxList from './CheckboxList'
 import NextButton from './NextButton'
 import PrevButton from './PrevButton'
+import { useTransition, animated } from 'react-spring'
 
 const Card = styled(Grid)`
   border: 1px solid ${get('colors.valhalla.200')};
   border-radius: 8px;
   padding: 42px 0;
   grid-template-columns: repeat(7, 1fr);
-  height: 100%;
+  min-height: 486px;
 `
 
 const Title = styled(Typography)`
@@ -106,6 +107,7 @@ const Step = ({ pricingAssistant, form, setForm, step, setStep, color }) => {
 }
 
 const PricingAssistantStepContainer = styled.div`
+  position: relative;
   grid-column: 6 / -1;
   min-height: 486px;
 `
@@ -114,18 +116,28 @@ const RightColumn = ({ pricingAssistant, color }) => {
   const [step, setStep] = React.useState(0)
   const [form, setForm] = React.useState({})
 
+  const transitions = useTransition(step, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  })
+
   console.log(form)
 
   return (
-    <PricingAssistantStepContainer has>
-      <Step
-        pricingAssistant={pricingAssistant}
-        step={step}
-        setStep={setStep}
-        setForm={setForm}
-        form={form}
-        color={color}
-      />
+    <PricingAssistantStepContainer>
+      {transitions((styles, item) => (
+        <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>
+          <Step
+            pricingAssistant={pricingAssistant}
+            step={item}
+            setStep={setStep}
+            setForm={setForm}
+            form={form}
+            color={color}
+          />
+        </animated.div>
+      ))}
     </PricingAssistantStepContainer>
   )
 }
