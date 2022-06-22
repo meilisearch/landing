@@ -6,8 +6,8 @@ import Radio from 'components/Radio'
 
 const Options = styled(Grid)`
   grid-template-columns: ${p => (p.$hasIcon ? 'repeat(3, 1fr)' : '1fr')};
-  grid-gap: 20px;
-  margin: 48px 0;
+  grid-gap: ${p => (p.$hasIcon ? '20px' : '12px')};
+  margin: 0;
 `
 
 const RadioList = ({ content, form, setForm, color }) => {
