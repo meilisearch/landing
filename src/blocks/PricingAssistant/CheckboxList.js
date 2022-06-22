@@ -11,7 +11,7 @@ const Options = styled(Grid)`
 `
 
 const CheckboxList = ({ content, form, setForm, color }) => {
-  const checkboxState = useCheckboxState({ state: [] })
+  const checkboxState = useCheckboxState({ state: form[content.name] || [] })
 
   React.useEffect(() => {
     setForm({ ...form, [content.name]: checkboxState.state })

@@ -11,7 +11,7 @@ const Options = styled(Grid)`
 `
 
 const RadioList = ({ content, form, setForm, color }) => {
-  const radioState = useRadioState()
+  const radioState = useRadioState({ state: form[content.name] || null })
 
   React.useEffect(() => {
     setForm({ ...form, [content.name]: radioState.state })
