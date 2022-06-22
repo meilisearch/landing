@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import get from 'utils/get'
 import Typography from 'components/Typography'
 import Grid from 'components/Grid'
@@ -8,10 +8,9 @@ import CheckboxList from './CheckboxList'
 import NextButton from './NextButton'
 import PrevButton from './PrevButton'
 import { useTransition, animated } from 'react-spring'
+import BaseBullets from 'components/Bullets'
 
 const Card = styled(Grid)`
-  border: 1px solid ${get('colors.valhalla.200')};
-  border-radius: 8px;
   padding: 42px 0;
   grid-template-columns: repeat(7, 1fr);
   min-height: 486px;
@@ -110,6 +109,27 @@ const PricingAssistantStepContainer = styled.div`
   position: relative;
   grid-column: 6 / -1;
   min-height: 486px;
+  border: 1px solid ${get('colors.valhalla.200')};
+  border-radius: 8px;
+`
+
+const Bullets = styled(BaseBullets)`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 42px;
+  display: flex;
+  flex-direction: column;
+  button + button {
+    margin-top: 16px;
+  }
+  ${p =>
+    p.$hasCompletedForm &&
+    css`
+      button {
+        background-color: ${p.color};
+      }
+    `};
 `
 
 const RightColumn = ({ pricingAssistant, color }) => {
@@ -126,6 +146,12 @@ const RightColumn = ({ pricingAssistant, color }) => {
 
   return (
     <PricingAssistantStepContainer>
+      <Bullets
+        currentIndex={step}
+        nbBullets={pricingAssistant.steps.length}
+        color={color}
+        $hasCompletedForm={step === pricingAssistant.steps.length}
+      />
       {transitions((styles, item) => (
         <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>
           <Step
