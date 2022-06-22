@@ -44,7 +44,7 @@ const Pricing = () => {
         <PageContent>
           <PricingAssistant
             pricingAssistant={pricingAssistant}
-            color={get('colors.hotPink')}
+            color={get('colors.dodgerBlue')}
             data-cy="pricingAssistant"
           />
           <HeroBlock hero={hero} data-cy="pricingHero" />
