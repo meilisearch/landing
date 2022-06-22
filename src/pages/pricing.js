@@ -43,10 +43,9 @@ const Pricing = () => {
       <div style={{ backgroundColor: get('colors.valhalla.800') }}>
         <PageContent>
           <PricingAssistant
-            pricing={pricing}
-            data-cy="pricingAssistant"
             pricingAssistant={pricingAssistant}
             color={get('colors.hotPink')}
+            data-cy="pricingAssistant"
           />
           <HeroBlock hero={hero} data-cy="pricingHero" />
           <PricingBlock pricing={pricing} data-cy="pricingCards" />

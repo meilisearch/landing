@@ -13,9 +13,10 @@ const Section = styled.section`
 const PricingAssistant = ({
   pricingAssistant,
   color = get('colors.dodgerBlue'),
+  ...props
 }) => {
   return (
-    <Section>
+    <Section {...props}>
       <Grid>
         <LeftColumn pricingAssistant={pricingAssistant} color={color} />
         <RightColumn pricingAssistant={pricingAssistant} color={color} />
