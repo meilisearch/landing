@@ -43,12 +43,11 @@ const Radio = ({
   title,
   radioState,
   color = get('colors.dodgerBlue'),
-  index,
   value,
   ...props
 }) => (
   <label {...props}>
-    <HiddenRadio {...radioState} value={value} autoFocus={index === 0} />
+    <HiddenRadio {...radioState} value={value} />
     <CardRadio
       icon={icon}
       title={title}

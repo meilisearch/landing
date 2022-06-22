@@ -42,12 +42,11 @@ const Checkbox = ({
   title,
   icon,
   color = get('colors.dodgerBlue'),
-  autoFocus,
   checkboxState,
 }) => {
   return (
     <label>
-      <HiddenCheckBox value={value} autoFocus={autoFocus} {...checkboxState} />
+      <HiddenCheckBox value={value} {...checkboxState} />
       <VisibleCheckBox $color={color} icon={icon} title={title} />
     </label>
   )

@@ -20,12 +20,11 @@ const CheckboxList = ({ content, form, setForm, color }) => {
 
   return (
     <Options>
-      {content.options.map((option, index) => (
+      {content.options.map(option => (
         <Checkbox
           key={option.value}
           {...option}
           color={color}
-          autoFocus={index === 0}
           checkboxState={checkboxState}
         />
       ))}

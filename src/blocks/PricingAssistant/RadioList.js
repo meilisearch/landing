@@ -24,12 +24,11 @@ const RadioList = ({ content, form, setForm, color }) => {
       as={Options}
       $hasIcon={!!content.options[0].icon}
     >
-      {content.options.map((option, index) => (
+      {content.options.map(option => (
         <Radio
           key={option.title}
           radioState={radioState}
           color={color}
-          index={index}
           {...option}
         />
       ))}
