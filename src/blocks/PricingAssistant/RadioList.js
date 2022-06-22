@@ -10,21 +10,23 @@ const Options = styled(Grid)`
   margin: 0;
 `
 
-const RadioList = ({ content, form, setForm, color }) => {
-  const radioState = useRadioState({ state: form[content.name] || null })
+const RadioList = ({ currentStepData, form, setForm, color }) => {
+  const radioState = useRadioState({
+    state: form[currentStepData.name] || null,
+  })
 
   React.useEffect(() => {
-    setForm({ ...form, [content.name]: radioState.state })
+    setForm({ ...form, [currentStepData.name]: radioState.state })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [radioState.state])
 
   return (
     <RadioGroup
-      aria-label={content.name}
+      aria-label={currentStepData.name}
       as={Options}
-      $hasIcon={!!content.options[0].icon}
+      $hasIcon={!!currentStepData.options[0].icon}
     >
-      {content.options.map(option => (
+      {currentStepData.options.map(option => (
         <Radio
           key={option.title}
           radioState={radioState}

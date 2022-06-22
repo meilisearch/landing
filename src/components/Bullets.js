@@ -1,18 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Button } from 'reakit/Button'
 import hexToRgb from 'utils/hexToRgb'
 import getColorName from 'utils/getColorName'
 import get from 'utils/get'
 
-const Bullet = styled(Button)`
+const Bullet = styled.div`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  padding: 0;
-  margin: 0;
-  border: none;
-  cursor: pointer;
   transition: background-color 300ms;
 
   ${p =>

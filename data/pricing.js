@@ -74,8 +74,10 @@ const getPricingPageData = () => ({
   pricingAssistant: {
     preTitle: 'Pricing assistant',
     title: 'We can help you to choose the <strong>right plan</strong>',
-    next: 'Next',
-    previous: 'Previous',
+    buttons: {
+      next: 'Next',
+      previous: 'Previous',
+    },
     steps: [
       {
         title: 'What is your <strong>use case</strong>?',

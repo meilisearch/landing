@@ -10,17 +10,19 @@ const Options = styled(Grid)`
   margin: 48px 0;
 `
 
-const CheckboxList = ({ content, form, setForm, color }) => {
-  const checkboxState = useCheckboxState({ state: form[content.name] || [] })
+const CheckboxList = ({ currentStepData, form, setForm, color }) => {
+  const checkboxState = useCheckboxState({
+    state: form[currentStepData.name] || [],
+  })
 
   React.useEffect(() => {
-    setForm({ ...form, [content.name]: checkboxState.state })
+    setForm({ ...form, [currentStepData.name]: checkboxState.state })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [checkboxState.state])
 
   return (
     <Options>
-      {content.options.map(option => (
+      {currentStepData.options.map(option => (
         <Checkbox
           key={option.value}
           {...option}

@@ -23,6 +23,7 @@ const Title = styled(Typography)`
 `
 
 const LeftColumn = ({ pricingAssistant, color }) => {
+  console.log(color)
   return (
     <PricingAssistantTextContainer>
       <PreTitle variant="title.caps" $color={color}>

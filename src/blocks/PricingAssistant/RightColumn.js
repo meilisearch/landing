@@ -1,32 +1,16 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import get from 'utils/get'
-import Typography from 'components/Typography'
 import Grid from 'components/Grid'
-import RadioList from './RadioList'
-import CheckboxList from './CheckboxList'
-import NextButton from './NextButton'
-import PrevButton from './PrevButton'
+import StepsButtons from './StepsButtons'
 import { useTransition, animated } from 'react-spring'
 import BaseBullets from 'components/Bullets'
+import CurrentStep from './CurrentStep'
 
 const Card = styled(Grid)`
   padding: 42px 0;
   grid-template-columns: repeat(7, 1fr);
   min-height: 486px;
-`
-
-const Title = styled(Typography)`
-  color: ${get('colors.white')};
-  display: block;
-  text-align: center;
-`
-
-const Subtitle = styled(Typography)`
-  color: ${get('colors.ashes.900')};
-  display: block;
-  text-align: center;
-  font-size: 12px;
 `
 
 const Content = styled.div`
@@ -36,74 +20,6 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `
-
-const Buttons = styled.div`
-  display: flex;
-`
-
-const Step = ({ pricingAssistant, form, setForm, step, setStep, color }) => {
-  if (step < pricingAssistant.steps.length) {
-    const content = pricingAssistant.steps[step]
-    return (
-      <Card>
-        <Content>
-          <div>
-            <Title
-              variant="body.l.default"
-              dangerouslySetInnerHTML={{ __html: content.title }}
-            />
-            {content.subtitle && (
-              <Subtitle
-                variant="body.l.default"
-                dangerouslySetInnerHTML={{ __html: content.subtitle }}
-              />
-            )}
-          </div>
-          {content.multipleChoices ? (
-            <CheckboxList
-              content={content}
-              setForm={setForm}
-              form={form}
-              color={color}
-            />
-          ) : (
-            <RadioList
-              content={content}
-              setForm={setForm}
-              form={form}
-              color={color}
-            />
-          )}
-          <Buttons>
-            <PrevButton
-              step={step}
-              setStep={setStep}
-              buttonText={pricingAssistant.previous}
-              color={color}
-            />
-            <NextButton
-              step={step}
-              setStep={setStep}
-              nbSteps={pricingAssistant.steps.length}
-              buttonText={pricingAssistant.next}
-              disabled={
-                form[content.name] && form[content.name].length > 0
-                  ? false
-                  : true
-              }
-              color={color}
-            />
-          </Buttons>
-        </Content>
-      </Card>
-    )
-  }
-  return (
-    <>
-      <p>test</p>
-    </>
-  )
-}
 
 const PricingAssistantStepContainer = styled.div`
   position: relative;
@@ -120,21 +36,26 @@ const Bullets = styled(BaseBullets)`
   left: 42px;
   display: flex;
   flex-direction: column;
-  button + button {
+  div + div {
     margin-top: 16px;
   }
   ${p =>
     p.$hasCompletedForm &&
     css`
-      button {
+      div {
         background-color: ${p.color};
       }
     `};
 `
 
+const Results = () => {
+  return <p>test</p>
+}
+
 const RightColumn = ({ pricingAssistant, color }) => {
   const [step, setStep] = React.useState(0)
   const [form, setForm] = React.useState({})
+  const nbSteps = pricingAssistant.steps.length
 
   const transitions = useTransition(step, {
     from: { opacity: 0 },
@@ -148,22 +69,41 @@ const RightColumn = ({ pricingAssistant, color }) => {
     <PricingAssistantStepContainer>
       <Bullets
         currentIndex={step}
-        nbBullets={pricingAssistant.steps.length}
+        nbBullets={nbSteps}
         color={color}
-        $hasCompletedForm={step === pricingAssistant.steps.length}
+        $hasCompletedForm={step === nbSteps}
       />
-      {transitions((styles, item) => (
-        <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>
-          <Step
-            pricingAssistant={pricingAssistant}
-            step={item}
-            setStep={setStep}
-            setForm={setForm}
-            form={form}
-            color={color}
-          />
-        </animated.div>
-      ))}
+      {transitions((styles, item) => {
+        const { steps } = pricingAssistant
+        const currentStepData = steps[item]
+        const currentFormField = form[currentStepData.name] || null
+        return (
+          <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>
+            <Card>
+              <Content>
+                {step < nbSteps ? (
+                  <CurrentStep
+                    currentStepData={currentStepData}
+                    form={form}
+                    setForm={setForm}
+                    color={color}
+                  />
+                ) : (
+                  <Results />
+                )}
+                <StepsButtons
+                  buttonsTexts={pricingAssistant.buttons}
+                  currentStep={item}
+                  setStep={setStep}
+                  nbSteps={steps.length}
+                  color={color}
+                  currentFormField={currentFormField}
+                />
+              </Content>
+            </Card>
+          </animated.div>
+        )
+      })}
     </PricingAssistantStepContainer>
   )
 }
