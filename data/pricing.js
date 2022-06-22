@@ -247,16 +247,52 @@ const getPricingPageData = () => ({
       description: 'Here is the recommended plan based on your business needs.',
       tryAgain: 'Try again',
       options: {
-        custom: {
-          preTitle: 'Enterprise',
-          title: 'Custom quote',
-          description:
-            'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
-          cta: {
-            title: 'Contact sales',
-            href: '',
-            target: '',
+        preTitle: 'Dedicated',
+        perMonth: '/month',
+        estimation: price => `Estimation base on $${price} per hour`,
+        ram: quantity => `${quantity}GB Ram`,
+        cpu: quantity => `${quantity} CPU`,
+        disk: quantity => `${quantity}GB Disk`,
+        description:
+          'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
+        cta: {
+          title: 'Contact sales',
+          href: '',
+          target: '',
+        },
+        list: [
+          {
+            monthlyPrice: 29,
+            hourPrice: 0.04,
+            ram: 1,
+            cpu: 0.5,
+            disk: 10,
           },
+          {
+            monthlyPrice: 122,
+            hourPrice: 0.17,
+            ram: 4,
+            cpu: 1,
+            disk: 40,
+          },
+          {
+            monthlyPrice: 461,
+            hourPrice: 0.64,
+            ram: 16,
+            cpu: 4,
+            disk: 160,
+          },
+        ],
+      },
+      customOption: {
+        preTitle: 'Enterprise',
+        title: 'Custom quote',
+        description:
+          'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
+        cta: {
+          title: 'Contact sales',
+          href: '',
+          target: '',
         },
       },
     },
