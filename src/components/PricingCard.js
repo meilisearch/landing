@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import get from 'utils/get'
 
 const PricingCard = styled.div`
-  border: 2px solid ${get('colors.dodgerBlue')};
+  border: 2px solid ${p => p.$color || get('colors.dodgerBlue')};
   border-radius: 16px;
   overflow: hidden;
   height: 100%;
@@ -11,7 +11,7 @@ const PricingCard = styled.div`
 `
 
 const PricingCardHeaderWrapper = styled.div`
-  background-color: ${p => p.$bgColor || get('colors.dodgerBlue')};
+  background-color: ${p => p.$color || get('colors.dodgerBlue')};
   color: ${get('colors.white')};
   padding: 16px;
   position: relative;
@@ -43,16 +43,16 @@ const HeaderContent = styled.div`
   text-align: center;
 `
 
-const PricingCardHeader = ({ children, ...props }) => (
+const PricingCardHeader = ({ children, hasDecorator = true, ...props }) => (
   <PricingCardHeaderWrapper {...props}>
     <HeaderContent>{children}</HeaderContent>
-    <Decorator className="decorator" />
+    {hasDecorator && <Decorator className="decorator" />}
   </PricingCardHeaderWrapper>
 )
 
 const PricingCardBody = styled.div`
   color: ${get('colors.ashes.100')};
-  background-color: ${p => p.$bgColor || get('colors.valhalla')};
+  background-color: ${p => p.$color || get('colors.valhalla')};
   height: 100%;
   display: flex;
   justify-content: space-between;

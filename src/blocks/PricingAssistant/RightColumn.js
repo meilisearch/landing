@@ -6,6 +6,7 @@ import StepsButtons from './StepsButtons'
 import { useTransition, animated } from 'react-spring'
 import BaseBullets from 'components/Bullets'
 import CurrentStep from './CurrentStep'
+import Results from './Results'
 
 const Card = styled(Grid)`
   padding: 42px 0;
@@ -48,13 +49,19 @@ const Bullets = styled(BaseBullets)`
     `};
 `
 
-const Results = () => {
-  return <p>test</p>
+const filledForm = {
+  useCase: 'other',
+  searchesPerMonth: '10000',
+  feature: ['numeric', 'geo', 'textual'],
+  documentsNumber: '10000',
+  documentsTotalSize: '50',
+  frequency: 'daily',
 }
 
 const RightColumn = ({ pricingAssistant, color }) => {
-  const [step, setStep] = React.useState(0)
-  const [form, setForm] = React.useState({})
+  const [step, setStep] = React.useState(6)
+  // const [form, setForm] = React.useState({})
+  const [form, setForm] = React.useState(filledForm)
   const nbSteps = pricingAssistant.steps.length
 
   const transitions = useTransition(step, {
@@ -74,31 +81,43 @@ const RightColumn = ({ pricingAssistant, color }) => {
         $hasCompletedForm={step === nbSteps}
       />
       {transitions((styles, item) => {
-        const { steps } = pricingAssistant
+        console.log({ item })
+        const { steps, recommandations, buttons } = pricingAssistant
         const currentStepData = steps[item]
-        const currentFormField = form[currentStepData.name] || null
+        console.log({ currentStepData })
+        const currentFormField = form[currentStepData?.name] || null
         return (
           <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>
             <Card>
               <Content>
                 {step < nbSteps ? (
-                  <CurrentStep
-                    currentStepData={currentStepData}
-                    form={form}
-                    setForm={setForm}
-                    color={color}
-                  />
+                  <>
+                    <CurrentStep
+                      currentStepData={currentStepData}
+                      form={form}
+                      setForm={setForm}
+                      color={color}
+                    />
+                    <StepsButtons
+                      buttonsTexts={buttons}
+                      currentStep={item}
+                      setStep={setStep}
+                      nbSteps={steps.length}
+                      color={color}
+                      currentFormField={currentFormField}
+                    />
+                  </>
                 ) : (
-                  <Results />
+                  <Results
+                    form={form}
+                    recommandations={recommandations}
+                    color={color}
+                    onReset={() => {
+                      setForm({})
+                      setStep(0)
+                    }}
+                  />
                 )}
-                <StepsButtons
-                  buttonsTexts={pricingAssistant.buttons}
-                  currentStep={item}
-                  setStep={setStep}
-                  nbSteps={steps.length}
-                  color={color}
-                  currentFormField={currentFormField}
-                />
               </Content>
             </Card>
           </animated.div>

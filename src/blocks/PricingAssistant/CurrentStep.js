@@ -19,6 +19,7 @@ const Subtitle = styled(Typography)`
 `
 
 const CurrentStep = ({ currentStepData, form, setForm, color }) => {
+  if (!currentStepData) return null
   return (
     <>
       <div>

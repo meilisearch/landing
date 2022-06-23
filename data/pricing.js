@@ -258,9 +258,9 @@ const getPricingPageData = () => ({
         description:
           'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
         cta: {
-          title: 'Contact sales',
-          href: '',
-          target: '',
+          title: 'Get started',
+          href: 'https://cloud.meilisearch.com/login',
+          target: '_blank',
         },
         list: [
           {

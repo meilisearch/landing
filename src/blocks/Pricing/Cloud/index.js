@@ -39,7 +39,7 @@ const Cloud = ({ cloud, ...props }) => {
             </Typography>
           </HeaderContainer>
         </PricingCardHeader>
-        <PricingCard.Body $bgColor={get('colors.valhalla.700')}>
+        <PricingCard.Body $color={get('colors.valhalla.700')}>
           <Mobile cloud={cloud} />
           <Desktop cloud={cloud} />
         </PricingCard.Body>
