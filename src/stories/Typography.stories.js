@@ -81,6 +81,13 @@ TitleCaps.args = {
   children: 'I’m the title.caps variant',
 }
 
+export const TitleCapsXs = Template.bind({})
+TitleCapsXs.storyName = 'title | capsXs'
+TitleCapsXs.args = {
+  variant: 'title.capsXs',
+  children: 'I’m the title.capsXs variant',
+}
+
 export const BodyLDefault = Template.bind({})
 BodyLDefault.storyName = 'body | L | default'
 BodyLDefault.args = {

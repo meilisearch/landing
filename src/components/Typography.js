@@ -101,6 +101,20 @@ const variants = {
         }
       `,
     },
+    capsXs: {
+      tag: 'span',
+      style: css`
+        font-family: Poppins;
+        font-weight: 700;
+        letter-spacing: 3%;
+        line-height: 130%;
+        text-transform: uppercase;
+        font-size: 9px;
+        @media (min-width: ${get('breakpoints.xl')}) {
+          font-size: 10px;
+        }
+      `,
+    },
   },
   body: {
     l: {
@@ -329,6 +343,7 @@ Typography.propTypes = {
     'title.s',
     'title.xs',
     'title.caps',
+    'title.capsXs',
     'body.l.default',
     'body.l.bold',
     'body.l.link',
