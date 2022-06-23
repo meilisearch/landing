@@ -65,7 +65,7 @@ const getPricingPageData = () => ({
           keypoints: ['Premier support', 'Premium SLA', 'More resources'],
           cta: {
             title: 'Contact sales',
-            href: 'javascript:$crisp.push(["do", "chat:open"])',
+            href: '',
           },
         },
       ],

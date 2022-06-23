@@ -32,6 +32,8 @@ const EnterprisePlan = ({ enterprisePlan }) => {
         href={enterprisePlan.cta.href}
         target={enterprisePlan.cta.target}
         style={{ marginTop: 48 }}
+        // eslint-disable-next-line no-undef
+        onClick={() => $crisp.push(['do', 'chat:open'])}
       >
         <Typography variant="body.s.bold">
           {enterprisePlan.cta.title}
