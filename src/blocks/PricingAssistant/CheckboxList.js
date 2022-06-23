@@ -12,7 +12,7 @@ const Options = styled(Grid)`
 
 const CheckboxList = ({ currentStepData, form, setForm, color }) => {
   const checkboxState = useCheckboxState({
-    state: form[currentStepData.name] || [],
+    state: form[currentStepData.name],
   })
 
   React.useEffect(() => {

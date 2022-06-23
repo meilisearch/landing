@@ -117,33 +117,6 @@ const getPricingPageData = () => ({
         ],
       },
       {
-        title: 'How many <strong>searches per month</strong> do you have?',
-        multipleChoices: false,
-        name: 'searchesPerMonth',
-        options: [
-          {
-            title: '< 10 000',
-            value: '10000',
-          },
-          {
-            title: '10 000 - 500 000',
-            value: '500000',
-          },
-          {
-            title: '500 000 - 1 000 000',
-            value: '1000000',
-          },
-          {
-            title: '1 000 000 - 5 000 000',
-            value: '5000000',
-          },
-          {
-            title: '> 5 000 000',
-            value: '5000001',
-          },
-        ],
-      },
-      {
         title: 'What <strong>feature</strong> are you interested in?',
         subtitle: 'Multiple choice possible',
         multipleChoices: true,
@@ -172,47 +145,52 @@ const getPricingPageData = () => ({
         name: 'documentsNumber',
         options: [
           {
-            title: '< 10 000',
-            value: '10000',
+            title: '< 100 000',
+            value: 100000,
           },
           {
-            title: '10 000 - 500 000',
-            value: '500000',
+            title: '100 000 - 500 000',
+            value: 500000,
           },
           {
             title: '500 000 - 1 000 000',
-            value: '1000000',
+            value: 1000000,
           },
           {
             title: '1 000 000 - 5 000 000',
-            value: '5000000',
+            value: 5000000,
           },
           {
-            title: '> 5 000 000',
-            value: '5000001',
+            title: '5 000 000 - 100 000 000',
+            value: 100000000,
+          },
+          {
+            title: '> 100 000 000',
+            value: 1000000001,
           },
         ],
       },
       {
-        title: 'What is the total <strong>size of your documents</strong>?',
+        title:
+          'What is the <strong>approximate size</strong> of one of your documents?',
         multipleChoices: false,
-        name: 'documentsTotalSize',
+        name: 'documentApproxSize',
         options: [
           {
-            title: '< 1KB',
-            value: '1',
+            title: '< 0.5 KB',
+            value: 0.5,
+          },
+          {
+            title: '0.5 KB - 1 KB',
+            value: 1,
           },
           {
             title: '1 KB - 10 KB',
-            value: '10',
+            value: 10,
           },
           {
-            title: '10 KB - 100 KB',
-            value: '100',
-          },
-          {
-            title: '> 100 KB',
-            value: '101',
+            title: '> 10 KB',
+            value: 11,
           },
         ],
       },

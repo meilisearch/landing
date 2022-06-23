@@ -49,19 +49,9 @@ const Bullets = styled(BaseBullets)`
     `};
 `
 
-const filledForm = {
-  useCase: 'other',
-  searchesPerMonth: '10000',
-  feature: ['numeric', 'geo', 'textual'],
-  documentsNumber: '10000',
-  documentsTotalSize: '50',
-  frequency: 'daily',
-}
-
 const RightColumn = ({ pricingAssistant, color }) => {
-  const [step, setStep] = React.useState(6)
-  // const [form, setForm] = React.useState({})
-  const [form, setForm] = React.useState(filledForm)
+  const [step, setStep] = React.useState(0)
+  const [form, setForm] = React.useState({})
   const nbSteps = pricingAssistant.steps.length
 
   const transitions = useTransition(step, {
@@ -81,10 +71,8 @@ const RightColumn = ({ pricingAssistant, color }) => {
         $hasCompletedForm={step === nbSteps}
       />
       {transitions((styles, item) => {
-        console.log({ item })
         const { steps, recommandations, buttons } = pricingAssistant
         const currentStepData = steps[item]
-        console.log({ currentStepData })
         const currentFormField = form[currentStepData?.name] || null
         return (
           <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>

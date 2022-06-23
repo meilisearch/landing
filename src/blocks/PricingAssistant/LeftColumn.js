@@ -22,21 +22,18 @@ const Title = styled(Typography)`
   }
 `
 
-const LeftColumn = ({ pricingAssistant, color }) => {
-  console.log(color)
-  return (
-    <PricingAssistantTextContainer>
-      <PreTitle variant="title.caps" $color={color}>
-        {pricingAssistant.preTitle}
-      </PreTitle>
-      <Title
-        variant="title.l"
-        forwardedAs="h2"
-        $color={color}
-        dangerouslySetInnerHTML={{ __html: pricingAssistant.title }}
-      />
-    </PricingAssistantTextContainer>
-  )
-}
+const LeftColumn = ({ pricingAssistant, color }) => (
+  <PricingAssistantTextContainer>
+    <PreTitle variant="title.caps" $color={color}>
+      {pricingAssistant.preTitle}
+    </PreTitle>
+    <Title
+      variant="title.l"
+      forwardedAs="h2"
+      $color={color}
+      dangerouslySetInnerHTML={{ __html: pricingAssistant.title }}
+    />
+  </PricingAssistantTextContainer>
+)
 
 export default LeftColumn

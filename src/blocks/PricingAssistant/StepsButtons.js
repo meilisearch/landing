@@ -59,7 +59,7 @@ const StepsButtons = ({
         <NextButton
           onClick={() => setStep(currentStep + 1)}
           color={color}
-          disabled={!(currentFormField && currentFormField?.length > 0)}
+          disabled={!(currentFormField || currentFormField?.length > 0)}
           text={next}
         />
       )}

@@ -18,27 +18,35 @@ const SUGGESTIONS = {
 const getPricingAssistantSuggestion = form => {
   const {
     // useCase,
-    // searchesPerMonth,
-    feature,
+    // feature,
     documentsNumber,
-    documentsTotalSize,
+    documentApproxSize,
     frequency,
   } = form
+
   if (
-    frequency === 'continuously' ||
-    parseInt(documentsTotalSize > 100) ||
-    parseInt(documentsNumber > 5000000)
+    documentsNumber > 5000000 ||
+    documentApproxSize > 1 ||
+    frequency === 'minute' ||
+    frequency === 'continuously'
   )
     return SUGGESTIONS.CUSTOM
-  const dbSize =
-    (parseInt(documentsNumber) *
-      parseInt(documentsTotalSize) *
-      (feature === 'geo' ? 1 : 10)) /
-    1000000
-  if (dbSize <= 1) return SUGGESTIONS.LOW
-  if (dbSize <= 4) return SUGGESTIONS.MIDDLE
-  if (dbSize <= 16) return SUGGESTIONS.HIGH
-  if (dbSize > 16) return SUGGESTIONS.CUSTOM
+
+  let dbSizeInGB = 0
+  if (form.feature.includes('textual')) {
+    dbSizeInGB += (documentsNumber * documentApproxSize * 10) / 1024 / 1024
+  }
+  if (form.feature.includes('geo')) {
+    dbSizeInGB += (documentsNumber * 20) / 1024 / 1024 / 1024
+  }
+  if (form.feature.includes('numeric')) {
+    dbSizeInGB += (documentsNumber * documentApproxSize * 2) / 1024 / 1024
+  }
+
+  if (dbSizeInGB <= 1) return SUGGESTIONS.LOW
+  if (dbSizeInGB <= 4) return SUGGESTIONS.MIDDLE
+  if (dbSizeInGB <= 16) return SUGGESTIONS.HIGH
+  if (dbSizeInGB > 16) return SUGGESTIONS.CUSTOM
 }
 
 const PricingCard = styled(BasePricingCard)`
