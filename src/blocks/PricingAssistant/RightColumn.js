@@ -70,15 +70,15 @@ const RightColumn = ({ pricingAssistant, color }) => {
         color={color}
         $hasCompletedForm={step === nbSteps}
       />
-      {transitions((styles, item) => {
+      {transitions((styles, currentStep) => {
         const { steps, recommandations, buttons } = pricingAssistant
-        const currentStepData = steps[item]
+        const currentStepData = steps[currentStep]
         const currentFormField = form[currentStepData?.name] || null
         return (
           <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>
             <Card>
               <Content>
-                {step < nbSteps ? (
+                {currentStep < nbSteps ? (
                   <>
                     <CurrentStep
                       currentStepData={currentStepData}
@@ -88,7 +88,7 @@ const RightColumn = ({ pricingAssistant, color }) => {
                     />
                     <StepsButtons
                       buttonsTexts={buttons}
-                      currentStep={item}
+                      currentStep={currentStep}
                       setStep={setStep}
                       nbSteps={steps.length}
                       color={color}

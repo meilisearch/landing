@@ -18,10 +18,10 @@ const SUGGESTIONS = {
 const getPricingAssistantSuggestion = form => {
   const {
     // useCase,
-    // feature,
-    documentsNumber,
-    documentApproxSize,
-    frequency,
+    feature = [],
+    documentsNumber = 0,
+    documentApproxSize = 0,
+    frequency = null,
   } = form
 
   if (
@@ -33,13 +33,13 @@ const getPricingAssistantSuggestion = form => {
     return SUGGESTIONS.CUSTOM
 
   let dbSizeInGB = 0
-  if (form.feature.includes('textual')) {
+  if (feature.includes('textual')) {
     dbSizeInGB += (documentsNumber * documentApproxSize * 10) / 1024 / 1024
   }
-  if (form.feature.includes('geo')) {
+  if (feature.includes('geo')) {
     dbSizeInGB += (documentsNumber * 20) / 1024 / 1024 / 1024
   }
-  if (form.feature.includes('numeric')) {
+  if (feature.includes('numeric')) {
     dbSizeInGB += (documentsNumber * documentApproxSize * 2) / 1024 / 1024
   }
 
@@ -184,7 +184,9 @@ const Plans = ({ data, planIndex, color }) => {
 }
 
 const Results = ({ form, recommandations, color, onReset }) => {
+  const [reset, setReset] = React.useState(false)
   const resultToDisplay = getPricingAssistantSuggestion(form)
+  if (reset) return null
 
   return (
     <div
@@ -199,7 +201,12 @@ const Results = ({ form, recommandations, color, onReset }) => {
       <Title variant="body.l.default">{recommandations.title}</Title>
       <Description variant="body.m.default">
         {recommandations.description}
-        <ResetButton onClick={onReset}>
+        <ResetButton
+          onClick={() => {
+            onReset()
+            setReset(true)
+          }}
+        >
           <TryAgain variant="body.m.default" $color={color}>
             {recommandations.tryAgain}
           </TryAgain>
