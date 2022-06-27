@@ -34,7 +34,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-instantsearch-dom": "^6.27.0",
-    "react-intersection-observer": "^9.2.2",
+    "react-intersection-observer": "^9.3.4",
     "react-lottie": "^1.2.3",
     "react-lottie-wrapper": "^1.1.8",
     "react-markdown": "^8.0.3",
