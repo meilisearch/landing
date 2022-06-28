@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import get from 'utils/get'
-import Typography from 'components/Typography'
 import RadioList from './RadioList'
 import CheckboxList from './CheckboxList'
+import get from 'utils/get'
+import Typography from 'components/Typography'
 
 const Title = styled(Typography)`
   color: ${get('colors.white')};
@@ -18,11 +18,15 @@ const Subtitle = styled(Typography)`
   font-size: 12px;
 `
 
+const StepTitle = styled.div`
+  padding: 0 36px;
+`
+
 const CurrentStep = ({ currentStepData, form, setForm, color }) => {
   if (!currentStepData) return null
   return (
     <>
-      <div>
+      <StepTitle>
         <Title
           variant="body.l.default"
           dangerouslySetInnerHTML={{ __html: currentStepData.title }}
@@ -33,7 +37,7 @@ const CurrentStep = ({ currentStepData, form, setForm, color }) => {
             dangerouslySetInnerHTML={{ __html: currentStepData.subtitle }}
           />
         )}
-      </div>
+      </StepTitle>
       {currentStepData.multipleChoices ? (
         <CheckboxList
           currentStepData={currentStepData}

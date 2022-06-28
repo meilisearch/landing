@@ -4,8 +4,11 @@ import Typography from 'components/Typography'
 import get from 'utils/get'
 
 const PricingAssistantTextContainer = styled.div`
-  grid-column: 1 / 5;
+  grid-column: 1 / -1;
   margin-top: 112px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    grid-column: 1 / 5;
+  }
 `
 
 const PreTitle = styled(Typography)`

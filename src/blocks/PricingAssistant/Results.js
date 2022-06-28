@@ -1,63 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
-import Grid from 'components/Grid'
 import Button from 'components/Button'
 import BaseList from 'components/List'
 import Typography from 'components/Typography'
 import BasePricingCard from 'components/PricingCard'
 import { Button as ReakitButton } from 'reakit/Button'
-
-const SUGGESTIONS = {
-  CUSTOM: 'CUSTOM',
-  LOW: 0,
-  MIDDLE: 1,
-  HIGH: 2,
-}
-
-const getPricingAssistantSuggestion = form => {
-  const {
-    // useCase,
-    feature = [],
-    documentsNumber = 0,
-    documentApproxSize = 0,
-    frequency = null,
-  } = form
-
-  if (
-    documentsNumber > 5000000 ||
-    documentApproxSize > 1 ||
-    frequency === 'minute' ||
-    frequency === 'continuously'
-  )
-    return SUGGESTIONS.CUSTOM
-
-  let dbSizeInGB = 0
-  if (feature.includes('textual')) {
-    dbSizeInGB += (documentsNumber * documentApproxSize * 10) / 1024 / 1024
-  }
-  if (feature.includes('geo')) {
-    dbSizeInGB += (documentsNumber * 20) / 1024 / 1024 / 1024
-  }
-  if (feature.includes('numeric')) {
-    dbSizeInGB += (documentsNumber * documentApproxSize * 2) / 1024 / 1024
-  }
-
-  if (dbSizeInGB <= 10) return SUGGESTIONS.LOW
-  if (dbSizeInGB <= 40) return SUGGESTIONS.MIDDLE
-  if (dbSizeInGB <= 160) return SUGGESTIONS.HIGH
-  if (dbSizeInGB > 160) return SUGGESTIONS.CUSTOM
-}
+import getPricingAssistantSuggestion, {
+  SUGGESTIONS,
+} from 'utils/getPricingAssistantSuggestion'
+import hexToRgb from 'utils/hexToRgb'
+import getColorName from 'utils/getColorName'
 
 const PricingCard = styled(BasePricingCard)`
   border-width: 1px;
   width: 100%;
-`
-
-const Title = styled(Typography)`
-  color: ${get('colors.white')};
-  text-align: center;
-  display: block;
 `
 
 const Description = styled(Typography)`
@@ -82,6 +39,10 @@ const TryAgain = styled(Typography)`
 const PricingCardHeader = styled.div`
   min-height: auto;
   justify-content: flex-start;
+  @media (min-width: ${get('breakpoints.md')}) {
+    padding: 28px 20px 12px;
+  }
+
   > div {
     align-items: flex-start;
     text-align: initial;
@@ -91,6 +52,7 @@ const PricingCardHeader = styled.div`
 const PricingCardBody = styled.div`
   padding: 20px;
   align-items: flex-start;
+  height: auto;
 `
 
 const CardDescription = styled(Typography)`
@@ -104,20 +66,27 @@ const CustomPlan = ({ data, color }) => {
         as={PricingCardHeader}
         hasDecorator={false}
         $color={color}
-        style={{ padding: '28px 20px 24px' }}
       >
         <Typography variant="title.capsXs">{data.preTitle}</Typography>
         <Typography variant="body.l.default" style={{ marginTop: 4 }}>
           {data.title}
         </Typography>
       </PricingCard.Header>
-      <PricingCard.Body as={PricingCardBody} style={{ padding: '24px 16px' }}>
+      <PricingCard.Body
+        as={PricingCardBody}
+        style={{ padding: '24px 16px' }}
+        $color={hexToRgb(get(`colors.${getColorName(color)}`), 0.2)}
+      >
         <CardDescription
           variant="body.s.default"
           dangerouslySetInnerHTML={{ __html: data.description }}
         />
-        {/* eslint-disable-next-line no-undef */}
-        <Button color={color} onClick={() => $crisp.push(['do', 'chat:open'])}>
+        <Button
+          color={color}
+          // eslint-disable-next-line no-undef
+          onClick={() => $crisp.push(['do', 'chat:open'])}
+          style={{ marginTop: 28 }}
+        >
           <Typography variant="body.s.bold">{data.cta.title}</Typography>
         </Button>
       </PricingCard.Body>
@@ -131,8 +100,10 @@ const Price = styled.div`
 `
 
 const List = styled(BaseList)`
-  li + li {
-    margin-top: 12px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    li + li {
+      margin-top: 12px;
+    }
   }
 `
 
@@ -144,7 +115,6 @@ const Plans = ({ data, planIndex, color }) => {
         as={PricingCardHeader}
         hasDecorator={false}
         $color={color}
-        style={{ padding: '28px 20px 24px' }}
       >
         <Typography variant="title.capsXs">{data.preTitle}</Typography>
         <Price>
@@ -157,7 +127,11 @@ const Plans = ({ data, planIndex, color }) => {
           {data.estimation(planInfos.hourPrice)}
         </Typography>
       </PricingCard.Header>
-      <PricingCard.Body as={PricingCardBody} style={{ padding: '24px 16px' }}>
+      <PricingCard.Body
+        as={PricingCardBody}
+        style={{ padding: '24px 16px' }}
+        $color={hexToRgb(get(`colors.${getColorName(color)}`), 0.2)}
+      >
         <List>
           <List.Element bulletColor={color}>
             <Typography variant="body.s.default">
@@ -175,7 +149,12 @@ const Plans = ({ data, planIndex, color }) => {
             </Typography>
           </List.Element>
         </List>
-        <Button color={color} href={data.cta.href} target={data.cta.target}>
+        <Button
+          color={color}
+          href={data.cta.href}
+          target={data.cta.target}
+          style={{ marginTop: 16 }}
+        >
           <Typography variant="body.s.bold">{data.cta.title}</Typography>
         </Button>
       </PricingCard.Body>
@@ -183,55 +162,64 @@ const Plans = ({ data, planIndex, color }) => {
   )
 }
 
+const Plan = styled.div`
+  width: 100%;
+  padding: 0 55px;
+  color: ${get('colors.ashes.900')};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 26px;
+`
+
+const Title = styled(Typography)`
+  color: ${get('colors.white')};
+  display: block;
+  text-align: center;
+`
+
+const ResultsTitle = styled.div`
+  padding: 0 36px;
+`
+
 const Results = ({ form, recommandations, color, onReset }) => {
   const [reset, setReset] = React.useState(false)
   const resultToDisplay = getPricingAssistantSuggestion(form)
   if (reset) return null
 
   return (
-    <div
-      style={{
-        height: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-        justifyContent: 'center',
-      }}
-    >
-      <Title variant="body.l.default">{recommandations.title}</Title>
-      <Description variant="body.m.default">
-        {recommandations.description}
-        <ResetButton
-          onClick={() => {
-            onReset()
-            setReset(true)
-          }}
-        >
-          <TryAgain variant="body.m.default" $color={color}>
-            {recommandations.tryAgain}
-          </TryAgain>
-        </ResetButton>
-      </Description>
-      <Grid
-        style={{
-          gridTemplateColumns: 'repeat(5, 1fr)',
-          margin: '0 -24px',
-          width: '100%',
-        }}
-      >
-        <div style={{ gridColumn: '2 / 5', margin: '0 -16px' }}>
-          {resultToDisplay === SUGGESTIONS.CUSTOM ? (
-            <CustomPlan data={recommandations.customOption} color={color} />
-          ) : (
-            <Plans
-              data={recommandations.options}
-              planIndex={resultToDisplay}
-              color={color}
-            />
-          )}
-        </div>
-      </Grid>
-    </div>
+    <>
+      <ResultsTitle>
+        <Title
+          variant="body.l.default"
+          dangerouslySetInnerHTML={{ __html: recommandations.title }}
+        />
+        <Description variant="body.m.default">
+          {recommandations.description}
+          <ResetButton
+            onClick={() => {
+              onReset()
+              setReset(true)
+            }}
+          >
+            <TryAgain variant="body.m.default" $color={color}>
+              {recommandations.tryAgain}
+            </TryAgain>
+          </ResetButton>
+        </Description>
+      </ResultsTitle>
+      <Plan>
+        {resultToDisplay === SUGGESTIONS.CUSTOM ? (
+          <CustomPlan data={recommandations.customOption} color={color} />
+        ) : (
+          <Plans
+            data={recommandations.options}
+            planIndex={resultToDisplay}
+            color={color}
+          />
+        )}
+      </Plan>
+    </>
   )
 }
 

@@ -8,33 +8,50 @@ import BaseBullets from 'components/Bullets'
 import CurrentStep from './CurrentStep'
 import Results from './Results'
 
+const PricingAssistantStepContainer = styled.div`
+  grid-column: 1 / -1;
+  margin-top: 32px;
+  position: relative;
+  min-height: 450px;
+  border: 1px solid ${get('colors.valhalla.200')};
+  border-radius: 8px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    grid-column: 6 / -1;
+    margin-top: 0;
+    min-height: 486px;
+  }
+`
+
 const Card = styled(Grid)`
-  padding: 42px 0;
-  grid-template-columns: repeat(7, 1fr);
-  min-height: 486px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 32px 0 20px;
+  min-height: 450px;
+  grid-gap: 0 16px;
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    min-height: 486px;
+    padding: 42px 0;
+    grid-template-columns: repeat(7, 1fr);
+  }
 `
 
 const Content = styled.div`
-  grid-column: 2 / 7;
+  grid-column: 1 / -1;
+  width: 100%;
   color: ${get('colors.ashes.900')};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`
-
-const PricingAssistantStepContainer = styled.div`
-  position: relative;
-  grid-column: 6 / -1;
-  min-height: 486px;
-  border: 1px solid ${get('colors.valhalla.200')};
-  border-radius: 8px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    grid-column: 2 / 7;
+  }
 `
 
 const Bullets = styled(BaseBullets)`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 42px;
+  left: 20px;
   display: flex;
   flex-direction: column;
   div + div {
@@ -47,6 +64,10 @@ const Bullets = styled(BaseBullets)`
         background-color: ${p.color};
       }
     `};
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    left: 42px;
+  }
 `
 
 const RightColumn = ({ pricingAssistant, color }) => {
@@ -74,11 +95,12 @@ const RightColumn = ({ pricingAssistant, color }) => {
         const { steps, recommandations, buttons } = pricingAssistant
         const currentStepData = steps[currentStep]
         const currentFormField = form[currentStepData?.name] || null
+        const isQuestion = currentStep < nbSteps
         return (
           <animated.div style={{ position: 'absolute', inset: 0, ...styles }}>
             <Card>
               <Content>
-                {currentStep < nbSteps ? (
+                {isQuestion ? (
                   <>
                     <CurrentStep
                       currentStepData={currentStepData}
