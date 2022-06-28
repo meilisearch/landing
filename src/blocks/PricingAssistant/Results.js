@@ -43,10 +43,10 @@ const getPricingAssistantSuggestion = form => {
     dbSizeInGB += (documentsNumber * documentApproxSize * 2) / 1024 / 1024
   }
 
-  if (dbSizeInGB <= 1) return SUGGESTIONS.LOW
-  if (dbSizeInGB <= 4) return SUGGESTIONS.MIDDLE
-  if (dbSizeInGB <= 16) return SUGGESTIONS.HIGH
-  if (dbSizeInGB > 16) return SUGGESTIONS.CUSTOM
+  if (dbSizeInGB <= 10) return SUGGESTIONS.LOW
+  if (dbSizeInGB <= 40) return SUGGESTIONS.MIDDLE
+  if (dbSizeInGB <= 160) return SUGGESTIONS.HIGH
+  if (dbSizeInGB > 160) return SUGGESTIONS.CUSTOM
 }
 
 const PricingCard = styled(BasePricingCard)`
