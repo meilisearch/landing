@@ -2,6 +2,7 @@ const colors = {
   white: '#FFF',
   dodgerBlue: {
     300: '#9FA1F0',
+    400: '#7B7EEF',
     DEFAULT: '#4F55E3',
     600: '#232ADC',
     700: '#1C22B0',
@@ -20,6 +21,7 @@ const colors = {
   },
   hotPink: {
     300: '#FFAED4',
+    400: '#FF8DC4',
     DEFAULT: '#FF5CAA',
     600: '#FF1786',
   },

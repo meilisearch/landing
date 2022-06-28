@@ -29,10 +29,16 @@ const ResetButton = styled(ReakitButton)`
   cursor: pointer;
   display: inline-block;
   margin-left: 8px;
+  color: ${p => p.$color};
+  transition: color 300ms;
+
+  &:hover,
+  &:focus {
+    color: ${p => get(`colors.${getColorName(p.$color)}.400`)};
+  }
 `
 
 const TryAgain = styled(Typography)`
-  color: ${p => p.$color};
   text-decoration: underline;
 `
 
@@ -197,12 +203,13 @@ const Results = ({ form, recommandations, color, onReset }) => {
         <Description variant="body.m.default">
           {recommandations.description}
           <ResetButton
+            $color={color}
             onClick={() => {
               onReset()
               setReset(true)
             }}
           >
-            <TryAgain variant="body.m.default" $color={color}>
+            <TryAgain variant="body.m.default">
               {recommandations.tryAgain}
             </TryAgain>
           </ResetButton>
