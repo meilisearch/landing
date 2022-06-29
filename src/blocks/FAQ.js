@@ -7,7 +7,14 @@ import Accordion from 'components/Accordion'
 
 const FAQWrapper = styled.section`
   color: ${get('colors.white')};
-  padding: 64px 0 76px;
+  margin: 0 -16px;
+  padding: 64px 16px 76px;
+  background-color: ${get('colors.valhalla')};
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin: 0 -32px;
+    padding: 64px 32px 76px;
+  }
 `
 
 const Content = styled.div`
