@@ -170,12 +170,17 @@ const Plans = ({ data, planIndex, color }) => {
 
 const Plan = styled.div`
   width: 100%;
-  padding: 0 55px;
   color: ${get('colors.ashes.900')};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 26px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    padding: 0 38px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding: 0 78px;
+  }
 `
 
 const Title = styled(Typography)`
@@ -185,7 +190,14 @@ const Title = styled(Typography)`
 `
 
 const ResultsTitle = styled.div`
-  padding: 0 36px;
+  margin: 0 -24px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    margin: 0;
+    padding: 0 38px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding: 0 50px;
+  }
 `
 
 const Results = ({ form, recommandations, color, onReset }) => {

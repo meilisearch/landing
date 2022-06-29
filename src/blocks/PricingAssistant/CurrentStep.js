@@ -19,7 +19,7 @@ const Subtitle = styled(Typography)`
 `
 
 const StepTitle = styled.div`
-  padding: 0 36px;
+  margin: 0 -32px;
 `
 
 const CurrentStep = ({ currentStepData, form, setForm, color }) => {

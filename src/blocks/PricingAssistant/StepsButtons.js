@@ -53,10 +53,6 @@ const NextButton = ({ onClick, color, disabled, text }) => {
 
 const StepsButtonsContainer = styled.div`
   display: flex;
-  padding: 0 55px;
-  @media (min-width: ${get('breakpoints.md')}) {
-    padding: 0;
-  }
 `
 
 const StepsButtons = ({

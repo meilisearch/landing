@@ -8,13 +8,17 @@ import get from 'utils/get'
 const Options = styled(Grid)`
   grid-template-columns: ${p => (p.$hasIcon ? 'repeat(2, 1fr)' : '1fr')};
   grid-gap: 12px;
-  padding: 0 55px;
   margin: 0;
 
   @media (min-width: ${get('breakpoints.md')}) {
     grid-template-columns: ${p => (p.$hasIcon ? 'repeat(3, 1fr)' : '1fr')};
+    grid-gap: ${p => (p.$hasIcon ? '8px' : '12px')};
+    padding: ${p => (p.$hasIcon ? '0' : '0 48px')};
+  }
+
+  @media (min-width: ${get('breakpoints.lg')}) {
     grid-gap: ${p => (p.$hasIcon ? '20px' : '12px')};
-    padding: ${p => (p.$hasIcon ? 0 : '0 80px')};
+    padding: ${p => (p.$hasIcon ? '0' : '0 80px')};
   }
 `
 

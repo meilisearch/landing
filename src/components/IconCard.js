@@ -5,22 +5,20 @@ import get from 'utils/get'
 
 const Card = styled.div`
   width: 100%;
-  height: 75px;
+  min-height: 75px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
   padding: 8px;
-  @media (min-width: ${get('breakpoints.md')}) {
-    height: 110px;
-  }
 
   > svg {
     width: 36px;
     height: 36px;
     flex-shrink: 0;
-    @media (min-width: ${get('breakpoints.md')}) {
+    @media (min-width: ${get('breakpoints.lg')}) {
       width: 55px;
       height: 55px;
     }

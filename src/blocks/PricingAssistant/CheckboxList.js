@@ -8,14 +8,16 @@ import get from 'utils/get'
 const Options = styled(Grid)`
   grid-template-columns: repeat(${p => p.$nbColumns}, 1fr);
   grid-gap: 12px;
-  padding: 0 89px;
   margin: 0;
 
   @media (min-width: ${get('breakpoints.md')}) {
     grid-template-columns: repeat(3, 1fr);
     margin: 48px 0;
+    grid-gap: 8px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    margin: 48px 0;
     grid-gap: 20px;
-    padding: 0;
   }
 `
 

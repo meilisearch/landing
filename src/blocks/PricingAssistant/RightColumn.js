@@ -18,6 +18,8 @@ const PricingAssistantStepContainer = styled.div`
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: 6 / -1;
     margin-top: 0;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
     min-height: 486px;
   }
 `
@@ -29,9 +31,12 @@ const Card = styled(Grid)`
   grid-gap: 0 16px;
 
   @media (min-width: ${get('breakpoints.md')}) {
+    padding: 28px 0;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
     min-height: 486px;
     padding: 42px 0;
-    grid-template-columns: repeat(7, 1fr);
   }
 `
 
@@ -42,8 +47,15 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 55px;
   @media (min-width: ${get('breakpoints.md')}) {
-    grid-column: 2 / 7;
+    padding: 0 48px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    padding: 0 62px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding: 0 96px;
   }
 `
 
@@ -66,6 +78,12 @@ const Bullets = styled(BaseBullets)`
     `};
 
   @media (min-width: ${get('breakpoints.md')}) {
+    left: 16px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    left: 24px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
     left: 42px;
   }
 `

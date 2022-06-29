@@ -5,9 +5,16 @@ import get from 'utils/get'
 
 const PricingAssistantTextContainer = styled.div`
   grid-column: 1 / -1;
-  margin-top: 112px;
+  display: flex;
+  align-items: center;
+
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: 1 / 5;
+    margin-right: -16px;
+  }
+  @media (min-width: ${get('breakpoints.lg')}) {
+    margin-right: 0;
+    margin-top: 0;
   }
 `
 
@@ -27,15 +34,17 @@ const Title = styled(Typography)`
 
 const LeftColumn = ({ pricingAssistant, color }) => (
   <PricingAssistantTextContainer>
-    <PreTitle variant="title.caps" $color={color}>
-      {pricingAssistant.preTitle}
-    </PreTitle>
-    <Title
-      variant="title.l"
-      forwardedAs="h2"
-      $color={color}
-      dangerouslySetInnerHTML={{ __html: pricingAssistant.title }}
-    />
+    <div>
+      <PreTitle variant="title.caps" $color={color}>
+        {pricingAssistant.preTitle}
+      </PreTitle>
+      <Title
+        variant="title.l"
+        forwardedAs="h2"
+        $color={color}
+        dangerouslySetInnerHTML={{ __html: pricingAssistant.title }}
+      />
+    </div>
   </PricingAssistantTextContainer>
 )
 
