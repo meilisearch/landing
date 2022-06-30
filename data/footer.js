@@ -67,7 +67,7 @@ const getFooterData = () => ({
           target: '_blank',
         },
         {
-          title: 'Github',
+          title: 'GitHub',
           href: 'https://github.com/meilisearch',
           target: '_blank',
         },
