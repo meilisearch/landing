@@ -11,6 +11,7 @@ import getPricingAssistantSuggestion, {
 } from 'utils/getPricingAssistantSuggestion'
 import hexToRgb from 'utils/hexToRgb'
 import getColorName from 'utils/getColorName'
+import { AnalyticsBrowser } from '@segment/analytics-next'
 
 const PricingCard = styled(BasePricingCard)`
   border-width: 1px;
@@ -203,8 +204,18 @@ const ResultsTitle = styled.div`
 const Results = ({ form, recommandations, color, onReset }) => {
   const [reset, setReset] = React.useState(false)
   const resultToDisplay = getPricingAssistantSuggestion(form)
-  if (reset) return null
+  const analytics = AnalyticsBrowser.load({
+    writeKey: process.env.NEXT_PUBLIC_SEGMENT_KEY,
+  })
 
+  React.useEffect(() => {
+    analytics?.track('pricing-assistant', {
+      form,
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  if (reset) return null
   return (
     <>
       <ResultsTitle>
