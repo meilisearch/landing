@@ -99,8 +99,6 @@ const RightColumn = ({ pricingAssistant, color }) => {
     leave: { opacity: 0 },
   })
 
-  console.log(form)
-
   return (
     <PricingAssistantStepContainer>
       <Bullets
