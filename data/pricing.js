@@ -166,7 +166,7 @@ const getPricingPageData = () => ({
           },
           {
             title: '> 100 000 000',
-            value: 1000000001,
+            value: 100000001,
           },
         ],
       },
@@ -174,7 +174,7 @@ const getPricingPageData = () => ({
         title:
           'What is the <strong>approximate size</strong> of one of your documents?',
         multipleChoices: false,
-        name: 'documentApproxSize',
+        name: 'documentApproxSizeInKB',
         options: [
           {
             title: '< 0.5 KB',
@@ -195,9 +195,9 @@ const getPricingPageData = () => ({
         ],
       },
       {
-        title: 'What <strong>update frequency</strong> do you need?',
+        title: 'What <strong>update updateFrequency</strong> do you need?',
         multipleChoices: false,
-        name: 'frequency',
+        name: 'updateFrequency',
         options: [
           {
             title: 'Every week',

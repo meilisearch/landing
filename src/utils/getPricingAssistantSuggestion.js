@@ -10,27 +10,27 @@ const getPricingAssistantSuggestion = form => {
     // useCase,
     feature = [],
     documentsNumber = 0,
-    documentApproxSize = 0,
-    frequency = null,
+    documentApproxSizeInKB = 0,
+    updateFrequency = null,
   } = form
 
   if (
     documentsNumber > 5000000 ||
-    documentApproxSize > 1 ||
-    frequency === 'minute' ||
-    frequency === 'continuously'
+    documentApproxSizeInKB > 1 ||
+    updateFrequency === 'minute' ||
+    updateFrequency === 'continuously'
   )
     return SUGGESTIONS.CUSTOM
 
   let dbSizeInGB = 0
   if (feature.includes('textual')) {
-    dbSizeInGB += (documentsNumber * documentApproxSize * 10) / 1024 / 1024
+    dbSizeInGB += (documentsNumber * documentApproxSizeInKB * 10) / 1024 / 1024
   }
   if (feature.includes('geo')) {
     dbSizeInGB += (documentsNumber * 20) / 1024 / 1024 / 1024
   }
   if (feature.includes('numeric')) {
-    dbSizeInGB += (documentsNumber * documentApproxSize * 2) / 1024 / 1024
+    dbSizeInGB += (documentsNumber * documentApproxSizeInKB * 2) / 1024 / 1024
   }
 
   if (dbSizeInGB <= 10) return SUGGESTIONS.LOW
