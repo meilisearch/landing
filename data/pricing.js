@@ -73,7 +73,7 @@ const getPricingPageData = () => ({
   },
   pricingAssistant: {
     preTitle: 'Pricing assistant',
-    title: 'We can help you to choose the <strong>right plan</strong>',
+    title: 'We can help you choose the <strong>right plan</strong>',
     buttons: {
       next: 'Next',
       previous: 'Previous',
@@ -95,7 +95,7 @@ const getPricingPageData = () => ({
             value: 'b2c',
           },
           {
-            title: 'Site search',
+            title: 'Site Search',
             icon: SiteSearch,
             value: 'site',
           },
@@ -117,7 +117,7 @@ const getPricingPageData = () => ({
         ],
       },
       {
-        title: 'What <strong>feature</strong> are you interested in?',
+        title: 'What <strong>features</strong> are you interested in?',
         subtitle: 'Multiple choice possible',
         multipleChoices: true,
         name: 'feature',
@@ -234,7 +234,7 @@ const getPricingPageData = () => ({
         cpu: quantity => `${quantity} CPU`,
         disk: quantity => `${quantity}GB Disk`,
         description:
-          'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
+          'We can create the optimal dedicated plan for you.<br/>Contact our sales team to ask for a fully custom quote.',
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/login',
