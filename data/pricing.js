@@ -128,7 +128,7 @@ const getPricingPageData = () => ({
             value: 'textual',
           },
           {
-            title: 'Geografic filters/sorting',
+            title: 'Geographic filters/sorting',
             icon: GeographicSearch,
             value: 'geo',
           },
