@@ -195,7 +195,7 @@ const getPricingPageData = () => ({
         ],
       },
       {
-        title: 'What <strong>update updateFrequency</strong> do you need?',
+        title: 'What <strong>update frequency</strong> do you need?',
         multipleChoices: false,
         name: 'updateFrequency',
         options: [
