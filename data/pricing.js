@@ -85,17 +85,17 @@ const getPricingPageData = () => ({
         name: 'useCase',
         options: [
           {
-            title: 'SaaS Application',
+            title: 'SaaS application',
             icon: SaasApp,
             value: 'saas',
           },
           {
-            title: 'B2C Application',
+            title: 'B2C application',
             icon: B2CApp,
             value: 'b2c',
           },
           {
-            title: 'Site Search',
+            title: 'Site search',
             icon: SiteSearch,
             value: 'site',
           },
