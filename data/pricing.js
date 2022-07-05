@@ -166,7 +166,7 @@ const getPricingPageData = () => ({
           },
           {
             title: '> 100 000 000',
-            value: 100000001,
+            value: '100000000+',
           },
         ],
       },
@@ -190,7 +190,7 @@ const getPricingPageData = () => ({
           },
           {
             title: '> 10 KB',
-            value: 11,
+            value: '10+',
           },
         ],
       },

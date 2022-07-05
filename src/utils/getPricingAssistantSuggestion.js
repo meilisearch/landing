@@ -15,7 +15,9 @@ const getPricingAssistantSuggestion = form => {
   } = form
 
   if (
+    documentsNumber === '100000000+' ||
     documentsNumber > 5000000 ||
+    documentApproxSizeInKB === '10+' ||
     documentApproxSizeInKB > 1 ||
     updateFrequency === 'minute' ||
     updateFrequency === 'continuously'
