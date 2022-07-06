@@ -350,7 +350,7 @@ const getPricingPageData = () => ({
         tbody: [
           {
             title: 'Interface to browse your documents',
-            openSource: 'mini dashboard',
+            openSource: 'search preview',
             cloud:
               '<a href=\'https://roadmap.meilisearch.com/\' target="_blank">Coming soon</a>',
           },
