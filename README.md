@@ -23,7 +23,7 @@
 
 <br/>
 
-👋 Hi! Welcome to Meilisearch's landing page repository.
+👋 Hi! Welcome to Meilisearch's landing page repository 🔥.
 
 Our landing page is available at this address: [https://www.meilisearch.com](https://www.meilisearch.com).
 
