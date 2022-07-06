@@ -69,11 +69,17 @@ const GithubButton = ({
   }, [octokit])
 
   return (
-    <GithubLink href={href} rel="noreferrer" target="_blank" {...props}>
+    <GithubLink
+      href={href}
+      rel="noreferrer"
+      target="_blank"
+      className="hide-in-percy"
+      {...props}
+    >
       <GithubLogo height={20} />
       {stargazersCount && (
         <>
-          <Typography variant="title.caps" className="hide-in-percy">
+          <Typography variant="title.caps">
             {formatStargazers(stargazersCount)}
           </Typography>
           <StarIcon />

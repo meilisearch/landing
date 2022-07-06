@@ -47,6 +47,7 @@ describe(`Functional tests`, () => {
       cy.get('[data-cy="pricingHero"]').should('be.visible')
       cy.get('[data-cy="pricingCards"]').should('be.visible')
       cy.get('[data-cy="pricingTable"]').should('be.visible')
+      cy.get('[data-cy="pricingAssistant"]').should('be.visible')
       cy.get('[data-cy="pricingFaq"]').should('be.visible')
       cy.get('[data-cy="footer"]').should('be.visible')
     })

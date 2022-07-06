@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     background-color: ${get('colors.valhalla')};
     scroll-behavior: smooth;
+    font-smooth: auto;
+    -webkit-font-smoothing: antialiased;
   }
   * {
     box-sizing: border-box;

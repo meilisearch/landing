@@ -1,3 +1,15 @@
+import {
+  B2CApp,
+  Ecommerce,
+  GeographicSearch,
+  Media,
+  NumericSorting,
+  Other,
+  SaasApp,
+  SiteSearch,
+  TextualSearch,
+} from 'components/icons'
+
 const getPricingPageData = () => ({
   meta: {
     title: 'Pricing ',
@@ -53,10 +65,216 @@ const getPricingPageData = () => ({
           keypoints: ['Premier support', 'Premium SLA', 'More resources'],
           cta: {
             title: 'Contact sales',
-            href: 'javascript:$crisp.push(["do", "chat:open"])',
+            href: '',
           },
         },
       ],
+    },
+  },
+  pricingAssistant: {
+    preTitle: 'Pricing assistant',
+    title: 'We can help you choose the <strong>right plan</strong>',
+    buttons: {
+      next: 'Next',
+      previous: 'Previous',
+    },
+    steps: [
+      {
+        title: 'What is your <strong>use case</strong>?',
+        multipleChoices: false,
+        name: 'useCase',
+        options: [
+          {
+            title: 'SaaS application',
+            icon: SaasApp,
+            value: 'saas',
+          },
+          {
+            title: 'B2C application',
+            icon: B2CApp,
+            value: 'b2c',
+          },
+          {
+            title: 'Site search',
+            icon: SiteSearch,
+            value: 'site',
+          },
+          {
+            title: 'E-commerce',
+            icon: Ecommerce,
+            value: 'ecommerce',
+          },
+          {
+            title: 'Media',
+            icon: Media,
+            value: 'media',
+          },
+          {
+            title: 'Other',
+            icon: Other,
+            value: 'other',
+          },
+        ],
+      },
+      {
+        title: 'What <strong>features</strong> are you interested in?',
+        subtitle: 'Multiple choice possible',
+        multipleChoices: true,
+        name: 'feature',
+        options: [
+          {
+            title: 'Textual search',
+            icon: TextualSearch,
+            value: 'textual',
+          },
+          {
+            title: 'Geographic filters/sorting',
+            icon: GeographicSearch,
+            value: 'geo',
+          },
+          {
+            title: 'Numeric and/or textual filters/sorting',
+            icon: NumericSorting,
+            value: 'numeric',
+          },
+        ],
+      },
+      {
+        title: 'How many <strong>documents</strong> do you have?',
+        multipleChoices: false,
+        name: 'documentsNumber',
+        options: [
+          {
+            title: '< 100 000',
+            value: 100000,
+          },
+          {
+            title: '100 000 - 500 000',
+            value: 500000,
+          },
+          {
+            title: '500 000 - 1 000 000',
+            value: 1000000,
+          },
+          {
+            title: '1 000 000 - 5 000 000',
+            value: 5000000,
+          },
+          {
+            title: '5 000 000 - 100 000 000',
+            value: 100000000,
+          },
+          {
+            title: '> 100 000 000',
+            value: '100000000+',
+          },
+        ],
+      },
+      {
+        title:
+          'What is the <strong>approximate size</strong> of one of your documents?',
+        multipleChoices: false,
+        name: 'documentApproxSizeInKB',
+        options: [
+          {
+            title: '< 0.5 KB',
+            value: 0.5,
+          },
+          {
+            title: '0.5 KB - 1 KB',
+            value: 1,
+          },
+          {
+            title: '1 KB - 10 KB',
+            value: 10,
+          },
+          {
+            title: '> 10 KB',
+            value: '10+',
+          },
+        ],
+      },
+      {
+        title: 'What <strong>update frequency</strong> do you need?',
+        multipleChoices: false,
+        name: 'updateFrequency',
+        options: [
+          {
+            title: 'Every week',
+            value: 'week',
+          },
+          {
+            title: 'Every day',
+            value: 'day',
+          },
+          {
+            title: 'Every hour',
+            value: 'hour',
+          },
+          {
+            title: 'Every minute',
+            value: 'minute',
+          },
+          {
+            title: 'Continuously',
+            value: 'continuously',
+          },
+        ],
+      },
+    ],
+    recommandations: {
+      title: 'Our recommandation',
+      description: 'Here is the recommended plan based on your business needs.',
+      tryAgain: 'Try again',
+      options: {
+        preTitle: 'Dedicated',
+        perMonth: '/month',
+        estimation: price => `Estimation base on $${price} per hour`,
+        ram: quantity => `${quantity}GB Ram`,
+        cpu: quantity => `${quantity} CPU`,
+        disk: quantity => `${quantity}GB Disk`,
+        description:
+          'We can create the optimal dedicated plan for you.<br/>Contact our sales team to ask for a fully custom quote.',
+        cta: {
+          title: 'Get started',
+          href: 'https://cloud.meilisearch.com/login',
+          target: '_blank',
+        },
+        list: [
+          {
+            monthlyPrice: 29,
+            hourPrice: 0.04,
+            ram: 1,
+            cpu: 0.5,
+            disk: 10,
+          },
+          {
+            monthlyPrice: 122,
+            hourPrice: 0.17,
+            ram: 4,
+            cpu: 1,
+            disk: 40,
+          },
+          {
+            monthlyPrice: 461,
+            hourPrice: 0.64,
+            ram: 16,
+            cpu: 4,
+            disk: 160,
+          },
+        ],
+      },
+      customOption: {
+        preTitle: 'Enterprise',
+        title: 'Custom quote',
+        description:
+          'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
+        cta: {
+          title: 'Contact sales',
+          href: '',
+          target: '',
+        },
+      },
     },
   },
   table: {

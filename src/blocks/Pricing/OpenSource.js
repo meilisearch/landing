@@ -28,12 +28,12 @@ const OpenSource = ({ openSource }) => {
   return (
     <OpenSourcePlanWrapper>
       <PricingCard>
-        <PricingCard.Header $bgColor={get('colors.dodgerBlue.800')}>
+        <PricingCard.Header $color={get('colors.dodgerBlue.800')}>
           <Typography variant="title.m" style={{ color: get('colors.white') }}>
             {openSource.title}
           </Typography>
         </PricingCard.Header>
-        <PricingCard.Body $bgColor={get('colors.valhalla.600')}>
+        <PricingCard.Body $color={get('colors.valhalla.600')}>
           <Infos>
             <div>
               <Typography variant="title.xs">{openSource.plan}</Typography>

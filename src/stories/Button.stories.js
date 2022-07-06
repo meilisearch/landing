@@ -76,3 +76,10 @@ Link.args = {
   children: <Typography variant="body.s.bold">Log in</Typography>,
   href: '',
 }
+
+export const Disabled = Template.bind({})
+Disabled.storyName = 'disabled'
+Disabled.args = {
+  disabled: true,
+  children: <Typography variant="body.s.bold">Log in</Typography>,
+}

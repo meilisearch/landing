@@ -13,6 +13,10 @@ const variants = {
       background-color: ${p => get(`colors.${getColorName(p.$color)}.600`)};
       border-color: ${p => get(`colors.${getColorName(p.$color)}.600`)};
     }
+    &[aria-disabled='true'] {
+      background-color: ${get('colors.valhalla.100')};
+      border-color: ${get('colors.valhalla.100')};
+    }
   `,
   secondary: css`
     background-color: transparent;
@@ -54,6 +58,7 @@ const StyledButton = styled(ReakitButton)`
   transition-duration: 0.3s;
   outline: none;
   flex-shrink: 0;
+  pointer-events: auto;
 
   ${p => variants[p.$variant]};
   ${p => sizes[p.$size]};
@@ -64,6 +69,7 @@ const Button = ({
   color = get('colors.dodgerBlue'),
   size = 'default',
   href,
+  disabled,
   ...props
 }) => (
   <StyledButton
@@ -72,6 +78,7 @@ const Button = ({
     $size={size}
     $variant={variant}
     $color={color}
+    disabled={disabled}
     {...props}
   />
 )
@@ -93,6 +100,10 @@ Button.propTypes = {
    * Link to open on button click
    */
   href: PropTypes.string,
+  /**
+   * Wether the button should be disabled or not
+   */
+  disabled: PropTypes.bool,
 }
 
 Button.defaultProps = {
@@ -100,6 +111,7 @@ Button.defaultProps = {
   color: get('colors.dodgerBlue'),
   size: 'default',
   href: null,
+  disabled: false,
 }
 
 export default Button
