@@ -10,6 +10,13 @@ const Section = styled.section`
   padding: 80px 0 118px;
 `
 
+const Anchor = styled.div`
+  display: block;
+  position: relative;
+  top: -200px;
+  visibility: hidden;
+`
+
 const PricingAssistant = ({
   pricingAssistant,
   color = get('colors.dodgerBlue'),
@@ -17,6 +24,7 @@ const PricingAssistant = ({
 }) => {
   return (
     <Section {...props}>
+      <Anchor id="pricing-assistant" />
       <Grid>
         <LeftColumn pricingAssistant={pricingAssistant} color={color} />
         <RightColumn pricingAssistant={pricingAssistant} color={color} />
