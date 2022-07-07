@@ -10814,10 +10814,10 @@ react-instantsearch-dom@^6.27.0:
     react-fast-compare "^3.0.0"
     react-instantsearch-core "6.27.0"
 
-react-intersection-observer@^9.2.2:
-  version "9.2.2"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.2.2.tgz#4f72487e2e9c62b6a6f55f38c5b0b6b7dc6c196d"
-  integrity sha512-xrFOWo5DbDzayAuDn6WpLrXfw73mvfx4WjuAjjy7dY7jWeTTle5+18nGtvMlR7q0npJanmmh6/CaSaSg4JxTJQ==
+react-intersection-observer@^9.3.5:
+  version "9.3.5"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.3.5.tgz#df97584c1ef1549a47d4af6380db2fb4b76d7bba"
+  integrity sha512-TiJXVUapzAaIrZCAMBLjyWvwGYNGm0Xpkcwm3NY23b9PsJEBavul0hRFmrwc/LOmBUA/8TlkjCj7lCvjM0q1Hg==
 
 react-is@17.0.2:
   version "17.0.2"
