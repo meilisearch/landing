@@ -43,8 +43,8 @@ const getPricingPageData = () => ({
           title: 'Dedicated',
           description: 'For production applications.<br/>Starting from ',
           tooltip: {
-            cta: '$30/month',
-            text: 'Estimation based on $0.042 per hour.',
+            cta: '$29/month',
+            text: 'Estimation based on $0.040 per hour.',
           },
           keypoints: [
             'Highly available by default',
