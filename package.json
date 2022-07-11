@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@meilisearch/instant-meilisearch": "^0.5.10",
-    "@octokit/rest": "^18.12.0",
+    "@octokit/rest": "^19.0.3",
     "@segment/analytics-next": "^1.39.2",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
