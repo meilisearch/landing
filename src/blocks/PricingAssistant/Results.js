@@ -66,7 +66,7 @@ const CardDescription = styled(Typography)`
   opacity: 0.8;
 `
 
-const CustomPlan = ({ data, color }) => {
+const CustomPlan = ({ data, color, analytics }) => {
   return (
     <PricingCard $color={color}>
       <PricingCard.Header
@@ -90,8 +90,11 @@ const CustomPlan = ({ data, color }) => {
         />
         <Button
           color={color}
-          // eslint-disable-next-line no-undef
-          onClick={() => $crisp.push(['do', 'chat:open'])}
+          onClick={() => {
+            // eslint-disable-next-line no-undef
+            $crisp.push(['do', 'chat:open'])
+            analytics?.track('pricing-assistant-cta-click')
+          }}
           style={{ marginTop: 28 }}
         >
           <Typography variant="body.s.bold">{data.cta.title}</Typography>
@@ -114,7 +117,7 @@ const List = styled(BaseList)`
   }
 `
 
-const Plans = ({ data, planIndex, color }) => {
+const Plans = ({ data, planIndex, color, analytics }) => {
   const planInfos = data.list[planIndex]
   return (
     <PricingCard $color={color}>
@@ -161,6 +164,7 @@ const Plans = ({ data, planIndex, color }) => {
           href={data.cta.href}
           target={data.cta.target}
           style={{ marginTop: 16 }}
+          onClick={() => analytics?.track('pricing-assistant-cta-click')}
         >
           <Typography variant="body.s.bold">{data.cta.title}</Typography>
         </Button>
@@ -209,9 +213,20 @@ const Results = ({ form, recommandations, color, onReset }) => {
   })
 
   React.useEffect(() => {
-    analytics?.track('pricing-assistant', {
-      form,
-    })
+    if (process.env.NODE_ENV === 'production') {
+      const currentPlan =
+        resultToDisplay === SUGGESTIONS.CUSTOM
+          ? SUGGESTIONS.CUSTOM
+          : recommandations.options.list[resultToDisplay]
+
+      analytics?.track('pricing-assistant', {
+        form,
+        suggestion:
+          currentPlan === SUGGESTIONS.CUSTOM
+            ? 'custom quote'
+            : `${currentPlan.ram}GB Ram, ${currentPlan.cpu} CPU, ${currentPlan.disk}GB Disk`,
+      })
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -240,12 +255,17 @@ const Results = ({ form, recommandations, color, onReset }) => {
       </ResultsTitle>
       <Plan>
         {resultToDisplay === SUGGESTIONS.CUSTOM ? (
-          <CustomPlan data={recommandations.customOption} color={color} />
+          <CustomPlan
+            data={recommandations.customOption}
+            color={color}
+            analytics={analytics}
+          />
         ) : (
           <Plans
             data={recommandations.options}
             planIndex={resultToDisplay}
             color={color}
+            analytics={analytics}
           />
         )}
       </Plan>
