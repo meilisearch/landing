@@ -69,7 +69,7 @@ const getHeaderData = () => ({
   ],
   cta1: {
     title: 'Join the Cloud beta',
-    href: 'https://meilisearch.typeform.com/to/FtnzvZfh',
+    href: 'https://meilisearch.typeform.com/to/VI2cI2rv',
   },
   cta2: {
     title: 'Get Started',

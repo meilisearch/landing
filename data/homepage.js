@@ -266,7 +266,7 @@ const getHomepageData = () => ({
         mobileImage: '/images/step3-2-mobile.svg',
         cta: {
           title: 'Apply for the beta',
-          url: 'https://meilisearch.typeform.com/to/FtnzvZfh',
+          url: 'https://meilisearch.typeform.com/to/VI2cI2rv',
           target: '_blank',
         },
       },
