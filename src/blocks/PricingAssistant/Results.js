@@ -117,8 +117,7 @@ const List = styled(BaseList)`
   }
 `
 
-const Plans = ({ data, planIndex, color, analytics }) => {
-  const planInfos = data.list[planIndex]
+const Plans = ({ data, plan, color, analytics }) => {
   return (
     <PricingCard $color={color}>
       <PricingCard.Header
@@ -128,13 +127,11 @@ const Plans = ({ data, planIndex, color, analytics }) => {
       >
         <Typography variant="title.capsXs">{data.preTitle}</Typography>
         <Price>
-          <Typography variant="title.s">
-            {`$${planInfos.monthlyPrice}`}
-          </Typography>
+          <Typography variant="title.s">{`$${plan.monthlyPrice}`}</Typography>
           <Typography variant="body.l.default">{data.perMonth}</Typography>
         </Price>
         <Typography variant="body.xs.default">
-          {data.estimation(planInfos.hourPrice)}
+          {data.estimation(plan.hourPrice)}
         </Typography>
       </PricingCard.Header>
       <PricingCard.Body
@@ -145,17 +142,17 @@ const Plans = ({ data, planIndex, color, analytics }) => {
         <List>
           <List.Element bulletColor={color}>
             <Typography variant="body.s.default">
-              {data.ram(planInfos.ram)}
+              {data.ram(plan.ram)}
             </Typography>
           </List.Element>
           <List.Element bulletColor={color}>
             <Typography variant="body.s.default">
-              {data.cpu(planInfos.cpu)}
+              {data.cpu(plan.cpu)}
             </Typography>
           </List.Element>
           <List.Element bulletColor={color}>
             <Typography variant="body.s.default">
-              {data.disk(planInfos.disk)}
+              {data.disk(plan.disk)}
             </Typography>
           </List.Element>
         </List>
@@ -207,24 +204,19 @@ const ResultsTitle = styled.div`
 
 const Results = ({ form, recommandations, color, onReset }) => {
   const [reset, setReset] = React.useState(false)
-  const resultToDisplay = getPricingAssistantSuggestion(form)
+  const suggestedPlan = getPricingAssistantSuggestion(form)
   const analytics = AnalyticsBrowser.load({
     writeKey: process.env.NEXT_PUBLIC_SEGMENT_KEY,
   })
 
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
-      const currentPlan =
-        resultToDisplay === SUGGESTIONS.CUSTOM
-          ? SUGGESTIONS.CUSTOM
-          : recommandations.options.list[resultToDisplay]
-
       analytics?.track('pricing-assistant', {
         form,
         suggestion:
-          currentPlan === SUGGESTIONS.CUSTOM
+          suggestedPlan === SUGGESTIONS.CUSTOM
             ? 'custom quote'
-            : `${currentPlan.ram}GB Ram, ${currentPlan.cpu} CPU, ${currentPlan.disk}GB Disk`,
+            : `${suggestedPlan.ram}GB Ram, ${suggestedPlan.cpu} CPU, ${suggestedPlan.disk}GB Disk`,
       })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -254,7 +246,7 @@ const Results = ({ form, recommandations, color, onReset }) => {
         </Description>
       </ResultsTitle>
       <Plan>
-        {resultToDisplay === SUGGESTIONS.CUSTOM ? (
+        {suggestedPlan === SUGGESTIONS.CUSTOM ? (
           <CustomPlan
             data={recommandations.customOption}
             color={color}
@@ -263,7 +255,7 @@ const Results = ({ form, recommandations, color, onReset }) => {
         ) : (
           <Plans
             data={recommandations.options}
-            planIndex={resultToDisplay}
+            plan={suggestedPlan}
             color={color}
             analytics={analytics}
           />
