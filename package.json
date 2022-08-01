@@ -22,7 +22,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@meilisearch/instant-meilisearch": "^0.5.10",
+    "@meilisearch/instant-meilisearch": "^0.8.1",
     "@octokit/rest": "^19.0.3",
     "@segment/analytics-next": "^1.40.0",
     "gray-matter": "^4.0.3",
