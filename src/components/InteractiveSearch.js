@@ -144,7 +144,7 @@ const InteractiveSearch = ({
           ariaLabel="animated arrows"
         />
       </Animation>
-      <InstantSearch indexName="movies" searchClient={searchClient}>
+      <InstantSearch indexName="movies-en-US" searchClient={searchClient}>
         <Searchbox placeholderSearch={placeholderSearch} />
         <Stats
           translations={{
