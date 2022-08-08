@@ -25,7 +25,7 @@ export const Default = () => {
     []
   )
   return (
-    <InstantSearch indexName="movies" searchClient={searchClient}>
+    <InstantSearch indexName="movies-en-US" searchClient={searchClient}>
       <Searchbox />
     </InstantSearch>
   )
