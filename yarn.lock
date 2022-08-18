@@ -1932,10 +1932,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@segment/analytics-next@^1.42.1":
-  version "1.42.1"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.42.1.tgz#50284f465068f41aca9b007c4c2354763a35b27b"
-  integrity sha512-KvAwGJMUpEuFT3+5Y2CY18j27SilGw6eAbvDf3tt0Btw/HSx8VlY9gE1wvFe3/nTtBQBHJKA4GOm98n+6Oe0rQ==
+"@segment/analytics-next@^1.42.3":
+  version "1.42.3"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.42.3.tgz#7b292fad79a3fb207b509a79a4c292089b5a527a"
+  integrity sha512-/H0f+inK/3XSyvngUUG2CxSpIWuCiRh7/386mXr5aV2ZBSzUzAW7w2PsexU4MiR1zvXYey5uDNhgTTQ/CdsiVQ==
   dependencies:
     "@lukeed/uuid" "^2.0.0"
     "@segment/analytics-core" "1.0.1"
