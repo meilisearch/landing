@@ -1953,10 +1953,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@segment/analytics-next@^1.42.3":
-  version "1.42.3"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.42.3.tgz#7b292fad79a3fb207b509a79a4c292089b5a527a"
-  integrity sha512-/H0f+inK/3XSyvngUUG2CxSpIWuCiRh7/386mXr5aV2ZBSzUzAW7w2PsexU4MiR1zvXYey5uDNhgTTQ/CdsiVQ==
+"@segment/analytics-next@^1.43.0":
+  version "1.43.0"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.43.0.tgz#75315115bbc1fc79985596aacaaf68ad734d2334"
+  integrity sha512-jGj+9Iv3rKYmXqCkF0bPnXIOS1QasCvPOjSkjUkU6o4JlAtDQ0DuuKej5N3NOATD3F3ckeL4cwMcuSh+s+MD3A==
   dependencies:
     "@lukeed/uuid" "^2.0.0"
     "@segment/analytics-core" "1.0.1"
