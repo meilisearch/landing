@@ -1,4 +1,14 @@
 describe(`Functional tests`, () => {
+  beforeEach(() => {
+    cy.intercept(
+      'GET',
+      'https://api.github.com/repos/meilisearch/meilisearch',
+      {
+        statusCode: 201,
+      }
+    )
+  })
+
   context('home page', () => {
     beforeEach(() => {
       cy.visit('/')
