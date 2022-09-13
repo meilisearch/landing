@@ -1953,7 +1953,7 @@
   dependencies:
     tslib "^2.4.0"
 
-"@segment/analytics-next@^1.43.0":
+"@segment/analytics-next@^1.42.3":
   version "1.43.0"
   resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.43.0.tgz#75315115bbc1fc79985596aacaaf68ad734d2334"
   integrity sha512-jGj+9Iv3rKYmXqCkF0bPnXIOS1QasCvPOjSkjUkU6o4JlAtDQ0DuuKej5N3NOATD3F3ckeL4cwMcuSh+s+MD3A==
