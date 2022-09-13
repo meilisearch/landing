@@ -24,7 +24,7 @@ describe(`Functional tests`, () => {
     })
 
     it('Should display movies in the interactive search', () => {
-      cy.get('[data-cy="interactive-search-desktop"] > div > ul')
+      cy.get('[data-cy="interactive-search-desktop"] .ais-Hits-list')
         .children()
         .should('have.length', 4)
     })
