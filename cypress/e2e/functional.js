@@ -1,4 +1,14 @@
 describe(`Functional tests`, () => {
+  beforeEach(() => {
+    cy.intercept(
+      'GET',
+      'https://api.github.com/repos/meilisearch/meilisearch',
+      {
+        statusCode: 201,
+      }
+    )
+  })
+
   context('home page', () => {
     beforeEach(() => {
       cy.visit('/')
@@ -24,7 +34,6 @@ describe(`Functional tests`, () => {
     })
 
     it('Should display movies in the interactive search', () => {
-      Cypress.config('defaultCommandTimeout', 10000)
       cy.get('[data-cy="interactive-search-desktop"] .ais-Hits-list')
         .children()
         .should('have.length', 4)
