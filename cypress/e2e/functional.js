@@ -24,6 +24,7 @@ describe(`Functional tests`, () => {
     })
 
     it('Should display movies in the interactive search', () => {
+      Cypress.config('defaultCommandTimeout', 10000)
       cy.get('[data-cy="interactive-search-desktop"] .ais-Hits-list')
         .children()
         .should('have.length', 4)
