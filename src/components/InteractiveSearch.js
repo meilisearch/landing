@@ -123,8 +123,8 @@ const InteractiveSearch = ({
   const searchClient = React.useMemo(
     () =>
       instantMeiliSearch(
-        process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST,
-        process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY,
+        process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST ? process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST: 'http://0.0.0.0:7700',
+        process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY ? process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY: 'searchKey',
         {
           paginationTotalHits: 4,
           primaryKey: 'id',
