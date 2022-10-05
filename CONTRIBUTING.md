@@ -46,22 +46,10 @@ You can check out the longer, more complete guideline documentation [here](https
 yarn
 ```
 
-or
-
-```bash
-npm install
-```
-
 ### Run
 
 ```bash
 yarn dev
-```
-
-or
-
-```bash
-npm run dev
 ```
 
 ### Generate build
@@ -72,12 +60,6 @@ You can generate a build of this project with the following command:
 yarn build
 ```
 
-or
-
-```bash
-npm run build
-```
-
 ### Run your build
 
 The above commands will generate an optimized version of the app, inside the `.next` folder.
@@ -86,12 +68,6 @@ You can then serve it with:
 
 ```bash
 yarn start
-```
-
-or
-
-```bash
-npm run start
 ```
 
 Or serve it with any web server of your choice.
@@ -110,11 +86,6 @@ Each PR should pass the linter to be accepted.
 yarn lint
 ```
 
-or
-
-```bash
-npm run lint
-```
 
 ### Storybook <!-- omit in toc -->
 
@@ -124,12 +95,6 @@ This project's components and blocks are in Storybook. If you edit one of the co
 
 ```bash
 yarn storybook
-```
-
-or
-
-```bash
-npm run storybook
 ```
 
 ### Data folder
