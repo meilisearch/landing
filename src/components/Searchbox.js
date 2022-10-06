@@ -107,7 +107,12 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
       submitButton.setAttribute('tabindex', -1)
     }
     disableMagnifyingGlassFocus()
+    const submitButton = document.getElementsByClassName(
+      'ais-SearchBox-submit'
+    )[1]
+    submitButton.setAttribute('aria-label', 'search')
   }, [])
+
 
   React.useEffect(() => {
     const loadAnalytics = async () => {
