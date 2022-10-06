@@ -113,7 +113,6 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
     submitButton.setAttribute('aria-label', 'search')
   }, [])
 
-
   React.useEffect(() => {
     const loadAnalytics = async () => {
       let [response] = await AnalyticsBrowser.load({ writeKey })

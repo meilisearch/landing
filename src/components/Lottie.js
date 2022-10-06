@@ -13,12 +13,12 @@ const LottieAnimation = ({ animation, options = {}, ariaLabel, ...props }) => {
   }
 
   React.useEffect(() => {
-    const lottie = document.querySelectorAll('div .hide-in-percy');
+    const lottie = document.querySelectorAll('div .hide-in-percy')
     for (let i = 0; i < lottie.length; i++) {
-      lottie[i].removeAttribute('aria-label');
+      lottie[i].removeAttribute('aria-label')
     }
-  }, []);
-  
+  }, [])
+
   return (
     <Lottie
       options={lottieOptions}
