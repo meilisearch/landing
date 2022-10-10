@@ -20,6 +20,18 @@ module.exports = {
         destination: '/privacy-policy',
         permanent: true,
       },
+      {
+        source: '/blog',
+        destination: 'https://blog.meilisearch.com',
+        permanent: true,
+        basePath: false,
+      },
+      {
+        source: '/docs',
+        destination: 'https://docs.meilisearch.com',
+        permanent: true,
+        basePath: false,
+      },
     ]
   },
 }
