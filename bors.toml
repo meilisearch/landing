@@ -1,6 +1,7 @@
 status = [
   'linter_check',
-  'cypress-run'
+  'cypress-run',
+  'percy'
 ]
 # 1 hour timeout
 timeout-sec = 3600
