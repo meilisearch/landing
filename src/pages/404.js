@@ -87,7 +87,12 @@ const Custom404 = () => {
             <Description variant="title.m">{content.description}</Description>
           </Text>
           <Cta>
-            <Button href="/" variant="secondary" color={get('colors.hotPink')}>
+            <Button
+              href="/"
+              variant="secondary"
+              color={get('colors.hotPink')}
+              data-cy="bring-me-home"
+            >
               <Typography variant="body.s.bold">{content.cta}</Typography>
             </Button>
           </Cta>

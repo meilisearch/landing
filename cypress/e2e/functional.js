@@ -100,7 +100,7 @@ describe(`Functional tests`, () => {
     })
 
     it('Should have a link bringing to home page', () => {
-      cy.get('a > span').contains('Bring me home, please').click()
+      cy.get('[data-cy="bring-me-home"]').click()
       cy.url().should('match', new RegExp(Cypress.config('baseUrl')))
     })
   })
