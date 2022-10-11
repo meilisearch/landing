@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   justify-content: center;
   text-align: center;
   a {
-    color: ${get('colors.ashes')};
+    color: ${get('colors.white')};
     transition: border-bottom 300ms;
     border-bottom: 2px solid ${get('colors.white')};
     &:hover,
