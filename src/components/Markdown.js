@@ -7,7 +7,7 @@ import get from 'utils/get'
 const StyledMarkdown = styled.div`
   color: ${get('colors.ashes.900')};
   margin-top: 16px;
-  font-family: Inter;
+  font-family: ${get('fontFamily.inter')};
   word-break: break-word;
   h1 {
     color: ${get('colors.white')};

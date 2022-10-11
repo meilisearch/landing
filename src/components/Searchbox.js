@@ -54,7 +54,7 @@ const StyledSearchbox = styled(IsSearchbox)`
 
     ::placeholder {
       color: ${get('colors.valhalla.200')};
-      font-family: Inter;
+      font-family: ${get('fontFamily.inter')};
       font-weight: ${get('fontWeight.normal')};
       font-size: 14px;
       line-height: 150%;

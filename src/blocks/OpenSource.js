@@ -95,7 +95,7 @@ const Keypoint = styled.div`
 `
 
 const Number = styled.span`
-  font-family: Poppins;
+  font-family: ${get('fontFamily.poppins')};
   font-weight: ${get('fontWeight.bold')};
   letter-spacing: -0.02em;
   font-size: 50px;

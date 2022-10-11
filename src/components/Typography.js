@@ -8,7 +8,7 @@ const variants = {
     xl: {
       tag: 'span',
       style: css`
-        font-family: Poppins;
+        font-family: ${get('fontFamily.poppins')};
         font-weight: 700;
         letter-spacing: -1%;
         line-height: 140%;
@@ -24,7 +24,7 @@ const variants = {
     l: {
       tag: 'span',
       style: css`
-        font-family: Poppins;
+        font-family: ${get('fontFamily.poppins')};
         font-weight: 700;
         letter-spacing: -1%;
         line-height: 140%;
@@ -40,7 +40,7 @@ const variants = {
     m: {
       tag: 'span',
       style: css`
-        font-family: Poppins;
+        font-family: ${get('fontFamily.poppins')};
         font-weight: 600;
         letter-spacing: -1%;
         line-height: 140%;
@@ -56,7 +56,7 @@ const variants = {
     s: {
       tag: 'span',
       style: css`
-        font-family: Poppins;
+        font-family: ${get('fontFamily.poppins')};
         font-weight: 600;
         letter-spacing: -1%;
         line-height: 140%;
@@ -72,7 +72,7 @@ const variants = {
     xs: {
       tag: 'span',
       style: css`
-        font-family: Poppins;
+        font-family: ${get('fontFamily.poppins')};
         font-weight: 500;
         line-height: 140%;
         font-size: 18px;
@@ -87,7 +87,7 @@ const variants = {
     caps: {
       tag: 'span',
       style: css`
-        font-family: Poppins;
+        font-family: ${get('fontFamily.poppins')};
         font-weight: 700;
         letter-spacing: 3%;
         line-height: 140%;
@@ -104,7 +104,7 @@ const variants = {
     capsXs: {
       tag: 'span',
       style: css`
-        font-family: Poppins;
+        font-family: ${get('fontFamily.poppins')};
         font-weight: 700;
         letter-spacing: 3%;
         line-height: 130%;
@@ -121,7 +121,7 @@ const variants = {
       default: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           line-height: 150%;
           font-size: 15px;
           font-weight: 400;
@@ -136,7 +136,7 @@ const variants = {
       bold: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           line-height: 150%;
           font-size: 15px;
           font-weight: 600;
@@ -151,7 +151,7 @@ const variants = {
       link: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           line-height: 150%;
           font-size: 15px;
           font-weight: 600;
@@ -169,7 +169,7 @@ const variants = {
       default: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 400;
           line-height: 150%;
           font-size: 14px;
@@ -184,7 +184,7 @@ const variants = {
       bold: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 600;
           line-height: 150%;
           font-size: 14px;
@@ -199,7 +199,7 @@ const variants = {
       link: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 600;
           line-height: 150%;
           font-size: 14px;
@@ -217,7 +217,7 @@ const variants = {
       default: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 400;
           line-height: 150%;
           font-size: 12px;
@@ -232,7 +232,7 @@ const variants = {
       bold: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 600;
           line-height: 150%;
           font-size: 12px;
@@ -247,7 +247,7 @@ const variants = {
       link: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 600;
           line-height: 150%;
           font-size: 12px;
@@ -265,7 +265,7 @@ const variants = {
       default: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 400;
           line-height: 150%;
           font-size: 10px;
@@ -280,7 +280,7 @@ const variants = {
       bold: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 600;
           line-height: 150%;
           font-size: 10px;
@@ -295,7 +295,7 @@ const variants = {
       link: {
         tag: 'span',
         style: css`
-          font-family: Inter;
+          font-family: ${get('fontFamily.inter')};
           font-weight: 600;
           line-height: 150%;
           text-decoration: underline;

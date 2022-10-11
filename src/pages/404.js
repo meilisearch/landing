@@ -33,7 +33,7 @@ const PageContent = styled(BasePageContent)`
 `
 
 const Title = styled(Typography)`
-  font-family: Poppins;
+  font-family: ${get('fontFamily.poppins')};
   font-style: normal;
   font-weight: ${get('fontWeight.bold')};
   font-size: 172px;
