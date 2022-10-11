@@ -13,9 +13,15 @@ const Wrapper = styled.div`
   justify-content: center;
   text-align: center;
   a {
-    color: white;
-    text-decoration: underline;
+    color: ${get('colors.ashes')};
+    transition: border-bottom 300ms;
+    border-bottom: 2px solid ${get('colors.white')};
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid ${get('colors.hotPink')};
+    }
   }
+
   @media (min-width: ${get('breakpoints.lg')}) {
     padding: 24px;
   }
