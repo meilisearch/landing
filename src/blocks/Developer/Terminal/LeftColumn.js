@@ -24,7 +24,7 @@ const SdkTab = styled(Tab.Tab)`
 `
 
 const Language = styled(Typography)`
-  font-family: 'Poppins';
+  font-family: ${get('fontFamily.poppins')};
   font-weight: ${get('fontWeight.bold')};
   font-size: 10px;
   line-height: 12px;

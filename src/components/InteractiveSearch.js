@@ -41,7 +41,7 @@ const Poster = styled.div`
 `
 
 const MovieTitle = styled(Typography)`
-  font-family: 'Poppins';
+  font-family: ${get('fontFamily.poppins')};
   font-weight: 600;
   font-size: 21.1092px;
   line-height: 32px;
@@ -54,7 +54,7 @@ const MovieTitle = styled(Typography)`
 `
 
 const MovieYear = styled.div`
-  font-family: Poppins;
+  font-family: ${get('fontFamily.poppins')};
   font-size: 12px;
   font-weight: 400;
   color: ${get('colors.valhalla.300')};
@@ -94,7 +94,7 @@ const Hit = ({ hit }) => (
 
 const StatsText = styled(Typography)`
   color: ${get('colors.white')};
-  font-family: Inter;
+  font-family: ${get('fontFamily.inter')};
   font-weight: ${get('fontWeight.normal')};
   font-size: 12px;
   line-height: 150%;
