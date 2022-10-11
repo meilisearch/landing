@@ -42,7 +42,7 @@ const Header = props => {
       {banner && <Banner title={banner} />}
       <HeaderWrapper $hasDarkBgColor={hasDarkBgColor}>
         <DesktopHeader headerProps={headerProps} />
-        <MobileHeader headerProps={headerProps} />
+        <MobileHeader headerProps={headerProps} hasBanner={banner} />
       </HeaderWrapper>
     </Wrapper>
   )
