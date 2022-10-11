@@ -31,7 +31,7 @@ const Backdrop = styled(DialogBackdrop)`
   color: ${get('colors.white')};
   background-color: ${get('colors.valhalla')};
   z-index: 50;
-  inset: 98px 0 0 0;
+  inset: ${p => (p.$hasBanner ? 'calc(98px + 72px) 0 0 0' : '98px 0 0 0')};
   padding-top: 64px;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
@@ -63,7 +63,7 @@ const Scrollable = styled(Grid)`
   justify-content: flex-start;
 `
 
-const MobileHeader = ({ headerProps }) => {
+const MobileHeader = ({ hasBanner, headerProps }) => {
   const dialog = useDialogState({
     animated: true,
     unstable_initialFocusRef: null,
@@ -78,7 +78,7 @@ const MobileHeader = ({ headerProps }) => {
       >
         {dialog.visible ? <Cross height={24} /> : <Hamburger height={24} />}
       </DialogDisclosure>
-      <Backdrop {...dialog}>
+      <Backdrop $hasBanner={hasBanner} {...dialog}>
         <Content {...dialog} aria-label="Menu">
           <Scrollable>
             <MenuLinks headerProps={headerProps} />

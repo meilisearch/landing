@@ -3,6 +3,7 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   viewportWidth: 1440,
   viewportHeight: 900,
+  scrollBehavior: 'center',
   projectId: '4ja87b',
   e2e: {
     // We've imported your old cypress plugins here.

@@ -9,6 +9,10 @@ import {
 } from '../src/components/icons'
 
 const getHeaderData = () => ({
+  banner: {
+    title:
+      '🎉 Announcing our <a href="https://techcrunch.com/2022/10/10/meilisearch-lands-15m-investment-to-grow-its-search-as-a-service-business/" target="_blank">$15 million Series A</a> with Felicis Venture!',
+  },
   links: [
     {
       title: 'Pricing',
