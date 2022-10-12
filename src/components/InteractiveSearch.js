@@ -9,13 +9,11 @@ import Typography from 'components/Typography'
 import Lottie from 'components/Lottie'
 import { useInView } from 'react-intersection-observer'
 
-const NEXT_PUBLIC_DEMO_MOVIES_HOST = process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST
-  ? process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST
-  : 'http://0.0.0.0:7700'
-const NEXT_PUBLIC_DEMO_MOVIES_API_KEY = process.env
-  .NEXT_PUBLIC_DEMO_MOVIES_API_KEY
-  ? process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY
-  : 'searchKey'
+const NEXT_PUBLIC_DEMO_MOVIES_HOST =
+  process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST || 'http://0.0.0.0:7700'
+
+const NEXT_PUBLIC_DEMO_MOVIES_API_KEY =
+  process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY || 'searchKey'
 
 const Card = styled.div`
   background-color: ${get('colors.white')};

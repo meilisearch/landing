@@ -3,13 +3,11 @@ import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
 import Searchbox from 'components/Searchbox'
 import { InstantSearch } from 'react-instantsearch-dom'
 
-const NEXT_PUBLIC_DEMO_MOVIES_HOST = process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST
-  ? process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST
-  : 'http://0.0.0.0:7700'
-const NEXT_PUBLIC_DEMO_MOVIES_API_KEY = process.env
-  .NEXT_PUBLIC_DEMO_MOVIES_API_KEY
-  ? process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY
-  : 'searchKey'
+const NEXT_PUBLIC_DEMO_MOVIES_HOST =
+  process.env.NEXT_PUBLIC_DEMO_MOVIES_HOST || 'http://0.0.0.0:7700'
+
+const NEXT_PUBLIC_DEMO_MOVIES_API_KEY =
+  process.env.NEXT_PUBLIC_DEMO_MOVIES_API_KEY || 'searchKey'
 
 export default {
   title: 'Components/Searchbox',
