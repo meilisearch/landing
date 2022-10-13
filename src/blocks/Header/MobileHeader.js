@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import GithubButton from 'components/GithubButton'
 import BaseGrid from 'components/Grid'
-import { Hamburger, Cross } from 'components/icons'
 import get from 'utils/get'
 import Logo from './Logo'
 import MenuLinks from './MenuLinks'
@@ -13,6 +12,8 @@ import {
   DialogBackdrop,
   DialogContent,
 } from 'components/Dialog'
+import Lottie from 'components/Lottie'
+import hamburgerMenuAnimation from '../../lotties/hamburgerMenu.json'
 
 const Grid = styled(BaseGrid)`
   width: 100%;
@@ -31,7 +32,7 @@ const Backdrop = styled(DialogBackdrop)`
   color: ${get('colors.white')};
   background-color: ${get('colors.valhalla')};
   z-index: 50;
-  inset: ${p => (p.$hasBanner ? 'calc(98px + 72px) 0 0 0' : '98px 0 0 0')};
+  inset: 98px 0 0 0;
   padding-top: 64px;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
@@ -63,22 +64,27 @@ const Scrollable = styled(Grid)`
   justify-content: flex-start;
 `
 
-const MobileHeader = ({ hasBanner, headerProps }) => {
+const MobileHeader = ({ headerProps }) => {
   const dialog = useDialogState({
     animated: true,
     unstable_initialFocusRef: null,
   })
+
   return (
     <Grid as="nav">
       <Logo />
-      <DialogDisclosure
-        {...dialog}
-        style={{ color: 'white', height: 24 }}
-        aria-label="hamburger"
-      >
-        {dialog.visible ? <Cross height={24} /> : <Hamburger height={24} />}
+      <DialogDisclosure {...dialog} style={{ color: 'white', height: '30px' }}>
+        <Lottie
+          direction={dialog.visible ? 1 : -1}
+          animation={hamburgerMenuAnimation}
+          options={{
+            loop: false,
+            autoplay: false,
+          }}
+          ariaLabel="Hamburger Menu"
+        />
       </DialogDisclosure>
-      <Backdrop $hasBanner={hasBanner} {...dialog}>
+      <Backdrop {...dialog}>
         <Content {...dialog} aria-label="Menu">
           <Scrollable>
             <MenuLinks headerProps={headerProps} />
