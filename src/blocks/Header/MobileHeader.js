@@ -21,24 +21,21 @@ const Grid = styled(BaseGrid)`
   align-items: center;
   justify-content: space-between;
   padding: 28px 16px 20px;
-
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
   }
 `
-
 const Backdrop = styled(DialogBackdrop)`
   padding: 24px 24px 0;
   color: ${get('colors.white')};
   background-color: ${get('colors.valhalla')};
   z-index: 50;
-  inset: 98px 0 0 0;
+  inset: ${p => (p.$hasBanner ? 'calc(98px + 72px) 0 0 0' : '98px 0 0 0')};
   padding-top: 64px;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
   }
 `
-
 const DialogFooter = styled(Grid)`
   position: sticky;
   bottom: 0;
@@ -49,13 +46,11 @@ const DialogFooter = styled(Grid)`
   justify-content: space-between;
   background-color: ${get('colors.valhalla')};
 `
-
 const Content = styled(DialogContent)`
   height: 100%;
   display: flex;
   flex-direction: column;
 `
-
 const Scrollable = styled(Grid)`
   display: flex;
   flex: 1;
@@ -64,16 +59,19 @@ const Scrollable = styled(Grid)`
   justify-content: flex-start;
 `
 
-const MobileHeader = ({ headerProps }) => {
+const MobileHeader = ({ hasBanner, headerProps }) => {
   const dialog = useDialogState({
     animated: true,
     unstable_initialFocusRef: null,
   })
-
   return (
     <Grid as="nav">
       <Logo />
-      <DialogDisclosure {...dialog} style={{ color: 'white', height: '30px' }}>
+      <DialogDisclosure
+        {...dialog}
+        style={{ color: 'white', height: 24 }}
+        aria-label="hamburger"
+      >
         <Lottie
           direction={dialog.visible ? 1 : -1}
           animation={hamburgerMenuAnimation}
@@ -84,7 +82,7 @@ const MobileHeader = ({ headerProps }) => {
           ariaLabel="Hamburger Menu"
         />
       </DialogDisclosure>
-      <Backdrop {...dialog}>
+      <Backdrop $hasBanner={hasBanner} {...dialog}>
         <Content {...dialog} aria-label="Menu">
           <Scrollable>
             <MenuLinks headerProps={headerProps} />
@@ -98,5 +96,4 @@ const MobileHeader = ({ headerProps }) => {
     </Grid>
   )
 }
-
 export default MobileHeader
