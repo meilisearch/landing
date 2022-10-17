@@ -25,6 +25,7 @@ const Grid = styled(BaseGrid)`
     display: none;
   }
 `
+
 const Backdrop = styled(DialogBackdrop)`
   padding: 24px 24px 0;
   color: ${get('colors.white')};
@@ -36,6 +37,7 @@ const Backdrop = styled(DialogBackdrop)`
     display: none;
   }
 `
+
 const DialogFooter = styled(Grid)`
   position: sticky;
   bottom: 0;
@@ -46,11 +48,13 @@ const DialogFooter = styled(Grid)`
   justify-content: space-between;
   background-color: ${get('colors.valhalla')};
 `
+
 const Content = styled(DialogContent)`
   height: 100%;
   display: flex;
   flex-direction: column;
 `
+
 const Scrollable = styled(Grid)`
   display: flex;
   flex: 1;
@@ -64,12 +68,13 @@ const MobileHeader = ({ hasBanner, headerProps }) => {
     animated: true,
     unstable_initialFocusRef: null,
   })
+
   return (
     <Grid as="nav">
       <Logo />
       <DialogDisclosure
         {...dialog}
-        style={{ color: 'white', height: 24 }}
+        style={{ color: 'white', height: 32 }}
         aria-label="hamburger"
       >
         <Lottie
@@ -96,4 +101,5 @@ const MobileHeader = ({ hasBanner, headerProps }) => {
     </Grid>
   )
 }
+
 export default MobileHeader
