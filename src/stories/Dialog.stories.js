@@ -9,7 +9,8 @@ import get from 'utils/get'
 
 import Button from 'components/Button'
 import Typography from 'components/Typography'
-import { Hamburger } from 'components/icons'
+import Lottie from 'components/Lottie'
+import hamburgerMenuAnimation from '../lotties/hamburgerMenu.json'
 
 export default {
   title: 'Components/Dialog',
@@ -36,7 +37,16 @@ export const Default = () => {
   return (
     <>
       <DialogDisclosure {...dialog} style={{ color: 'white' }}>
-        <Hamburger height={24} />
+        <Lottie
+          style={{ width: '200px', height: '200px', margin: 'auto' }}
+          direction={dialog.visible ? 1 : -1}
+          animation={hamburgerMenuAnimation}
+          options={{
+            loop: false,
+            autoplay: false,
+          }}
+          ariaLabel="Hamburger Menu"
+        />
       </DialogDisclosure>
       <DialogBackdrop {...dialog} style={backdropStyle}>
         <DialogContent {...dialog} aria-label="Welcome">
@@ -55,7 +65,16 @@ export const Animated = () => {
   return (
     <>
       <DialogDisclosure {...dialog} style={{ color: 'white' }}>
-        <Hamburger height={24} />
+        <Lottie
+          style={{ width: '200px', height: '200px', margin: 'auto' }}
+          direction={dialog.visible ? 1 : -1}
+          animation={hamburgerMenuAnimation}
+          options={{
+            loop: false,
+            autoplay: false,
+          }}
+          ariaLabel="Hamburger Menu"
+        />
       </DialogDisclosure>
       <DialogBackdrop {...dialog} style={backdropStyle}>
         <DialogContent {...dialog} aria-label="Welcome">
