@@ -1,10 +1,15 @@
 import {
   B2CApp,
+  Code,
+  Diamond,
   Ecommerce,
   GeographicSearch,
+  GraduationCap,
   Media,
   NumericSorting,
   Other,
+  Puzzle,
+  Rocket,
   SaasApp,
   SiteSearch,
   TextualSearch,
@@ -34,41 +39,94 @@ const getPricingPageData = () => ({
         target: '_blank',
       },
     },
-    cloud: {
-      title: 'Cloud',
+    payingPlans: [
+      {
+        title: 'Hobby',
+        default: false,
+        icon: GraduationCap,
+        pricing: '<strong>$30</strong>/month',
+        specifications: [
+          'Disk 10GB',
+          'RAM 1GB',
+          '0,5vCPU',
+          'Shared resources',
+          'Community (Slack) support',
+        ],
+        cta: {
+          title: 'Get started',
+          href: '', // TODO: ask for the link
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Developer',
+        default: true,
+        icon: Code,
+        pricing: '<strong>$120</strong>/month',
+        specifications: [
+          'Disk 40GB',
+          'RAM 4GB',
+          '1vCPU',
+          'Dedicated resources',
+          'Meilisearch team support',
+        ],
+        cta: {
+          title: 'Get started',
+          href: '', // TODO: ask for the link
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Pro',
+        default: false,
+        icon: Diamond,
+        pricing: '<strong>$600</strong>/month',
+        specifications: [
+          'Disk 160GB',
+          'RAM 16GB',
+          '4vCPU',
+          'Dedicated resources',
+          'Meilisearch team support',
+        ],
+        cta: {
+          title: 'Get started',
+          href: '', // TODO: ask for the link
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Enterprise',
+        default: false,
+        icon: Rocket,
+        pricing: 'Custom quote',
+        specifications: [
+          'Disk Custom',
+          'RAM Custom',
+          'Custom vCPU',
+          'Dedicated resources',
+          'Dedicated account manager',
+          'Premium SLA',
+        ],
+        cta: {
+          title: 'Contact Sales',
+          href: '', // TODO: ask for the link
+          target: '_blank',
+        },
+      },
+    ],
+    freePlan: {
+      preTitle: 'Open Source',
+      icon: Puzzle,
+      title: 'Free',
       description:
-        'Hosted and fully‑managed options for Meilisearch, designed for workflow and business needs.',
-      plans: [
-        {
-          title: 'Dedicated',
-          description: 'For production applications.<br/>Starting from ',
-          tooltip: {
-            cta: '$29/month',
-            text: 'Estimation based on $0.040 per hour.',
-          },
-          keypoints: [
-            'Highly available by default',
-            'Multiple region available',
-            'Up to 128Gb of RAM',
-            'Up to 1TB of storage',
-          ],
-          cta: {
-            title: 'Start now',
-            href: 'https://meilisearch.typeform.com/to/VI2cI2rv',
-            target: '_blank',
-          },
-        },
-        {
-          title: 'Enterprise',
-          description:
-            'Contact our sales team to ask for a fully custom quote.',
-          keypoints: ['Premier support', 'Premium SLA', 'More resources'],
-          cta: {
-            title: 'Contact sales',
-            href: '',
-          },
-        },
-      ],
+        'Start using Meilisearch now by downloading our open source version. You will have the possibility in the future to move to our cloud easily.',
+      readMore:
+        'Read our <a href="" target="_blank">Cloud - Open source comparison guide</a>', // TODO: ask for the link
+      cta: {
+        title: 'Get started',
+        href: '', // TODO: ask for the link
+        target: '_blank',
+      },
     },
   },
   pricingAssistant: {
