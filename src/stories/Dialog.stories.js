@@ -9,8 +9,7 @@ import get from 'utils/get'
 
 import Button from 'components/Button'
 import Typography from 'components/Typography'
-import { Hamburger } from 'components/icons'
-
+import { Twirl as Hamburger } from 'hamburger-react'
 export default {
   title: 'Components/Dialog',
   parameters: {
