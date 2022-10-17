@@ -88,7 +88,7 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
   const writeKey = process.env.NEXT_PUBLIC_SEGMENT_KEY
 
   const sendDataToSegment = e => {
-    if (e.target.value) {
+    if (process.env.NODE_ENV === 'production' && e.target.value) {
       const processingTimeInMs = document.querySelector(
         '.ais-Stats-text strong:nth-child(2)'
       ).innerText
@@ -118,7 +118,7 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
       let [response] = await AnalyticsBrowser.load({ writeKey })
       setAnalytics(response)
     }
-    if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'test') {
+    if (process.env.NODE_ENV === 'production') {
       loadAnalytics()
     }
   }, [writeKey])
