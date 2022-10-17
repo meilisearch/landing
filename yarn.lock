@@ -1946,20 +1946,22 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
   integrity sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==
 
-"@segment/analytics-core@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-core/-/analytics-core-1.0.1.tgz#fbc8aa363f786bf94dea31a4cd98b08ea804b460"
-  integrity sha512-aty64DNqhigwnKYWR5YFYV5t61x8KfVKM5w9M25Cpxoy8UPz5pnCNl7+leGHJlnIUO5ULQ2PH7Db+LF10apuYA==
-  dependencies:
-    tslib "^2.4.0"
-
-"@segment/analytics-next@^1.42.3":
-  version "1.43.0"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.43.0.tgz#75315115bbc1fc79985596aacaaf68ad734d2334"
-  integrity sha512-jGj+9Iv3rKYmXqCkF0bPnXIOS1QasCvPOjSkjUkU6o4JlAtDQ0DuuKej5N3NOATD3F3ckeL4cwMcuSh+s+MD3A==
+"@segment/analytics-core@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-core/-/analytics-core-1.1.0.tgz#a27477a35d1a005ea6b3ee9842f6870bc5260498"
+  integrity sha512-Ccjt0cewP9QQU7g2p342QQ48mOaGlFNa9DTyQlEDoyRuInnVDcW6mPFS7RlNXEnmw3F2fi3YONNktn5Ja63xcw==
   dependencies:
     "@lukeed/uuid" "^2.0.0"
-    "@segment/analytics-core" "1.0.1"
+    dset "^3.1.2"
+    tslib "^2.4.0"
+
+"@segment/analytics-next@^1.44.0":
+  version "1.44.0"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.44.0.tgz#09d004dfe1f83c563c1b2a5d401ef72addbfd093"
+  integrity sha512-88h+zFtcrj3HiiUZ8Y+mkWCO+AmvUSTSmnii3ayWe1vBGrZ2OxMG9UDuj5PEmsErGM0c+KRyyGlO+anF4M01iw==
+  dependencies:
+    "@lukeed/uuid" "^2.0.0"
+    "@segment/analytics-core" "1.1.0"
     "@segment/analytics.js-video-plugins" "^0.2.1"
     "@segment/facade" "^3.4.9"
     "@segment/tsub" "^0.1.12"
