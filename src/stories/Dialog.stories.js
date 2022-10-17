@@ -36,9 +36,11 @@ export const Default = () => {
   const dialog = useDialogState()
   return (
     <>
-      <DialogDisclosure {...dialog} style={{ color: 'white' }}>
+      <DialogDisclosure
+        {...dialog}
+        style={{ color: 'white', width: 40, height: 40 }}
+      >
         <Lottie
-          style={{ width: '200px', height: '200px', margin: 'auto' }}
           direction={dialog.visible ? 1 : -1}
           animation={hamburgerMenuAnimation}
           options={{
