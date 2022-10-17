@@ -41,7 +41,7 @@ jobs:
       - name: Browser tests
         uses: cypress-io/github-action@v4
         with:
-          build: yarn build
+          build: yarn build:ci
           start: yarn start
           wait-on: http://localhost:3000
           config-file: cypress.config.js
@@ -52,7 +52,6 @@ jobs:
         env:
           NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
           NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
-          NEXT_PUBLIC_ENVIRONMENT: test
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
@@ -71,7 +70,6 @@ jobs:
     env:
       NEXT_PUBLIC_DEMO_MOVIES_HOST: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_HOST }}
       NEXT_PUBLIC_DEMO_MOVIES_API_KEY: ${{ secrets.NEXT_PUBLIC_DEMO_MOVIES_API_KEY }}
-      NEXT_PUBLIC_ENVIRONMENT: test
     steps:
       - uses: actions/checkout@v3
       - name: Setup node
@@ -83,7 +81,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Build website
-        run: yarn build
+        run: yarn build:ci
       - name: Percy Test
         run: yarn test:ci:percy
         env:

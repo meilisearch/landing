@@ -118,7 +118,7 @@ const Searchbox = ({ placeholderSearch = null, ...props }) => {
       let [response] = await AnalyticsBrowser.load({ writeKey })
       setAnalytics(response)
     }
-    if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'test') {
+    if (process.env.NEXT_PUBLIC_APP_ENV === 'production') {
       loadAnalytics()
     }
   }, [writeKey])
