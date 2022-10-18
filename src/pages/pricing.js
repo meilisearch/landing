@@ -6,7 +6,7 @@ import {
   PricingHero,
   FAQ,
   Table,
-  Pricing as BasePricingBlock,
+  // Pricing as BasePricingBlock,
   PricingAssistant,
 } from 'blocks'
 import get from 'utils/get'
@@ -24,25 +24,27 @@ const HeroBlock = styled(PricingHero)`
   }
 `
 
-const PricingBlock = styled(BasePricingBlock)`
-  margin-top: 72px;
-  @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: 82px;
-  }
-  @media (min-width: ${get('breakpoints.xl')}) {
-    margin-top: 64px;
-  }
-`
+// const PricingBlock = styled(BasePricingBlock)`
+//   margin-top: 72px;
+//   @media (min-width: ${get('breakpoints.lg')}) {
+//     margin-top: 82px;
+//   }
+//   @media (min-width: ${get('breakpoints.xl')}) {
+//     margin-top: 64px;
+//   }
+// `
 
 const Pricing = () => {
-  const { meta, hero, faq, table, pricingAssistant, pricing } = pricingPageData
+  // const { meta, hero, faq, table, pricingAssistant, pricing } =
+  //   getPricingPageData()
+  const { meta, hero, faq, table, pricingAssistant } = pricingPageData
   return (
     <>
       <Head meta={meta} />
       <div style={{ backgroundColor: get('colors.valhalla.800') }}>
         <PageContent>
           <HeroBlock hero={hero} data-cy="pricingHero" />
-          <PricingBlock pricing={pricing} data-cy="pricingCards" />
+          {/* <PricingBlock pricing={pricing} data-cy="pricingCards" /> */}
           <Table table={table} data-cy="pricingTable" />
           <PricingAssistant
             pricingAssistant={pricingAssistant}
