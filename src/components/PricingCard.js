@@ -3,23 +3,7 @@ import get from 'utils/get'
 import hexToRgb from 'utils/hexToRgb'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
-
-const PricingCardWrapper = styled.div`
-  background-color: ${get('colors.valhalla.600')};
-  border-radius: 16px;
-  padding: 16px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  @media (min-width: ${get('breakpoints.lg')}) {
-    padding: 24px;
-  }
-  @media (min-width: ${get('breakpoints.xl')}) {
-    padding: 26px 32px 40px;
-  }
-`
+import Card from 'components/Card'
 
 const PlanIcon = styled.div`
   background-color: ${hexToRgb(get('colors.hotPink'), 0.2)};
@@ -76,7 +60,7 @@ const Cta = styled(Button)`
 const PricingCard = ({ plan, ...props }) => {
   const Icon = plan.icon
   return (
-    <PricingCardWrapper {...props}>
+    <Card $bgColor="colors.valhalla.600" {...props}>
       <div>
         <PlanIcon>
           <Icon />
@@ -97,7 +81,7 @@ const PricingCard = ({ plan, ...props }) => {
       >
         <Typography variant="body.s.bold">{plan.cta.title}</Typography>
       </Cta>
-    </PricingCardWrapper>
+    </Card>
   )
 }
 export default PricingCard
