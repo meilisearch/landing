@@ -9,7 +9,8 @@ import get from 'utils/get'
 
 import Button from 'components/Button'
 import Typography from 'components/Typography'
-import { Hamburger } from 'components/icons'
+import Lottie from 'components/Lottie'
+import hamburgerMenuAnimation from '../lotties/hamburgerMenu.json'
 
 export default {
   title: 'Components/Dialog',
@@ -35,8 +36,19 @@ export const Default = () => {
   const dialog = useDialogState()
   return (
     <>
-      <DialogDisclosure {...dialog} style={{ color: 'white' }}>
-        <Hamburger height={24} />
+      <DialogDisclosure
+        {...dialog}
+        style={{ color: 'white', width: 40, height: 40 }}
+      >
+        <Lottie
+          direction={dialog.visible ? 1 : -1}
+          animation={hamburgerMenuAnimation}
+          options={{
+            loop: false,
+            autoplay: false,
+          }}
+          ariaLabel="Hamburger Menu"
+        />
       </DialogDisclosure>
       <DialogBackdrop {...dialog} style={backdropStyle}>
         <DialogContent {...dialog} aria-label="Welcome">
@@ -54,8 +66,19 @@ export const Animated = () => {
   const dialog = useDialogState({ animated: true })
   return (
     <>
-      <DialogDisclosure {...dialog} style={{ color: 'white' }}>
-        <Hamburger height={24} />
+      <DialogDisclosure
+        {...dialog}
+        style={{ color: 'white', width: 40, height: 40 }}
+      >
+        <Lottie
+          direction={dialog.visible ? 1 : -1}
+          animation={hamburgerMenuAnimation}
+          options={{
+            loop: false,
+            autoplay: false,
+          }}
+          ariaLabel="Hamburger Menu"
+        />
       </DialogDisclosure>
       <DialogBackdrop {...dialog} style={backdropStyle}>
         <DialogContent {...dialog} aria-label="Welcome">
