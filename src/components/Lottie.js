@@ -1,7 +1,13 @@
 import React from 'react'
 import Lottie from 'react-lottie-wrapper'
 
-const LottieAnimation = ({ animation, options = {}, ariaLabel, ...props }) => {
+const LottieAnimation = ({
+  animation,
+  options = {},
+  ariaLabel,
+  hideInPercy = true,
+  ...props
+}) => {
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -27,7 +33,7 @@ const LottieAnimation = ({ animation, options = {}, ariaLabel, ...props }) => {
       ariaRole={null}
       ariaLabel={ariaLabel}
       tabIndex={-1}
-      className="hide-in-percy"
+      className={hideInPercy && 'hide-in-percy'}
       {...props}
     />
   )

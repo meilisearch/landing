@@ -85,6 +85,7 @@ const MobileHeader = ({ hasBanner, headerProps }) => {
             autoplay: false,
           }}
           ariaLabel="Hamburger Menu"
+          hideInPercy={false}
         />
       </DialogDisclosure>
       <Backdrop $hasBanner={hasBanner} {...dialog}>
