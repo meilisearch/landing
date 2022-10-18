@@ -6,8 +6,9 @@
   "author": "mdubus <morgane.dubus@meilisearch.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "NEXT_PUBLIC_APP_ENV=development next dev",
+    "build": "NEXT_PUBLIC_APP_ENV=production next build",
+    "build:ci": "NEXT_PUBLIC_APP_ENV=test next build",
     "start": "next start",
     "lint": "eslint --ext .js .",
     "lint:fix": "eslint --ext .js . --fix",
