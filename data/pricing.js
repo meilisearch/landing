@@ -302,7 +302,7 @@ const getPricingPageData = () => ({
     },
   },
   table: {
-    title: 'Features',
+    title: 'Open source vs Cloud',
     tables: [
       {
         thead: ['Search Capabilities', 'Open Source', 'Cloud'],
