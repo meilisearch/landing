@@ -28,17 +28,6 @@ const getPricingPageData = () => ({
       'Whatever your needs, we can find the right plan that will fit your business perfectly.',
   },
   pricing: {
-    openSource: {
-      title: 'Open Source',
-      plan: 'Free',
-      planDescription:
-        'Start using Meilisearch now by downloading our open source version. You will have the possibility in the future to move to our cloud easily.',
-      cta: {
-        title: 'Download',
-        href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
-        target: '_blank',
-      },
-    },
     payingPlans: [
       {
         title: 'Hobby',
