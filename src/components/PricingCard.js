@@ -3,7 +3,17 @@ import get from 'utils/get'
 import hexToRgb from 'utils/hexToRgb'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
-import Card from 'components/Card'
+import BaseCard from 'components/Card'
+
+const Card = styled(BaseCard)`
+  padding: 16px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    padding: 24px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    padding: 32px;
+  }
+`
 
 const PlanIcon = styled.div`
   background-color: ${hexToRgb(get('colors.hotPink'), 0.2)};
@@ -21,18 +31,47 @@ const Title = styled(Typography)`
 
 const Pricing = styled(Typography)`
   color: ${get('colors.ashes.900')};
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  font-size: 12px;
+  font-weight: ${get('fontWeight.normal')};
+  line-height: 150%;
 
   strong {
     color: white;
     font-family: 'Poppins';
-    font-size: 26px;
+    font-weight: ${get('fontWeight.medium')};
+    font-size: 18px;
     line-height: 140%;
+  }
+
+  @media (min-width: ${get('breakpoints.lg')}) {
+    font-size: 13px;
+    strong {
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: ${get('breakpoints.xl')}) {
+    font-size: 14px;
+    strong {
+      font-size: 26px;
+    }
   }
 `
 
 const Specification = styled(Typography)`
   display: block;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    font-size: 11px;
+  }
+  @media (min-width: ${get('breakpoints.xl')}) {
+    font-size: 12px;
+  }
 `
 
 const Specifications = styled.div`
@@ -52,6 +91,11 @@ const Specifications = styled.div`
 
 const Cta = styled(Button)`
   margin-top: 16px;
+  padding: 10px 20px;
+  height: 38px;
+  @media (min-width: ${get('breakpoints.lg')}) {
+    height: 45px;
+  }
   @media (min-width: ${get('breakpoints.xl')}) {
     margin-top: 32px;
   }
