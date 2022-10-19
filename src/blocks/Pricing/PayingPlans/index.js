@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import PricingCard from 'components/PricingCard'
 import get from 'utils/get'
 import BaseGrid from 'components/Grid'
+import BasePlan from './Plan'
 
 const Grid = styled(BaseGrid)`
   grid-template-columns: repeat(2, 1fr);
@@ -11,7 +11,7 @@ const Grid = styled(BaseGrid)`
   }
 `
 
-const Plan = styled(PricingCard)`
+const Plan = styled(BasePlan)`
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: span 3;
   }

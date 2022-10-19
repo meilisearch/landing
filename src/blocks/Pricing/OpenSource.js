@@ -4,7 +4,7 @@ import Grid from 'components/Grid'
 import get from 'utils/get'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
-import Card from 'components/Card'
+import PricingCard from 'components/PricingCard'
 import RoundedIcon from 'components/RoundedIcon'
 
 const OpenSourceWrapper = styled(Grid)`
@@ -56,6 +56,7 @@ const ReadMore = styled(Typography)`
   }
 
   a {
+    outline: none;
     color: ${get('colors.dodgerBlue.400')};
     text-decoration: underline;
     transition: color 300ms;
@@ -70,7 +71,7 @@ const ReadMore = styled(Typography)`
 const OpenSource = ({ openSource }) => {
   return (
     <OpenSourceWrapper>
-      <Card $bgColor="colors.valhalla.600">
+      <PricingCard color="colors.dodgerBlue">
         <Grid>
           <Col>
             <RoundedIcon icon={openSource.icon} color="colors.dodgerBlue.400" />
@@ -89,7 +90,7 @@ const OpenSource = ({ openSource }) => {
           <LastColumn>
             <Button
               variant="secondary"
-              color={get('colors.white')}
+              color={get('colors.dodgerBlue')}
               href={openSource.cta.href}
               target={openSource.cta.target}
             >
@@ -99,7 +100,7 @@ const OpenSource = ({ openSource }) => {
             </Button>
           </LastColumn>
         </Grid>
-      </Card>
+      </PricingCard>
     </OpenSourceWrapper>
   )
 }
