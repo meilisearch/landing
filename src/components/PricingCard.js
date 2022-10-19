@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import get from 'utils/get'
-import hexToRgb from 'utils/hexToRgb'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
+import RoundedIcon from 'components/RoundedIcon'
 import BaseCard from 'components/Card'
 
 const Card = styled(BaseCard)`
@@ -13,15 +13,6 @@ const Card = styled(BaseCard)`
   @media (min-width: ${get('breakpoints.xl')}) {
     padding: 32px;
   }
-`
-
-const PlanIcon = styled.div`
-  background-color: ${hexToRgb(get('colors.hotPink'), 0.2)};
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: ${get('colors.hotPink')};
-  padding: 8px;
 `
 
 const Title = styled(Typography)`
@@ -101,31 +92,27 @@ const Cta = styled(Button)`
   }
 `
 
-const PricingCard = ({ plan, ...props }) => {
-  const Icon = plan.icon
-  return (
-    <Card $bgColor="colors.valhalla.600" {...props}>
-      <div>
-        <PlanIcon>
-          <Icon />
-        </PlanIcon>
-        <Title variant="body.m.bold">{plan.title}</Title>
-        <Pricing dangerouslySetInnerHTML={{ __html: plan.pricing }} />
-        <Specifications>
-          {plan.specifications?.map(specification => (
-            <Specification key={specification}>{specification}</Specification>
-          ))}
-        </Specifications>
-      </div>
-      <Cta
-        variant="secondary"
-        color={get('colors.white')}
-        href={plan.cta.href}
-        target={plan.cta.target}
-      >
-        <Typography variant="body.s.bold">{plan.cta.title}</Typography>
-      </Cta>
-    </Card>
-  )
-}
+const PricingCard = ({ plan, ...props }) => (
+  <Card $bgColor="colors.valhalla.600" {...props}>
+    <div>
+      <RoundedIcon icon={plan.icon}></RoundedIcon>
+      <Title variant="body.m.bold">{plan.title}</Title>
+      <Pricing dangerouslySetInnerHTML={{ __html: plan.pricing }} />
+      <Specifications>
+        {plan.specifications?.map(specification => (
+          <Specification key={specification}>{specification}</Specification>
+        ))}
+      </Specifications>
+    </div>
+    <Cta
+      variant="secondary"
+      color={get('colors.white')}
+      href={plan.cta.href}
+      target={plan.cta.target}
+    >
+      <Typography variant="body.s.bold">{plan.cta.title}</Typography>
+    </Cta>
+  </Card>
+)
+
 export default PricingCard
