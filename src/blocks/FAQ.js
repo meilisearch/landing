@@ -9,7 +9,7 @@ const FAQWrapper = styled.section`
   color: ${get('colors.white')};
   margin: 0 -16px;
   padding: 64px 16px 76px;
-  background-color: ${get('colors.valhalla')};
+  background-color: ${get('colors.valhalla.800')};
 
   @media (min-width: ${get('breakpoints.md')}) {
     margin: 0 -32px;
