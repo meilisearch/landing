@@ -6,8 +6,12 @@ import get from 'utils/get'
 import styled from 'styled-components'
 
 const Section = styled.section`
-  background-color: ${get('colors.valhalla.800')};
+  background-color: ${get('colors.valhalla.700')};
   padding: 80px 0 118px;
+  margin: 0 -16px;
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin: 0 -32px;
+  }
 `
 
 const Anchor = styled.div`

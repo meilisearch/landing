@@ -43,19 +43,17 @@ const Pricing = () => {
   return (
     <>
       <Head meta={meta} />
-      <div style={{ backgroundColor: get('colors.valhalla.800') }}>
-        <PageContent>
-          <HeroBlock hero={hero} data-cy="pricingHero" />
-          <PricingBlock pricing={pricing} data-cy="pricingCards" />
-          <Table table={table} data-cy="pricingTable" />
-          <PricingAssistant
-            pricingAssistant={pricingAssistant}
-            color={get('colors.dodgerBlue')}
-            data-cy="pricingAssistant"
-          />
-          <FAQ faq={faq} data-cy="pricingFaq" />
-        </PageContent>
-      </div>
+      <PageContent>
+        <HeroBlock hero={hero} data-cy="pricingHero" />
+        <PricingBlock pricing={pricing} data-cy="pricingCards" />
+        <PricingAssistant
+          pricingAssistant={pricingAssistant}
+          color={get('colors.dodgerBlue')}
+          data-cy="pricingAssistant"
+        />
+        <Table table={table} data-cy="pricingTable" />
+        <FAQ faq={faq} data-cy="pricingFaq" />
+      </PageContent>
     </>
   )
 }
