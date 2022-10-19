@@ -68,6 +68,7 @@ const CardDescription = styled(Typography)`
 
 const CustomPlan = ({ data, color, analytics }) => {
   return (
+    // TODO: Fix the PricingCard
     <PricingCard $color={color}>
       <PricingCard.Header
         as={PricingCardHeader}
