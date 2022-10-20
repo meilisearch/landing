@@ -10,53 +10,24 @@ const ResultCard = styled.div`
   flex-direction: column;
 `
 
-const ResultCardHeaderWrapper = styled.div`
+const ResultCardHeader = styled.div`
   background-color: ${p => p.$color || get('colors.dodgerBlue')};
   color: ${get('colors.white')};
-  padding: 16px;
-  position: relative;
-  overflow: hidden;
-  min-height: 164px;
+  padding: 28px 16px 14px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-const Decorator = styled.div`
-  background: url(images/decorator6.svg) no-repeat;
-  background-size: 209px 180px;
-  position: absolute;
-  top: -11px;
-  right: -9px;
-  width: 209px;
-  height: 180px;
-  z-index: 1;
-`
-
-const HeaderContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
   z-index: 2;
-  position: relative;
-  text-align: center;
 `
-
-const ResultCardHeader = ({ children, hasDecorator = true, ...props }) => (
-  <ResultCardHeaderWrapper {...props}>
-    <HeaderContent>{children}</HeaderContent>
-    {hasDecorator && <Decorator className="decorator" />}
-  </ResultCardHeaderWrapper>
-)
 
 const ResultCardBody = styled.div`
   color: ${get('colors.ashes.100')};
-  background-color: ${p => p.$color || get('colors.valhalla')};
-  height: 100%;
+  background-color: ${get('colors.valhalla')};
+  padding: 24px 16px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-items: flex-start;
 `
 
 ResultCard.Header = ResultCardHeader

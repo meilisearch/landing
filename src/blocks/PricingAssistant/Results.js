@@ -9,7 +9,6 @@ import { Button as ReakitButton } from 'reakit/Button'
 import getPricingAssistantSuggestion, {
   SUGGESTIONS,
 } from 'utils/getPricingAssistantSuggestion'
-import hexToRgb from 'utils/hexToRgb'
 import getColorName from 'utils/getColorName'
 import { AnalyticsBrowser } from '@segment/analytics-next'
 
@@ -43,25 +42,6 @@ const TryAgain = styled(Typography)`
   text-decoration: underline;
 `
 
-const PricingCardHeader = styled.div`
-  min-height: auto;
-  justify-content: flex-start;
-  @media (min-width: ${get('breakpoints.md')}) {
-    padding: 28px 20px 12px;
-  }
-
-  > div {
-    align-items: flex-start;
-    text-align: initial;
-  }
-`
-
-const PricingCardBody = styled.div`
-  padding: 20px;
-  align-items: flex-start;
-  height: auto;
-`
-
 const CardDescription = styled(Typography)`
   opacity: 0.8;
 `
@@ -69,21 +49,13 @@ const CardDescription = styled(Typography)`
 const CustomPlan = ({ data, color, analytics }) => {
   return (
     <ResultCard $color={color}>
-      <ResultCard.Header
-        as={PricingCardHeader}
-        hasDecorator={false}
-        $color={color}
-      >
+      <ResultCard.Header $color={color}>
         <Typography variant="title.capsXs">{data.preTitle}</Typography>
         <Typography variant="body.l.default" style={{ marginTop: 4 }}>
           {data.title}
         </Typography>
       </ResultCard.Header>
-      <ResultCard.Body
-        as={PricingCardBody}
-        style={{ padding: '24px 16px' }}
-        $color={hexToRgb(get(`colors.${getColorName(color)}`), 0.2)}
-      >
+      <ResultCard.Body>
         <CardDescription
           variant="body.s.default"
           dangerouslySetInnerHTML={{ __html: data.description }}
@@ -120,11 +92,7 @@ const List = styled(BaseList)`
 const Plans = ({ data, plan, color, analytics }) => {
   return (
     <ResultCard $color={color}>
-      <ResultCard.Header
-        as={PricingCardHeader}
-        hasDecorator={false}
-        $color={color}
-      >
+      <ResultCard.Header $color={color}>
         <Typography variant="title.capsXs">{data.preTitle}</Typography>
         <Price>
           <Typography variant="title.s">{`$${plan.monthlyPrice}`}</Typography>
@@ -134,11 +102,7 @@ const Plans = ({ data, plan, color, analytics }) => {
           {data.estimation(plan.hourPrice)}
         </Typography>
       </ResultCard.Header>
-      <ResultCard.Body
-        as={PricingCardBody}
-        style={{ padding: '24px 16px' }}
-        $color={hexToRgb(get(`colors.${getColorName(color)}`), 0.2)}
-      >
+      <ResultCard.Body>
         <List>
           <List.Element bulletColor={color}>
             <Typography variant="body.s.default">
