@@ -4,7 +4,7 @@ import get from 'utils/get'
 import Button from 'components/Button'
 import BaseList from 'components/List'
 import Typography from 'components/Typography'
-import BasePricingCard from 'components/PricingCard'
+import BaseResultCard from './ResultCard'
 import { Button as ReakitButton } from 'reakit/Button'
 import getPricingAssistantSuggestion, {
   SUGGESTIONS,
@@ -13,7 +13,7 @@ import hexToRgb from 'utils/hexToRgb'
 import getColorName from 'utils/getColorName'
 import { AnalyticsBrowser } from '@segment/analytics-next'
 
-const PricingCard = styled(BasePricingCard)`
+const ResultCard = styled(BaseResultCard)`
   border-width: 1px;
   width: 100%;
 `
@@ -68,9 +68,8 @@ const CardDescription = styled(Typography)`
 
 const CustomPlan = ({ data, color, analytics }) => {
   return (
-    // TODO: Fix the PricingCard
-    <PricingCard $color={color}>
-      <PricingCard.Header
+    <ResultCard $color={color}>
+      <ResultCard.Header
         as={PricingCardHeader}
         hasDecorator={false}
         $color={color}
@@ -79,8 +78,8 @@ const CustomPlan = ({ data, color, analytics }) => {
         <Typography variant="body.l.default" style={{ marginTop: 4 }}>
           {data.title}
         </Typography>
-      </PricingCard.Header>
-      <PricingCard.Body
+      </ResultCard.Header>
+      <ResultCard.Body
         as={PricingCardBody}
         style={{ padding: '24px 16px' }}
         $color={hexToRgb(get(`colors.${getColorName(color)}`), 0.2)}
@@ -100,8 +99,8 @@ const CustomPlan = ({ data, color, analytics }) => {
         >
           <Typography variant="body.s.bold">{data.cta.title}</Typography>
         </Button>
-      </PricingCard.Body>
-    </PricingCard>
+      </ResultCard.Body>
+    </ResultCard>
   )
 }
 
@@ -120,8 +119,8 @@ const List = styled(BaseList)`
 
 const Plans = ({ data, plan, color, analytics }) => {
   return (
-    <PricingCard $color={color}>
-      <PricingCard.Header
+    <ResultCard $color={color}>
+      <ResultCard.Header
         as={PricingCardHeader}
         hasDecorator={false}
         $color={color}
@@ -134,8 +133,8 @@ const Plans = ({ data, plan, color, analytics }) => {
         <Typography variant="body.xs.default">
           {data.estimation(plan.hourPrice)}
         </Typography>
-      </PricingCard.Header>
-      <PricingCard.Body
+      </ResultCard.Header>
+      <ResultCard.Body
         as={PricingCardBody}
         style={{ padding: '24px 16px' }}
         $color={hexToRgb(get(`colors.${getColorName(color)}`), 0.2)}
@@ -166,8 +165,8 @@ const Plans = ({ data, plan, color, analytics }) => {
         >
           <Typography variant="body.s.bold">{data.cta.title}</Typography>
         </Button>
-      </PricingCard.Body>
-    </PricingCard>
+      </ResultCard.Body>
+    </ResultCard>
   )
 }
 
