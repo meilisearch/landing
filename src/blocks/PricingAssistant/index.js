@@ -4,6 +4,7 @@ import LeftColumn from './LeftColumn'
 import RightColumn from './RightColumn'
 import get from 'utils/get'
 import styled from 'styled-components'
+import Anchor from 'components/Anchor'
 
 const Section = styled.section`
   background-color: ${get('colors.valhalla.700')};
@@ -12,13 +13,6 @@ const Section = styled.section`
   @media (min-width: ${get('breakpoints.md')}) {
     margin: 0 -32px;
   }
-`
-
-const Anchor = styled.div`
-  display: block;
-  position: relative;
-  top: -200px;
-  visibility: hidden;
 `
 
 const PricingAssistant = ({

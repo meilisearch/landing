@@ -4,6 +4,7 @@ import get from 'utils/get'
 import Typography from 'components/Typography'
 import Grid from 'components/Grid'
 import TableComponent from 'components/Table'
+import Anchor from 'components/Anchor'
 
 const TableSection = styled.section`
   background-color: ${get('colors.valhalla')};
@@ -107,6 +108,7 @@ const Table = ({ table, ...props }) => {
     <TableSection {...props}>
       <Grid style={{ position: 'relative' }}>
         <Content>
+          <Anchor id="open-source-vs-cloud" />
           <Title variant="title.m" forwardedAs="h2">
             {table.title}
           </Title>
