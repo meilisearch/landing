@@ -11,7 +11,7 @@ import {
 const getHeaderData = () => ({
   banner: {
     title:
-      '🎉 Announcing our <a href="https://techcrunch.com/2022/10/10/meilisearch-lands-15m-investment-to-grow-its-search-as-a-service-business/" target="_blank">$15 million Series A</a> with Felicis Venture!',
+      '🎉 Announcing our <a href="https://blog.meilisearch.com/meilisearch-series-a/" target="_blank">$15 million Series A</a> with Felicis Venture!',
   },
   links: [
     {
