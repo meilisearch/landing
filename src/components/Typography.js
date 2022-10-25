@@ -26,7 +26,7 @@ const variants = {
       style: css`
         font-family: ${get('fontFamily.poppins')};
         font-weight: 700;
-        letter-spacing: -1%;
+        letter-spacing: -0.01em;
         line-height: 140%;
         font-size: 30px;
         @media (min-width: ${get('breakpoints.md')}) {
