@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from 'blocks/Header'
+import { Header } from 'blocks'
 
 export default {
   title: 'blocks/Header',
