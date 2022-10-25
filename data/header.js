@@ -70,6 +70,10 @@ const headerData = {
       href: 'https://jobs.lever.co/meili',
       target: '_blank',
     },
+    {
+      title: 'About us',
+      href: '/about-us',
+    },
   ],
   cta1: {
     title: 'Join the Cloud beta',
