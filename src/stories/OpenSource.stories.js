@@ -1,6 +1,6 @@
 import React from 'react'
 import { OpenSource } from 'blocks'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 import get from 'utils/get'
 
 export default {
@@ -8,13 +8,13 @@ export default {
 }
 
 export const Default = () => {
-  const { openSource: openSourceProps } = getHomepageData()
+  const { openSource: openSourceProps } = homepageData
 
   return <OpenSource openSourceProps={openSourceProps} />
 }
 
 export const OtherColor = () => {
-  const { openSource: openSourceProps } = getHomepageData()
+  const { openSource: openSourceProps } = homepageData
 
   return (
     <OpenSource openSourceProps={openSourceProps} color={get('colors.lila')} />

@@ -1,6 +1,6 @@
 import React from 'react'
 import Testimonial from 'components/Testimonial'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 
 export default {
   title: 'Components/Testimonial',
@@ -10,7 +10,7 @@ export default {
 }
 
 export const Default = () => {
-  const { testimonials } = getHomepageData()
+  const { testimonials } = homepageData
 
   return <Testimonial testimonial={testimonials.list[0]} />
 }

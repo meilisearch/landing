@@ -1,6 +1,6 @@
 import React from 'react'
 import { Companies } from 'blocks'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 import get from 'utils/get'
 
 export default {
@@ -8,7 +8,7 @@ export default {
 }
 
 export const Default = () => {
-  const { companies: companiesProps } = getHomepageData()
+  const { companies: companiesProps } = homepageData
 
   return (
     <Companies companiesProps={companiesProps} color={get('colors.lila')} />
