@@ -1,13 +1,13 @@
 import React from 'react'
 import { Testimonials } from 'blocks'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 
 export default {
   title: 'Blocks/Testimonials',
 }
 
 export const Default = () => {
-  const { testimonials: testimonialsProps } = getHomepageData()
+  const { testimonials: testimonialsProps } = homepageData
 
   return <Testimonials testimonialsProps={testimonialsProps} />
 }

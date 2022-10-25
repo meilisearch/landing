@@ -1,6 +1,6 @@
 import React from 'react'
 import { Step3 } from 'blocks'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 import get from 'utils/get'
 
 export default {
@@ -8,7 +8,7 @@ export default {
 }
 
 export const Default = () => {
-  const { steps: stepsProps } = getHomepageData()
+  const { steps: stepsProps } = homepageData
 
   return (
     <Step3
@@ -22,7 +22,7 @@ export const Default = () => {
 }
 
 export const OtherColor = () => {
-  const { steps: stepsProps } = getHomepageData()
+  const { steps: stepsProps } = homepageData
 
   return (
     <Step3

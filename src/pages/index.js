@@ -13,7 +13,7 @@ import {
   Testimonials,
   Companies as BaseCompanies,
 } from 'blocks'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 import get from 'utils/get'
 import PageContent from 'components/PageContent'
 
@@ -116,7 +116,7 @@ const Home = ({ code_samples }) => {
     steps,
     cards,
     testimonials,
-  } = getHomepageData()
+  } = homepageData
   const stepsAnchor = steps.map(step => ({
     preTitle: step.preTitle,
     title: step.title,
@@ -167,7 +167,7 @@ export const getStaticProps = async () => {
   try {
     let code_samples = []
     if (process.env.NODE_ENV !== 'development') {
-      const sdkList = getHomepageData().developer.sdkList
+      const sdkList = homepageData.developer.sdkList
       code_samples = await getCodeSamples(sdkList)
     }
 
