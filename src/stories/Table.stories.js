@@ -1,13 +1,13 @@
 import React from 'react'
 import { Table } from 'blocks'
-import getPricingPageData from '../../data/pricing'
+import pricingPageData from '../../data/pricing'
 
 export default {
   title: 'Blocks/Table',
 }
 
 export const Default = () => {
-  const { table } = getPricingPageData()
+  const { table } = pricingPageData
 
   return <Table table={table} />
 }
