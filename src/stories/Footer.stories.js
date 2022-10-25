@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from 'blocks/Footer'
+import { Footer } from 'blocks'
 
 export default {
   title: 'blocks/Footer',
