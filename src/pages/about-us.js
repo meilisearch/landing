@@ -1,10 +1,10 @@
 import Head from 'components/Head'
-import getAboutUsData from '../../data/about-us'
+import aboutUsData from '../../data/about-us'
 import PageContent from 'components/PageContent'
 import { AboutUsHero } from 'blocks'
 
 const AboutUs = () => {
-  const { meta, hero } = getAboutUsData()
+  const { meta, hero } = aboutUsData
   return (
     <>
       <Head meta={meta} />
