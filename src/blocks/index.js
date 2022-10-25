@@ -1,3 +1,4 @@
+export { default as AboutUsHero } from './AboutUsHero'
 export { default as Cards } from './Cards'
 export { default as Companies } from './Companies'
 export { default as Demo } from './Demo'
