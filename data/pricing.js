@@ -10,7 +10,7 @@ import {
   TextualSearch,
 } from 'components/icons'
 
-const getPricingPageData = () => ({
+const pricingPageData = {
   meta: {
     title: 'Pricing ',
     description:
@@ -464,6 +464,6 @@ const getPricingPageData = () => ({
       },
     ],
   },
-})
+}
 
-export default getPricingPageData
+export default pricingPageData

@@ -1,13 +1,13 @@
 import React from 'react'
 import { PricingHero as Hero } from 'blocks'
-import getPricingPageData from '../../data/pricing'
+import pricingPageData from '../../data/pricing'
 
 export default {
   title: 'Blocks/PricingHero',
 }
 
 export const Default = () => {
-  const { hero } = getPricingPageData()
+  const { hero } = pricingPageData
 
   return <Hero hero={hero} />
 }

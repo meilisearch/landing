@@ -1,6 +1,6 @@
 import React from 'react'
 import { PricingAssistant } from 'blocks'
-import getPricingPageData from '../../data/pricing'
+import pricingPageData from '../../data/pricing'
 import get from 'utils/get'
 
 export default {
@@ -8,7 +8,7 @@ export default {
 }
 
 export const Default = () => {
-  const { pricingAssistant } = getPricingPageData()
+  const { pricingAssistant } = pricingPageData
 
   return (
     <PricingAssistant
@@ -19,7 +19,7 @@ export const Default = () => {
 }
 
 export const HotPink = () => {
-  const { pricingAssistant } = getPricingPageData()
+  const { pricingAssistant } = pricingPageData
 
   return (
     <PricingAssistant
