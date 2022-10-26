@@ -30,19 +30,18 @@ const HeaderWrapper = styled.div`
 `
 
 const Header = props => {
-  const headerProps = headerData
   const router = useRouter()
 
   const darkBgPages = ['/pricing', '/privacy-policy', '/terms-of-use']
   const hasDarkBgColor = darkBgPages.includes(router.asPath)
-  const banner = headerProps?.banner?.title
+  const banner = headerData?.banner?.title
 
   return (
     <Wrapper data-cy="header" {...props}>
       {banner && <Banner title={banner} />}
       <HeaderWrapper $hasDarkBgColor={hasDarkBgColor}>
-        <DesktopHeader headerProps={headerProps} />
-        <MobileHeader headerProps={headerProps} hasBanner={banner} />
+        <DesktopHeader headerProps={headerData} />
+        <MobileHeader headerProps={headerData} hasBanner={banner} />
       </HeaderWrapper>
     </Wrapper>
   )

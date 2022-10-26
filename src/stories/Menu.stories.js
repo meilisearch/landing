@@ -14,9 +14,8 @@ export default {
 
 export const Default = () => {
   const menuState = useMenuState()
-  const headerProps = headerData
 
-  const menuList = headerProps.links.find(link => link.subMenu)
+  const menuList = headerData.links.find(link => link.subMenu)
   return (
     <>
       <MenuDisclosure {...menuState}>
@@ -33,9 +32,8 @@ export const Default = () => {
 
 export const Animated = () => {
   const menuState = useMenuState({ animated: 300, loop: true })
-  const headerProps = headerData
 
-  const menuList = headerProps.links.find(link => link.subMenu)
+  const menuList = headerData.links.find(link => link.subMenu)
 
   return (
     <>

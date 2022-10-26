@@ -34,7 +34,6 @@ const LogoSection = styled.div`
 `
 
 const Footer = props => {
-  const footerProps = footerData
   return (
     <Wrapper data-cy="footer" {...props}>
       <Grid>
@@ -46,10 +45,10 @@ const Footer = props => {
             layout="fixed"
             alt="Meilisearch Logo"
           />
-          <Newsletter newsletterProps={footerProps.newsletter} />
+          <Newsletter newsletterProps={footerData.newsletter} />
         </LogoSection>
-        <MenuSection menu={footerProps.menu} />
-        <BottomSection footerProps={footerProps} />
+        <MenuSection menu={footerData.menu} />
+        <BottomSection footerProps={footerData} />
       </Grid>
     </Wrapper>
   )
