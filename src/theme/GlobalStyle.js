@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  .cky-consent-container, .cky-modal {
+    font-family: ${get('fontFamily.inter')};
+  }
 `
 
 export default GlobalStyle
