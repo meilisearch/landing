@@ -5,7 +5,7 @@ import Button from 'components/Button'
 import Typography from 'components/Typography'
 import BasePageContent from 'components/PageContent'
 import get404Data from '../../data/404'
-import getHeaderData from '../../data/header'
+import headerData from '../../data/header'
 
 const Container = styled.div`
   height: 100vh;
@@ -84,7 +84,7 @@ const Cta = styled.div`
 
 const Custom404 = () => {
   const { meta, content } = get404Data()
-  const { banner } = getHeaderData()
+  const { banner } = headerData
 
   return (
     <>

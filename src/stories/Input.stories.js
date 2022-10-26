@@ -1,6 +1,6 @@
 import React from 'react'
 import Input from 'components/Input'
-import getFooterData from '../../data/footer'
+import footerData from '../../data/footer'
 
 export default {
   title: 'Components/Input',
@@ -12,7 +12,7 @@ export default {
 
 export const Default = () => {
   const [email, setEmail] = React.useState('')
-  const { newsletter: newsletterProps } = getFooterData()
+  const { newsletter: newsletterProps } = footerData
 
   return (
     <Input

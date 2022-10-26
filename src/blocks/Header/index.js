@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
-import getHeaderData from '../../../data/header'
+import headerData from '../../../data/header'
 import DesktopHeader from './DesktopHeader'
 import MobileHeader from './MobileHeader'
 import { useRouter } from 'next/router'
@@ -30,7 +30,7 @@ const HeaderWrapper = styled.div`
 `
 
 const Header = props => {
-  const headerProps = getHeaderData()
+  const headerProps = headerData
   const router = useRouter()
 
   const darkBgPages = ['/pricing', '/privacy-policy', '/terms-of-use']

@@ -8,7 +8,7 @@ import {
   Roadmap2,
 } from '../src/components/icons'
 
-const getHeaderData = () => ({
+const headerData = {
   banner: {
     title:
       '🎉 Announcing our <a href="https://blog.meilisearch.com/meilisearch-series-a/" target="_blank">$15 million Series A</a> with Felicis Venture!',
@@ -79,6 +79,6 @@ const getHeaderData = () => ({
     title: 'Get Started',
     href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
   },
-})
+}
 
-export default getHeaderData
+export default headerData

@@ -1,6 +1,6 @@
 import { Github, Twitter, Linkedin, Slack } from '../src/components/icons'
 
-const getFooterData = () => ({
+const footerData = {
   newsletter: {
     title: 'Newsletter',
     description:
@@ -144,6 +144,6 @@ const getFooterData = () => ({
       title: 'Slack',
     },
   ],
-})
+}
 
-export default getFooterData
+export default footerData

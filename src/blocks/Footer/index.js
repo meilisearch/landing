@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
-import getFooterData from '../../../data/footer'
+import footerData from '../../../data/footer'
 import Grid from 'components/Grid'
 import Image from 'components/Image'
 import Newsletter from './Newsletter'
@@ -34,7 +34,7 @@ const LogoSection = styled.div`
 `
 
 const Footer = props => {
-  const footerProps = getFooterData()
+  const footerProps = footerData
   return (
     <Wrapper data-cy="footer" {...props}>
       <Grid>
