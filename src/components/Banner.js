@@ -6,7 +6,7 @@ import Typography from 'components/Typography'
 const Wrapper = styled.div`
   background-color: ${get('colors.dodgerBlue')};
   padding: 16px;
-  height: 72px;
+  height: var(--banner-height);
   color: white;
   display: flex;
   align-items: center;

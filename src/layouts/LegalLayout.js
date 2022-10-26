@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Grid from 'components/Grid'
 import get from 'utils/get'
 import hexToRgb from 'utils/hexToRgb'
+import getHeaderData from '../../data/header'
 
 const ResourceCenter = styled(Grid)`
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -13,7 +14,10 @@ const ResourceCenter = styled(Grid)`
 const GridWrapper = styled.div`
   grid-column: 1 / -1;
   position: sticky;
-  top: 98px;
+  top: calc(
+    var(--header-height-mobile)
+      ${p => (p.$hasBanner ? '+ var(--banner-height)' : '')}
+  );
   height: 50px;
   margin: 0;
   padding: 0 16px;
@@ -36,18 +40,22 @@ const GridWrapper = styled.div`
 const StickyWrapper = styled.div`
   @media (min-width: ${get('breakpoints.md')}) {
     position: sticky;
-    top: calc(98px + 54px);
-  }
-  @media (min-width: ${get('breakpoints.lg')}) {
-    top: calc(88px + 54px);
+    top: calc(
+      var(--header-height-desktop) + 54px
+        ${p => (p.$hasBanner ? '+ var(--banner-height)' : '')}
+    );
   }
 `
 
-const LeftColumn = ({ children, ...props }) => (
-  <GridWrapper {...props}>
-    <StickyWrapper>{children}</StickyWrapper>
-  </GridWrapper>
-)
+const LeftColumn = ({ children, ...props }) => {
+  const { banner } = getHeaderData()
+
+  return (
+    <GridWrapper $hasBanner={banner.title} {...props}>
+      <StickyWrapper $hasBanner={banner.title}>{children}</StickyWrapper>
+    </GridWrapper>
+  )
+}
 
 const MiddleColumn = styled.div`
   grid-column: 1 / -1;

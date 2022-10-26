@@ -5,16 +5,23 @@ import Button from 'components/Button'
 import Typography from 'components/Typography'
 import BasePageContent from 'components/PageContent'
 import get404Data from '../../data/404'
+import getHeaderData from '../../data/header'
 
 const Container = styled.div`
   height: 100vh;
-  margin-top: -98px;
+  margin-top: calc(
+    0px - var(--header-height-mobile)
+      ${p => (p.$hasBanner ? '- var(--banner-height)' : '')}
+  );
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (min-width: ${get('breakpoints.lg')}) {
-    margin-top: -88px;
+    margin-top: calc(
+      0px - var(--header-height-desktop)
+        ${p => (p.$hasBanner ? '- var(--banner-height)' : '')}
+    );
   }
 `
 
@@ -77,10 +84,12 @@ const Cta = styled.div`
 
 const Custom404 = () => {
   const { meta, content } = get404Data()
+  const { banner } = getHeaderData()
+
   return (
     <>
       <Head meta={meta} />
-      <Container>
+      <Container $hasBanner={banner}>
         <PageContent>
           <Text>
             <Title>404</Title>

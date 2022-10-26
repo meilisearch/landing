@@ -23,9 +23,9 @@ const HeaderWrapper = styled.div`
   width: 100%;
   background-color: ${p =>
     p.$hasDarkBgColor ? get('colors.valhalla.800') : get('colors.valhalla')};
-  height: 98px;
+  height: var(--header-height-mobile);
   @media (min-width: ${get('breakpoints.lg')}) {
-    height: 88px;
+    height: var(--header-height-desktop);
   }
 `
 

@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-smooth: auto;
     -webkit-font-smoothing: antialiased;
+    --header-height-mobile: 98px;
+    --header-height-desktop: 88px;
+    --banner-height: 72px;
   }
   * {
     box-sizing: border-box;

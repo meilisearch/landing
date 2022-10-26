@@ -31,7 +31,10 @@ const Backdrop = styled(DialogBackdrop)`
   color: ${get('colors.white')};
   background-color: ${get('colors.valhalla')};
   z-index: 50;
-  inset: ${p => (p.$hasBanner ? 'calc(98px + 72px) 0 0 0' : '98px 0 0 0')};
+  inset: ${p =>
+    p.$hasBanner
+      ? 'calc(var(--header-height-mobile) + var(--banner-height)) 0 0 0'
+      : 'var(--header-height-mobile) 0 0 0'};
   padding-top: 64px;
   @media (min-width: ${get('breakpoints.lg')}) {
     display: none;
