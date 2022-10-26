@@ -1,6 +1,6 @@
 import React from 'react'
 import InteractiveSearch from 'components/InteractiveSearch'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 
 export default {
   title: 'Components/InteractiveSearch',
@@ -11,7 +11,7 @@ export default {
 }
 
 export const Default = () => {
-  const { demo: demoProps } = getHomepageData()
+  const { demo: demoProps } = homepageData
 
   return (
     <InteractiveSearch

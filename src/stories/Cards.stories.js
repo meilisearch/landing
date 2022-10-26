@@ -1,6 +1,6 @@
 import React from 'react'
 import { Cards } from 'blocks'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 
 export default {
   title: 'Blocks/Cards',
@@ -10,7 +10,7 @@ export default {
 }
 
 export const Default = () => {
-  const { cards: cardsProps } = getHomepageData()
+  const { cards: cardsProps } = homepageData
 
   return <Cards cardsProps={cardsProps} />
 }

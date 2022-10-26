@@ -44,7 +44,7 @@ import {
 } from 'components/icons'
 import get from 'utils/get'
 
-const getHomepageData = () => ({
+const homepageData = {
   meta: {
     title: '',
     description:
@@ -547,6 +547,6 @@ const getHomepageData = () => ({
       target: '_blank',
     },
   },
-})
+}
 
-export default getHomepageData
+export default homepageData

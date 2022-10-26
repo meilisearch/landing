@@ -1,6 +1,6 @@
 import React from 'react'
 import { Demo } from 'blocks'
-import getHomepageData from '../../data/homepage'
+import homepageData from '../../data/homepage'
 import get from 'utils/get'
 
 export default {
@@ -8,13 +8,13 @@ export default {
 }
 
 export const Default = () => {
-  const { demo: demoProps } = getHomepageData()
+  const { demo: demoProps } = homepageData
 
   return <Demo demoProps={demoProps} color={get('colors.lila')} />
 }
 
 export const OtherColor = () => {
-  const { demo: demoProps } = getHomepageData()
+  const { demo: demoProps } = homepageData
 
   return <Demo demoProps={demoProps} color={get('colors.hotPink')} />
 }
