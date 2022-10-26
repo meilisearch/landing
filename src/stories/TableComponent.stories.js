@@ -1,6 +1,6 @@
 import React from 'react'
 import Table from 'components/Table'
-import getPricingPageData from '../../data/pricing'
+import pricingPageData from '../../data/pricing'
 
 export default {
   title: 'Components/Table',
@@ -10,7 +10,7 @@ export default {
 }
 
 export const Default = () => {
-  const { table } = getPricingPageData()
+  const { table } = pricingPageData
 
   return <Table table={table.tables[2]} />
 }
