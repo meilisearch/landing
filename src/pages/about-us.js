@@ -1,11 +1,12 @@
 import Head from 'components/Head'
 import aboutUsData from '../../data/about-us'
-import { AboutUsHero, OurStory, Investors, Values } from 'blocks'
+import { AboutUsHero, OurStory, Investors, Values, JobOffers } from 'blocks'
 import get from 'utils/get'
 import PageContent from 'components/PageContent'
 
 const AboutUs = () => {
-  const { meta, hero, ourStory, investors, values } = aboutUsData
+  // TODO : Add tests
+  const { meta, hero, ourStory, investors, values, jobOffers } = aboutUsData
   return (
     <>
       <Head meta={meta} />
@@ -43,6 +44,7 @@ const AboutUs = () => {
         >
           Other block to come
         </div>
+        <JobOffers jobOffers={jobOffers} />
       </PageContent>
     </>
   )

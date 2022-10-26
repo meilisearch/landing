@@ -133,6 +133,16 @@ const aboutUsData = {
       },
     ],
   },
+  jobOffers: {
+    preTitle: 'Job Offers',
+    title: 'Join us!',
+    cta: {
+      title: 'See all job offers',
+      href: 'https://jobs.lever.co/meili',
+      target: '_blank',
+    },
+    readMore: 'Read more',
+  },
 }
 
 export default aboutUsData
