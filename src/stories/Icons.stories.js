@@ -8,12 +8,14 @@ import {
   Chat as ChatIcon,
   Code as CodeIcon,
   Cross as CrossIcon,
+  Crv as CrvIcon,
   Dart as DartIcon,
   Documentation as DocumentationIcon,
   Dotnet as DotnetIcon,
   Earth as EarthIcon,
   Ecommerce as EcommerceIcon,
   Excluded as ExcludedIcon,
+  Felicis as FelicisIcon,
   Filter as FilterIcon,
   GeographicSearch as GeographicSearchIcon,
   GithubOutlined as GithubOutlinedIcon,
@@ -29,12 +31,15 @@ import {
   Javascript as JavascriptIcon,
   Juicebrothers as JuicebrothersIcon,
   Key as KeyIcon,
+  KimaVentures as KimaVenturesIcon,
   Laravel as LaravelIcon,
   Lightning as LightningIcon,
   Linkedin as LinkedinIcon,
   Literal as LiteralIcon,
+  LocalGlobe as LocalGlobeIcon,
   LouisVuitton as LouisVuittonIcon,
   MagnifyingGlass as MagnifyingGlassIcon,
+  Mango as MangoIcon,
   Media as MediaIcon,
   NumericSorting as NumericSortingIcon,
   Other as OtherIcon,
@@ -52,6 +57,7 @@ import {
   Ruby as RubyIcon,
   Rust as RustIcon,
   SaasApp as SaasAppIcon,
+  Seedcamp as SeedcampIcon,
   SiteSearch as SiteSearchIcon,
   Slack as SlackIcon,
   SortBy as SortByIcon,
@@ -61,6 +67,7 @@ import {
   TextualSearch as TextualSearchIcon,
   Twitter as TwitterIcon,
   Typo as TypoIcon,
+  Vercel as VercelIcon,
   Vue as VueIcon,
   Wrench as WrenchIcon,
 } from 'components/icons'
@@ -91,12 +98,14 @@ export const Blog = () => <BlogIcon height={56} />
 export const Chat = () => <ChatIcon height={56} />
 export const Code = () => <CodeIcon height={56} />
 export const Cross = () => <CrossIcon height={56} />
+export const Crv = () => <CrvIcon height={56} />
 export const Dart = () => <DartIcon height={56} />
 export const Documentation = () => <DocumentationIcon height={56} />
 export const Dotnet = () => <DotnetIcon height={56} />
 export const Earth = () => <EarthIcon height={56} />
 export const Ecommerce = () => <EcommerceIcon height={56} />
 export const Excluded = () => <ExcludedIcon height={56} />
+export const Felicis = () => <FelicisIcon height={56} />
 export const Filter = () => <FilterIcon height={56} />
 export const GeographicSearch = () => <GeographicSearchIcon height={56} />
 export const GithubOutlined = () => <GithubOutlinedIcon height={56} />
@@ -112,12 +121,15 @@ export const Java = () => <JavaIcon height={56} />
 export const Javascript = () => <JavascriptIcon height={56} />
 export const Juicebrothers = () => <JuicebrothersIcon height={56} />
 export const Key = () => <KeyIcon height={56} />
+export const KimaVentures = () => <KimaVenturesIcon height={56} />
 export const Laravel = () => <LaravelIcon height={56} />
 export const Lightning = () => <LightningIcon height={56} />
 export const Linkedin = () => <LinkedinIcon height={56} />
 export const Literal = () => <LiteralIcon height={56} />
+export const LocalGlobe = () => <LocalGlobeIcon height={56} />
 export const LouisVuitton = () => <LouisVuittonIcon height={56} />
 export const MagnifyingGlass = () => <MagnifyingGlassIcon height={56} />
+export const Mango = () => <MangoIcon height={56} />
 export const Media = () => <MediaIcon height={56} />
 export const NumericSorting = () => <NumericSortingIcon height={56} />
 export const Other = () => <OtherIcon height={56} />
@@ -135,6 +147,7 @@ export const Roadmap2 = () => <Roadmap2Icon height={56} />
 export const Ruby = () => <RubyIcon height={56} />
 export const Rust = () => <RustIcon height={56} />
 export const SaasApp = () => <SaasAppIcon height={56} />
+export const Seedcamp = () => <SeedcampIcon height={56} />
 export const SiteSearch = () => <SiteSearchIcon height={56} />
 export const Slack = () => <SlackIcon height={56} />
 export const SortBy = () => <SortByIcon height={56} />
@@ -144,5 +157,6 @@ export const Symfony = () => <SymfonyIcon height={56} />
 export const TextualSearch = () => <TextualSearchIcon height={56} />
 export const Twitter = () => <TwitterIcon height={56} />
 export const Typo = () => <TypoIcon height={56} />
+export const Vercel = () => <VercelIcon height={56} />
 export const Vue = () => <VueIcon height={56} />
 export const Wrench = () => <WrenchIcon height={56} />
