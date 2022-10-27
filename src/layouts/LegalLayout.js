@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Grid from 'components/Grid'
 import get from 'utils/get'
 import hexToRgb from 'utils/hexToRgb'
-import getHeaderData from '../../data/header'
+import headerData from '../../data/header'
 
 const ResourceCenter = styled(Grid)`
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -48,7 +48,7 @@ const StickyWrapper = styled.div`
 `
 
 const LeftColumn = ({ children, ...props }) => {
-  const { banner } = getHeaderData()
+  const { banner } = headerData
 
   return (
     <GridWrapper $hasBanner={banner.title} {...props}>

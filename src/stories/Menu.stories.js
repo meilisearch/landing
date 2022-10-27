@@ -2,7 +2,7 @@ import React from 'react'
 import { Menu, MenuDisclosure, MenuItem } from 'components/Menu'
 import Typography from 'components/Typography'
 import { useMenuState } from 'reakit/Menu'
-import getHeaderData from '../../data/header'
+import headerData from '../../data/header'
 
 export default {
   title: 'Components/Menu',
@@ -14,9 +14,8 @@ export default {
 
 export const Default = () => {
   const menuState = useMenuState()
-  const headerProps = getHeaderData()
 
-  const menuList = headerProps.links.find(link => link.subMenu)
+  const menuList = headerData.links.find(link => link.subMenu)
   return (
     <>
       <MenuDisclosure {...menuState}>
@@ -33,9 +32,8 @@ export const Default = () => {
 
 export const Animated = () => {
   const menuState = useMenuState({ animated: 300, loop: true })
-  const headerProps = getHeaderData()
 
-  const menuList = headerProps.links.find(link => link.subMenu)
+  const menuList = headerData.links.find(link => link.subMenu)
 
   return (
     <>

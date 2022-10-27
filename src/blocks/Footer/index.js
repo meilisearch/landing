@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
-import getFooterData from '../../../data/footer'
+import footerData from '../../../data/footer'
 import Grid from 'components/Grid'
 import Image from 'components/Image'
 import Newsletter from './Newsletter'
@@ -34,7 +34,6 @@ const LogoSection = styled.div`
 `
 
 const Footer = props => {
-  const footerProps = getFooterData()
   return (
     <Wrapper data-cy="footer" {...props}>
       <Grid>
@@ -46,10 +45,10 @@ const Footer = props => {
             layout="fixed"
             alt="Meilisearch Logo"
           />
-          <Newsletter newsletterProps={footerProps.newsletter} />
+          <Newsletter newsletterProps={footerData.newsletter} />
         </LogoSection>
-        <MenuSection menu={footerProps.menu} />
-        <BottomSection footerProps={footerProps} />
+        <MenuSection menu={footerData.menu} />
+        <BottomSection footerProps={footerData} />
       </Grid>
     </Wrapper>
   )
