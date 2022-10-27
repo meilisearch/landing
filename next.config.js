@@ -1,5 +1,8 @@
 module.exports = {
   reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
   poweredByHeader: false,
   webpack: config => {
     // Unset client-side javascript that only works server-side
