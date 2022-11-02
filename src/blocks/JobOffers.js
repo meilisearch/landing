@@ -85,7 +85,7 @@ const NoJobOffer = ({ jobOffers: { noJobOffer } }) => (
       href={noJobOffer.cta.href}
       target={noJobOffer.cta.target}
     >
-      <Typography>{noJobOffer.cta.title}</Typography>
+      <Typography variant="body.s.bold">{noJobOffer.cta.title}</Typography>
     </Cta>
   </Card>
 )
@@ -100,7 +100,7 @@ const JobOffer = ({ readMore, job }) => (
       href={job.hostedUrl}
       target="_blank"
     >
-      <Typography>{readMore}</Typography>
+      <Typography variant="body.s.bold">{readMore}</Typography>
     </Cta>
   </Card>
 )
@@ -152,7 +152,9 @@ const JobOffers = ({ jobOffers }) => {
                 href={jobOffers.cta.href}
                 target={jobOffers.cta.target}
               >
-                <Typography>{jobOffers.cta.title}</Typography>
+                <Typography variant="body.s.bold">
+                  {jobOffers.cta.title}
+                </Typography>
               </Cta>
             )}
           </SmallSection>
