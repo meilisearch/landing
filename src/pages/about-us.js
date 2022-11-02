@@ -35,15 +35,6 @@ const AboutUs = () => {
           Other block to come
         </div>
         <Investors investors={investors} />
-        <div
-          style={{
-            height: 200,
-            color: 'white',
-            margin: '0 -32px',
-          }}
-        >
-          Other block to come
-        </div>
         <JobOffers jobOffers={jobOffers} />
       </PageContent>
     </>

@@ -142,6 +142,16 @@ const aboutUsData = {
       target: '_blank',
     },
     readMore: 'Read more',
+    noJobOffer: {
+      title: 'No job offer available at the moment',
+      description:
+        'Sorry, no positions are currently open, but we’re always on the hunt for new profiles, so don’t hesitate to reach out if you’re interested in working with us.',
+      cta: {
+        title: 'Apply spontaneously',
+        href: 'https://jobs.lever.co/meili',
+        target: '_blank',
+      },
+    },
   },
 }
 

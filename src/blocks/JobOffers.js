@@ -6,6 +6,7 @@ import Grid from 'components/Grid'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
 import Tag from 'components/Tag'
+import BaseCard from 'components/Card'
 
 const Section = styled.section`
   padding: 72px 0;
@@ -29,6 +30,10 @@ const TitleSection = styled.div`
 
 const Cta = styled(Button)`
   margin-top: 20px;
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: 0;
+  }
 `
 
 const SmallSection = styled.div`
@@ -44,7 +49,7 @@ const SmallSection = styled.div`
   }
 `
 
-const Card = styled.div`
+const Card = styled(BaseCard)`
   color: white;
   grid-column: 1/-1;
   margin-top: 24px;
@@ -70,30 +75,43 @@ const List = styled(Grid)`
   }
 `
 
+const NoJobOffer = ({ jobOffers: { noJobOffer } }) => (
+  <Card style={{ backgroundColor: get('colors.valhalla.700') }}>
+    <Typography variant="title.xs">{noJobOffer.title}</Typography>
+    <Typography variant="body.s.default">{noJobOffer.description}</Typography>
+    <Cta
+      variant="secondary"
+      color={get('colors.white')}
+      href={noJobOffer.cta.href}
+      target={noJobOffer.cta.target}
+    >
+      <Typography>{noJobOffer.cta.title}</Typography>
+    </Cta>
+  </Card>
+)
+
+const JobOffer = ({ readMore, job }) => (
+  <Card style={{ backgroundColor: get('colors.valhalla.700') }}>
+    <Tag color="colors.hotPink">{job.categories.team}</Tag>
+    <Typography variant="title.xs">{job.text}</Typography>
+    <Cta
+      variant="secondary"
+      color={get('colors.white')}
+      href={job.hostedUrl}
+      target="_blank"
+    >
+      <Typography>{readMore}</Typography>
+    </Cta>
+  </Card>
+)
+
 const JobList = ({ loading, jobOffersList, jobOffers }) => {
   if (loading) return null
-  if (!jobOffersList) return <div>no job offer currently available</div>
-  return (
-    <List>
-      {jobOffersList.map((job, index) => (
-        <Card
-          key={index}
-          style={{ backgroundColor: get('colors.valhalla.700') }}
-        >
-          <Tag color="colors.hotPink">{job.categories.team}</Tag>
-          <Typography>{job.text}</Typography>
-          <Cta
-            variant="secondary"
-            color={get('colors.white')}
-            href={job.hostedUrl}
-            target="_blank"
-          >
-            <Typography>{jobOffers.readMore}</Typography>
-          </Cta>
-        </Card>
-      ))}
-    </List>
-  )
+  if (!jobOffersList || jobOffersList.length === 0)
+    return <NoJobOffer jobOffers={jobOffers} />
+  return jobOffersList.map((job, index) => (
+    <JobOffer readMore={jobOffers.readMore} key={index} job={job} />
+  ))
 }
 
 const JobOffers = ({ jobOffers }) => {
@@ -127,22 +145,26 @@ const JobOffers = ({ jobOffers }) => {
             <Typography variant="title.m" style={{ color: 'white' }}>
               {jobOffers.title}
             </Typography>
-            <Cta
-              variant="secondary"
-              color={get('colors.white')}
-              href={jobOffers.cta.href}
-              target={jobOffers.cta.target}
-            >
-              <Typography>{jobOffers.cta.title}</Typography>
-            </Cta>
+            {jobOffersList && jobOffersList.length > 0 && (
+              <Cta
+                variant="secondary"
+                color={get('colors.white')}
+                href={jobOffers.cta.href}
+                target={jobOffers.cta.target}
+              >
+                <Typography>{jobOffers.cta.title}</Typography>
+              </Cta>
+            )}
           </SmallSection>
         </TitleSection>
       </Grid>
-      <JobList
-        loading={loading}
-        jobOffersList={jobOffersList}
-        jobOffers={jobOffers}
-      />
+      <List>
+        <JobList
+          loading={loading}
+          jobOffersList={jobOffersList}
+          jobOffers={jobOffers}
+        />
+      </List>
     </Section>
   )
 }
