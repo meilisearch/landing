@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import Button from 'components/Button'
 import BaseInput from 'components/Input'
 import Typography from 'components/Typography'
+import Card from 'components/Card'
 import get from 'utils/get'
 
-const Container = styled.div`
-  background-color: ${get('colors.valhalla.400')};
-  border-radius: 16px;
+const Container = styled(Card)`
+  width: auto;
+  height: auto;
+  display: block;
   padding: 32px 20px;
   margin-top: 42px;
   @media (min-width: ${get('breakpoints.md')}) {
@@ -57,7 +59,7 @@ const Newsletter = ({ newsletterProps }) => {
   const [email, setEmail] = React.useState('')
 
   return (
-    <Container>
+    <Container $bgColor="colors.valhalla.400">
       <Typography variant="title.caps">{newsletterProps.title}</Typography>
       <Description variant="body.s.default">
         {newsletterProps.description}

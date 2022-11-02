@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import get from 'utils/get'
 import Button from 'components/Button'
 import List from 'components/List'
+import Card from 'components/Card'
 
 const Grid = styled(BaseGrid)`
   margin-top: 72px;
@@ -38,13 +39,8 @@ const Content = styled.div`
   justify-content: center;
 `
 
-const Card = styled.div`
-  background-color: ${get('colors.valhalla.700')};
-  border-radius: 16px;
-  padding: 32px;
-`
-
 const DocumentationCard = styled(Card)`
+  height: auto;
   margin-top: 20px;
   @media (min-width: ${get('breakpoints.lg')}) {
     margin-top: 56px;
@@ -57,27 +53,24 @@ const DocumentationCard = styled(Card)`
 const Documentation = ({ developerProps }) => {
   const { documentationCta: cta } = developerProps
   return (
-    <div>
-      <DocumentationCard>
-        <Typography variant="title.s">
-          {developerProps.documentation}
-        </Typography>
-        <Typography
-          variant="body.s.default"
-          color={get('colors.ashes.600')}
-          style={{ marginTop: 24 }}
-        >
-          {developerProps.documentationText}
-        </Typography>
-        <Button href={cta.href} target={cta.target} style={{ marginTop: 24 }}>
-          <Typography variant="body.s.bold">{cta.title}</Typography>
-        </Button>
-      </DocumentationCard>
-    </div>
+    <DocumentationCard>
+      <Typography variant="title.s">{developerProps.documentation}</Typography>
+      <Typography
+        variant="body.s.default"
+        color={get('colors.ashes.600')}
+        style={{ marginTop: 24 }}
+      >
+        {developerProps.documentationText}
+      </Typography>
+      <Button href={cta.href} target={cta.target} style={{ marginTop: 24 }}>
+        <Typography variant="body.s.bold">{cta.title}</Typography>
+      </Button>
+    </DocumentationCard>
   )
 }
 
 const DeveloperHubCard = styled(Card)`
+  height: auto;
   margin-top: 56px;
   @media (min-width: ${get('breakpoints.xl')}) {
     margin-top: 48px;
@@ -86,35 +79,33 @@ const DeveloperHubCard = styled(Card)`
 
 const DeveloperHub = ({ developerProps }) => {
   return (
-    <div>
-      <DeveloperHubCard>
-        <Typography variant="title.s">{developerProps.developerHub}</Typography>
-        <Typography
-          variant="body.s.default"
-          color={get('colors.ashes.600')}
-          style={{ margin: '24px 0' }}
-        >
-          {developerProps.developerHubText}
+    <DeveloperHubCard>
+      <Typography variant="title.s">{developerProps.developerHub}</Typography>
+      <Typography
+        variant="body.s.default"
+        color={get('colors.ashes.600')}
+        style={{ margin: '24px 0' }}
+      >
+        {developerProps.developerHubText}
+      </Typography>
+      <List style>
+        {developerProps.developerHubList.map((elem, index) => (
+          <List.Element key={index}>
+            <Typography
+              variant="body.s.default"
+              color={get('colors.ashes.600')}
+            >
+              {elem}
+            </Typography>
+          </List.Element>
+        ))}
+      </List>
+      <Button disabled style={{ marginTop: 24 }}>
+        <Typography variant="body.s.bold" color={get('colors.ashes.900')}>
+          {developerProps.comingSoon}
         </Typography>
-        <List style>
-          {developerProps.developerHubList.map((elem, index) => (
-            <List.Element key={index}>
-              <Typography
-                variant="body.s.default"
-                color={get('colors.ashes.600')}
-              >
-                {elem}
-              </Typography>
-            </List.Element>
-          ))}
-        </List>
-        <Button disabled style={{ marginTop: 24 }}>
-          <Typography variant="body.s.bold" color={get('colors.ashes.900')}>
-            {developerProps.comingSoon}
-          </Typography>
-        </Button>
-      </DeveloperHubCard>
-    </div>
+      </Button>
+    </DeveloperHubCard>
   )
 }
 

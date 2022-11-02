@@ -4,6 +4,7 @@ import BaseGrid from 'components/Grid'
 import get from 'utils/get'
 import Button from 'components/Button'
 import Typography from 'components/Typography'
+import Card from 'components/Card'
 
 const Grid = styled(BaseGrid)`
   margin-top: 256px;
@@ -66,12 +67,10 @@ const IllustrationColumn = styled.div`
   }
 `
 
-const ContentColumn = styled.div`
+const ContentColumn = styled(Card)`
   order: 2;
   grid-column: 1 / -1;
   padding: 64px 32px 32px;
-  background-color: ${get('colors.valhalla.700')};
-  border-radius: 16px;
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: 7 / -1;
     padding: 32px;
