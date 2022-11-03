@@ -142,7 +142,11 @@ const JobOffers = ({ jobOffers }) => {
             preTitle={jobOffers.preTitle}
           />
           <SmallSection>
-            <Typography variant="title.m" style={{ color: 'white' }}>
+            <Typography
+              variant="title.m"
+              style={{ color: 'white' }}
+              forwardedAs="h2"
+            >
               {jobOffers.title}
             </Typography>
             {jobOffersList && jobOffersList.length > 0 && (
