@@ -22,6 +22,75 @@ const aboutUsData = {
     title: 'Our story',
     image: '/images/timeline.png',
   },
+  values: {
+    preTitle: 'What drives us',
+    title: 'Our values',
+    cta: {
+      href: 'https://www.welcometothejungle.com/fr/companies/meilisearch/values',
+      title: 'Learn more about our values',
+      target: '_blank',
+    },
+    group: [
+      {
+        title: 'Commitment 🤝',
+        color: 'colors.hotPink',
+        values: [
+          {
+            title: 'We are passionate',
+            description:
+              "At Meilisearch we do what we do because it's what we love doing. We try to keep a healthy balance between work and passion.",
+          },
+          {
+            title: 'We care about the project',
+            description:
+              'We are all very committed to making Meilisearch a successful project, which goes beyond our individual job scopes.',
+          },
+          {
+            title: 'We disagree and commit',
+            description:
+              'Being committed also means being opinionated. We try to debate in a constructive way that helps us all.',
+          },
+        ],
+      },
+      {
+        title: 'Openness 🌈',
+        color: 'colors.lila',
+        values: [
+          {
+            title: 'We give back to open-source what it gave to us',
+            description:
+              'We are providing a search solution accessible to all. We want to put sharing and collaboration at the basis of what we do.',
+          },
+          {
+            title: 'We find solutions together',
+            description:
+              "One thing we know is that no one knows everything. We are learning from others and are not afraid to say, ‘I don't know’.",
+          },
+          {
+            title: 'We value diverse views and backgrounds',
+            description:
+              'We value diverse backgrounds, cultures, and opinions as we believe it is the only way to build a long-lasting company.',
+          },
+        ],
+      },
+      {
+        title: 'Quality & simplicity 🧘🏽‍♀️',
+        color: 'colors.dodgerBlue',
+        values: [
+          {
+            title: 'Quality & simplicity',
+            description:
+              'We prefer quality over rapidity. Building an open-source project means respecting certain standards and paying close attention to the work we produce and show.',
+          },
+          {
+            title: 'We are pragmatic',
+            description:
+              'We believe that aiming for perfection is counterproductive. We stand by the adage "done well today is better than perfect next week".',
+          },
+        ],
+      },
+    ],
+  },
   investors: {
     preTitle: 'Lorem Ipsum', // TODO : Update with text
     title: 'Our investors',
