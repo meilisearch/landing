@@ -1932,25 +1932,25 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
   integrity sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==
 
-"@segment/analytics-core@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-core/-/analytics-core-1.1.0.tgz#a27477a35d1a005ea6b3ee9842f6870bc5260498"
-  integrity sha512-Ccjt0cewP9QQU7g2p342QQ48mOaGlFNa9DTyQlEDoyRuInnVDcW6mPFS7RlNXEnmw3F2fi3YONNktn5Ja63xcw==
+"@segment/analytics-core@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-core/-/analytics-core-1.1.1.tgz#34a583d12fd42c82f3a55173dcaf121e03e27228"
+  integrity sha512-rnxhw5sBGfV0R79SI/C4nKw3OFjhhWQMo7lOwRv2GuL/JbnOcA6DxP1RMs1Vc7TaS/fjeSJrfpP84k3A5xPzHw==
   dependencies:
     "@lukeed/uuid" "^2.0.0"
     dset "^3.1.2"
     tslib "^2.4.0"
 
-"@segment/analytics-next@^1.45.0":
-  version "1.45.0"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.45.0.tgz#458efc0b07421051a2f75ccc9f50e00ac62f17c4"
-  integrity sha512-dgMo5epHmQnQjtEWSSmFmWWq4lsaxoKlhJcfcVJ91CNuCDnGCZyjubL9I6F7A+3AydIpptzJKo+b7zztC/2Lew==
+"@segment/analytics-next@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-next/-/analytics-next-1.46.0.tgz#4bfa48200b8073d8d99b1a8e528122d149a74a9b"
+  integrity sha512-5QgBk2bQIgYmElY2Dk2hrruHrKlNZ0yyUOG+WWsz/6ca+jDdNHjMZLiKIGARg6Das8MLrmHbrXy67TXp3Ch82A==
   dependencies:
     "@lukeed/uuid" "^2.0.0"
-    "@segment/analytics-core" "1.1.0"
+    "@segment/analytics-core" "1.1.1"
     "@segment/analytics.js-video-plugins" "^0.2.1"
     "@segment/facade" "^3.4.9"
-    "@segment/tsub" "^0.1.12"
+    "@segment/tsub" "^0.2.0"
     dset "^3.1.2"
     js-cookie "3.0.1"
     node-fetch "^2.6.7"
@@ -1987,10 +1987,10 @@
   resolved "https://registry.yarnpkg.com/@segment/isodate/-/isodate-1.0.3.tgz#f44e8202d5edd277ce822785239474b2c9411d4a"
   integrity sha512-BtanDuvJqnACFkeeYje7pWULVv8RgZaqKHWwGFnL/g/TH/CcZjkIVTfGDp/MAxmilYHUkrX70SqwnYSTNEaN7A==
 
-"@segment/tsub@^0.1.12":
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/@segment/tsub/-/tsub-0.1.12.tgz#1c301a8b81e5dbda54eb0435ae808fbe65553f23"
-  integrity sha512-35JB0+HuMZrn7mus/s4yOHAcuid+MzaOYxV8YAogTR4Z7AsHwn/Zn/y9XdoHp2kKdn54s6jO4IaO826v0j7qmw==
+"@segment/tsub@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@segment/tsub/-/tsub-0.2.0.tgz#456345ad04bca81f6c3fefacac722fd9eb4923ce"
+  integrity sha512-DThHEnZ+1PlSjj59Q7Ns/ESevjfztDV4PtKMcoVp1PWSWaaPcaktWGdTeDgi8ucsJO91qtY9N4aM2cbfGr/yWA==
   dependencies:
     "@stdlib/math-base-special-ldexp" "^0.0.5"
     dlv "^1.1.3"
