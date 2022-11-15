@@ -153,6 +153,88 @@ const aboutUsData = {
       },
     },
   },
+  perksAndBenefits: {
+    preTitle: 'Perks & benefits',
+    title: 'Why work with us?',
+    description:
+      'Here are some of the things we offer in order for our employees to have the best possible experience!',
+    benefits: [
+      {
+        icon: '🗓',
+        title: '4 days work week',
+        description:
+          'Work-life balance is important to us. We work from Monday to Thursday: Fridays are yours to do as you wish!',
+      },
+      {
+        icon: '🖥',
+        title: 'Equipment',
+        description:
+          'We provide Macbooks, headphones, screen(s), a desk, and all the equipment you need to work from home.',
+      },
+      {
+        icon: '🏠',
+        title: 'Remote friendly',
+        description:
+          '80% of our team is fully remote, others opt to work from the office. We reimburse coworking spaces and cafes fees.',
+      },
+      {
+        icon: '🏝',
+        title: 'Time off',
+        description:
+          'We offer 6 weeks of paid time off for a full year to all our employees — and ping you until you take it all!',
+      },
+      {
+        icon: '🍼',
+        title: 'Parental leave',
+        description:
+          'We give 3 months of fully paid leave to new and adopting parents: your job will be there for you when you get back.',
+      },
+      {
+        icon: '❤️',
+        title: 'Health insurance',
+        description:
+          'We make sure all team members are covered with good insurance, local to the country you live in.',
+      },
+      {
+        icon: '🎉',
+        title: 'Team gathering',
+        description:
+          'We value time spent together and gather several times a year for team offsites, company events or remote activities.',
+      },
+      {
+        icon: '🏀',
+        title: 'Physical health',
+        description:
+          'We support physical health and provide either a membership or a stipend for your sport activities each month.',
+      },
+      {
+        icon: '☀️',
+        title: 'Mental health',
+        description:
+          'Mental health is fundamental to us. We provide confidential individual support to any team member who wants to.',
+      },
+      {
+        icon: '💰',
+        title: 'Stock options',
+        description:
+          'As our team members make the success of Meilisearch, we trust stock options to all long-term employees.',
+      },
+      {
+        icon: '📈',
+        title: 'Career framework',
+        description:
+          'We accompany you on the career path you want to take: skills, next steps and salaries are transparent.',
+      },
+      {
+        icon: '💡',
+        title: 'Open source support',
+        description:
+          'As an open source company, we allot a monthly stipend to the support of your favorite open source softwares.',
+      },
+    ],
+    loadMore: 'Load more benefits',
+    loadLess: 'Load less benefits',
+  },
 }
 
 export default aboutUsData
