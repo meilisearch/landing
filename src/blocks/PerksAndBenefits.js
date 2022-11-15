@@ -128,7 +128,7 @@ const PerksAndBenefits = ({ perksAndBenefits }) => {
     <Section>
       <Grid>
         <FirstRow>
-          <PreTitle preTitle={preTitle} />
+          <PreTitle color={get('colors.hotPink')} preTitle={preTitle} />
           <Title variant="title.m">{title}</Title>
           <Description variant="body.s.default">{description}</Description>
         </FirstRow>
