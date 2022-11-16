@@ -7,8 +7,8 @@ import {
   Values,
   JobOffers,
   PerksAndBenefits,
+  OurTeam,
 } from 'blocks'
-import get from 'utils/get'
 import PageContent from 'components/PageContent'
 
 const AboutUs = () => {
@@ -21,22 +21,14 @@ const AboutUs = () => {
     values,
     jobOffers,
     perksAndBenefits,
+    ourTeam,
   } = aboutUsData
   return (
     <>
       <Head meta={meta} />
       <PageContent>
         <AboutUsHero hero={hero} />
-        <div
-          style={{
-            backgroundColor: get('colors.valhalla.700'),
-            height: 200,
-            color: 'white',
-            margin: '0 -32px',
-          }}
-        >
-          Other block to come
-        </div>
+        <OurTeam ourTeam={ourTeam} />
         <OurStory ourStory={ourStory} />
         <Values values={values} />
         <PerksAndBenefits perksAndBenefits={perksAndBenefits} />
