@@ -20,7 +20,7 @@ const aboutUsData = {
   ourStory: {
     preTitle: 'meilisearch Milestones',
     title: 'Our story',
-    image: '/images/timeline.png',
+    image: '/images/timeline.svg',
   },
   values: {
     preTitle: 'What drives us',
@@ -242,42 +242,42 @@ const aboutUsData = {
       {
         name: 'Morgane 🇫🇷',
         position: 'Software Engineer',
-        image: '/images/teamMembers/morgane-dubus.png',
+        image: '/images/teamMembers/morgane-dubus.svg',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/Morgane-Dubus-e5761f4ddd604954ba1a5ed74c309339',
       },
       {
         name: 'Léna 🇫🇷',
         position: 'Product Designer',
-        image: '/images/teamMembers/lena-pinot.png',
+        image: '/images/teamMembers/lena-pinot.svg',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/L-na-Pinot-4c3b4219b0ce4818bca96502bcc9433e',
       },
       {
         name: 'Amélie 🇫🇷',
         position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        image: '/images/teamMembers/amelie-lallemand.svg',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
       },
       {
         name: '4',
         position: 'Software Engineer',
-        image: '/images/teamMembers/4.png',
+        image: '/images/teamMembers/4.svg',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
       },
       {
         name: '5',
         position: 'Software Engineer',
-        image: '/images/teamMembers/5.png',
+        image: '/images/teamMembers/5.svg',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
       },
       {
         name: '6',
         position: 'Software Engineer',
-        image: '/images/teamMembers/6.png',
+        image: '/images/teamMembers/6.svg',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
       },
