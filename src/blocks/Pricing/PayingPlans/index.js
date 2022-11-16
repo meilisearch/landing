@@ -13,7 +13,7 @@ const Grid = styled(BaseGrid)`
 
 const Plan = styled(BasePlan)`
   @media (min-width: ${get('breakpoints.md')}) {
-    grid-column: span 3;
+    grid-column: span 4;
   }
 `
 
