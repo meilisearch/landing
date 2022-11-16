@@ -261,6 +261,104 @@ const aboutUsData = {
           'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
       },
       {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie-lallemand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
         name: '4',
         position: 'Software Engineer',
         image: '/images/teamMembers/4.png',
