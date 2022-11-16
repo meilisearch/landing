@@ -177,8 +177,7 @@ const Carousel2 = styled(TeamMemberList)`
 `
 
 const OurTeam = ({ ourTeam }) => {
-  // const personsPerCarousel = Math.ceil(ourTeam.teamMembers / 2)
-  const personsPerCarousel = 2.5
+  const personsPerCarousel = Math.ceil(ourTeam.teamMembers.length / 2)
   const shuffledPeople = shuffle(ourTeam.teamMembers)
   const carousel1 = shuffledPeople.slice(0, personsPerCarousel)
   const carousel2 = shuffledPeople.slice(
