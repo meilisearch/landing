@@ -32,7 +32,7 @@ const SummaryContent = styled.div`
 `
 
 const Details = styled.details`
-  background: ${get('colors.valhalla.700')};
+  background: ${get('colors.valhalla.600')};
   border: 1px solid ${get('colors.valhalla.400')};
   border-radius: 8px;
 

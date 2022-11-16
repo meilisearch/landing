@@ -7,7 +7,7 @@ import TableComponent from 'components/Table'
 import Anchor from 'components/Anchor'
 
 const TableSection = styled.section`
-  background-color: ${get('colors.valhalla')};
+  background-color: ${get('colors.valhalla.700')};
   padding: 60px 16px 72px;
   color: ${get('colors.white')};
   margin: 0 -16px;
