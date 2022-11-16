@@ -2,13 +2,7 @@ import Head from 'components/Head'
 import styled from 'styled-components'
 import pricingPageData from '../../data/pricing'
 import PageContent from 'components/PageContent'
-import {
-  PricingHero,
-  FAQ,
-  Table,
-  Pricing as BasePricingBlock,
-  PricingAssistant,
-} from 'blocks'
+import { PricingHero, FAQ, Table, Pricing as BasePricingBlock } from 'blocks'
 import get from 'utils/get'
 
 const HeroBlock = styled(PricingHero)`
@@ -38,19 +32,13 @@ const PricingBlock = styled(BasePricingBlock)`
 `
 
 const Pricing = () => {
-  const { meta, hero, faq, table, pricingAssistant, pricing } =
-    pricingPageData()
+  const { meta, hero, faq, table, pricing } = pricingPageData
   return (
     <>
       <Head meta={meta} />
       <PageContent>
         <HeroBlock hero={hero} data-cy="pricingHero" />
         <PricingBlock pricing={pricing} data-cy="pricingCards" />
-        <PricingAssistant
-          pricingAssistant={pricingAssistant}
-          color={get('colors.dodgerBlue')}
-          data-cy="pricingAssistant"
-        />
         <Table table={table} data-cy="pricingTable" />
         <FAQ faq={faq} data-cy="pricingFaq" />
       </PageContent>
