@@ -1,4 +1,4 @@
-import { Diamond, GraduationCap, Puzzle, Rocket } from 'components/icons'
+import { Code, Diamond, Puzzle, Rocket } from 'components/icons'
 
 const pricingPageData = {
   meta: {
@@ -17,9 +17,11 @@ const pricingPageData = {
       {
         title: 'Build',
         default: false,
-        icon: GraduationCap,
+        icon: Code,
         pricing: '<strong>$0</strong>/month',
+        planDescription: 'For small projects and testing',
         specifications: [
+          'Fair use policy',
           'Up to 100k documents',
           'Up to 10k searches per month',
           'Shared resources',
@@ -36,6 +38,7 @@ const pricingPageData = {
         default: true,
         icon: Diamond,
         pricing: '<strong>$1200</strong>/month',
+        planDescription: 'Recommended for production',
         specifications: [
           'Up to 10M documents',
           'Up to 10M searches per month',
@@ -54,12 +57,14 @@ const pricingPageData = {
         default: false,
         icon: Rocket,
         pricing: 'Custom quote',
+        planDescription: 'Built for your needs',
         specifications: [
           'Custom usage-based or resource-based pricing',
           'SSO included',
           'Dedicated resources',
           'Dedicated account manager',
           'Premium SLA',
+          'Highly available',
         ],
         cta: {
           title: 'Contact Sales',

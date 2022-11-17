@@ -7,7 +7,7 @@ import PricingCard from 'components/PricingCard'
 
 const Title = styled(Typography)`
   color: ${get('colors.hotPink')};
-  margin-top: 4px;
+  margin-top: 8px;
 `
 
 const Pricing = styled(Typography)`
@@ -47,26 +47,23 @@ const Specification = styled(Typography)`
   font-weight: 400;
   font-size: 10px;
   line-height: 150%;
+  color: ${get('colors.ashes.600')};
+  margin-top: 7px;
+
   @media (min-width: ${get('breakpoints.lg')}) {
     font-size: 11px;
   }
   @media (min-width: ${get('breakpoints.xl')}) {
     font-size: 12px;
+    margin-top: 12px;
   }
 `
 
-const Specifications = styled.div`
-  color: ${get('colors.ashes.600')};
+const PlanDescription = styled(Typography)`
+  color: white;
   margin-top: 16px;
   @media (min-width: ${get('breakpoints.xl')}) {
-    margin-top: 30px;
-  }
-
-  ${Specification} + ${Specification} {
-    margin-top: 7px;
-    @media (min-width: ${get('breakpoints.xl')}) {
-      margin-top: 12px;
-    }
+    margin-top: 32px;
   }
 `
 
@@ -88,11 +85,14 @@ const Plan = ({ plan, ...props }) => (
       <RoundedIcon icon={plan.icon}></RoundedIcon>
       <Title variant="body.m.bold">{plan.title}</Title>
       <Pricing dangerouslySetInnerHTML={{ __html: plan.pricing }} />
-      <Specifications>
+      <PlanDescription variant="body.xs.bold">
+        {plan.planDescription}
+      </PlanDescription>
+      <div>
         {plan.specifications?.map(specification => (
           <Specification key={specification}>{specification}</Specification>
         ))}
-      </Specifications>
+      </div>
     </div>
     <Cta
       variant="secondary"
