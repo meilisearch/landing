@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     --header-height-mobile: 98px;
     --header-height-desktop: 88px;
-    --banner-height: 72px;
+    --banner-height: 48px;
   }
   * {
     box-sizing: border-box;

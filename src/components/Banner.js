@@ -7,18 +7,19 @@ const Wrapper = styled.div`
   background-color: ${get('colors.dodgerBlue')};
   padding: 16px;
   height: var(--banner-height);
-  color: white;
+  color: ${get('colors.ashes.600')};
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   a {
-    color: ${get('colors.white')};
-    transition: border-bottom 300ms;
-    border-bottom: 2px solid ${get('colors.white')};
+    transition: color 300ms, border-bottom 300ms;
+    border-bottom: 2px solid ${get('colors.ashes.600')};
+    color: inherit;
     &:hover,
     &:focus {
-      border-bottom: 2px solid ${get('colors.hotPink')};
+      color: ${get('colors.white')};
+      border-bottom: 2px solid ${get('colors.white')};
     }
   }
 
