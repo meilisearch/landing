@@ -15,19 +15,19 @@ const pricingPageData = {
   pricing: {
     payingPlans: [
       {
-        title: 'Hobby',
+        title: 'Build',
         default: false,
         icon: GraduationCap,
         pricing: '<strong>$0</strong>/month',
         specifications: [
-          'Up to 10k documents',
+          'Up to 100k documents',
           'Up to 10k searches per month',
           'Shared resources',
           'Community (Slack) support',
         ],
         cta: {
           title: 'Get started',
-          href: 'https://cloud.meilisearch.com/register?plan=hobby',
+          href: 'https://cloud.meilisearch.com/register?plan=build',
           target: '_blank',
         },
       },
