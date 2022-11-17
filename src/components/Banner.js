@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 const Banner = ({ title }) => (
   <Wrapper>
     <Typography
-      variant="body.m.bold"
+      variant="body.s.bold"
       dangerouslySetInnerHTML={{ __html: title }}
     />
   </Wrapper>
