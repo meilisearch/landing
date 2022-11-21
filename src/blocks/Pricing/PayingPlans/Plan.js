@@ -4,42 +4,11 @@ import Typography from 'components/Typography'
 import Button from 'components/Button'
 import RoundedIcon from 'components/RoundedIcon'
 import PricingCard from 'components/PricingCard'
+import Pricing from '../CardPricingTypography'
 
 const Title = styled(Typography)`
   color: ${get('colors.hotPink')};
   margin-top: 8px;
-`
-
-const Pricing = styled(Typography)`
-  color: ${get('colors.ashes.900')};
-  display: flex;
-  align-items: center;
-  height: 32px;
-  font-size: 12px;
-  font-weight: ${get('fontWeight.normal')};
-  line-height: 150%;
-
-  strong {
-    color: white;
-    font-family: 'Poppins';
-    font-weight: ${get('fontWeight.medium')};
-    font-size: 18px;
-    line-height: 140%;
-  }
-
-  @media (min-width: ${get('breakpoints.lg')}) {
-    font-size: 13px;
-    strong {
-      font-size: 22px;
-    }
-  }
-
-  @media (min-width: ${get('breakpoints.xl')}) {
-    font-size: 14px;
-    strong {
-      font-size: 26px;
-    }
-  }
 `
 
 const Specification = styled(Typography)`

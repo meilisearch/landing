@@ -6,6 +6,7 @@ import Typography from 'components/Typography'
 import Button from 'components/Button'
 import PricingCard from 'components/PricingCard'
 import RoundedIcon from 'components/RoundedIcon'
+import Pricing from './CardPricingTypography'
 
 const OpenSourceWrapper = styled(Grid)`
   grid-template-columns: 1fr;
@@ -24,11 +25,6 @@ const PreTitle = styled(Typography)`
   color: ${get('colors.dodgerBlue.400')};
   margin-top: 4px;
   font-weight: ${get('fontWeight.semibold')};
-`
-
-const Title = styled(Typography)`
-  color: white;
-  margin-top: 4px;
 `
 
 const SecondColumn = styled(Col)`
@@ -76,7 +72,7 @@ const OpenSource = ({ openSource }) => {
           <Col>
             <RoundedIcon icon={openSource.icon} color="colors.dodgerBlue.400" />
             <PreTitle variant="body.m.bold">{openSource.preTitle}</PreTitle>
-            <Title variant="title.xs">{openSource.title}</Title>
+            <Pricing dangerouslySetInnerHTML={{ __html: openSource.pricing }} />
           </Col>
           <SecondColumn>
             <Description variant="body.xs.default">

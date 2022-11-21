@@ -18,7 +18,7 @@ const pricingPageData = {
         title: 'Build',
         default: false,
         icon: Code,
-        pricing: '<strong>$0</strong>/month',
+        pricing: '<strong>Free</strong>',
         planDescription: 'For small projects and testing',
         specifications: [
           'Fair use policy',
@@ -37,7 +37,7 @@ const pricingPageData = {
         title: 'Pro',
         default: true,
         icon: Diamond,
-        pricing: '<strong>$1200</strong>/month',
+        pricing: '<strong>$1200</strong> /month',
         planDescription: 'Recommended for production',
         specifications: [
           'Up to 10M documents',
@@ -76,7 +76,7 @@ const pricingPageData = {
     freePlan: {
       preTitle: 'Open Source',
       icon: Puzzle,
-      title: 'Free',
+      pricing: '<strong>Free</strong> (self-hosted)',
       description:
         'Start using Meilisearch now by downloading our open source version. You will have the possibility in the future to move to our cloud easily.',
       readMore:
