@@ -266,9 +266,14 @@ const pricingPageData = {
     title: 'FAQs',
     questions: [
       {
-        question: 'Is there a free plan or a trial period?',
+        question: 'Can I try Meilisearch cloud for free?',
         answer:
-          'We currently do not offer a free plan or trial period. However, you can try out the open-source version following this <a href="https://docs.meilisearch.com/learn/getting_started/quick_start.html" target="_blank">quick start guide</a>.',
+          'Yes. We offer a free plan based on fair usage that allows you to index up to 100k documents and perform 10k search requests per month.',
+      },
+      {
+        question: 'What happens if I exceed my plan limits?',
+        answer:
+          'For the time being, we can only rely on fair use. However, you may experience additional latency and response time if you exceed the limits.',
       },
       {
         question: 'Is there a minimum term or commitment once I start paying?',
@@ -283,23 +288,22 @@ const pricingPageData = {
       {
         question: 'How does billing work?',
         answer:
-          'We bill per hour spent. We do not provide consumption-based plans. An hour corresponds to one hour of a Meilisearch server or project up and running in the cloud. In addition, while computing the hours, we round up, meaning if a server runs for one hour and five minutes, we will charge for two hours; if it runs for thirty minutes, we will charge for one hour.<br/><br/>Users will be charged at the end of each month based on their invoice(s) value. You can view the estimated cost for a billing period of your project(s) on the <a href="https://cloud.meilisearch.com/billing" target="_blank">billing page</a> and access your invoices and receipts by navigating to the “Billing settings” > “Manage billing settings and invoices” > “Invoice History”.',
+          'We bill per hour spent. We do not provide consumption-based plans. An hour corresponds to one hour of a Meilisearch server or project up and running in the cloud. In addition, while computing the hours, we round up, meaning if a server runs for one hour and five minutes, we will charge for two hours; if it runs for thirty minutes, we will charge for one hour.<br/><br/>Users will be charged at the end of each month based on their invoice(s) value.  It is important to note that the cost for a billing period is displayed excluding local taxes, and we automatically apply taxes to your monthly bill based on your region.<br/><br/> You can view the estimated cost for a billing period of your project(s) on the <a href="https://cloud.meilisearch.com/billing" target="_blank">billing page</a> and access your invoices and receipts by navigating to the “Billing settings” > “Manage billing settings and invoices” > “Invoice History”.',
       },
       {
-        question: 'Can I change my plan or resource?',
+        question: 'Can I change my plan?',
         answer:
-          "Yes, and it is effortless. You can upgrade a project's plan or resource by selecting the project, navigating to the “Resources” tab, and clicking on the “Upgrade” button. Please remember that once the process is complete, you won't be able to downgrade your resource.",
+          "Yes, and it is effortless. You can upgrade a project's plan by selecting the project, navigating to the “Resources” tab, and clicking on the “Change Plan” button. Please remember that once the process is complete, you won't be able to downgrade your plan.",
       },
       {
         question: 'How do I choose the right plan?',
-        answer: `You can estimate your costs and the right plan for your use case using our <a href="#pricing-assistant">pricing assistant</a>. We often suggest choosing a plan that corresponds with the number of documents, as upgrading to a higher plan with more capacity is very easy. While we take into account the number of documents in estimating the plan to choose, here are some other factors to consider when choosing a plan:<br/>
+        answer: `While we provide a free and flexible plan, a rule of thumb is that your plan needs to match your business needs and workload. This means:<br/>
           <ul>
-            <li><strong>Volume or number of search requests:</strong> A search request is CPU intensive. The more cores you provide to the engine, the more search queries it will be able to process at the same time. Kindly note that using 0.5 vCPUs might impact the search experience while indexing simultaneously. Hence, we recommend using at least one full CPU to handle indexing and search concurrently, meaning Meilisearch will automatically take 0.5 vCPUs maximum for indexing, with the other for search.</li>
-            <li><strong>Search speed:</strong> The search speed is based on the RAM/database size ratio. You can find more information in the <a href="https://docs.meilisearch.com/faq.html#search-speed" target="_blank">dedicated documentation</a>.</li>
-            <li><strong>Disk space:</strong> We recommend reserving at least ten times the size of your raw data. This means that if your document size is 8GB, you should at least reserve 80GB of disk space for Meilisearch.</li>
-            <li><strong>Complexity and structure of your documents:</strong> If there are lots of filterable and searchable attributes or all document fields are searchable, we strongly recommend updating the \`searchableAttributes\` list to contain only the fields you want to search; otherwise, a plan with more RAM and storage would be suitable.</li>
+            <li>The Build plan is suitable for small businesses or individuals whose needs and workload are within the limit, as this is based on fair usage. When you reach this limit, you can easily scale up by upgrading to the Professional plan with the click of a button.</li>
+            <li>If your workload is beyond the Build plan’s limits, your data needs to be highly available, and your business requires a personalized support experience during business hours, the Professional plan is a better fit.</li>
+            <li>The Enterprise plan is entirely dependent on your use case and expectations. It is a bespoke plan suitable for businesses with unique requirements, such as special support needs or unique use-case.</li>
           </ul><br/>
-          If you need help choosing the right plan for your use case, please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a>.`,
+          If you need additional assistance choosing the right plan for your use case, please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a>.`,
       },
     ],
   },
