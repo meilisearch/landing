@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import get from 'utils/get'
-import PayingPlans from './PayingPlans'
-import OpenSource from './OpenSource'
+import BaseGrid from 'components/Grid'
+import BasePlan from './Plan'
 
 const Section = styled.section`
   z-index: 2;
@@ -18,11 +18,29 @@ const Section = styled.section`
   }
 `
 
+const Grid = styled(BaseGrid)`
+  grid-template-columns: repeat(2, 1fr);
+  @media (min-width: ${get('breakpoints.md')}) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+`
+
+const Plan = styled(BasePlan)`
+  grid-column: span 1;
+
+  @media (min-width: ${get('breakpoints.md')}) {
+    grid-column: ${p => (p.$fullWidth ? '1 / -1' : 'span 4')};
+  }
+`
+
 const Pricing = ({ pricing, ...props }) => {
   return (
     <Section {...props}>
-      <PayingPlans payingPlans={pricing.payingPlans} />
-      <OpenSource openSource={pricing.freePlan} />
+      <Grid {...props}>
+        {pricing.plans?.map(plan => (
+          <Plan $fullWidth={plan.fullWidth} plan={plan} key={plan.title} />
+        ))}
+      </Grid>
     </Section>
   )
 }

@@ -13,20 +13,24 @@ const pricingPageData = {
       'Whatever your needs, we can find the right plan that will fit your business perfectly.',
   },
   pricing: {
-    payingPlans: [
+    plans: [
       {
         title: 'Build',
         default: false,
+        fullWidth: false,
+        color: 'colors.hotPink',
         icon: Code,
         pricing: '<strong>Free</strong>',
-        planDescription: 'For small projects and testing',
-        specifications: [
-          'Fair use policy',
-          'Up to 100k documents',
-          'Up to 10k searches per month',
-          'Shared resources',
-          'Community (Slack) support',
-        ],
+        planDescription: `
+          <ul>
+          <li><strong>For small projects and testing</strong></li>
+          <li>Fair use policy</li>
+          <li>Up to 100k documents</li>
+          <li>Up to 10k searches per month</li>
+          <li>Shared resources</li>
+          <li>Community (Slack) support</li>
+          </ul>
+        `,
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=build',
@@ -36,16 +40,20 @@ const pricingPageData = {
       {
         title: 'Pro',
         default: true,
+        fullWidth: false,
+        color: 'colors.hotPink',
         icon: Diamond,
         pricing: '<strong>$1200</strong> /month',
-        planDescription: 'Recommended for production',
-        specifications: [
-          'Up to 10M documents',
-          'Up to 10M searches per month',
-          'Highly available',
-          'Dedicated resources',
-          'Meilisearch team support',
-        ],
+        planDescription: `
+        <ul>
+        <li><strong>Recommended for production</strong></li>
+        <li>Up to 10M documents</li>
+        <li>Up to 10M searches per month</li>
+        <li>Highly available</li>
+        <li>Dedicated resources</li>
+        <li>Meilisearch team support</li>
+        </ul>
+      `,
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=pro',
@@ -55,38 +63,46 @@ const pricingPageData = {
       {
         title: 'Enterprise',
         default: false,
+        fullWidth: false,
+        color: 'colors.hotPink',
         icon: Rocket,
         pricing: 'Custom quote',
-        planDescription: 'Built for your needs',
-        specifications: [
-          'Custom usage-based or resource-based pricing',
-          'SSO included',
-          'Dedicated resources',
-          'Dedicated account manager',
-          'Premium SLA',
-          'Highly available',
-        ],
+        planDescription: `
+        <ul>
+        <li><strong>Built for your needs</strong></li>
+        <li>Custom usage-based or resource-based pricing</li>
+        <li>SSO included</li>
+        <li>Dedicated resources</li>
+        <li>Dedicated account manager</li>
+        <li>Premium SLA</li>
+        <li>Highly available</li>
+        </ul>
+      `,
         cta: {
           title: 'Contact Sales',
           href: 'mailto:bonjour@meilisearch.com?subject="Enterprise quote"',
           target: '_blank',
         },
       },
-    ],
-    freePlan: {
-      preTitle: 'Open Source',
-      icon: Puzzle,
-      pricing: '<strong>Free</strong> (self-hosted)',
-      description:
-        'Start using Meilisearch now by downloading our open source version. You will have the possibility in the future to move to our cloud easily.',
-      readMore:
-        'Read our <a href="#open-source-vs-cloud">Cloud - Open source comparison guide</a>',
-      cta: {
-        title: 'Get started',
-        href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
-        target: '_blank',
+      {
+        title: 'Open Source',
+        default: false,
+        fullWidth: true,
+        color: 'colors.dodgerBlue',
+        icon: Puzzle,
+        pricing: '<strong>Free</strong> (self-hosted)',
+        planDescription: `
+        Start using Meilisearch now by downloading our open source version.<br/>You will have the possibility in the future to move to our cloud easily.
+        <br/><br/>
+        Read our <a href="#open-source-vs-cloud">Cloud - Open source comparison guide</a>
+      `,
+        cta: {
+          title: 'Get started',
+          href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
+          target: '_blank',
+        },
       },
-    },
+    ],
   },
   table: {
     title: 'Open source vs Cloud',
