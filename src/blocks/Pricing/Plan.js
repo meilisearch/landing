@@ -42,13 +42,17 @@ const Pricing = styled(Typography)`
 `
 
 const PricingCard = styled(BasePricingCard)`
+  justify-content: flex-start;
   ${p =>
     p.$fullWidth &&
     css`
-      flex-direction: row;
-      align-items: center;
-      > * + * {
-        margin-left: 32px;
+      @media (min-width: ${get('breakpoints.md')}) {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        > * + * {
+          margin-left: 32px;
+        }
       }
     `}
 `
@@ -61,6 +65,7 @@ const Title = styled(Typography)`
 const PlanDescription = styled(Typography)`
   color: ${get('colors.ashes.600')};
   font-weight: ${get('fontWeight.normal')};
+  margin-bottom: ${p => (p.$fullWidth ? '0px' : '16px')};
 
   strong {
     color: ${get('colors.white')};
@@ -82,6 +87,8 @@ const PlanDescription = styled(Typography)`
   }
 
   @media (min-width: ${get('breakpoints.xl')}) {
+    margin-bottom: ${p => (p.$fullWidth ? '0px' : '32px')};
+
     li + li {
       margin-top: 16px;
     }
@@ -89,15 +96,16 @@ const PlanDescription = styled(Typography)`
 `
 
 const Cta = styled(Button)`
-  margin-top: 16px;
+  margin-top: auto;
   padding: 10px 20px;
   height: 38px;
 
+  @media (min-width: ${get('breakpoints.md')}) {
+    margin-top: ${p => (p.$fullWidth ? '0px' : 'auto')};
+  }
+
   @media (min-width: ${get('breakpoints.lg')}) {
     height: 45px;
-  }
-  @media (min-width: ${get('breakpoints.xl')}) {
-    margin-top: ${p => (p.$fullWidth ? '0px' : '32px')};
   }
 `
 
