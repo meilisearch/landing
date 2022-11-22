@@ -61,5 +61,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
     "storybook-addon-next-router": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meilisearch/landing.git"
   }
 }
