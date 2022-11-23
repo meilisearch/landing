@@ -80,7 +80,7 @@ const pricingPageData = {
       `,
         cta: {
           title: 'Contact Sales',
-          href: 'mailto:bonjour@meilisearch.com?subject="Enterprise quote"',
+          href: 'https://cal.com/team/meilisearch/cloud-enterprise',
           target: '_blank',
         },
       },
