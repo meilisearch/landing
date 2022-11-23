@@ -16,7 +16,7 @@ const pricingPageData = {
     plans: [
       {
         title: 'Build',
-        default: false,
+        active: false,
         fullWidth: false,
         color: 'colors.hotPink',
         icon: Code,
@@ -39,7 +39,7 @@ const pricingPageData = {
       },
       {
         title: 'Pro',
-        default: true,
+        active: true,
         fullWidth: false,
         color: 'colors.hotPink',
         icon: Diamond,
@@ -62,7 +62,7 @@ const pricingPageData = {
       },
       {
         title: 'Enterprise',
-        default: false,
+        active: false,
         fullWidth: false,
         color: 'colors.hotPink',
         icon: Rocket,
@@ -86,7 +86,7 @@ const pricingPageData = {
       },
       {
         title: 'Open Source',
-        default: false,
+        active: false,
         fullWidth: true,
         color: 'colors.dodgerBlue',
         icon: Puzzle,

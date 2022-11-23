@@ -113,7 +113,7 @@ const Plan = ({ plan, ...props }) => (
   <PricingCard
     $fullWidth={plan.fullWidth}
     color={plan.color}
-    selected={plan.default}
+    active={plan.active}
     {...props}
   >
     <div>

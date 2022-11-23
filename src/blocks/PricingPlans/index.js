@@ -29,20 +29,20 @@ const Plan = styled(BasePlan)`
   grid-column: span 1;
 
   @media (min-width: ${get('breakpoints.md')}) {
-    grid-column: ${p => (p.$fullWidth ? '1 / -1' : 'span 4')};
+    grid-column: ${p => (p.plan.fullWidth ? '1 / -1' : 'span 4')};
   }
 `
 
-const Pricing = ({ pricing, ...props }) => {
+const PricingPlans = ({ pricing, ...props }) => {
   return (
     <Section {...props}>
       <Grid {...props}>
         {pricing.plans?.map(plan => (
-          <Plan $fullWidth={plan.fullWidth} plan={plan} key={plan.title} />
+          <Plan plan={plan} key={plan.title} />
         ))}
       </Grid>
     </Section>
   )
 }
 
-export default Pricing
+export default PricingPlans

@@ -103,7 +103,7 @@ const Decorator2 = styled.div`
   }
 `
 
-const Table = ({ table, ...props }) => {
+const ComparativeTable = ({ table, ...props }) => {
   return (
     <TableSection {...props}>
       <Grid style={{ position: 'relative' }}>
@@ -125,4 +125,4 @@ const Table = ({ table, ...props }) => {
   )
 }
 
-export default Table
+export default ComparativeTable

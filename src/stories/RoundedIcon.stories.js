@@ -16,8 +16,8 @@ Default.args = {
   icon: Puzzle,
 }
 
-export const DifferentColor = Template.bind({})
-DifferentColor.args = {
+export const OtherColor = Template.bind({})
+OtherColor.args = {
   icon: Puzzle,
   color: 'colors.dodgerBlue',
 }

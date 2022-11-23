@@ -2,7 +2,12 @@ import Head from 'components/Head'
 import styled from 'styled-components'
 import pricingPageData from '../../data/pricing'
 import PageContent from 'components/PageContent'
-import { PricingHero, FAQ, Table, Pricing as BasePricingBlock } from 'blocks'
+import {
+  PricingHero,
+  FAQ,
+  ComparativeTable,
+  PricingPlans as BasePricingBlock,
+} from 'blocks'
 import get from 'utils/get'
 
 const HeroBlock = styled(PricingHero)`
@@ -38,8 +43,8 @@ const Pricing = () => {
       <Head meta={meta} />
       <PageContent>
         <HeroBlock hero={hero} data-cy="pricingHero" />
-        <PricingBlock pricing={pricing} data-cy="pricingCards" />
-        <Table table={table} data-cy="pricingTable" />
+        <PricingBlock pricing={pricing} data-cy="pricingPlans" />
+        <ComparativeTable table={table} data-cy="comparativeTable" />
         <FAQ faq={faq} data-cy="pricingFaq" />
       </PageContent>
     </>
