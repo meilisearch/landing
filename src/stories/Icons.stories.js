@@ -8,6 +8,7 @@ import {
   Code as CodeIcon,
   Cross as CrossIcon,
   Dart as DartIcon,
+  Discord as DiscordIcon,
   Documentation as DocumentationIcon,
   Dotnet as DotnetIcon,
   Earth as EarthIcon,
@@ -45,7 +46,6 @@ import {
   Roadmap2 as Roadmap2Icon,
   Ruby as RubyIcon,
   Rust as RustIcon,
-  Slack as SlackIcon,
   SortBy as SortByIcon,
   Star as StarIcon,
   Swift as SwiftIcon,
@@ -82,6 +82,7 @@ export const Chat = () => <ChatIcon height={56} />
 export const Code = () => <CodeIcon height={56} />
 export const Cross = () => <CrossIcon height={56} />
 export const Dart = () => <DartIcon height={56} />
+export const Discord = () => <DiscordIcon height={56} />
 export const Documentation = () => <DocumentationIcon height={56} />
 export const Dotnet = () => <DotnetIcon height={56} />
 export const Earth = () => <EarthIcon height={56} />
@@ -119,7 +120,6 @@ export const Roadmap = () => <RoadmapIcon height={56} />
 export const Roadmap2 = () => <Roadmap2Icon height={56} />
 export const Ruby = () => <RubyIcon height={56} />
 export const Rust = () => <RustIcon height={56} />
-export const Slack = () => <SlackIcon height={56} />
 export const SortBy = () => <SortByIcon height={56} />
 export const Star = () => <StarIcon height={56} />
 export const Swift = () => <SwiftIcon height={56} />

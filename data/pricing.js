@@ -28,7 +28,7 @@ const pricingPageData = {
           <li>Up to 100k documents</li>
           <li>Up to 10k searches per month</li>
           <li>Shared resources</li>
-          <li>Community (Slack) support</li>
+          <li>Community (Discord) support</li>
           </ul>
         `,
         cta: {

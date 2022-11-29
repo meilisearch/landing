@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Slack } from '../src/components/icons'
+import { Github, Twitter, Linkedin, Discord } from '../src/components/icons'
 
 const footerData = {
   newsletter: {
@@ -63,7 +63,7 @@ const footerData = {
       submenu: [
         {
           title: 'Support',
-          href: 'https://slack.meilisearch.com/',
+          href: 'https://discord.gg/meilisearch',
           target: '_blank',
         },
         {
@@ -72,8 +72,8 @@ const footerData = {
           target: '_blank',
         },
         {
-          title: 'Slack',
-          href: 'https://slack.meilisearch.com/',
+          title: 'Discord',
+          href: 'https://discord.gg/meilisearch',
           target: '_blank',
         },
         {
@@ -138,10 +138,10 @@ const footerData = {
       title: 'Linkedin',
     },
     {
-      icon: Slack,
-      href: 'https://slack.meilisearch.com/',
+      icon: Discord,
+      href: 'https://discord.gg/meilisearch',
       target: '_blank',
-      title: 'Slack',
+      title: 'Discord',
     },
   ],
 }
