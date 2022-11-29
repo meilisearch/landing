@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table } from 'blocks'
+import { ComparativeTable } from 'blocks'
 import pricingPageData from '../../data/pricing'
 
 export default {
@@ -9,5 +9,5 @@ export default {
 export const Default = () => {
   const { table } = pricingPageData
 
-  return <Table table={table} />
+  return <ComparativeTable table={table} />
 }

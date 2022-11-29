@@ -1,14 +1,4 @@
-import {
-  B2CApp,
-  Ecommerce,
-  GeographicSearch,
-  Media,
-  NumericSorting,
-  Other,
-  SaasApp,
-  SiteSearch,
-  TextualSearch,
-} from 'components/icons'
+import { Code, Diamond, Puzzle, Rocket } from 'components/icons'
 
 const pricingPageData = {
   meta: {
@@ -23,239 +13,99 @@ const pricingPageData = {
       'Whatever your needs, we can find the right plan that will fit your business perfectly.',
   },
   pricing: {
-    openSource: {
-      title: 'Open Source',
-      plan: 'Free',
-      planDescription:
-        'Start using Meilisearch now by downloading our open source version. You will have the possibility in the future to move to our cloud easily.',
-      cta: {
-        title: 'Download',
-        href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
-        target: '_blank',
-      },
-    },
-    cloud: {
-      title: 'Cloud',
-      description:
-        'Hosted and fully‑managed options for Meilisearch, designed for workflow and business needs.',
-      plans: [
-        {
-          title: 'Dedicated',
-          description: 'For production applications.<br/>Starting from ',
-          tooltip: {
-            cta: '$29/month',
-            text: 'Estimation based on $0.040 per hour.',
-          },
-          keypoints: [
-            'Highly available by default',
-            'Multiple region available',
-            'Up to 128Gb of RAM',
-            'Up to 1TB of storage',
-          ],
-          cta: {
-            title: 'Start now',
-            href: 'https://meilisearch.typeform.com/to/VI2cI2rv',
-            target: '_blank',
-          },
-        },
-        {
-          title: 'Enterprise',
-          description:
-            'Contact our sales team to ask for a fully custom quote.',
-          keypoints: ['Premier support', 'Premium SLA', 'More resources'],
-          cta: {
-            title: 'Contact sales',
-            href: '',
-          },
-        },
-      ],
-    },
-  },
-  pricingAssistant: {
-    preTitle: 'Pricing assistant',
-    title: 'We can help you choose the <strong>right plan</strong>',
-    buttons: {
-      next: 'Next',
-      previous: 'Previous',
-    },
-    steps: [
+    plans: [
       {
-        title: 'What is your <strong>use case</strong>?',
-        multipleChoices: false,
-        name: 'useCase',
-        options: [
-          {
-            title: 'SaaS application',
-            icon: SaasApp,
-            value: 'saas',
-          },
-          {
-            title: 'B2C application',
-            icon: B2CApp,
-            value: 'b2c',
-          },
-          {
-            title: 'Site search',
-            icon: SiteSearch,
-            value: 'site',
-          },
-          {
-            title: 'E-commerce',
-            icon: Ecommerce,
-            value: 'ecommerce',
-          },
-          {
-            title: 'Media',
-            icon: Media,
-            value: 'media',
-          },
-          {
-            title: 'Other',
-            icon: Other,
-            value: 'other',
-          },
-        ],
-      },
-      {
-        title: 'What <strong>features</strong> are you interested in?',
-        subtitle: 'Multiple choice possible',
-        multipleChoices: true,
-        name: 'feature',
-        options: [
-          {
-            title: 'Textual search',
-            icon: TextualSearch,
-            value: 'textual',
-          },
-          {
-            title: 'Geographic filters/sorting',
-            icon: GeographicSearch,
-            value: 'geo',
-          },
-          {
-            title: 'Numeric and/or textual filters/sorting',
-            icon: NumericSorting,
-            value: 'numeric',
-          },
-        ],
-      },
-      {
-        title: 'How many <strong>documents</strong> do you have?',
-        multipleChoices: false,
-        name: 'documentsNumber',
-        options: [
-          {
-            title: '< 100 000',
-            value: 100000,
-          },
-          {
-            title: '100 000 - 500 000',
-            value: 500000,
-          },
-          {
-            title: '500 000 - 1 000 000',
-            value: 1000000,
-          },
-          {
-            title: '1 000 000 - 5 000 000',
-            value: 5000000,
-          },
-          {
-            title: '5 000 000 - 100 000 000',
-            value: 100000000,
-          },
-          {
-            title: '> 100 000 000',
-            value: '100000000+',
-          },
-        ],
-      },
-      {
-        title:
-          'What is the <strong>approximate size</strong> of one of your documents?',
-        multipleChoices: false,
-        name: 'documentApproxSizeInKB',
-        options: [
-          {
-            title: '< 0.5 KB',
-            value: 0.5,
-          },
-          {
-            title: '0.5 KB - 1 KB',
-            value: 1,
-          },
-          {
-            title: '1 KB - 10 KB',
-            value: 10,
-          },
-          {
-            title: '> 10 KB',
-            value: '10+',
-          },
-        ],
-      },
-      {
-        title: 'What <strong>update frequency</strong> do you need?',
-        multipleChoices: false,
-        name: 'updateFrequency',
-        options: [
-          {
-            title: 'Every week',
-            value: 'week',
-          },
-          {
-            title: 'Every day',
-            value: 'day',
-          },
-          {
-            title: 'Every hour',
-            value: 'hour',
-          },
-          {
-            title: 'Every minute',
-            value: 'minute',
-          },
-          {
-            title: 'Continuously',
-            value: 'continuously',
-          },
-        ],
-      },
-    ],
-    recommandations: {
-      title: 'Our recommandation',
-      description: 'Here is the recommended plan based on your business needs.',
-      tryAgain: 'Try again',
-      options: {
-        preTitle: 'Dedicated',
-        perMonth: '/month',
-        estimation: price => `Estimation base on $${price} per hour`,
-        ram: quantity => `${quantity}GB Ram`,
-        cpu: quantity => `${quantity} CPU`,
-        disk: quantity => `${quantity}GB Disk`,
-        description:
-          'We can create the optimal dedicated plan for you.<br/>Contact our sales team to ask for a fully custom quote.',
+        title: 'Build',
+        active: false,
+        fullWidth: false,
+        color: 'colors.hotPink',
+        icon: Code,
+        pricing: '<strong>Free</strong>',
+        planDescription: `
+          <ul>
+          <li><strong>For small projects and testing</strong></li>
+          <li>Fair use policy</li>
+          <li>Up to 100k documents</li>
+          <li>Up to 10k searches per month</li>
+          <li>Shared resources</li>
+          <li>Community (Slack) support</li>
+          </ul>
+        `,
         cta: {
           title: 'Get started',
-          href: 'https://cloud.meilisearch.com/login',
+          href: 'https://cloud.meilisearch.com/register?plan=build',
           target: '_blank',
         },
       },
-      customOption: {
-        preTitle: 'Enterprise',
-        title: 'Custom quote',
-        description:
-          'We can create for you the optimal dedicated plan.<br/>Contact our sales team to ask for a fully custom quote.',
+      {
+        title: 'Pro',
+        active: true,
+        fullWidth: false,
+        color: 'colors.hotPink',
+        icon: Diamond,
+        pricing: '<strong>$1200</strong> /month',
+        planDescription: `
+        <ul>
+        <li><strong>Recommended for production</strong></li>
+        <li>Up to 10M documents</li>
+        <li>Up to 10M searches per month</li>
+        <li>Highly available</li>
+        <li>Dedicated resources</li>
+        <li>Meilisearch team support</li>
+        </ul>
+      `,
         cta: {
-          title: 'Contact sales',
-          href: '',
-          target: '',
+          title: 'Get started',
+          href: 'https://cloud.meilisearch.com/register?plan=pro',
+          target: '_blank',
         },
       },
-    },
+      {
+        title: 'Enterprise',
+        active: false,
+        fullWidth: false,
+        color: 'colors.hotPink',
+        icon: Rocket,
+        pricing: 'Custom quote',
+        planDescription: `
+        <ul>
+        <li><strong>Built for your needs</strong></li>
+        <li>Custom usage-based or resource-based pricing</li>
+        <li>SSO included</li>
+        <li>Dedicated resources</li>
+        <li>Dedicated account manager</li>
+        <li>Premium SLA</li>
+        <li>Highly available</li>
+        </ul>
+      `,
+        cta: {
+          title: 'Contact Sales',
+          href: 'https://cal.com/team/meilisearch/cloud-enterprise',
+          target: '_blank',
+        },
+      },
+      {
+        title: 'Open Source',
+        active: false,
+        fullWidth: true,
+        color: 'colors.dodgerBlue',
+        icon: Puzzle,
+        pricing: '<strong>Free</strong> (self-hosted)',
+        planDescription: `
+        Start using Meilisearch now by downloading our open source version.<br/>You will have the possibility in the future to move to our cloud easily.
+        <br/><br/>
+        Read our <a href="#open-source-vs-cloud">Cloud - Open source comparison guide</a>
+      `,
+        cta: {
+          title: 'Get started',
+          href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
+          target: '_blank',
+        },
+      },
+    ],
   },
   table: {
-    title: 'Features',
+    title: 'Open source vs Cloud',
     tables: [
       {
         thead: ['Search Capabilities', 'Open Source', 'Cloud'],
@@ -432,35 +282,44 @@ const pricingPageData = {
     title: 'FAQs',
     questions: [
       {
-        question: 'What is the best server size for my needs?',
+        question: 'Can I try Meilisearch cloud for free?',
         answer:
-          'The size of the machine you need will depend on many factors. The number of documents, the size of those documents, the number of filters/sorts you will need. If you want to get a quick estimate of how big you can get to start with, get a machine that has at least ten times the disk space of your dataset.',
+          'Yes. We offer a free plan based on fair usage that allows you to index up to 100k documents and perform 10k search requests per month.',
       },
       {
-        question: 'Is Meilisearch cloud highly available?',
+        question: 'What happens if I exceed my plan limits?',
         answer:
-          'Yes, no need to sell you 3 nodes, Meillisearch is highly available by default. It’s totally transparent for you.',
+          'For the time being, we can only rely on fair use. However, you may experience additional latency and response time if you exceed the limits.',
       },
       {
-        question:
-          'I have never used a search engine before. Can I use Meilisearch anyway?',
+        question: 'Is there a minimum term or commitment once I start paying?',
         answer:
-          "Of course! No knowledge of ElasticSearch or Solr is required to use Meilisearch. Meilisearch is really easy to use and thus accessible to all kinds of developers. Take a quick tour to learn the basics of Meilisearch! We also provide a lot of tools, including SDKs, to help you integrate easily Meilisearch in your project. We're adding new tools every day! Plus, you can contact us if you need any help. We will answer for sure!",
+          'There is no minimum term, and users can close their accounts anytime. Users will only be charged for the period during which a project was active. That said, if you’re unhappy with Meilisearch, we’d like to know why. It’s important to us that our users are happy. Please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a> and provide a detailed explanation of what happened. We’ll work with you to ensure you have the best possible experience. To delete your account, navigate to the account settings on your dashboard and click the “Delete your account” button.',
       },
       {
-        question: 'Do I need to configure Meilisearch to get it working?',
+        question: 'How do we accept payment?',
         answer:
-          "Meilisearch configuration works out-of-the-box. It means, by default, Meilisearch configures necessary settings for providing a powerful and relevant search. For example, without requiring any configuration, Meilisearch is typo tolerant. Type \"create an index\" in the documentation search bar to experience the typo tolerance of our search engine. To find out more about the relevancy of Meilisearch, take a look at <a href='https://docs.meilisearch.com/learn/core_concepts/relevancy.html' target='_blank'>this detailed explanation</a>. However, Meilisearch is of course highly customizable in order to adapt the search to your needs by setting synonyms, stop words, and custom ranking rules.",
+          'We only accept payment online via credit cards and charge in US dollars (USD) with Stripe as our payment service provider.',
       },
       {
-        question: 'How to know if Meilisearch perfectly fits my use cases?',
+        question: 'How does billing work?',
         answer:
-          "Since Meilisearch is an open-source and easy-to-use tool, you can give it a try using your data. Follow <a href='https://docs.meilisearch.com/learn/getting_started/quick_start.html' target='_blank'>this guide</a> to get a quick start! Besides, we published <a href='https://docs.meilisearch.com/learn/what_is_meilisearch/comparison_to_alternatives.html' target='_blank'>a comparison between Meilisearch and other search engines</a> with the goal of providing an overview of Meilisearch alternatives.",
+          'We bill per hour spent. We do not provide consumption-based plans. An hour corresponds to one hour of a Meilisearch server or project up and running in the cloud. In addition, while computing the hours, we round up, meaning if a server runs for one hour and five minutes, we will charge for two hours; if it runs for thirty minutes, we will charge for one hour.<br/><br/>Users will be charged at the end of each month based on their invoice(s) value.  It is important to note that the cost for a billing period is displayed excluding local taxes, and we automatically apply taxes to your monthly bill based on your region.<br/><br/> You can view the estimated cost for a billing period of your project(s) on the <a href="https://cloud.meilisearch.com/billing" target="_blank">billing page</a> and access your invoices and receipts by navigating to the “Billing settings” > “Manage billing settings and invoices” > “Invoice History”.',
       },
       {
-        question: 'Which languages can Meilisearch handle?',
+        question: 'Can I change my plan?',
         answer:
-          'Meilisearch works perfectly with English, kanji, and Romance languages. If you have any hesitation about your language handling, please contact us.',
+          "Yes, and it is effortless. You can upgrade a project's plan by selecting the project, navigating to the “Resources” tab, and clicking on the “Change Plan” button. Please remember that once the process is complete, you won't be able to downgrade your plan.",
+      },
+      {
+        question: 'How do I choose the right plan?',
+        answer: `While we provide a free and flexible plan, a rule of thumb is that your plan needs to match your business needs and workload. This means:<br/>
+          <ul>
+            <li>The Build plan is suitable for small businesses or individuals whose needs and workload are within the limit, as this is based on fair usage. When you reach this limit, you can easily scale up by upgrading to the Professional plan with the click of a button.</li>
+            <li>If your workload is beyond the Build plan’s limits, your data needs to be highly available, and your business requires a personalized support experience during business hours, the Professional plan is a better fit.</li>
+            <li>The Enterprise plan is entirely dependent on your use case and expectations. It is a bespoke plan suitable for businesses with unique requirements, such as special support needs or unique use-case.</li>
+          </ul><br/>
+          If you need additional assistance choosing the right plan for your use case, please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a>.`,
       },
     ],
   },

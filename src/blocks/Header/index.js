@@ -32,7 +32,7 @@ const HeaderWrapper = styled.div`
 const Header = props => {
   const router = useRouter()
 
-  const darkBgPages = ['/pricing', '/privacy-policy', '/terms-of-use']
+  const darkBgPages = ['/privacy-policy', '/terms-of-use']
   const hasDarkBgColor = darkBgPages.includes(router.asPath)
   const banner = headerData?.banner?.title
 

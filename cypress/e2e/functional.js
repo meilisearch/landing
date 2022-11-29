@@ -55,9 +55,8 @@ describe(`Functional tests`, () => {
     it('Should have blocks', () => {
       cy.get('[data-cy="header"]').should('be.visible')
       cy.get('[data-cy="pricingHero"]').should('be.visible')
-      cy.get('[data-cy="pricingCards"]').should('be.visible')
-      cy.get('[data-cy="pricingTable"]').should('be.visible')
-      cy.get('[data-cy="pricingAssistant"]').should('be.visible')
+      cy.get('[data-cy="pricingPlans"]').should('be.visible')
+      cy.get('[data-cy="comparativeTable"]').should('be.visible')
       cy.get('[data-cy="pricingFaq"]').should('be.visible')
       cy.get('[data-cy="footer"]').should('be.visible')
     })

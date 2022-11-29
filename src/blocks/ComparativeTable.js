@@ -4,9 +4,10 @@ import get from 'utils/get'
 import Typography from 'components/Typography'
 import Grid from 'components/Grid'
 import TableComponent from 'components/Table'
+import Anchor from 'components/Anchor'
 
 const TableSection = styled.section`
-  background-color: ${get('colors.valhalla')};
+  background-color: ${get('colors.valhalla.700')};
   padding: 60px 16px 72px;
   color: ${get('colors.white')};
   margin: 0 -16px;
@@ -102,11 +103,12 @@ const Decorator2 = styled.div`
   }
 `
 
-const Table = ({ table, ...props }) => {
+const ComparativeTable = ({ table, ...props }) => {
   return (
     <TableSection {...props}>
       <Grid style={{ position: 'relative' }}>
         <Content>
+          <Anchor id="open-source-vs-cloud" />
           <Title variant="title.m" forwardedAs="h2">
             {table.title}
           </Title>
@@ -123,4 +125,4 @@ const Table = ({ table, ...props }) => {
   )
 }
 
-export default Table
+export default ComparativeTable

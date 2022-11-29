@@ -10,7 +10,7 @@ const Table = styled.table`
   border-radius: 8px;
   border: 1px solid ${get('colors.valhalla.400')};
   padding: 12px 12px 0 12px;
-  background-color: ${get('colors.valhalla.700')};
+  background-color: ${get('colors.valhalla')};
   display: table;
   border-spacing: 0;
 
