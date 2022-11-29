@@ -20,7 +20,7 @@ import {
   SortBy,
   Wrench,
   Github,
-  Slack,
+  Discord,
   Roadmap,
   Ruby,
   Javascript,
@@ -58,8 +58,8 @@ const homepageData = {
     mobileBackground: '/images/hero-mobile.svg',
     desktopBackground: '/images/hero-desktop.svg',
     cta1: {
-      title: 'Join our Slack',
-      url: 'https://slack.meilisearch.com/',
+      title: 'Join our Discord',
+      url: 'https://discord.gg/meilisearch',
       target: '_blank',
     },
     cta2: {
@@ -445,15 +445,15 @@ const homepageData = {
       },
       {
         color: get('colors.lila'),
-        icon: Slack,
+        icon: Discord,
         title: {
-          name: 'Slack',
+          name: 'Discord',
           translate: false,
         },
         description: 'Join us on our team chat and ask questions!',
         cta: {
           title: 'Join the discussion',
-          href: 'https://slack.meilisearch.com/',
+          href: 'https://discord.gg/meilisearch',
           target: '_blank',
         },
       },
