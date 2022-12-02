@@ -265,8 +265,8 @@ const homepageData = {
         image: '/images/step3-2.svg',
         mobileImage: '/images/step3-2-mobile.svg',
         cta: {
-          title: 'Apply for the beta',
-          url: 'https://meilisearch.typeform.com/to/VI2cI2rv',
+          title: 'Try the Cloud',
+          url: 'https://cloud.meilisearch.com',
           target: '_blank',
         },
       },
