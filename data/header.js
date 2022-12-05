@@ -74,10 +74,12 @@ const headerData = {
   cta1: {
     title: 'Get Started',
     href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
+    target: '_blank',
   },
   cta2: {
     title: 'Login',
     href: 'https://cloud.meilisearch.com',
+    target: '_blank',
   },
 }
 

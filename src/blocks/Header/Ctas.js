@@ -22,11 +22,13 @@ const Ctas = ({ headerProps, ...props }) => {
         href={cta1.href}
         color={get('colors.hotPink')}
         variant="secondary"
+        target={cta1.target}
       >
         <Typography variant="body.s.bold">{cta1.title}</Typography>
       </Button>
       <Button
         href={cta2.href}
+        target={cta2.target}
         color={get('colors.hotPink')}
         style={{ marginLeft: 24 }}
       >
