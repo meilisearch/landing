@@ -72,12 +72,12 @@ const headerData = {
     },
   ],
   cta1: {
-    title: 'Join the Cloud beta',
-    href: 'https://meilisearch.typeform.com/to/VI2cI2rv',
-  },
-  cta2: {
     title: 'Get Started',
     href: 'https://docs.meilisearch.com/learn/getting_started/quick_start.html',
+  },
+  cta2: {
+    title: 'Login',
+    href: 'https://cloud.meilisearch.com',
   },
 }
 
