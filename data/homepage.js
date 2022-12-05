@@ -261,7 +261,7 @@ const homepageData = {
       secondSection: {
         title: 'Cloud',
         description:
-          'Need to go fast? Meilisearch Cloud takes care of everything so you just have to focus on the most important thing: making sure your users have a great search experience.<br/><br/>Enter the waiting list for our Cloud beta by completing the form linked below.',
+          'Need to go fast? Meilisearch Cloud takes care of everything so you just have to focus on the most important thing: making sure your users have a great search experience.',
         image: '/images/step3-2.svg',
         mobileImage: '/images/step3-2-mobile.svg',
         cta: {
