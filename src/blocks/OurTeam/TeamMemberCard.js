@@ -52,6 +52,7 @@ const TeamMemberCard = ({ teamMember }) => (
         src={teamMember.image}
         layout="fill"
         alt={`${teamMember.name} - ${teamMember.position}`}
+        loading="eager"
       />
     </ImageContainer>
     <TeamMemberInfos>
