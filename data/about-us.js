@@ -240,144 +240,214 @@ const aboutUsData = {
     title: 'Our team',
     teamMembers: [
       {
-        name: 'Morgane 🇫🇷',
+        name: 'Alexia 🇫🇷',
         position: 'Software Engineer',
-        image: '/images/teamMembers/morgane-dubus.png',
+        image: '/images/teamMembers/alexia.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Morgane-Dubus-e5761f4ddd604954ba1a5ed74c309339',
+          'https://www.notion.so/meilisearch/Alexia-Toulmet-e26b3fc562614d0c9285225c7c221470',
+      },
+      {
+        name: 'Amélie 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/amelie.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+      },
+      {
+        name: 'Bruno 🇧🇷',
+        position: 'Software Engineer Manager',
+        image: '/images/teamMembers/bruno.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Bruno-Casali-49a83569f1e54ba1b3276e257ff4d165',
+      },
+      {
+        name: 'Carolina 🇫🇷',
+        position: 'Developer Advocate',
+        image: '/images/teamMembers/carolina.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Carolina-Ferreira-07304e47bf314162a0ac3a9d676124df',
+      },
+      {
+        name: 'Charline 🇫🇷',
+        position: 'Product Designer',
+        image: '/images/teamMembers/charline.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Charline-Moncoucut-e72b480f84134ac9bd8b620118de72f6',
+      },
+      {
+        name: 'Charlotte 🇫🇷',
+        position: 'Software Engineer',
+        image: '/images/teamMembers/charlotte.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Charlotte-Vermandel-47949ba0d1144f7584401c33ecce9844',
+      },
+      {
+        name: 'Clémentine 🇫🇷',
+        position: 'Software Engineer Manager',
+        image: '/images/teamMembers/clementine.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Cl-mentine-Urquizar-90214cbb5f1e4fa583546c7ed2be1362',
+      },
+      {
+        name: 'Dave 🇮🇪',
+        position: 'Product Manager',
+        image: '/images/teamMembers/dave.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Dave-Larkan-b049ebf78edb4138b43cf84e031542cd',
+      },
+      {
+        name: 'Ferdinand 🇫🇷',
+        position: 'Head of Developer Relations',
+        image: '/images/teamMembers/ferdinand.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Ferdinand-Boas-5917879a5d75449997d8b481bf11990b',
+      },
+      {
+        name: 'Gui 🇮🇹',
+        position: 'Technical Content Writer',
+        image: '/images/teamMembers/gui.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Gui-Machiavelli-611f419fcd7b4b708326e181d9151054',
+      },
+      {
+        name: 'Guillaume 🇫🇷',
+        position: 'Product Manager',
+        image: '/images/teamMembers/guillaume.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Guillaume-Mourier-8ab6465c4e0249debd20367f84370839',
+      },
+      {
+        name: 'Ingrid 🇫🇷',
+        position: 'Talent Acquisition Manager',
+        image: '/images/teamMembers/ingrid.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Ingrid-Hazan-c91c296583e44f4aba11c83a44eb4828',
+      },
+      {
+        name: 'Jonathan 🇫🇷',
+        position: 'Senior Software Engineer',
+        image: '/images/teamMembers/jonathan.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Jonathan-Landicheff-d75d6a3bb87645d78b8317dca6e87504',
+      },
+      {
+        name: 'Kero 🇫🇷',
+        position: 'Co-founder & CTO',
+        image: '/images/teamMembers/kero.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Cl-ment-Renault-kero-3ae8be622c4e4a11a05ae7159317398a',
+      },
+      {
+        name: 'Laurène 🇫🇷',
+        position: 'Employee Experience Manager',
+        image: '/images/teamMembers/laurene.png',
+        linkToPublicNotionPage:
+          'https://www.notion.so/meilisearch/Laur-ne-Gibaud-4010db44b2b04ff098010f069b6ca8e8',
       },
       {
         name: 'Léna 🇫🇷',
         position: 'Product Designer',
-        image: '/images/teamMembers/lena-pinot.png',
+        image: '/images/teamMembers/lena.png',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/L-na-Pinot-4c3b4219b0ce4818bca96502bcc9433e',
       },
       {
-        name: 'Amélie 🇫🇷',
+        name: 'Loïc 🇳🇱',
         position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        image: '/images/teamMembers/loic.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Lo-c-Lecrenier-d7d385438fa544f8aa9d0a1736a41897',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Louis 🇫🇷',
+        position: 'Senior Software Engineer',
+        image: '/images/teamMembers/louis.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Louis-Dureuil-4fd2c6ef6cc148b88511811130296333',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Luna 🇫🇷',
+        position: 'Lead Community Developer',
+        image: '/images/teamMembers/luna.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Luna-Ferraraccio-582c787ee29a449f90ca8084d61f6200',
       },
       {
-        name: 'Amélie 🇫🇷',
+        name: 'Many 🇫🇷',
         position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        image: '/images/teamMembers/many.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Maxime-Legendre-ManyTheFish-b1d14140cfc74772ac75af9f4af5337d',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Maryam 🇴🇲',
+        position: 'Technical Content Writer',
+        image: '/images/teamMembers/maryam.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Maryam-Sulemani-ecc4bc4a23f54cd58c9b299f9eb64478',
       },
       {
-        name: 'Amélie 🇫🇷',
+        name: 'Morgane 🇫🇷',
         position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        image: '/images/teamMembers/morgane-d.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Morgane-Dubus-e5761f4ddd604954ba1a5ed74c309339',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Morgane 🇫🇷',
+        position: 'Human Resources Manager',
+        image: '/images/teamMembers/morgane-n.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Morgane-Neff-ce9c8e7d86ab46a6bdd64b3164bbec25',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Nicolas 🇫🇷',
+        position: 'Team Lead',
+        image: '/images/teamMembers/nico.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Nicolas-Vi-not-2652210cff774133a8d2562e0e4605f8',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Oluwaseyi 🇳🇬',
+        position: 'Support Engineer',
+        image: '/images/teamMembers/olu.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Oluwaseyi-Ademola-362e72dee0dd4286a32aa909fa66bef5',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Quentin 🇫🇷',
+        position: 'Co-founder & CEO',
+        image: '/images/teamMembers/quentin.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Quentin-de-Quelen-83330823aff145edaa65b2da3d530546',
       },
       {
-        name: 'Amélie 🇫🇷',
+        name: 'Samuel 🇫🇷',
         position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        image: '/images/teamMembers/sam.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Samuel-Jimenez-e7cb34e9158243e79c0cc335be5365cd',
       },
       {
-        name: 'Amélie 🇫🇷',
+        name: 'Tamo 🇫🇷',
         position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        image: '/images/teamMembers/tamo.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Tamo-41f6efcf8234424bb37e1addf3487b9f',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Thomas 🇫🇷',
+        position: 'Co-founder & COO',
+        image: '/images/teamMembers/thomas.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Thomas-Payet-ac2c60b1e79e4eff91321450aedaf80e',
       },
       {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
+        name: 'Tommy 🇫🇷',
+        position: 'Documentation Team Manager',
+        image: '/images/teamMembers/tommy.png',
         linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
-      },
-      {
-        name: 'Amélie 🇫🇷',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/amelie-lallemand.png',
-        linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
-      },
-      {
-        name: '4',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/4.png',
-        linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
-      },
-      {
-        name: '5',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/5.png',
-        linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
-      },
-      {
-        name: '6',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/6.png',
-        linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Am-lie-Lallemand-4e886881e90141bbbf9bde3b979d931c',
+          'https://www.notion.so/meilisearch/Tommy-Melvin-ca8f49a658fd4c89ae16b8274f433b62',
       },
     ],
   },
