@@ -92,7 +92,7 @@ const aboutUsData = {
     ],
   },
   investors: {
-    preTitle: 'Lorem Ipsum', // TODO : Update with text
+    preTitle: 'Trusted by great companies',
     title: 'Our investors',
     description: 'We are proudly backed by some of the world’s best investors.',
     list: [
