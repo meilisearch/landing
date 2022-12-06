@@ -20,7 +20,7 @@ const aboutUsData = {
   ourStory: {
     preTitle: 'meilisearch Milestones',
     title: 'Our story',
-    image: '/images/timeline.svg',
+    image: '/images/timeline.png',
   },
   values: {
     preTitle: 'What drives us',
