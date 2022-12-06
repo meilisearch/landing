@@ -108,9 +108,9 @@ const SecondaryGrid = styled(Grid)`
   }
 `
 
-const Values = ({ values }) => {
+const Values = ({ values, ...props }) => {
   return (
-    <Section>
+    <Section {...props}>
       <Grid>
         <Content>
           <PreTitle preTitle={values.preTitle} color={get('colors.hotPink')} />

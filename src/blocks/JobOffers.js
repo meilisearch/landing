@@ -114,7 +114,7 @@ const JobList = ({ loading, jobOffersList, jobOffers }) => {
   ))
 }
 
-const JobOffers = ({ jobOffers }) => {
+const JobOffers = ({ jobOffers, ...props }) => {
   const [loading, setLoading] = React.useState(true)
   const [jobOffersList, setJobOffersList] = React.useState([])
 
@@ -134,7 +134,7 @@ const JobOffers = ({ jobOffers }) => {
   }, [])
 
   return (
-    <Section>
+    <Section {...props}>
       <Grid>
         <TitleSection>
           <PreTitle

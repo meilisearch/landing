@@ -113,7 +113,7 @@ const Cta = styled(Button)`
   }
 `
 
-const PerksAndBenefits = ({ perksAndBenefits }) => {
+const PerksAndBenefits = ({ perksAndBenefits, ...props }) => {
   const { benefits, preTitle, title, description, loadMore, loadLess } =
     perksAndBenefits
   const { width: windowWidth } = useWindowSize()
@@ -125,7 +125,7 @@ const PerksAndBenefits = ({ perksAndBenefits }) => {
   )
 
   return (
-    <Section>
+    <Section {...props}>
       <Grid>
         <FirstRow>
           <PreTitle color={get('colors.hotPink')} preTitle={preTitle} />

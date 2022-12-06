@@ -100,9 +100,9 @@ const Grid = styled(BaseGrid)`
   }
 `
 
-const Investors = ({ investors }) => {
+const Investors = ({ investors, ...props }) => {
   return (
-    <Section>
+    <Section {...props}>
       <TextSection>
         <PreTitle color={get('colors.hotPink')} preTitle={investors.preTitle} />
         <Title variant="title.m" forwardedAs="h2">

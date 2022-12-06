@@ -61,9 +61,9 @@ const ImageResponsiveness = styled.div`
   }
 `
 
-const OurStory = ({ ourStory }) => {
+const OurStory = ({ ourStory, ...props }) => {
   return (
-    <Section>
+    <Section {...props}>
       <Grid>
         <Content>
           <PreTitle
