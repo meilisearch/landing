@@ -47,7 +47,7 @@ const Carousel1 = styled(TeamMemberList)`
 `
 
 const Carousel2 = styled(TeamMemberList)`
-  margin-top: margin-top: 42px;
+  margin-top: 42px;
   @media (min-width: ${get('breakpoints.md')}) {
     margin-top: 56px;
   }
