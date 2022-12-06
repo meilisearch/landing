@@ -67,12 +67,12 @@ const Carousel = styled.div`
   ${p =>
     p.$dir === 'ltr' &&
     css`
-      animation: ${scrollLeftToRight} 25s linear infinite;
+      animation: ${scrollLeftToRight} 50s linear infinite;
     `}
   ${p =>
     p.$dir === 'rtl' &&
     css`
-      animation: ${scrollRightToLeft} 25s linear infinite;
+      animation: ${scrollRightToLeft} 50s linear infinite;
     `}
 
   // Number of cards * width + gutter
@@ -185,6 +185,17 @@ const OurTeam = ({ ourTeam }) => {
     ourTeam.teamMembers.length
   )
 
+  // Duplicate the lists in order to fake an infinite loop
+  const carouselList1 = React.useMemo(
+    () => [...carousel1, ...carousel1],
+    [carousel1]
+  )
+
+  const carouselList2 = React.useMemo(
+    () => [...carousel2, ...carousel2],
+    [carousel2]
+  )
+
   return (
     <Section>
       <Grid>
@@ -193,8 +204,8 @@ const OurTeam = ({ ourTeam }) => {
           <Title variant="title.m">{ourTeam.title}</Title>
         </Content>
       </Grid>
-      <Carousel1 carousel={carousel1} dir="rtl" />
-      <Carousel2 carousel={carousel2} dir="ltr" />
+      <Carousel1 carousel={carouselList1} dir="rtl" />
+      <Carousel2 carousel={carouselList2} dir="ltr" />
     </Section>
   )
 }
