@@ -117,7 +117,7 @@ describe(`Functional tests`, () => {
     })
 
     it('Should have blocks', () => {
-      cy.get('[data-cy="AboutUsHero"]').should('be.visible')
+      cy.get('[data-cy="aboutUsHero"]').should('be.visible')
       cy.get('[data-cy="ourTeam"]').should('be.visible')
       cy.get('[data-cy="ourStory"]').should('be.visible')
       cy.get('[data-cy="values"]').should('be.visible')

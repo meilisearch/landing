@@ -28,9 +28,9 @@ const Title = styled(Typography)`
   }
 `
 
-const AboutUsHero = ({ hero }) => {
+const AboutUsHero = ({ hero, ...props }) => {
   return (
-    <AboutUsHeroGrid>
+    <AboutUsHeroGrid {...props}>
       <Title
         variant="title.l"
         dangerouslySetInnerHTML={{ __html: hero.title }}

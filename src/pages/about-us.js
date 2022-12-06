@@ -26,7 +26,7 @@ const AboutUs = () => {
     <>
       <Head meta={meta} />
       <PageContent>
-        <AboutUsHero hero={hero} data-cy="AboutUsHero" />
+        <AboutUsHero hero={hero} data-cy="aboutUsHero" />
         <OurTeam ourTeam={ourTeam} data-cy="ourTeam" />
         <OurStory ourStory={ourStory} data-cy="ourStory" />
         <Values values={values} data-cy="values" />

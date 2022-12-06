@@ -56,7 +56,7 @@ const Carousel2 = styled(TeamMemberList)`
   }
 `
 
-const OurTeam = ({ ourTeam }) => {
+const OurTeam = ({ ourTeam, ...props }) => {
   const [carousel1, setCarousel1] = React.useState([])
   const [carousel2, setCarousel2] = React.useState([])
 
@@ -73,7 +73,7 @@ const OurTeam = ({ ourTeam }) => {
   }, [ourTeam.teamMembers])
 
   return (
-    <Section>
+    <Section {...props}>
       <Grid>
         <Content>
           <PreTitle color={get('colors.hotPink')} preTitle={ourTeam.preTitle} />
