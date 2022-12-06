@@ -67,12 +67,12 @@ const Carousel = styled.div`
   ${p =>
     p.$dir === 'ltr' &&
     css`
-      animation: ${scrollLeftToRight} 10s linear infinite;
+      animation: ${scrollLeftToRight} 25s linear infinite;
     `}
   ${p =>
     p.$dir === 'rtl' &&
     css`
-      animation: ${scrollRightToLeft} 10s linear infinite;
+      animation: ${scrollRightToLeft} 25s linear infinite;
     `}
 
   // Number of cards * width + gutter
