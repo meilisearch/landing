@@ -12,7 +12,6 @@ import {
 import PageContent from 'components/PageContent'
 
 const AboutUs = () => {
-  // TODO : Add tests
   const {
     meta,
     hero,
@@ -27,13 +26,16 @@ const AboutUs = () => {
     <>
       <Head meta={meta} />
       <PageContent>
-        <AboutUsHero hero={hero} />
-        <OurTeam ourTeam={ourTeam} />
-        <OurStory ourStory={ourStory} />
-        <Values values={values} />
-        <PerksAndBenefits perksAndBenefits={perksAndBenefits} />
-        <Investors investors={investors} />
-        <JobOffers jobOffers={jobOffers} />
+        <AboutUsHero hero={hero} data-cy="AboutUsHero" />
+        <OurTeam ourTeam={ourTeam} data-cy="ourTeam" />
+        <OurStory ourStory={ourStory} data-cy="ourStory" />
+        <Values values={values} data-cy="values" />
+        <PerksAndBenefits
+          perksAndBenefits={perksAndBenefits}
+          data-cy="perksAndBenefits"
+        />
+        <Investors investors={investors} data-cy="investors" />
+        <JobOffers jobOffers={jobOffers} data-cy="jobOffers" />
       </PageContent>
     </>
   )
