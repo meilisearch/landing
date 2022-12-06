@@ -236,7 +236,7 @@ const aboutUsData = {
     loadLess: 'Load less benefits',
   },
   ourTeam: {
-    preTitle: 'Lorem Ipsum',
+    preTitle: 'Meili amazing crew',
     title: 'Our team',
     teamMembers: [
       {
