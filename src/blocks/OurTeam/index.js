@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import PreTitle from 'components/PreTitle'
 import Grid from 'components/Grid'
-import get from 'utils/get'
 import Typography from 'components/Typography'
 import shuffle from 'utils/shuffle'
+import get from 'utils/get'
 import TeamMemberList from './TeamMemberList'
 
 const Section = styled.section`
