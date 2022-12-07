@@ -1,8 +1,8 @@
+import styled from 'styled-components'
 import BaseLink from 'components/Link'
 import Image from 'components/Image'
-import styled from 'styled-components'
-import get from 'utils/get'
 import Typography from 'components/Typography'
+import get from 'utils/get'
 
 const ImageContainer = styled(BaseLink)`
   display: block;
