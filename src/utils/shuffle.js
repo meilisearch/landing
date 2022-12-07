@@ -1,12 +1,12 @@
-const shuffle = array => {
-  let shuffleArray = [...array]
-  for (let i = shuffleArray.length - 1; i > 0; i--) {
+const shuffleArray = array => {
+  let shuffledArray = [...array]
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    const temp = shuffleArray[i]
-    shuffleArray[i] = shuffleArray[j]
-    shuffleArray[j] = temp
+    const temp = shuffledArray[i]
+    shuffledArray[i] = shuffleArray[j]
+    shuffledArray[j] = temp
   }
-  return shuffleArray
+  return shuffledArray
 }
 
-export default shuffle
+export default shuffleArray
