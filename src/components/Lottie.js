@@ -30,10 +30,9 @@ const LottieAnimation = ({
       options={lottieOptions}
       height="100%"
       width="100%"
-      ariaRole={null}
       ariaLabel={ariaLabel}
       tabIndex={-1}
-      className={hideInPercy && 'hide-in-percy'}
+      className={hideInPercy ? 'hide-in-percy' : undefined}
       {...props}
     />
   )
