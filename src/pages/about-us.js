@@ -1,4 +1,5 @@
 import Head from 'components/Head'
+import PageContent from 'components/PageContent'
 import aboutUsData from '../../data/about-us'
 import {
   AboutUsHero,
@@ -9,7 +10,6 @@ import {
   PerksAndBenefits,
   OurTeam,
 } from 'blocks'
-import PageContent from 'components/PageContent'
 
 const AboutUs = () => {
   const {
