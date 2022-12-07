@@ -26,6 +26,8 @@ const Section = styled.section`
 
 const Content = styled.div`
   grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
 `
 
 const Title = styled(Typography)`

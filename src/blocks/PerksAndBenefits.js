@@ -23,6 +23,8 @@ const Section = styled.section`
 `
 
 const FirstRow = styled.div`
+  display: flex;
+  flex-direction: column;
   grid-column: 1 / -1;
   @media (min-width: ${get('breakpoints.md')}) {
     grid-column: 1 / 9;
