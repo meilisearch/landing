@@ -1,9 +1,9 @@
-import PreTitle from 'components/PreTitle'
-import BaseGrid from 'components/Grid'
 import React from 'react'
 import styled from 'styled-components'
-import get from 'utils/get'
+import PreTitle from 'components/PreTitle'
+import BaseGrid from 'components/Grid'
 import Typography from 'components/Typography'
+import get from 'utils/get'
 
 const Section = styled.section`
   background-color: ${get('colors.valhalla.700')};
