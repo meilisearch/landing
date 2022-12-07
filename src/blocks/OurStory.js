@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import PreTitle from 'components/PreTitle'
 import Grid from 'components/Grid'
-import get from 'utils/get'
 import Typography from 'components/Typography'
 import Image from 'components/Image'
+import get from 'utils/get'
 
 const SpecificGrid = styled(Grid)`
 @media (max-width: ${get('breakpoints.md')}) {
