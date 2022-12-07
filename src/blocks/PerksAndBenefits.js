@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import PreTitle from 'components/PreTitle'
 import Grid from 'components/Grid'
-import get from 'utils/get'
 import Button from 'components/Button'
 import Typography from 'components/Typography'
 import BaseCard from 'components/Card'
 import useWindowSize from 'hooks/useWindowSize'
 import isBreakpointSmaller from 'utils/isBreakpointSmaller'
+import get from 'utils/get'
 
 const Section = styled.section`
   padding: 72px 0;
