@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import PreTitle from 'components/PreTitle'
 import Grid from 'components/Grid'
-import get from 'utils/get'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
 import Card from 'components/Card'
+import get from 'utils/get'
 import hexToRgb from 'utils/hexToRgb'
 
 const Section = styled.section`
