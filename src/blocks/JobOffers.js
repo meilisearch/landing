@@ -5,7 +5,7 @@ import Grid from 'components/Grid'
 import Typography from 'components/Typography'
 import Button from 'components/Button'
 import Tag from 'components/Tag'
-import BaseCard from 'components/Card'
+import Card from 'components/Card'
 import get from 'utils/get'
 
 const Section = styled.section`
@@ -49,7 +49,7 @@ const SmallSection = styled.div`
   }
 `
 
-const Card = styled(BaseCard)`
+const JobOfferCard = styled(Card)`
   color: white;
   grid-column: 1/-1;
   margin-top: 24px;
@@ -76,7 +76,7 @@ const List = styled(Grid)`
 `
 
 const NoJobOffer = ({ jobOffers: { noJobOffer } }) => (
-  <Card style={{ backgroundColor: get('colors.valhalla.700') }}>
+  <JobOfferCard style={{ backgroundColor: get('colors.valhalla.700') }}>
     <Typography variant="title.xs">{noJobOffer.title}</Typography>
     <Typography variant="body.s.default">{noJobOffer.description}</Typography>
     <Cta
@@ -87,11 +87,11 @@ const NoJobOffer = ({ jobOffers: { noJobOffer } }) => (
     >
       <Typography variant="body.s.bold">{noJobOffer.cta.title}</Typography>
     </Cta>
-  </Card>
+  </JobOfferCard>
 )
 
 const JobOffer = ({ readMore, job }) => (
-  <Card style={{ backgroundColor: get('colors.valhalla.700') }}>
+  <JobOfferCard style={{ backgroundColor: get('colors.valhalla.700') }}>
     <Tag color="colors.hotPink">{job.categories.team}</Tag>
     <Typography variant="title.xs">{job.text}</Typography>
     <Cta
@@ -102,7 +102,7 @@ const JobOffer = ({ readMore, job }) => (
     >
       <Typography variant="body.s.bold">{readMore}</Typography>
     </Cta>
-  </Card>
+  </JobOfferCard>
 )
 
 const JobList = ({ loading, jobOffersList, jobOffers }) => {

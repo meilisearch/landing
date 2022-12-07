@@ -6,7 +6,7 @@ import Typography from 'components/Typography'
 import Image from 'components/Image'
 import get from 'utils/get'
 
-const SpecificGrid = styled(Grid)`
+const NoMaxWidthGrid = styled(Grid)`
 @media (max-width: ${get('breakpoints.md')}) {
   max-width: unset;
 `
@@ -75,7 +75,7 @@ const OurStory = ({ ourStory, ...props }) => {
           </Title>
         </Content>
       </Grid>
-      <SpecificGrid>
+      <NoMaxWidthGrid>
         <ImageContainer>
           <ImageResponsiveness>
             <Image
@@ -87,7 +87,7 @@ const OurStory = ({ ourStory, ...props }) => {
             />
           </ImageResponsiveness>
         </ImageContainer>
-      </SpecificGrid>
+      </NoMaxWidthGrid>
     </Section>
   )
 }

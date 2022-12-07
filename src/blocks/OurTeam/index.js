@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PreTitle from 'components/PreTitle'
 import Grid from 'components/Grid'
 import Typography from 'components/Typography'
-import shuffle from 'utils/shuffle'
+import shuffleArray from 'utils/shuffleArray'
 import get from 'utils/get'
 import TeamMemberList from './TeamMemberList'
 
@@ -63,7 +63,7 @@ const OurTeam = ({ ourTeam, ...props }) => {
   const [carousel2, setCarousel2] = React.useState([])
 
   React.useEffect(() => {
-    const shuffledPeople = shuffle(ourTeam.teamMembers)
+    const shuffledPeople = shuffleArray(ourTeam.teamMembers)
     const personsPerCarousel = Math.ceil(ourTeam.teamMembers.length / 2)
     const tempCarousel1 = shuffledPeople.slice(0, personsPerCarousel)
     const tempCarousel2 = shuffledPeople.slice(
