@@ -82,8 +82,8 @@ const OurTeam = ({ ourTeam, ...props }) => {
           <Title variant="title.m">{ourTeam.title}</Title>
         </Content>
       </Grid>
-      <Carousel1 carousel={carousel1} dir="rtl" />
-      <Carousel2 carousel={carousel2} dir="ltr" />
+      <Carousel1 carousel={carousel1} dir="rtl" className="hide-in-percy" />
+      <Carousel2 carousel={carousel2} dir="ltr" className="hide-in-percy" />
     </Section>
   )
 }
