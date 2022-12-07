@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Typography from './Typography'
 import get from 'utils/get'
 import hexToRgb from 'utils/hexToRgb'
+import Typography from './Typography'
 
 const TagWrapper = styled.div`
   color: ${get('colors.ashes')};
