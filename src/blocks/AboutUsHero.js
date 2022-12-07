@@ -1,7 +1,7 @@
-import Grid from 'components/Grid'
-import Typography from 'components/Typography'
 import React from 'react'
 import styled from 'styled-components'
+import Grid from 'components/Grid'
+import Typography from 'components/Typography'
 import get from 'utils/get'
 
 const AboutUsHeroGrid = styled(Grid)`
