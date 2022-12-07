@@ -26,7 +26,7 @@ const Carousel = styled.div`
   grid-template-columns: repeat(${p => p.$nbSlides}, 1fr);
   grid-gap: 0 26px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   &:hover {
     animation-play-state: paused;
   }
