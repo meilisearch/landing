@@ -103,4 +103,27 @@ describe(`Functional tests`, () => {
       cy.url().should('match', new RegExp(Cypress.config('baseUrl')))
     })
   })
+
+  context('about us page', () => {
+    beforeEach(() => {
+      cy.visit('/about-us')
+    })
+
+    it('Should visit the about us page', () => {
+      cy.url().should(
+        'match',
+        new RegExp(`${Cypress.config('baseUrl')}/about-us`)
+      )
+    })
+
+    it('Should have blocks', () => {
+      cy.get('[data-cy="aboutUsHero"]').should('be.visible')
+      cy.get('[data-cy="ourTeam"]').should('be.visible')
+      cy.get('[data-cy="ourStory"]').should('be.visible')
+      cy.get('[data-cy="values"]').should('be.visible')
+      cy.get('[data-cy="perksAndBenefits"]').should('be.visible')
+      cy.get('[data-cy="investors"]').should('be.visible')
+      cy.get('[data-cy="jobOffers"]').should('be.visible')
+    })
+  })
 })

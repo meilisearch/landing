@@ -24,3 +24,9 @@ export const LongText = Template.bind({})
 LongText.args = {
   children: '$0.0000000000042/hr',
 }
+
+export const OtherColor = Template.bind({})
+OtherColor.args = {
+  children: '$0.042/hr',
+  color: 'colors.hotPink',
+}
