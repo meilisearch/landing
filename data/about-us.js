@@ -15,7 +15,7 @@ const aboutUsData = {
   },
   hero: {
     title:
-      '<strong>Meilisearch</strong> is a french startup 🇫🇷 created in 2018 🎂 that just sealed a $15M series A round 💸, and has a 25+ worldwide-based team 🌍 committed to shaping the best search experience 🔍 ever made 🎉.',
+      '<strong>Meilisearch</strong> is a French startup 🇫🇷 created in 2018 🎂 that just sealed a $15M series A round 💸, and has a 25+ worldwide-based team 🌍 committed to shaping the best search experience ever made 🔍 🎉',
   },
   ourStory: {
     preTitle: 'meilisearch Milestones',
@@ -161,7 +161,7 @@ const aboutUsData = {
     benefits: [
       {
         icon: '🗓',
-        title: '4 days work week',
+        title: '4-day work week',
         description:
           'Work-life balance is important to us. We work from Monday to Thursday: Fridays are yours to do as you wish!',
       },
@@ -175,19 +175,19 @@ const aboutUsData = {
         icon: '🏠',
         title: 'Remote friendly',
         description:
-          '80% of our team is fully remote, others opt to work from the office. We reimburse coworking spaces and cafes fees.',
+          '80% of our team is fully remote, others opt to work from the office. We reimburse coworking spaces and cafe fees.',
       },
       {
         icon: '🏝',
         title: 'Time off',
         description:
-          'We offer 6 weeks of paid time off for a full year to all our employees — and ping you until you take it all!',
+          'We offer six weeks of paid time off per full year to all our employees — and ping you until you take it all!',
       },
       {
         icon: '🍼',
         title: 'Parental leave',
         description:
-          'We give 3 months of fully paid leave to new and adopting parents: your job will be there for you when you get back.',
+          'We give three months of fully-paid leave to new and adopting parents: your job will be there for you when you get back.',
       },
       {
         icon: '❤️',
@@ -211,13 +211,13 @@ const aboutUsData = {
         icon: '☀️',
         title: 'Mental health',
         description:
-          'Mental health is fundamental to us. We provide confidential individual support to any team member who wants to.',
+          'Mental health is fundamental to us. We provide confidential individual support to any team member who wants it.',
       },
       {
         icon: '💰',
         title: 'Stock options',
         description:
-          'As our team members make the success of Meilisearch, we trust stock options to all long-term employees.',
+          'As our team members are responsible for the success of Meilisearch, we entrust stock options to all long-term employees.',
       },
       {
         icon: '📈',
@@ -229,14 +229,14 @@ const aboutUsData = {
         icon: '💡',
         title: 'Open source support',
         description:
-          'As an open source company, we allot a monthly stipend to the support of your favorite open source softwares.',
+          'As an open source company, we allot a monthly stipend to the support of your favorite open source software.',
       },
     ],
     loadMore: 'Load more benefits',
     loadLess: 'Load less benefits',
   },
   ourTeam: {
-    preTitle: 'Meili amazing crew',
+    preTitle: 'Meili\'s amazing crew',
     title: 'Our team',
     teamMembers: [
       {
