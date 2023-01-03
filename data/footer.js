@@ -116,7 +116,7 @@ const footerData = {
       ],
     },
   ],
-  copyright: '©2022 Meilisearch - All rights reserved.',
+  copyright: `©${new Date().getFullYear()} Meilisearch - All rights reserved.`,
   socials: [
     {
       icon: Github,
