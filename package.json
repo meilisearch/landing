@@ -34,7 +34,7 @@
     "raw-loader": "^4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-instantsearch-dom": "^6.38.1",
+    "react-instantsearch-dom": "^6.38.2",
     "react-intersection-observer": "^9.4.1",
     "react-lottie": "^1.2.3",
     "react-lottie-wrapper": "^1.1.8",
