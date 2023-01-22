@@ -20,7 +20,7 @@ const Head = ({ meta }) => {
       <meta
         property="og:image"
         content={
-          meta.image || 'https://www.meilisearch.com/images/meili-logo.png'
+          meta.image || 'https://www.meilisearch.com/images/og-image.png'
         }
       />
       <meta property="og:image:type" content="image/png" />
@@ -38,7 +38,7 @@ const Head = ({ meta }) => {
       <meta
         name="twitter:image"
         content={
-          meta.image || 'https://www.meilisearch.com/images/meili-logo.png'
+          meta.image || 'https://www.meilisearch.com/images/og-image.png'
         }
       />
       <meta property="twitter:image:type" content="image/png" />
