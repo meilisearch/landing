@@ -50,7 +50,7 @@ const MovieTitle = styled(Typography)`
   font-family: ${get('fontFamily.poppins')};
   font-weight: 600;
   font-size: 21.1092px;
-  line-height: 32px;
+  line-height: 25px;
   letter-spacing: -0.02em;
   color: ${get('colors.valhalla')};
   text-align: left;
