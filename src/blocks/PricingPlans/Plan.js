@@ -87,7 +87,7 @@ const PlanDescription = styled(Typography)`
   }
 
   @media (min-width: ${get('breakpoints.xl')}) {
-    margin-bottom: ${p => (p.$fullWidth ? '0px' : '32px')};
+    margin-bottom: ${p => (p.$fullWidth ? '0px' : '20px')};
 
     li + li {
       margin-top: 16px;
@@ -96,16 +96,25 @@ const PlanDescription = styled(Typography)`
 `
 
 const Cta = styled(Button)`
-  margin-top: auto;
+  margin-top: 20px;
   padding: 10px 20px;
   height: 38px;
 
   @media (min-width: ${get('breakpoints.md')}) {
-    margin-top: ${p => (p.$fullWidth ? '0px' : 'auto')};
+    margin-top: ${p => (p.$fullWidth ? '0px' : '20px')};
   }
 
   @media (min-width: ${get('breakpoints.lg')}) {
     height: 45px;
+  }
+`
+
+const UsageBasedPricing = styled(Typography)`
+  color: ${get('colors.ashes.900')};
+  font-size: 11px;
+  margin: auto 0;
+  strong {
+    color: ${get('colors.hotPink')};
   }
 `
 
@@ -132,6 +141,9 @@ const Plan = ({ plan, ...props }) => (
       variant="body.xs.bold"
       dangerouslySetInnerHTML={{ __html: plan.planDescription }}
     />
+    {plan.ubp && (
+      <UsageBasedPricing dangerouslySetInnerHTML={{ __html: plan.ubp }} />
+    )}
     <Cta
       variant="secondary"
       color={get(plan.color)}

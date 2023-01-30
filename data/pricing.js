@@ -20,17 +20,17 @@ const pricingPageData = {
         fullWidth: false,
         color: 'colors.hotPink',
         icon: Code,
-        pricing: '<strong>Free</strong>',
+        pricing: '<strong>0$</strong> /month',
         planDescription: `
           <ul>
           <li><strong>For small projects and testing</strong></li>
-          <li>Fair use policy</li>
-          <li>Up to 100k documents</li>
-          <li>Up to 10k searches per month</li>
+          <li>100K documents included</li>
+          <li>10K searches/month included</li>
           <li>Shared resources</li>
           <li>Community (Discord) support</li>
           </ul>
         `,
+        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches or 1K documents</strong> when you’ve reached your plan limits.',
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=build',
@@ -47,13 +47,14 @@ const pricingPageData = {
         planDescription: `
         <ul>
         <li><strong>Recommended for production</strong></li>
-        <li>Up to 10M documents</li>
-        <li>Up to 10M searches per month</li>
+        <li>10M documents included</li>
+        <li>10M searches/month included</li>
         <li>Highly available</li>
         <li>Dedicated resources</li>
         <li>Meilisearch team support</li>
         </ul>
       `,
+        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches or 1K documents</strong> when you’ve reached your plan limits.',
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=pro',
