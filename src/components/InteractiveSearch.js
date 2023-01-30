@@ -50,10 +50,15 @@ const MovieTitle = styled(Typography)`
   font-family: ${get('fontFamily.poppins')};
   font-weight: 600;
   font-size: 21.1092px;
-  line-height: 32px;
+  line-height: 25px;
   letter-spacing: -0.02em;
   color: ${get('colors.valhalla')};
   text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 5px;
   ais-highlight-0000000000 {
     color: ${get('colors.lila')};
   }
