@@ -30,7 +30,7 @@ const pricingPageData = {
           <li>Community (Discord) support</li>
           </ul>
         `,
-        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches or 1K documents</strong> when you’ve reached your plan limits.',
+        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches and 1K documents</strong> when you’ve reached your plan limits.',
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=build',
@@ -54,7 +54,7 @@ const pricingPageData = {
         <li>Meilisearch team support</li>
         </ul>
       `,
-        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches or 1K documents</strong> when you’ve reached your plan limits.',
+        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches and 1K documents</strong> when you’ve reached your plan limits.',
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=pro',
@@ -285,12 +285,7 @@ const pricingPageData = {
       {
         question: 'Can I try Meilisearch cloud for free?',
         answer:
-          'Yes. We offer a free plan based on fair usage that allows you to index up to 100k documents and perform 10k search requests per month.',
-      },
-      {
-        question: 'What happens if I exceed my plan limits?',
-        answer:
-          'For the time being, we can only rely on fair use. However, you may experience additional latency and response time if you exceed the limits.',
+          'Yes. We offer a free plan that allows you to index up to 100k documents and perform 10k search requests per month. If you exceed this usage you’ll be charged 25c for each additional block of 1,000 searches and 1,000 documents.',
       },
       {
         question: 'Is there a minimum term or commitment once I start paying?',
@@ -303,24 +298,9 @@ const pricingPageData = {
           'We only accept payment online via credit cards and charge in US dollars (USD) with Stripe as our payment service provider.',
       },
       {
-        question: 'How does billing work?',
-        answer:
-          'We bill per hour spent. We do not provide consumption-based plans. An hour corresponds to one hour of a Meilisearch server or project up and running in the cloud. In addition, while computing the hours, we round up, meaning if a server runs for one hour and five minutes, we will charge for two hours; if it runs for thirty minutes, we will charge for one hour.<br/><br/>Users will be charged at the end of each month based on their invoice(s) value.  It is important to note that the cost for a billing period is displayed excluding local taxes, and we automatically apply taxes to your monthly bill based on your region.<br/><br/> You can view the estimated cost for a billing period of your project(s) on the <a href="https://cloud.meilisearch.com/billing" target="_blank">billing page</a> and access your invoices and receipts by navigating to the “Billing settings” > “Manage billing settings and invoices” > “Invoice History”.',
-      },
-      {
         question: 'Can I change my plan?',
         answer:
-          "Yes, and it is effortless. You can upgrade a project's plan by selecting the project, navigating to the “Resources” tab, and clicking on the “Change Plan” button. Please remember that once the process is complete, you won't be able to downgrade your plan.",
-      },
-      {
-        question: 'How do I choose the right plan?',
-        answer: `While we provide a free and flexible plan, a rule of thumb is that your plan needs to match your business needs and workload. This means:<br/>
-          <ul>
-            <li>The Build plan is suitable for small businesses or individuals whose needs and workload are within the limit, as this is based on fair usage. When you reach this limit, you can easily scale up by upgrading to the Professional plan with the click of a button.</li>
-            <li>If your workload is beyond the Build plan’s limits, your data needs to be highly available, and your business requires a personalized support experience during business hours, the Professional plan is a better fit.</li>
-            <li>The Enterprise plan is entirely dependent on your use case and expectations. It is a bespoke plan suitable for businesses with unique requirements, such as special support needs or unique use-case.</li>
-          </ul><br/>
-          If you need additional assistance choosing the right plan for your use case, please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a>.`,
+          'Yes, and it is effortless. You can upgrade a project’s plan by selecting the project, navigating to the "Billing" tab, and clicking on the "Change plan" button. Please remember that once the process is complete, you won’t be able to downgrade your plan.',
       },
     ],
   },
