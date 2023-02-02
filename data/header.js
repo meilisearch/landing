@@ -11,7 +11,7 @@ import {
 const headerData = {
   banner: {
     title:
-      '🎉 Announcing our <a href="https://blog.meilisearch.com/meilisearch-series-a/" target="_blank">$15 million Series A</a> with Felicis Venture!',
+      'We just released <a href="blog.meilisearch.com/enterprise-ready-stable-version/" target="_blank">Meilisearch 1.0</a>: the most performant search engine on the market with zero setup required.',
   },
   links: [
     {
