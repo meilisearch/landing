@@ -295,7 +295,7 @@ const pricingPageData = {
       {
         question: 'What happens if I exceed my plan limits?',
         answer:
-          'If you exceed your plan limit, you will be charged for additional usage based on the search unit. A search unit costs $0.25 and includes 1,000 searches and 1,000 additional documents. If you don’t have a valid payment method added to your account, Meilisearch will stop responding to search requests.',
+          'If you exceed your plan limit, you will be charged for additional usage based on the number of search units consumed. A search unit costs $0.25 and includes 1,000 searches and 1,000 additional documents. If you don’t have a valid payment method added to your account, Meilisearch will stop responding to search requests.',
       },
       {
         question: 'What is a search unit?',
@@ -332,7 +332,7 @@ const pricingPageData = {
       {
         question: 'Can I change my plan?',
         answer:
-          'Yes, and it is effortless. You can upgrade a project’s plan by selecting the project, navigating to the “Billing” tab, and clicking on the “Change plan” button. Please remember that once the process is complete, you won’t be able to downgrade your plan.',
+          'Yes, and it is effortless. You can change a project’s plan by selecting the project, navigating to the “Billing” tab, and clicking on the “Change plan” button. Please remember that once the process is complete, you won’t be able to downgrade your plan.',
       },
       {
         question: 'How do I choose the right plan?',
