@@ -11,7 +11,7 @@ import {
 const headerData = {
   banner: {
     title:
-      'We just released <a href="blog.meilisearch.com/enterprise-ready-stable-version/" target="_blank">Meilisearch 1.0</a>: the most performant search engine on the market with zero setup required.',
+      'We just released <a href="https://blog.meilisearch.com/v1-enterprise-ready-stable/" target="_blank">Meilisearch 1.0</a>: the most performant search engine on the market with zero setup required.',
   },
   links: [
     {
