@@ -285,7 +285,29 @@ const pricingPageData = {
       {
         question: 'Can I try Meilisearch cloud for free?',
         answer:
-          'Yes. We offer a free plan that allows you to index up to 100k documents and perform 10k search requests per month. If you exceed this usage you’ll be charged 25c for each additional block of 1,000 searches and 1,000 documents.',
+          'Yes. We offer a free plan that allows you to index up to 100k documents and perform 10k search requests per month.',
+      },
+      {
+        question: 'Do I need to add a card to create a Meilisearch Project?',
+        answer:
+          'No. You can create and use Meilisearch projects without having to add a card. If you want to exceed the usage included in the Build plan, you will need to add a card to avoid service disruption.',
+      },
+      {
+        question: 'What happens if I exceed my plan limits?',
+        answer:
+          'If you exceed your plan limit, you will be charged for additional usage based on the number of search units consumed. A search unit costs $0.25 and includes 1,000 searches and 1,000 additional documents. If you don’t have a valid payment method added to your account, Meilisearch will stop responding to search requests.',
+      },
+      {
+        question: 'What is a search unit?',
+        answer: `A search unit is a metric used to measure your usage of Meilisearch. It represents the number of searches and documents. Each unit costs $0.25 and contains 1,000 searches and 1,000 documents. Meilisearch calculates the number of units used by taking the greater of either the searches or documents.
+        <br/><br/>
+        For example:
+        <br/><br/>
+        A user on a Build plan exceeds the plan limit by 5,000 searches and 50,000 documents in a month. This means:
+        <br/><br/>
+        5,000 searches / 1,000 = 5 search units. And 5,000 documents / 1,000 = 50 search units. 
+        <br/><br/>
+        Meilisearch will take the greater of the two calculations to determine the number of units used. As a result, the user is charged $12.50 ($0.25 x 50 = $12.50) for additional usage.`,
       },
       {
         question: 'Is there a minimum term or commitment once I start paying?',
@@ -298,9 +320,29 @@ const pricingPageData = {
           'We only accept payment online via credit cards and charge in US dollars (USD) with Stripe as our payment service provider.',
       },
       {
+        question: 'How does billing work?',
+        answer: `Billing is determined by calculating the number of search units used in a billing cycle. If you exceed the number of search units allowed in a billing cycle for a dedicated plan, you will be charged for additional usage at $0.25 per search unit. Furthermore, billing is fulfilled per project rather than per account. This means that the search units allocated to a particular project cannot be shared with other projects in your account.
+        The billing period starts at the beginning of the calendar month and ends at midnight UTC on the last day of the calendar month.`,
+      },
+      {
+        question: 'How do you calculate the number of documents?',
+        answer:
+          'The number of documents calculated for billing purposes is the total number of documents across all indexes in a project at the time of billing.',
+      },
+      {
         question: 'Can I change my plan?',
         answer:
-          'Yes, and it is effortless. You can upgrade a project’s plan by selecting the project, navigating to the "Billing" tab, and clicking on the "Change plan" button. Please remember that once the process is complete, you won’t be able to downgrade your plan.',
+          'Yes, and it is effortless. You can change a project’s plan by selecting the project, navigating to the “Billing” tab, and clicking on the “Change plan” button. Please remember that once the process is complete, you won’t be able to downgrade your plan.',
+      },
+      {
+        question: 'How do I choose the right plan?',
+        answer: `Choosing the right plan depends on your use case, and the number of documents and search requests your app will consume. This means:
+        <ul>
+        <li>The Build plan is suitable for small businesses or individuals whose needs and workload are not yet at the level of the Pro plan. It’s a great option if you’re building out your solution and don’t yet have the level of usage required to justify the cost of a Pro plan. The costs associated with the Build plan scale with your usage, so it’s a good fit for growing businesses.</li><br/>
+        <li>If your workload is beyond the Build plan’s limits, and your business requires a personalized support experience during business hours, the Pro plan is a better fit.</li><br/>
+        <li>The Enterprise plan is entirely dependent on your use case and expectations. It is a bespoke plan suitable for businesses with unique requirements, such as special support needs or unique use-case.</li><br/>
+        </ul>    
+        If you need additional assistance choosing the right plan for your use case, please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a>.`,
       },
     ],
   },
