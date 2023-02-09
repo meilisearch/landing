@@ -7,7 +7,7 @@ import BasePricingCard from 'components/PricingCard'
 
 const Pricing = styled(Typography)`
   margin-top: 4px;
-  margin-bottom: 22px;
+  margin-bottom: 32px;
   white-space: pre;
   color: ${get('colors.ashes.900')};
   display: flex;
@@ -65,7 +65,7 @@ const Title = styled(Typography)`
 const PlanDescription = styled(Typography)`
   color: ${get('colors.ashes.600')};
   font-weight: ${get('fontWeight.normal')};
-  margin-bottom: ${p => (p.$fullWidth ? '0px' : '16px')};
+  margin-bottom: ${p => (p.$fullWidth ? '0px' : '24px')};
 
   strong {
     color: ${get('colors.white')};
@@ -87,8 +87,6 @@ const PlanDescription = styled(Typography)`
   }
 
   @media (min-width: ${get('breakpoints.xl')}) {
-    margin-bottom: ${p => (p.$fullWidth ? '0px' : '20px')};
-
     li + li {
       margin-top: 16px;
     }
@@ -96,12 +94,12 @@ const PlanDescription = styled(Typography)`
 `
 
 const Cta = styled(Button)`
-  margin-top: 20px;
+  margin-top: auto;
   padding: 10px 20px;
   height: 38px;
 
   @media (min-width: ${get('breakpoints.md')}) {
-    margin-top: ${p => (p.$fullWidth ? '0px' : '20px')};
+    margin-top: ${p => (p.$fullWidth ? '0px' : 'auto')};
   }
 
   @media (min-width: ${get('breakpoints.lg')}) {
@@ -112,7 +110,7 @@ const Cta = styled(Button)`
 const UsageBasedPricing = styled(Typography)`
   color: ${get('colors.ashes.900')};
   font-size: 11px;
-  margin: auto 0;
+  margin: 0 0 32px 0;
   strong {
     color: ${get('colors.hotPink')};
   }
@@ -135,15 +133,15 @@ const Plan = ({ plan, ...props }) => (
         dangerouslySetInnerHTML={{ __html: plan.pricing }}
       />
     </div>
+    {plan.ubp && (
+      <UsageBasedPricing dangerouslySetInnerHTML={{ __html: plan.ubp }} />
+    )}
     <PlanDescription
       $fullWidth={plan.fullWidth}
       $color={plan.color}
       variant="body.xs.bold"
       dangerouslySetInnerHTML={{ __html: plan.planDescription }}
     />
-    {plan.ubp && (
-      <UsageBasedPricing dangerouslySetInnerHTML={{ __html: plan.ubp }} />
-    )}
     <Cta
       variant="secondary"
       color={get(plan.color)}
