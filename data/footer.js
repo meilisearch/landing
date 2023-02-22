@@ -113,6 +113,11 @@ const footerData = {
           title: 'Terms of use',
           href: '/terms-of-use',
         },
+        {
+          title: 'Meilisearch handbook',
+          href: 'https://handbook.meilisearch.com/',
+          target: '_blank',
+        },
       ],
     },
   ],
