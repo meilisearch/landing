@@ -345,13 +345,6 @@ const aboutUsData = {
           'https://www.notion.so/meilisearch/Laur-ne-Gibaud-4010db44b2b04ff098010f069b6ca8e8',
       },
       {
-        name: 'Léna 🇫🇷',
-        position: 'Product Designer',
-        image: '/images/teamMembers/lena.png',
-        linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/L-na-Pinot-4c3b4219b0ce4818bca96502bcc9433e',
-      },
-      {
         name: 'Loïc 🇳🇱',
         position: 'Software Engineer',
         image: '/images/teamMembers/loic.png',
