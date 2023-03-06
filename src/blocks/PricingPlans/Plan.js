@@ -5,40 +5,11 @@ import Button from 'components/Button'
 import RoundedIcon from 'components/RoundedIcon'
 import BasePricingCard from 'components/PricingCard'
 
-const Pricing = styled(Typography)`
+const Price = styled(Typography)`
   margin-top: 4px;
-  margin-bottom: 32px;
   white-space: pre;
-  color: ${get('colors.ashes.900')};
   display: flex;
   align-items: center;
-  height: 32px;
-  font-size: 12px;
-  font-weight: ${get('fontWeight.normal')};
-  line-height: 150%;
-
-  strong {
-    color: white;
-    font-family: 'Poppins';
-    font-weight: ${get('fontWeight.medium')};
-    font-size: 18px;
-    line-height: 140%;
-  }
-
-  @media (min-width: ${get('breakpoints.lg')}) {
-    font-size: 13px;
-    strong {
-      font-size: 22px;
-    }
-  }
-
-  @media (min-width: ${get('breakpoints.xl')}) {
-    margin-bottom: ${p => (p.$fullWidth ? '0px' : '32px')};
-    font-size: 14px;
-    strong {
-      font-size: 26px;
-    }
-  }
 `
 
 const PricingCard = styled(BasePricingCard)`
@@ -116,6 +87,40 @@ const UsageBasedPricing = styled(Typography)`
   }
 `
 
+const Pricing = styled.div`
+  margin-top: 16px;
+  white-space: pre;
+  color: ${get('colors.ashes.900')};
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  font-size: 12px;
+  font-weight: ${get('fontWeight.normal')};
+  line-height: 150%;
+
+  strong {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: ${get('fontWeight.medium')};
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  @media (min-width: ${get('breakpoints.lg')}) {
+    font-size: 13px;
+    strong {
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: ${get('breakpoints.xl')}) {
+    font-size: 14px;
+    strong {
+      font-size: 26px;
+    }
+  }
+`
+
 const Plan = ({ plan, ...props }) => (
   <PricingCard
     $fullWidth={plan.fullWidth}
@@ -128,10 +133,15 @@ const Plan = ({ plan, ...props }) => (
       <Title $color={plan.color} variant="body.m.bold">
         {plan.title}
       </Title>
-      <Pricing
-        $fullWidth={plan.fullWidth}
-        dangerouslySetInnerHTML={{ __html: plan.pricing }}
-      />
+      <Pricing>
+        {plan.startingAt && (
+          <Typography variant="body.m.default">{plan.startingAt}</Typography>
+        )}
+        <Price
+          $fullWidth={plan.fullWidth}
+          dangerouslySetInnerHTML={{ __html: plan.pricing }}
+        />
+      </Pricing>
     </div>
     {plan.ubp && (
       <UsageBasedPricing dangerouslySetInnerHTML={{ __html: plan.ubp }} />

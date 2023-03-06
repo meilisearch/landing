@@ -20,6 +20,7 @@ const pricingPageData = {
         fullWidth: false,
         color: 'colors.hotPink',
         icon: Code,
+        startingAt: 'Starting at',
         pricing: '<strong>0$</strong> /month',
         planDescription: `
           <ul>
@@ -30,7 +31,7 @@ const pricingPageData = {
           <li>Community (Discord) support</li>
           </ul>
         `,
-        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches and 1K documents</strong> when you’ve reached your plan limits.',
+        ubp: 'Then <strong>$0.25</strong> for every <strong>1k documents and 1k searches</strong> when you exceed the included allowance.',
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=build',
@@ -43,6 +44,7 @@ const pricingPageData = {
         fullWidth: false,
         color: 'colors.hotPink',
         icon: Diamond,
+        startingAt: 'Starting at',
         pricing: '<strong>$1200</strong> /month',
         planDescription: `
         <ul>
@@ -54,7 +56,7 @@ const pricingPageData = {
         <li>Meilisearch team support</li>
         </ul>
       `,
-        ubp: 'Then <strong>$0.25</strong> for every <strong>1K searches and 1K documents</strong> when you’ve reached your plan limits.',
+        ubp: 'Then <strong>$0.25</strong> for every <strong>1k documents and 1k searches</strong> when you exceed the included allowance.',
         cta: {
           title: 'Get started',
           href: 'https://cloud.meilisearch.com/register?plan=pro',
@@ -343,6 +345,11 @@ const pricingPageData = {
         <li>The Enterprise plan is entirely dependent on your use case and expectations. It is a bespoke plan suitable for businesses with unique requirements, such as special support needs or unique use-case.</li><br/>
         </ul>    
         If you need additional assistance choosing the right plan for your use case, please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a>.`,
+      },
+      {
+        question: 'What are the standard support hours?',
+        answer:
+          'Standard support hours are 8AM-5PM CET. Support operates from Monday to Thursday.',
       },
     ],
   },
