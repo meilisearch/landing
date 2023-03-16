@@ -429,7 +429,7 @@ const aboutUsData = {
           'https://www.notion.so/meilisearch/Tamo-41f6efcf8234424bb37e1addf3487b9f',
       },
       {
-        name: 'Thomas 🇫🇷',
+        name: 'Thomas 🇷🇪',
         position: 'Co-founder & COO',
         image: '/images/teamMembers/thomas.png',
         linkToPublicNotionPage:
