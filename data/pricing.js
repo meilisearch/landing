@@ -1,4 +1,4 @@
-import { Code, Diamond, Puzzle, Rocket } from 'components/icons'
+import { Code, Diamond, Puzzle, Rocket } from 'components/icons';
 
 const pricingPageData = {
   meta: {
@@ -83,7 +83,7 @@ const pricingPageData = {
       `,
         cta: {
           title: 'Contact Sales',
-          href: 'https://cal.com/team/meilisearch/cloud-enterprise',
+          href: 'https://meet.meilisearch.com/meetings/cloud/presentation',
           target: '_blank',
         },
       },
@@ -307,7 +307,7 @@ const pricingPageData = {
         <br/><br/>
         A user on a Build plan exceeds the plan limit by 5,000 searches and 50,000 documents in a month. This means:
         <br/><br/>
-        5,000 searches / 1,000 = 5 search units. And 5,000 documents / 1,000 = 50 search units. 
+        5,000 searches / 1,000 = 5 search units. And 5,000 documents / 1,000 = 50 search units.
         <br/><br/>
         Meilisearch will take the greater of the two calculations to determine the number of units used. As a result, the user is charged $12.50 ($0.25 x 50 = $12.50) for additional usage.`,
       },
@@ -343,7 +343,7 @@ const pricingPageData = {
         <li>The Build plan is suitable for small businesses or individuals whose needs and workload are not yet at the level of the Pro plan. It’s a great option if you’re building out your solution and don’t yet have the level of usage required to justify the cost of a Pro plan. The costs associated with the Build plan scale with your usage, so it’s a good fit for growing businesses.</li><br/>
         <li>If your workload is beyond the Build plan’s limits, and your business requires a personalized support experience during business hours, the Pro plan is a better fit.</li><br/>
         <li>The Enterprise plan is entirely dependent on your use case and expectations. It is a bespoke plan suitable for businesses with unique requirements, such as special support needs or unique use-case.</li><br/>
-        </ul>    
+        </ul>
         If you need additional assistance choosing the right plan for your use case, please do not hesitate to contact us through the chat widget or email us at <a href="mailto:cloud@meilisearch.com">cloud@meilisearch.com</a>.`,
       },
       {
@@ -353,6 +353,6 @@ const pricingPageData = {
       },
     ],
   },
-}
+};
 
-export default pricingPageData
+export default pricingPageData;
