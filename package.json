@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
-    "@percy/cli": "^1.16.0",
+    "@percy/cli": "^1.24.0",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
