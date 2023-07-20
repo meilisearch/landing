@@ -345,13 +345,6 @@ const aboutUsData = {
           'https://www.notion.so/meilisearch/Laur-ne-Gibaud-4010db44b2b04ff098010f069b6ca8e8',
       },
       {
-        name: 'Loïc 🇳🇱',
-        position: 'Software Engineer',
-        image: '/images/teamMembers/loic.png',
-        linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Lo-c-Lecrenier-d7d385438fa544f8aa9d0a1736a41897',
-      },
-      {
         name: 'Louis 🇫🇷',
         position: 'Senior Software Engineer',
         image: '/images/teamMembers/louis.png',
@@ -399,13 +392,6 @@ const aboutUsData = {
         image: '/images/teamMembers/nico.png',
         linkToPublicNotionPage:
           'https://www.notion.so/meilisearch/Nicolas-Vi-not-2652210cff774133a8d2562e0e4605f8',
-      },
-      {
-        name: 'Oluwaseyi 🇳🇬',
-        position: 'Support Engineer',
-        image: '/images/teamMembers/olu.png',
-        linkToPublicNotionPage:
-          'https://www.notion.so/meilisearch/Oluwaseyi-Ademola-362e72dee0dd4286a32aa909fa66bef5',
       },
       {
         name: 'Quentin 🇫🇷',
